@@ -1,0 +1,73 @@
+import { Hero, Banner, Feature, CTA, LiveDemo } from '../components/onboarding';
+
+const OnBoarding = ({ data }) => {
+  const {
+    heroHeading,
+    heroSubHeading,
+    heroCTAText,
+    heroCTANavigation,
+    heroImg1,
+    heroImg2,
+    usedByHeading,
+    section1SubHeading,
+    section1Heading,
+    section1CTAText,
+    section2SubHeading,
+    section2Heading,
+    section2Description,
+    section2Img,
+    lastSectionSubHeading,
+    lastSectionHeading,
+    lastSectionDescription,
+    lastSectionImg,
+    lastSectionCTAText,
+    Features,
+  } = data.data.attributes;
+
+  return (
+    <>
+      <Hero
+        heroHeading={heroHeading}
+        heroSubHeading={heroSubHeading}
+        heroCTAText={heroCTAText}
+        heroCTANavigation={heroCTANavigation}
+        heroImg1={heroImg1}
+        heroImg2={heroImg2}
+        usedByHeading={usedByHeading}
+      />
+      <Banner
+        section1SubHeading={section1SubHeading}
+        section1Heading={section1Heading}
+        section1CTAText={section1CTAText}
+      />
+      <Feature Features={Features} />
+      <CTA
+        section2SubHeading={section2SubHeading}
+        section2Heading={section2Heading}
+        section2Description={section2Description}
+        section2Img={section2Img}
+      />
+      <LiveDemo
+        lastSectionSubHeading={lastSectionSubHeading}
+        lastSectionHeading={lastSectionHeading}
+        lastSectionDescription={lastSectionDescription}
+        lastSectionImg={lastSectionImg}
+        lastSectionCTAText={lastSectionCTAText}
+      />
+    </>
+  );
+};
+
+export default OnBoarding;
+
+export async function getStaticProps() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/onboardingtool-page?populate[0]=heroImg1&populate[1]=heroImg2&populate[2]=section2Img&populate[3]=lastSectionImg&populate[4]=Features&populate[5]=Features.image`
+  );
+  const data = await res.json();
+
+  return {
+    props: { data },
+    revalidate: 1,
+  };
+}

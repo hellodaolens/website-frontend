@@ -1,0 +1,115 @@
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const Navbar = () => {
+  const [navItems, setNavItems] = useState(null);
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`)
+      .then((res) => res.json())
+      .then((data) => setNavItems(data?.data?.attributes));
+  }, []);
+
+  if (navItems) {
+    return (
+      <NavContainer>
+        <div className="section-center nav-center">
+          <div className="logo">
+            <Image
+              src={navItems?.logo?.data?.attributes?.url}
+              alt={navItems?.logo?.data?.attributes?.name}
+              width={145}
+              height={28}
+            />
+          </div>
+
+          <div className="links">
+            {navItems?.navLinks?.map((item) => {
+              const { id, name, to } = item;
+              return (
+                <Link key={id} href={`/${to}`}>
+                  <a className="link">{name}</a>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="link-right">
+            <Link href="/contact">
+              <a className="btn2">{navItems?.anotherLink}</a>
+            </Link>
+          </div>
+        </div>
+      </NavContainer>
+    );
+  }
+};
+
+export const NavContainer = styled.nav`
+  background: transparent;
+  /* margin-bottom: 2rem; */
+  .nav-center {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+
+    @media (max-width: 992px) {
+      grid-template-columns: [start] auto [center] auto [end];
+      row-gap: 0.5rem;
+      grid-template-rows: [start] 1fr [center] 1fr [end];
+      width: 100vw;
+
+      .logo {
+        grid-column: start/center;
+        grid-row: start/center;
+        margin-left: 5vw;
+      }
+
+      .links {
+        grid-column: start/end;
+        grid-row: center/end;
+        width: 100%;
+        border-radius: 0;
+        gap: 0.75rem;
+      }
+
+      .link-right {
+        grid-column: center/end;
+        grid-row: start/center;
+        text-align: right;
+        margin-right: 5vw;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(100px);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 20px;
+    border: 2px solid #372744;
+  }
+
+  .link {
+    color: var(--clr-white);
+  }
+
+  .link-right {
+    .btn2 {
+      margin-top: 0;
+    }
+  }
+`;
+
+export default Navbar;

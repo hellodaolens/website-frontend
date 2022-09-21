@@ -1,0 +1,18 @@
+- [ ] create tabs btn and functionality for homepage admin section
+- [ ] set up view more functionality for investors section
+- [ ] set up view more functionality for reviews section
+- [ ] set up slider functionality for resources section on small screen
+- [ ] set up tabs for resources section
+- [ ] Check urls & hrefs for all the btns
+- [ ] improve component nomenclature
+- [ ] sliders and buttons on contribution page
+- [ ] slider for careers page CTA section
+- [x] wrap footer in layout
+- [ ] set up head element
+- [x] make top bar
+- [x] create navbar
+- [ ] make tabs and model work for content page
+- [x] make single blog page
+- [x] set up twitter feed component
+- [x] set up youtube component
+- [ ] set up spotify component
