@@ -16,25 +16,21 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const info =  {
-              first_name: firstName,
-              last_name: lastName,
-            },
-            listName: 'My Emails',
-          },
-      const response = await fetch(
-        'https://api.mailmodo.com/api/v1/addToList',
-        {
-          method: 'post',
-          headers: {
-            mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
-            'Content-Type': 'application/json',
-          },
-          body: {
-            email: email,
-            data:JSON.stringify(info)
-        }
-      );
+     const response = await fetch(`https://api.mailmodo.com/api/v1/addToList`, {
+        method: 'POST',
+        headers: {
+          mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          "data": {
+            "first_name": firstName,
+            "last_name":lastName
+           },
+          "listName": "My Emails"
+        }),
+      });
       console.log('Completed!', response);
     } catch (err) {
       console.error(`Error: ${err}`);
