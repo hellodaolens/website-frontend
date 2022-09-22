@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import Link from 'next/link';
 import featuresBCG from '../../public/assets/contribution/features3-bcg.png';
 import feature2 from '../../public/assets/contribution/feature2.png';
 import featureBCG from '../../public/assets/onboarding/feature-bcg.png';
 
-const Features = ({ featuresHeading, features1, features2, getCTAText }) => {
+const Features = ({
+  featuresHeading,
+  features1,
+  features2,
+  features2CTAtext,
+  features2Destination,
+}) => {
   const feature = features1[0];
 
   return (
@@ -59,9 +64,9 @@ const Features = ({ featuresHeading, features1, features2, getCTAText }) => {
         </article>
 
         <div className="btn-wrap">
-          <Link href={'/'}>
-            <a className="btn">{getCTAText}</a>
-          </Link>
+          <a href={features2Destination} className="btn">
+            {features2CTAtext}
+          </a>
         </div>
       </div>
     </Container>

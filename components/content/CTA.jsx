@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import ctaBCG from '../../public/assets/content/cta-bcg.png';
 
-const CTA = ({ heading, description, CTAText, image, points }) => {
+const CTA = ({
+  heading,
+  description,
+  CTAText,
+  CTADestination,
+  image,
+  points,
+}) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const setDimension = () => {
@@ -28,9 +34,9 @@ const CTA = ({ heading, description, CTAText, image, points }) => {
             <h2>{heading}</h2>
             <p>{description}</p>
 
-            <Link href="/onboarding">
-              <a className="btn">{CTAText}</a>
-            </Link>
+            <a href={CTADestination} className="btn">
+              {CTAText}
+            </a>
           </article>
           <article className="image">
             <Image

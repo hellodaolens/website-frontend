@@ -12,6 +12,7 @@ const Community = ({ data }) => {
     heroHeading,
     heroDescription,
     heroCTAText,
+    heroCTADestination,
     section1SubHeading,
     section1Heading,
     section1LastHeading,
@@ -21,6 +22,7 @@ const Community = ({ data }) => {
     lastSectionHeading,
     lastSectionDescription,
     lastSectionCTAText,
+    lastSectionCTADestination,
   } = data.data.attributes;
 
   return (
@@ -30,6 +32,7 @@ const Community = ({ data }) => {
         heroHeading={heroHeading}
         heroDescription={heroDescription}
         heroCTAText={heroCTAText}
+        heroCTADestination={heroCTADestination}
       />
       <Banner
         section1SubHeading={section1SubHeading}
@@ -45,6 +48,7 @@ const Community = ({ data }) => {
         lastSectionHeading={lastSectionHeading}
         lastSectionDescription={lastSectionDescription}
         lastSectionCTAText={lastSectionCTAText}
+        lastSectionCTADestination={lastSectionCTADestination}
       />
     </>
   );

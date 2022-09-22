@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import heroImg from '../../public/assets/homepage/hero-img.svg';
 import heroBCG from '../../public/assets/homepage/hero-bcg.png';
-import Link from 'next/link';
 import { Navbar } from '../common';
 
 const Hero = ({
@@ -20,9 +19,9 @@ const Hero = ({
             <article className="hero-info">
               <h1>{heroHeading}</h1>
               <p>{heroDesription}</p>
-              <Link href={heroCTADestination || '/'}>
-                <a className="btn">{heroCTAText}</a>
-              </Link>
+              <a href={heroCTADestination} className="btn">
+                {heroCTAText}
+              </a>
             </article>
             <article className="hero-img">
               <Image src={heroImg} alt="hero" />

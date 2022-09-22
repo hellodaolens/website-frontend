@@ -1,10 +1,15 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import heroBCG from '../../public/assets/careers/hero-bcg.png';
 import { Navbar } from '../common';
 
-const Hero = ({ heroHeading, heroDescription, heroCTAText, heroImg }) => {
+const Hero = ({
+  heroHeading,
+  heroDescription,
+  heroCTAText,
+  heroCTADestination,
+  heroImg,
+}) => {
   return (
     <>
       <Container>
@@ -15,9 +20,9 @@ const Hero = ({ heroHeading, heroDescription, heroCTAText, heroImg }) => {
               <div>
                 <h2>{heroHeading}</h2>
                 <p>{heroDescription}</p>
-                <Link href={'/'}>
-                  <a className="btn">{heroCTAText}</a>
-                </Link>
+                <a href={heroCTADestination} className="btn">
+                  {heroCTAText}
+                </a>
               </div>
             </article>
 

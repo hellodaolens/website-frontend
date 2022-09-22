@@ -8,7 +8,7 @@ const Hero = ({
   heroHeading,
   heroDescription,
   heroCTAText,
-  heroCTANavigation,
+  heroCTADestination,
   heroImg1,
   heroImg2,
   usedByHeading,
@@ -21,9 +21,9 @@ const Hero = ({
           <div className="hero-content">
             <h2>{heroHeading}</h2>
             <p>{heroDescription}</p>
-            <Link href={heroCTANavigation || '/'}>
-              <a className="btn">{heroCTAText}</a>
-            </Link>
+            <a href={heroCTADestination} className="btn">
+              {heroCTAText}
+            </a>
           </div>
         </div>
 

@@ -3,8 +3,8 @@
 - [ ] set up view more functionality for reviews section
 - [ ] set up slider functionality for resources section on small screen
 - [ ] set up tabs for resources section
-- [ ] Check urls & hrefs for all the btns
-- [ ] improve component nomenclature
+- [x] Check urls & hrefs for all the btns
+- [x] improve component nomenclature
 - [ ] sliders and buttons on contribution page
 - [ ] slider for careers page CTA section
 - [x] wrap footer in layout
@@ -16,3 +16,4 @@
 - [x] set up twitter feed component
 - [x] set up youtube component
 - [x] set up spotify component
+- [ ] fix navbar menu

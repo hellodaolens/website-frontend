@@ -17,6 +17,8 @@ export default function Home({ data }) {
     adminHeading,
     adminImg1,
     adminImg2,
+    adminCTAText,
+    adminCTADestination,
     adminPoints,
     customersHeading,
     customersSubHeading,
@@ -28,6 +30,8 @@ export default function Home({ data }) {
     lastSectionHeading,
     lastSectionSubHeading,
     lastSectionImg,
+    lastSectionCTAText,
+    lastSectionCTADestination,
     section1MainHeading,
     section1SubHeading,
     topBarInfo,
@@ -51,6 +55,8 @@ export default function Home({ data }) {
         adminImg1={adminImg1}
         adminImg2={adminImg2}
         adminPoints={adminPoints}
+        adminCTAText={adminCTAText}
+        adminCTADestination={adminCTADestination}
       />
       <Customers
         customersHeading={customersHeading}
@@ -66,6 +72,8 @@ export default function Home({ data }) {
         lastSectionHeading={lastSectionHeading}
         lastSectionDescription={lastSectionDescription}
         lastSectionImg={lastSectionImg}
+        lastSectionCTAText={lastSectionCTAText}
+        lastSectionCTADestination={lastSectionCTADestination}
       />
       <Investors />
     </>

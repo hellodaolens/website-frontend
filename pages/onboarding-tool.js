@@ -5,13 +5,14 @@ const OnBoarding = ({ data }) => {
     heroHeading,
     heroSubHeading,
     heroCTAText,
-    heroCTANavigation,
+    heroCTADestination,
     heroImg1,
     heroImg2,
     usedByHeading,
     section1SubHeading,
     section1Heading,
     section1CTAText,
+    section1CTADestination,
     section2SubHeading,
     section2Heading,
     section2Description,
@@ -21,6 +22,7 @@ const OnBoarding = ({ data }) => {
     lastSectionDescription,
     lastSectionImg,
     lastSectionCTAText,
+    lastSectionCTADestination,
     Features,
   } = data.data.attributes;
 
@@ -30,7 +32,7 @@ const OnBoarding = ({ data }) => {
         heroHeading={heroHeading}
         heroSubHeading={heroSubHeading}
         heroCTAText={heroCTAText}
-        heroCTANavigation={heroCTANavigation}
+        heroCTADestination={heroCTADestination}
         heroImg1={heroImg1}
         heroImg2={heroImg2}
         usedByHeading={usedByHeading}
@@ -39,6 +41,7 @@ const OnBoarding = ({ data }) => {
         section1SubHeading={section1SubHeading}
         section1Heading={section1Heading}
         section1CTAText={section1CTAText}
+        section1CTADestination={section1CTADestination}
       />
       <Feature Features={Features} />
       <CTA
@@ -53,6 +56,7 @@ const OnBoarding = ({ data }) => {
         lastSectionDescription={lastSectionDescription}
         lastSectionImg={lastSectionImg}
         lastSectionCTAText={lastSectionCTAText}
+        lastSectionCTADestination={lastSectionCTADestination}
       />
     </>
   );

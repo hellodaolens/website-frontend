@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styled from 'styled-components';
 import ctaBCG from '../../public/assets/community/cta-bcg.png';
 
@@ -6,15 +5,17 @@ const CTA = ({
   lastSectionHeading,
   lastSectionDescription,
   lastSectionCTAText,
+  lastSectionCTADestination,
 }) => {
   return (
     <Container className="section">
       <div className="section-center">
         <h2>{lastSectionHeading}</h2>
         <p>{lastSectionDescription}</p>
-        <Link href="/">
-          <a className="btn">{lastSectionCTAText}</a>
-        </Link>
+
+        <a href={lastSectionCTADestination} className="btn">
+          {lastSectionCTAText}
+        </a>
       </div>
     </Container>
   );

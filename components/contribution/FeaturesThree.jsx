@@ -2,9 +2,13 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import featureBCG from '../../public/assets/onboarding/feature-bcg.png';
 import features3BCG from '../../public/assets/contribution/features3-bcg.png';
-import Link from 'next/link';
 
-const FeaturesThree = ({ features3Heading, features3, get2CTAText }) => {
+const FeaturesThree = ({
+  features3Heading,
+  features3,
+  features3CTAText,
+  features3CTADestination,
+}) => {
   return (
     <Container className="section">
       <div className="section-center">
@@ -35,9 +39,9 @@ const FeaturesThree = ({ features3Heading, features3, get2CTAText }) => {
         })}
 
         <div className="btn-wrap">
-          <Link href={'/'}>
-            <a className="btn">{get2CTAText}</a>
-          </Link>
+          <a href={features3CTADestination} className="btn">
+            {features3CTAText}
+          </a>
         </div>
       </div>
     </Container>

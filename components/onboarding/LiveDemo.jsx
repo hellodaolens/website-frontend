@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import liveDemoBCG from '../../public/assets/onboarding/live-demo-bcg.png';
 
@@ -9,6 +8,7 @@ const LiveDemo = ({
   lastSectionDescription,
   lastSectionImg,
   lastSectionCTAText,
+  lastSectionCTADestination,
 }) => {
   return (
     <Container className="section">
@@ -28,9 +28,9 @@ const LiveDemo = ({
             objectFit="contain"
           />
 
-          <Link href={'/'}>
-            <a className="btn">{lastSectionCTAText}</a>
-          </Link>
+          <a href={lastSectionCTADestination} className="btn">
+            {lastSectionCTAText}
+          </a>
         </article>
       </div>
     </Container>

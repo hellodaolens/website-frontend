@@ -1,7 +1,8 @@
 import { Hero, CTA, TwitterFeed } from '../components/content';
 
 const Content = ({ data }) => {
-  const { heading, description, CTAText, image, points } = data.data.attributes;
+  const { heading, description, CTAText, CTADestination, image, points } =
+    data.data.attributes;
 
   return (
     <>
@@ -10,6 +11,7 @@ const Content = ({ data }) => {
         heading={heading}
         description={description}
         CTAText={CTAText}
+        CTADestination={CTADestination}
         image={image}
         points={points}
       />

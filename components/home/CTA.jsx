@@ -8,6 +8,8 @@ const CTA = ({
   lastSectionHeading,
   lastSectionSubHeading,
   lastSectionImg,
+  lastSectionCTAText,
+  lastSectionCTADestination,
 }) => {
   return (
     <Container className="section">
@@ -29,9 +31,9 @@ const CTA = ({
             />
           </article>
         </div>
-        <Link href={'/'}>
-          <a className="btn">Join now</a>
-        </Link>
+        <a href={lastSectionCTADestination} className="btn">
+          {lastSectionCTAText}
+        </a>
       </div>
     </Container>
   );

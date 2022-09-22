@@ -11,6 +11,7 @@ const Careers = ({ data }) => {
     heroHeading,
     heroDescription,
     heroCTAText,
+    heroCTADestination,
     heroImg,
     section1Heading,
     section1Description,
@@ -23,6 +24,7 @@ const Careers = ({ data }) => {
     lastSectionHeading,
     lastSectionDescription,
     lastSectionCTAText,
+    lastSectionCTADestination,
   } = data.data.attributes;
 
   return (
@@ -31,6 +33,7 @@ const Careers = ({ data }) => {
         heroHeading={heroHeading}
         heroDescription={heroDescription}
         heroCTAText={heroCTAText}
+        heroCTADestination={heroCTADestination}
         heroImg={heroImg}
       />
       <Globe
@@ -48,6 +51,7 @@ const Careers = ({ data }) => {
         lastSectionHeading={lastSectionHeading}
         lastSectionDescription={lastSectionDescription}
         lastSectionCTAText={lastSectionCTAText}
+        lastSectionCTADestination={lastSectionCTADestination}
       />
     </>
   );

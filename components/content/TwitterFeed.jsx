@@ -23,7 +23,7 @@ const TwitterFeed = () => {
         <div className="tweets-center">
           <a
             className="twitter-timeline"
-            data-height="500"
+            data-height="792"
             data-dnt="true"
             data-theme="dark"
             href="https://twitter.com/DaoLens?ref_src=twsrc%5Etfw"
@@ -42,9 +42,16 @@ const TwitterFeed = () => {
 };
 
 export const Container = styled.section`
+  text-align: center;
+
   .title {
     text-align: center;
     margin-bottom: 4rem;
+  }
+
+  a {
+    color: var(--clr-white);
+    text-decoration: underline;
   }
 `;
 

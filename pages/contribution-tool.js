@@ -10,17 +10,19 @@ const Contribution = ({ data: { data } }) => {
     heroHeading,
     heroDescription,
     heroCTAText,
-    heroCTANavigation,
+    heroCTADestination,
     heroImg1,
     heroImg2,
     usedByHeading,
     featuresHeading,
     features1,
     features2,
-    getCTAText,
+    features2CTAtext,
+    features2Destination,
     features3Heading,
     features3,
-    get2CTAText,
+    features3CTAText,
+    features3CTADestination,
   } = data.attributes;
 
   return (
@@ -29,7 +31,7 @@ const Contribution = ({ data: { data } }) => {
         heroHeading={heroHeading}
         heroDescription={heroDescription}
         heroCTAText={heroCTAText}
-        heroCTANavigation={heroCTANavigation}
+        heroCTADestination={heroCTADestination}
         heroImg1={heroImg1}
         heroImg2={heroImg2}
         usedByHeading={usedByHeading}
@@ -38,12 +40,14 @@ const Contribution = ({ data: { data } }) => {
         featuresHeading={featuresHeading}
         features1={features1}
         features2={features2}
-        getCTAText={getCTAText}
+        features2CTAtext={features2CTAtext}
+        features2Destination={features2Destination}
       />
       <FeaturesThree
         features3Heading={features3Heading}
         features3={features3}
-        get2CTAText={get2CTAText}
+        features3CTAText={features3CTAText}
+        features3CTADestination={features3CTADestination}
       />
       <Reviews />
     </>

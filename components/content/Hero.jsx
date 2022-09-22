@@ -77,7 +77,7 @@ const Hero = () => {
               </div>
 
               <div className="btn-container">
-                <Link href={'/'}>
+                <Link href={`/blog/${bannerArticle?.attributes?.slug}`}>
                   <a className="btn">5 min read</a>
                 </Link>
                 {bannerArticle?.attributes?.showCTAinHighlight && (

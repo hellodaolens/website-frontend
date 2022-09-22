@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import heroBCG from '../../public/assets/community/hero-bcg.png';
-import Link from 'next/link';
 import { Navbar } from '../common';
 
 const Hero = ({
@@ -8,6 +7,7 @@ const Hero = ({
   heroHeading,
   heroDescription,
   heroCTAText,
+  heroCTADestination,
 }) => {
   return (
     <Container>
@@ -17,9 +17,9 @@ const Hero = ({
           <h5>{heroSubHeading}</h5>
           <h1>{heroHeading}</h1>
           <h4>{heroDescription}</h4>
-          <Link href={'/'}>
-            <a className="btn">{heroCTAText}</a>
-          </Link>
+          <a href={heroCTADestination} className="btn">
+            {heroCTAText}
+          </a>
         </div>
       </main>
     </Container>

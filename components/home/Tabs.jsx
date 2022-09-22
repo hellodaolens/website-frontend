@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import tabs from '../../public/assets/homepage/tabs.png';
 import styled from 'styled-components';
 
-const Tabs = ({ adminHeading, adminImg1, adminImg2, adminPoints }) => {
+const Tabs = ({
+  adminHeading,
+  adminImg1,
+  adminImg2,
+  adminPoints,
+  adminCTAText,
+  adminCTADestination,
+}) => {
   const [tabs, setTabs] = useState('admin');
 
   const [isMobile, setIsMobile] = useState(false);
@@ -29,9 +35,9 @@ const Tabs = ({ adminHeading, adminImg1, adminImg2, adminPoints }) => {
           <div className="tab">
             <div className="tab-header">
               <h3>{adminHeading}</h3>
-              <Link href="/">
-                <a className="btn">Try our onboarding tool</a>
-              </Link>
+              <a href={adminCTADestination} className="btn">
+                {adminCTAText}
+              </a>
             </div>
 
             <div className="tab-img">
