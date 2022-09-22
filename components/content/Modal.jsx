@@ -16,6 +16,12 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
+      const info =  {
+              first_name: firstName,
+              last_name: lastName,
+            },
+            listName: 'My Emails',
+          },
       const response = await fetch(
         'https://api.mailmodo.com/api/v1/addToList',
         {
@@ -26,12 +32,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
           },
           body: {
             email: email,
-            data: {
-              first_name: firstName,
-              last_name: lastName,
-            },
-            listName: 'My Emails',
-          },
+            data:JSON.stringify(info)
         }
       );
       console.log('Completed!', response);
