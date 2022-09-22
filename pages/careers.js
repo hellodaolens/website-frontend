@@ -5,6 +5,7 @@ import {
   CTA,
   HiringBanner,
 } from '../components/careers';
+import { HeadSeo } from '../components/common';
 
 const Careers = ({ data }) => {
   const {
@@ -29,6 +30,7 @@ const Careers = ({ data }) => {
 
   return (
     <>
+      <HeadSeo title={heroHeading} description={heroDescription} />
       <Hero
         heroHeading={heroHeading}
         heroDescription={heroDescription}

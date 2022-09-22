@@ -1,3 +1,4 @@
+import { HeadSeo } from '../components/common';
 import {
   Hero,
   Banner,
@@ -39,6 +40,7 @@ export default function Home({ data }) {
 
   return (
     <>
+      <HeadSeo title="Personalised DAO Onboarding" />
       <TopBar topBarInfo={topBarInfo} />
       <Hero
         heroHeading={heroHeading}

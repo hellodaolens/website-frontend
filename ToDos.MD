@@ -8,10 +8,10 @@
 - [ ] sliders and buttons on contribution page
 - [ ] slider for careers page CTA section
 - [x] wrap footer in layout
-- [ ] set up head element
+- [x] set up head element
 - [x] make top bar
 - [x] create navbar
-- [ ] make tabs and modal work for content page
+- [x] make tabs and modal work for content page
 - [x] make single blog page
 - [x] set up twitter feed component
 - [x] set up youtube component

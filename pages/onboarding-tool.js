@@ -1,3 +1,4 @@
+import { HeadSeo } from '../components/common';
 import { Hero, Banner, Feature, CTA, LiveDemo } from '../components/onboarding';
 
 const OnBoarding = ({ data }) => {
@@ -28,6 +29,7 @@ const OnBoarding = ({ data }) => {
 
   return (
     <>
+      <HeadSeo title={heroHeading} description={heroSubHeading} />
       <Hero
         heroHeading={heroHeading}
         heroSubHeading={heroSubHeading}

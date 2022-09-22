@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import footerBCG from '../../public/assets/footer-bcg.png';
+import Link from 'next/link';
 
 const Footer = () => {
   const [footerData, setFooterData] = useState([]);
@@ -33,12 +34,16 @@ const Footer = () => {
       <div className="section-center">
         <article className="footer-icons">
           <div className="logo">
-            <Image
-              src={footerData?.logo?.data?.attributes?.url}
-              alt="logo"
-              width={isMobile ? 104 : 150}
-              height={isMobile ? 20 : 28}
-            />
+            <Link href="/">
+              <a>
+                <Image
+                  src={footerData?.logo?.data?.attributes?.url}
+                  alt="logo"
+                  width={isMobile ? 104 : 150}
+                  height={isMobile ? 20 : 28}
+                />
+              </a>
+            </Link>
           </div>
           <div className="social-icons">
             <div className="icons">

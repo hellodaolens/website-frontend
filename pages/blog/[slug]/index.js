@@ -1,30 +1,34 @@
-import { Navbar } from '../../../components/common';
+import { HeadSeo, Navbar } from '../../../components/common';
 import styled from 'styled-components';
 import moment from 'moment/moment';
 import ReactMarkdown from 'react-markdown';
 
 const SingleBlogPage = ({ article }) => {
-  const { author, content, name, createdAt } = article?.attributes;
+  const { author, content, name, shortDescription, createdAt } =
+    article?.attributes;
 
   return (
-    <Container>
-      <Navbar />
-      <main className="section">
-        <div className="section-center blog-center">
-          <div className="title">
-            <h3>{name}</h3>
+    <>
+      <HeadSeo title={name} description={shortDescription} />
+      <Container>
+        <Navbar />
+        <main className="section">
+          <div className="section-center blog-center">
+            <div className="title">
+              <h3>{name}</h3>
+            </div>
+            <div className="author">
+              <p>
+                {author}, {moment(createdAt).format('ll')}
+              </p>
+            </div>
+            <div className="content">
+              <ReactMarkdown>{content}</ReactMarkdown>
+            </div>
           </div>
-          <div className="author">
-            <p>
-              {author}, {moment(createdAt).format('ll')}
-            </p>
-          </div>
-          <div className="content">
-            <ReactMarkdown>{content}</ReactMarkdown>
-          </div>
-        </div>
-      </main>
-    </Container>
+        </main>
+      </Container>
+    </>
   );
 };
 

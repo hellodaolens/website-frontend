@@ -16,12 +16,16 @@ const Navbar = () => {
     <NavContainer>
       <div className="section-center nav-center">
         <div className="logo">
-          <Image
-            src={navItems?.logo?.data?.attributes?.url}
-            alt={navItems?.logo?.data?.attributes?.name}
-            width={145}
-            height={28}
-          />
+          <Link href="/">
+            <a>
+              <Image
+                src={navItems?.logo?.data?.attributes?.url}
+                alt={navItems?.logo?.data?.attributes?.name}
+                width={145}
+                height={28}
+              />
+            </a>
+          </Link>
         </div>
 
         <div className="links">

@@ -5,6 +5,7 @@ import articleBCG from '../../public/assets/content/article-bcg.png';
 import Link from 'next/link';
 
 const Articles = () => {
+  const [allArticles, setAllArticles] = useState([]);
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -12,17 +13,47 @@ const Articles = () => {
       `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&populate=*`
     )
       .then((res) => res.json())
-      .then((data) => setArticles(data?.data));
+      .then((data) => {
+        setAllArticles(data?.data);
+        setArticles(data?.data);
+      });
   }, []);
+
+  const handleFilterArticles = (type) => {
+    const tempArticles = allArticles?.filter(
+      (article) => article.attributes.type.toLowerCase() === type.toLowerCase()
+    );
+    setArticles(tempArticles);
+  };
 
   return (
     <Container className="section">
       <div className="tabs-container">
         <div className="tabs">
-          <button className="tab-btn">Popular</button>
-          <button className="tab-btn">Case study</button>
-          <button className="tab-btn">Trends</button>
-          <button className="tab-btn">DAOS</button>
+          <button
+            className="tab-btn"
+            onClick={() => handleFilterArticles('popular')}
+          >
+            Popular
+          </button>
+          <button
+            className="tab-btn"
+            onClick={() => handleFilterArticles('Case Study')}
+          >
+            Case study
+          </button>
+          <button
+            className="tab-btn"
+            onClick={() => handleFilterArticles('Trends')}
+          >
+            Trends
+          </button>
+          <button
+            className="tab-btn"
+            onClick={() => handleFilterArticles('DAOS')}
+          >
+            DAOS
+          </button>
         </div>
       </div>
 
@@ -37,6 +68,7 @@ const Articles = () => {
             authorDesignation,
             slug,
           } = attributes;
+
           return (
             <Link key={id} href={`/blog/${slug}`}>
               <article className="article">
@@ -60,6 +92,9 @@ const Articles = () => {
           );
         })}
       </div>
+      {articles?.length === 0 && (
+        <h4 style={{ textAlign: 'center' }}>No articles to display...</h4>
+      )}
 
       <div className="btn-container">
         <button className="btn2">View more</button>

@@ -1,3 +1,4 @@
+import { HeadSeo } from '../components/common';
 import { Hero, CTA, TwitterFeed } from '../components/content';
 
 const Content = ({ data }) => {
@@ -6,6 +7,7 @@ const Content = ({ data }) => {
 
   return (
     <>
+      <HeadSeo title="Content" />
       <Hero />
       <CTA
         heading={heading}

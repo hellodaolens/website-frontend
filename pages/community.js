@@ -1,3 +1,4 @@
+import { HeadSeo } from '../components/common';
 import {
   Hero,
   Banner,
@@ -27,6 +28,7 @@ const Community = ({ data }) => {
 
   return (
     <>
+      <HeadSeo title={heroHeading} description={heroDescription} />
       <Hero
         heroSubHeading={heroSubHeading}
         heroHeading={heroHeading}
