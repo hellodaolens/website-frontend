@@ -134,7 +134,8 @@ p {
   h5 {
     font-size: 1rem;
   }
-  body {
+  body,
+  button {
     font-size: 1rem;
   }
   h1,
@@ -150,7 +151,8 @@ small,
   font-size: var(--smallText);
 }
 
-a {
+a,
+button {
   text-decoration: none;
   transition: var(--transition);
 }
@@ -212,6 +214,10 @@ svg {
     linear-gradient(to right, #5fb5fc, #844aff, #df52ff);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
+}
+
+button {
+  font-family: var(--bodyFont);
 }
 
 .btn2:hover {

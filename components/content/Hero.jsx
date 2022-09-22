@@ -12,10 +12,16 @@ import Articles from './Articles';
 import Spotify from './Spotify';
 import { Navbar } from '../common';
 import Videos from './Videos';
+import Modal from './Modal';
 
 const Hero = () => {
   const [bannerArticle, setBannerArticle] = useState();
   const [option, setOption] = useState('articles');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
 
   const updateOptionBtns = (e) => {
     if (e.target.parentNode.classList.contains('option')) {
@@ -69,13 +75,23 @@ const Hero = () => {
                   {bannerArticle?.attributes?.authorDesignation}
                 </p>
               </div>
+
               <div className="btn-container">
                 <Link href={'/'}>
                   <a className="btn">5 min read</a>
                 </Link>
-                <Link href={'/'}>
-                  <a className="btn"> Open Modal</a>
-                </Link>
+                {bannerArticle?.attributes?.showCTAinHighlight && (
+                  <button onClick={openModal} className="btn2">
+                    Join now
+                  </button>
+                )}
+
+                {isModalOpen && (
+                  <Modal
+                    isModalOpen={isModalOpen}
+                    setIsModalOpen={setIsModalOpen}
+                  />
+                )}
               </div>
             </article>
           </div>
@@ -154,7 +170,7 @@ export const Container = styled.section`
   }
 
   .options {
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     text-align: center;
     justify-content: center;
     display: flex;

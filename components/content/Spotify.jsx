@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import ReactPlayer from 'react-player/lazy';
 
 const Spotify = () => {
   const [podcasts, setPodcasts] = useState([]);
@@ -11,72 +10,21 @@ const Spotify = () => {
       .then((data) => setPodcasts(data?.data));
   }, []);
 
-  window.onSpotifyIframeApiReady = (IFrameAPI) => {
-    let element = document.getElementById('embed-iframe');
-    let options = {
-      width: '60%',
-      height: '200',
-      uri: 'spotify:episode:7makk4oTQel546B0PZlDM5',
-    };
-    let callback = (EmbedController) => {
-      document
-        .querySelectorAll('ul#episodes > li > button')
-        .forEach((episode) => {
-          episode.addEventListener('click', () => {
-            EmbedController.loadUri(episode.dataset.spotifyId);
-          });
-        });
-    };
-    IFrameAPI.createController(element, options, callback);
-  };
-
   return (
     <Container className="section">
-      <div id="embed-iframe"></div>
-      <script
-        src="https://open.spotify.com/embed-podcast/iframe-api/v1"
-        async
-      ></script>
-      <script type="text/javascript">
-        {
-          (window.onSpotifyIframeApiReady = (IFrameAPI) => {
-            let element = document.getElementById('embed-iframe');
-            let options = {
-              width: '60%',
-              height: '200',
-              uri: 'spotify:episode:7makk4oTQel546B0PZlDM5',
-            };
-            let callback = (EmbedController) => {
-              document
-                .querySelectorAll('ul#episodes > li > button')
-                .forEach((episode) => {
-                  episode.addEventListener('click', () => {
-                    EmbedController.loadUri(episode.dataset.spotifyId);
-                  });
-                });
-            };
-            IFrameAPI.createController(element, options, callback);
-          })
-        }
-      </script>
       <div className="content-center">
-        <article id="embed-iframe"></article>
         {podcasts?.map((podcast) => {
+          const url = podcast?.attributes?.link;
+          const id = url.split('/')[4];
+
           return (
             <article key={podcast?.id} className="podcast">
-              {/* <ReactPlayer
-                url={video?.attributes?.link}
-                controls={true}
+              <iframe
+                key={podcast?.id}
+                style={{ borderRadius: '15px' }}
+                src={`https://open.spotify.com/embed/episode/${id}?utm_source=generator&theme=0`}
                 width="100%"
                 height="100%"
-              /> */}
-              <iframe
-                style="border-radius:12px"
-                src="https://open.spotify.com/embed/episode/0ppmIaUB4LUpgI84loC5Um?utm_source=generator"
-                width="100%"
-                height="352"
-                frameBorder="0"
-                allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               ></iframe>
@@ -89,16 +37,19 @@ const Spotify = () => {
 };
 
 export const Container = styled.section`
-  .podcast {
+  padding-bottom: 0;
+
+  /* .podcast {
     overflow: hidden;
     position: relative;
     width: 100%;
     max-width: 592px;
-    /* &::after {
+    &::after {
       padding-top: 56.25%;
+      padding-top: 50%;
       display: block;
       content: '';
-    } */
+    }
     iframe {
       position: absolute;
       top: 0;
@@ -107,7 +58,7 @@ export const Container = styled.section`
       height: 100%;
       border-radius: 0.5rem;
     }
-  }
+  } */
 
   .content-center {
     display: grid;

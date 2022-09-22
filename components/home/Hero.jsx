@@ -36,16 +36,21 @@ const Hero = ({
 
 export const Container = styled.section`
   background: url(${heroBCG.src}) top/cover no-repeat;
+  nav {
+    .link-right {
+      z-index: 5;
+    }
+  }
 
   main {
     display: grid;
     align-items: center;
     padding: 4rem 0;
+    padding-top: 0;
 
     @media (min-width: 792px) {
-      min-height: 100vh;
+      min-height: 85vh;
       position: relative;
-      margin-top: -4rem;
     }
 
     .hero-banner {
@@ -66,7 +71,7 @@ export const Container = styled.section`
 
       @media (min-width: 792px) {
         position: absolute;
-        top: 50%;
+        top: 45%;
         transform: translate(0%, -50%);
         max-width: 40rem;
       }
@@ -87,6 +92,7 @@ export const Container = styled.section`
     .hero-img {
       text-align: right;
       position: absolute;
+      z-index: 2;
       right: 0;
       top: 50%;
       transform: translate(0%, -50%);

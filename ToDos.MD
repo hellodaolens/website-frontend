@@ -11,8 +11,8 @@
 - [ ] set up head element
 - [x] make top bar
 - [x] create navbar
-- [ ] make tabs and model work for content page
+- [ ] make tabs and modal work for content page
 - [x] make single blog page
 - [x] set up twitter feed component
 - [x] set up youtube component
-- [ ] set up spotify component
+- [x] set up spotify component

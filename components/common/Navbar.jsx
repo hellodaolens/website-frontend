@@ -12,44 +12,41 @@ const Navbar = () => {
       .then((data) => setNavItems(data?.data?.attributes));
   }, []);
 
-  if (navItems) {
-    return (
-      <NavContainer>
-        <div className="section-center nav-center">
-          <div className="logo">
-            <Image
-              src={navItems?.logo?.data?.attributes?.url}
-              alt={navItems?.logo?.data?.attributes?.name}
-              width={145}
-              height={28}
-            />
-          </div>
-
-          <div className="links">
-            {navItems?.navLinks?.map((item) => {
-              const { id, name, to } = item;
-              return (
-                <Link key={id} href={`/${to}`}>
-                  <a className="link">{name}</a>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="link-right">
-            <Link href="/contact">
-              <a className="btn2">{navItems?.anotherLink}</a>
-            </Link>
-          </div>
+  return (
+    <NavContainer>
+      <div className="section-center nav-center">
+        <div className="logo">
+          <Image
+            src={navItems?.logo?.data?.attributes?.url}
+            alt={navItems?.logo?.data?.attributes?.name}
+            width={145}
+            height={28}
+          />
         </div>
-      </NavContainer>
-    );
-  }
+
+        <div className="links">
+          {navItems?.navLinks?.map((item) => {
+            return (
+              <Link key={item?.id} href={`/${item.to}`}>
+                <a className="link">{item?.name}</a>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="link-right">
+          <Link href="/" style={{ cursor: 'pointer' }}>
+            <a className="btn2">{navItems?.anotherLink}</a>
+          </Link>
+        </div>
+      </div>
+    </NavContainer>
+  );
 };
 
 export const NavContainer = styled.nav`
   background: transparent;
-  /* margin-bottom: 2rem; */
+
   .nav-center {
     max-width: 1136px;
     margin: 0 auto;
@@ -58,9 +55,34 @@ export const NavContainer = styled.nav`
     align-items: center;
     grid-template-columns: auto 1fr auto;
 
-    @media (max-width: 992px) {
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 90px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(100px);
+      width: fit-content;
+      margin: 0 auto;
+      padding: 5px 20px;
+      border: 2px solid #372744;
+    }
+
+    .link {
+      color: var(--clr-white);
+      cursor: pointer;
+    }
+
+    .link-right {
+      .btn2 {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 868px) {
       grid-template-columns: [start] auto [center] auto [end];
-      row-gap: 0.5rem;
+      gap: 0.5rem;
       grid-template-rows: [start] 1fr [center] 1fr [end];
       width: 100vw;
 
@@ -68,6 +90,7 @@ export const NavContainer = styled.nav`
         grid-column: start/center;
         grid-row: start/center;
         margin-left: 5vw;
+        align-self: center;
       }
 
       .links {
@@ -83,31 +106,11 @@ export const NavContainer = styled.nav`
         grid-row: start/center;
         text-align: right;
         margin-right: 5vw;
+
+        .btn2 {
+          padding: 10px 20px;
+        }
       }
-    }
-  }
-
-  .links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 90px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(100px);
-    width: fit-content;
-    margin: 0 auto;
-    padding: 5px 20px;
-    border: 2px solid #372744;
-  }
-
-  .link {
-    color: var(--clr-white);
-  }
-
-  .link-right {
-    .btn2 {
-      margin-top: 0;
     }
   }
 `;
