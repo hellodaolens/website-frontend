@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import bannerBcg from '../../public/assets/content/banner-bcg.png';
 import { FaTimes } from 'react-icons/fa';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Modal = ({ isModalOpen, setIsModalOpen }) => {
   const [firstName, setFirstName] = useState('');
@@ -16,23 +16,36 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-     const response = await fetch(`https://api.mailmodo.com/api/v1/addToList`, {
-        method: 'POST',
-        headers: {
-          mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          "data": {
-            "first_name": firstName,
-            "last_name":lastName
-           },
-          "listName": "My Emails"
-        }),
+      const response = await fetch(
+        `https://api.mailmodo.com/api/v1/addToList`,
+        {
+          method: 'POST',
+          headers: {
+            mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            data: {
+              first_name: firstName,
+              last_name: lastName,
+            },
+            listName: 'My Emails',
+          }),
+        }
+      );
+      toast.success("Thank you for submitting, you'll receive it soon!", {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
       });
       console.log('Completed!', response);
     } catch (err) {
+      toast.error(err, {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
+      });
       console.error(`Error: ${err}`);
     }
     closeModal();

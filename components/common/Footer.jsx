@@ -140,7 +140,6 @@ export const Container = styled.section`
 
     .btn {
       height: 48px;
-      width: 160px;
     }
   }
 `;
