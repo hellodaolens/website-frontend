@@ -16,11 +16,17 @@ export default function Home({ data }) {
     DAOResourcesHeading,
     DAOResources,
     adminHeading,
-    adminImg1,
-    adminImg2,
     adminCTAText,
     adminCTADestination,
+    adminImg1,
+    adminImg2,
     adminPoints,
+    contributorHeading,
+    contributorCTAText,
+    contributorCTADestination,
+    contributorImg1,
+    contributorImg2,
+    contributorPoints,
     customersHeading,
     customersSubHeading,
     heroCTADestination,
@@ -59,6 +65,12 @@ export default function Home({ data }) {
         adminPoints={adminPoints}
         adminCTAText={adminCTAText}
         adminCTADestination={adminCTADestination}
+        contributorHeading={contributorHeading}
+        contributorCTAText={contributorCTAText}
+        contributorCTADestination={contributorCTADestination}
+        contributorImg1={contributorImg1}
+        contributorImg2={contributorImg2}
+        contributorPoints={contributorPoints}
       />
       <Customers
         customersHeading={customersHeading}
@@ -84,7 +96,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo&populate[7]=contributorImg1&populate[8]=contributorImg2&populate[9]=contributorPoints&populate[10]=contributorPoints.img`
   );
   const data = await res.json();
 

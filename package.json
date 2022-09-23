@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@trendyol-js/react-carousel": "^3.0.0",
     "moment": "^2.29.4",
     "next": "12.3.0",
     "react": "18.2.0",
@@ -16,9 +17,11 @@
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
     "react-player": "^2.11.0",
+    "react-slick": "^0.29.0",
     "react-toastify": "^9.0.8",
     "react-twitter-embed": "^4.0.4",
     "sass": "^1.54.9",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

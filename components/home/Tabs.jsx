@@ -10,6 +10,13 @@ const Tabs = ({
   adminPoints,
   adminCTAText,
   adminCTADestination,
+
+  contributorHeading,
+  contributorCTAText,
+  contributorCTADestination,
+  contributorImg1,
+  contributorImg2,
+  contributorPoints,
 }) => {
   const [tabs, setTabs] = useState('admin');
 
@@ -31,6 +38,20 @@ const Tabs = ({
   return (
     <Container className="section">
       <div className="section-center">
+        <div className="tabs-btn-container btn2">
+          <button
+            className={tabs === 'admin' ? 'active' : ''}
+            onClick={() => setTabs('admin')}
+          >
+            <p>Admin</p>
+          </button>
+          <button
+            className={tabs === 'contributor' ? 'active' : ''}
+            onClick={() => setTabs('contributor')}
+          >
+            <p>Contributor</p>
+          </button>
+        </div>
         {tabs === 'admin' && (
           <div className="tab">
             <div className="tab-header">
@@ -79,6 +100,55 @@ const Tabs = ({
             </div>
           </div>
         )}
+
+        {tabs === 'contributor' && (
+          <div className="tab">
+            <div className="tab-header">
+              <h3>{contributorHeading}</h3>
+              <a href={contributorCTADestination} className="btn">
+                {contributorCTAText}
+              </a>
+            </div>
+
+            <div className="tab-img">
+              <div className="big-img">
+                <Image
+                  src={contributorImg1?.data.attributes.url}
+                  alt="admin"
+                  width={1136}
+                  height={629}
+                />
+              </div>
+              <div
+                className="small-img"
+                style={{ position: 'absolute', top: '35%', right: '10%' }}
+              >
+                <Image
+                  src={contributorImg2?.data.attributes.url}
+                  alt="admin"
+                  width={249}
+                  height={492}
+                />
+              </div>
+            </div>
+
+            <div className="tab-points">
+              {contributorPoints?.map((point) => {
+                return (
+                  <div key={point?.id} className="point">
+                    <Image
+                      src={point?.img.data.attributes.url}
+                      alt="point"
+                      width={isMobile ? 48 : 100}
+                      height={isMobile ? 48 : 100}
+                    />
+                    <p>{point?.point}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </Container>
   );
@@ -87,6 +157,53 @@ const Tabs = ({
 export const Container = styled.section`
   position: relative;
   background: url(${tabs.src}) center/cover no-repeat;
+
+  .tabs-btn-container.btn2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.35rem;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+
+      p {
+        color: var(--clr-white);
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+    }
+
+    button.active {
+      background: #200734;
+      p {
+        background: linear-gradient(
+            85.21deg,
+            #5fb5fc -7.59%,
+            #844aff 62.28%,
+            #df52ff 113.15%
+          ),
+          #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
 
   .tab-header {
     display: flex;

@@ -1,4 +1,4 @@
-- [ ] create tabs btn and functionality for homepage admin section
+- [x] create tabs btn and functionality for homepage admin section
 - [ ] set up view more functionality for investors section
 - [ ] set up view more functionality for reviews section
 - [ ] set up slider functionality for resources section on small screen
