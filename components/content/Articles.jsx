@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import articleBCG from '../../public/assets/content/article-bcg.png';
@@ -6,8 +6,26 @@ import Link from 'next/link';
 
 const Articles = ({ allArticles }) => {
   const [articles, setArticles] = useState(allArticles);
+  const [isMobile, setIsMobile] = useState(false);
   const [showAll, setShowAll] = useState(false);
-  const articlesToShow = showAll ? articles : articles?.slice(0, 2);
+  const articlesToShow = isMobile
+    ? showAll
+      ? articles
+      : articles?.slice(0, 2)
+    : articles;
+
+  const setDimension = () => {
+    const ismobile = window.innerWidth < 768;
+    if (ismobile !== isMobile) setIsMobile(ismobile);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', setDimension, false);
+
+    return () => {
+      window.removeEventListener('resize', setDimension);
+    };
+  }, [isMobile]);
 
   const handleFilterArticles = (type) => {
     if (type === 'all') {
