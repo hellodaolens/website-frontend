@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import tabs from '../../public/assets/homepage/tabs.png';
 import styled from 'styled-components';
+import checkMediaType from '../utils/checkMediaType';
 
 const Tabs = ({
   adminHeading,
@@ -63,23 +64,46 @@ const Tabs = ({
 
             <div className="tab-img">
               <div className="big-img">
-                <Image
-                  src={adminImg1?.data.attributes.url}
-                  alt="admin"
-                  width={1136}
-                  height={629}
-                />
+                {checkMediaType(adminImg1) === 'video' ? (
+                  <video
+                    src={adminImg1?.data.attributes.url}
+                    autoPlay
+                    loop
+                    muted
+                    width={1136}
+                    height={629}
+                  />
+                ) : (
+                  <Image
+                    src={adminImg1?.data.attributes.url}
+                    alt="admin"
+                    width={1136}
+                    height={629}
+                  />
+                )}
               </div>
               <div
                 className="small-img"
                 style={{ position: 'absolute', top: '35%', right: '10%' }}
               >
-                <Image
-                  src={adminImg2?.data.attributes.url}
-                  alt="admin"
-                  width={249}
-                  height={492}
-                />
+                {checkMediaType(adminImg2) === 'video' ? (
+                  <video
+                    src={adminImg2?.data.attributes.url}
+                    autoPlay
+                    loop
+                    muted
+                    alt="admin"
+                    width={249}
+                    height={492}
+                  />
+                ) : (
+                  <Image
+                    src={adminImg2?.data.attributes.url}
+                    alt="admin"
+                    width={249}
+                    height={492}
+                  />
+                )}
               </div>
             </div>
 
@@ -112,23 +136,45 @@ const Tabs = ({
 
             <div className="tab-img">
               <div className="big-img">
-                <Image
-                  src={contributorImg1?.data.attributes.url}
-                  alt="admin"
-                  width={1136}
-                  height={629}
-                />
+                {checkMediaType(contributorImg1) === 'video' ? (
+                  <video
+                    src={contributorImg1?.data.attributes.url}
+                    autoPlay
+                    loop
+                    muted
+                    width={1136}
+                    height={629}
+                  />
+                ) : (
+                  <Image
+                    src={contributorImg1?.data.attributes.url}
+                    alt="contributor"
+                    width={1136}
+                    height={629}
+                  />
+                )}
               </div>
               <div
                 className="small-img"
                 style={{ position: 'absolute', top: '35%', right: '10%' }}
               >
-                <Image
-                  src={contributorImg2?.data.attributes.url}
-                  alt="admin"
-                  width={249}
-                  height={492}
-                />
+                {checkMediaType(contributorImg2) === 'video' ? (
+                  <video
+                    src={contributorImg2?.data.attributes.url}
+                    autoPlay
+                    loop
+                    muted
+                    width={249}
+                    height={492}
+                  />
+                ) : (
+                  <Image
+                    src={contributorImg2?.data.attributes.url}
+                    alt="contributor"
+                    width={249}
+                    height={492}
+                  />
+                )}
               </div>
             </div>
 

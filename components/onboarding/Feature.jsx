@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import featureBCG from '../../public/assets/onboarding/feature-bcg.png';
+import checkMediaType from '../utils/checkMediaType';
 
 const Features = ({ Features }) => {
   return (
@@ -17,12 +18,24 @@ const Features = ({ Features }) => {
                 </div>
               </div>
               <div className="img">
-                <Image
-                  src={image?.data?.attributes?.url}
-                  alt={name}
-                  width={636}
-                  height={352}
-                />
+                {checkMediaType(image) === 'video' ? (
+                  <video
+                    src={image?.data?.attributes?.url}
+                    alt={name}
+                    width={636}
+                    height={352}
+                    autoPlay
+                    loop
+                    muted
+                  />
+                ) : (
+                  <Image
+                    src={image?.data?.attributes?.url}
+                    alt={name}
+                    width={636}
+                    height={352}
+                  />
+                )}
               </div>
             </article>
           );

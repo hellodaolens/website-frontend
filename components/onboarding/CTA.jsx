@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import ctaBCG from '../../public/assets/onboarding/cta-bcg.png';
+import checkMediaType from '../utils/checkMediaType';
 
 const CTA = ({
   section2SubHeading,
@@ -16,12 +17,24 @@ const CTA = ({
           <h3>{section2Heading}</h3>
           <p>{section2Description}</p>
           <div className="img">
-            <Image
-              src={section2Img?.data?.attributes?.url}
-              alt="DAO community"
-              width={1136}
-              height={620}
-            />
+            {checkMediaType(section2Img) === 'video' ? (
+              <video
+                src={section2Img?.data?.attributes?.url}
+                alt="DAO community"
+                width={1136}
+                height={620}
+                autoPlay
+                loop
+                muted
+              />
+            ) : (
+              <Image
+                src={section2Img?.data?.attributes?.url}
+                alt="DAO community"
+                width={1136}
+                height={620}
+              />
+            )}
           </div>
         </article>
       </div>

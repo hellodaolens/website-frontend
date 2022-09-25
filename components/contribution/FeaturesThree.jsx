@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import featureBCG from '../../public/assets/onboarding/feature-bcg.png';
 import features3BCG from '../../public/assets/contribution/features3-bcg.png';
+import checkMediaType from '../utils/checkMediaType';
 
 const FeaturesThree = ({
   features3Heading,
@@ -22,17 +23,29 @@ const FeaturesThree = ({
             <article key={id} className="feature">
               <div className="info">
                 <div>
-                  <h4>{name}</h4>
+                  <h4>{name}as</h4>
                   <p>{description}</p>
                 </div>
               </div>
               <div className="img">
-                <Image
-                  src={image?.data?.attributes?.url}
-                  alt={name}
-                  width={636}
-                  height={352}
-                />
+                {checkMediaType(image) === 'video' ? (
+                  <video
+                    src={image?.data?.attributes?.url}
+                    alt={name}
+                    width={636}
+                    height={352}
+                    autoPlay
+                    loop
+                    muted
+                  />
+                ) : (
+                  <Image
+                    src={image?.data?.attributes?.url}
+                    alt={name}
+                    width={636}
+                    height={352}
+                  />
+                )}
               </div>
             </article>
           );

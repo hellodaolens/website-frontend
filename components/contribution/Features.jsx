@@ -3,6 +3,7 @@ import Image from 'next/image';
 import featuresBCG from '../../public/assets/contribution/features3-bcg.png';
 import feature2 from '../../public/assets/contribution/feature2.png';
 import featureBCG from '../../public/assets/onboarding/feature-bcg.png';
+import checkMediaType from '../utils/checkMediaType';
 
 const Features = ({
   featuresHeading,
@@ -24,17 +25,29 @@ const Features = ({
           <div className="feature">
             <div className="info">
               <div>
-                <h4>{feature?.name}</h4>
+                <h4>{feature?.name}as</h4>
                 <p>{feature?.description}</p>
               </div>
             </div>
             <div className="img">
-              <Image
-                src={feature?.image?.data?.attributes?.url}
-                alt={feature?.name}
-                width={636}
-                height={352}
-              />
+              {checkMediaType(feature?.image) === 'video' ? (
+                <video
+                  src={feature?.image?.data?.attributes?.url}
+                  alt={feature?.name}
+                  width={636}
+                  height={352}
+                  autoPlay
+                  loop
+                  muted
+                />
+              ) : (
+                <Image
+                  src={feature?.image?.data?.attributes?.url}
+                  alt={feature?.name}
+                  width={636}
+                  height={352}
+                />
+              )}
             </div>
           </div>
         </article>
@@ -45,12 +58,24 @@ const Features = ({
             return (
               <article key={id} className="feature2">
                 <div className="img">
-                  <Image
-                    src={image?.data?.attributes?.url}
-                    alt={name}
-                    width={636}
-                    height={352}
-                  />
+                  {checkMediaType(image) === 'video' ? (
+                    <video
+                      src={image?.data?.attributes?.url}
+                      alt={name}
+                      width={636}
+                      height={352}
+                      autoPlay
+                      loop
+                      muted
+                    />
+                  ) : (
+                    <Image
+                      src={image?.data?.attributes?.url}
+                      alt={name}
+                      width={636}
+                      height={352}
+                    />
+                  )}
                 </div>
                 <div className="info">
                   <div>

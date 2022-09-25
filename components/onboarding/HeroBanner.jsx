@@ -1,6 +1,7 @@
 import Users from './User';
 import styled from 'styled-components';
 import Image from 'next/image';
+import checkMediaType from '../utils/checkMediaType';
 
 const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
   return (
@@ -8,23 +9,47 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
       <div className="section-center">
         <div className="img">
           <div className="big-img">
-            <Image
-              src={heroImg1?.data.attributes.url}
-              alt="admin"
-              width={1136}
-              height={629}
-            />
+            {checkMediaType(heroImg1) === 'video' ? (
+              <video
+                src={heroImg1?.data.attributes.url}
+                alt="onboarding"
+                width={1136}
+                height={629}
+                autoPlay
+                loop
+                muted
+              />
+            ) : (
+              <Image
+                src={heroImg1?.data.attributes.url}
+                alt="onboarding"
+                width={1136}
+                height={629}
+              />
+            )}
           </div>
           <div
             className="small-img"
             style={{ position: 'absolute', top: '35%', right: '10%' }}
           >
-            <Image
-              src={heroImg2?.data.attributes.url}
-              alt="admin"
-              width={249}
-              height={492}
-            />
+            {checkMediaType(heroImg2) === 'video' ? (
+              <video
+                src={heroImg2?.data.attributes.url}
+                alt="onboarding"
+                width={249}
+                height={492}
+                autoPlay
+                loop
+                muted
+              />
+            ) : (
+              <Image
+                src={heroImg2?.data.attributes.url}
+                alt="onboarding"
+                width={249}
+                height={492}
+              />
+            )}
           </div>
         </div>
         <Users users={users} usedByHeading={usedByHeading} />

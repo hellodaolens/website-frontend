@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import heroLastSection from '../../public/assets/homepage/hero-last-section.png';
+import checkMediaType from '../utils/checkMediaType';
 
 const CTA = ({
   lastSectionDescription,
@@ -21,14 +22,27 @@ const CTA = ({
             <p>{lastSectionDescription}</p>
           </article>
           <article className="img">
-            <Image
-              src={lastSectionImg?.data?.attributes?.url}
-              alt="last section image"
-              width={512}
-              height={316}
-              objectFit="cover"
-              className="image"
-            />
+            {checkMediaType(lastSectionImg) === 'video' ? (
+              <video
+                src={lastSectionImg?.data?.attributes?.url}
+                alt="last section image"
+                autoPlay
+                loop
+                muted
+                width={512}
+                height={316}
+                className="image"
+              />
+            ) : (
+              <Image
+                src={lastSectionImg?.data?.attributes?.url}
+                alt="last section image"
+                width={512}
+                height={316}
+                objectFit="cover"
+                className="image"
+              />
+            )}
           </article>
         </div>
         <a href={lastSectionCTADestination} className="btn">
