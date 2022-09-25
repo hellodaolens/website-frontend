@@ -21,7 +21,13 @@ const LiveDemo = ({
         </article>
 
         <article className="arrow">
-          <Image src={arrow} alt="arrow" objectFit="contain" />
+          <Image
+            src={arrow}
+            alt="arrow"
+            objectFit="contain"
+            placeholder="blur"
+            blurDataURL={arrow}
+          />
         </article>
 
         <article className="img">
@@ -31,6 +37,8 @@ const LiveDemo = ({
             width={120}
             height={120}
             objectFit="contain"
+            placeholder="blur"
+            blurDataURL={lastSectionImg?.data?.attributes?.url}
           />
 
           <a href={lastSectionCTADestination} className="btn">

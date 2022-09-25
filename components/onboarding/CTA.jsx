@@ -34,6 +34,8 @@ const CTA = ({
                 alt="DAO community"
                 width={1136}
                 height={620}
+                placeholder="blur"
+                blurDataURL={section2Img?.data?.attributes?.url}
               />
             )}
           </div>

@@ -66,6 +66,10 @@ const Customers = ({ customers, section2Heading }) => {
                     width={isMobile ? 44 : 64}
                     height={isMobile ? 44 : 64}
                     objectFit="contain"
+                    placeholder="blur"
+                    blurDataURL={
+                      customer?.attributes?.logo?.data?.attributes?.url
+                    }
                   />
                   <p>{customer?.attributes?.name}</p>
                 </article>

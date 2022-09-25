@@ -39,6 +39,8 @@ const Reviews = ({ reviews }) => {
                   alt={review?.attributes?.company}
                   width={isMobile ? 44 : 64}
                   height={isMobile ? 44 : 64}
+                  placeholder="blur"
+                  blurDataURL={review?.attributes?.image?.data?.attributes?.url}
                 />
                 <p>{review?.attributes?.testimonial}</p>
                 <h5>{review?.attributes?.by}</h5>

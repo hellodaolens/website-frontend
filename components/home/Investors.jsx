@@ -20,6 +20,10 @@ const Investors = ({ investors }) => {
                   width={40}
                   height={40}
                   objectFit="contain"
+                  placeholder="blur"
+                  blurDataURL={
+                    investor?.attributes?.logo?.data?.attributes?.url
+                  }
                 />
                 <p>{investor?.attributes?.name}</p>
               </article>

@@ -80,6 +80,8 @@ const Tabs = ({
                     alt="admin"
                     width={1136}
                     height={629}
+                    placeholder="blur"
+                    blurDataURL={adminImg1?.data.attributes.url}
                   />
                 )}
               </div>
@@ -104,6 +106,8 @@ const Tabs = ({
                     alt="admin"
                     width={249}
                     height={492}
+                    placeholder="blur"
+                    blurDataURL={adminImg2?.data.attributes.url}
                   />
                 )}
               </div>
@@ -118,6 +122,8 @@ const Tabs = ({
                       alt="point"
                       width={isMobile ? 48 : 100}
                       height={isMobile ? 48 : 100}
+                      placeholder="blur"
+                      blurDataURL={point?.img.data.attributes.url}
                     />
                     <p>{point?.point}</p>
                   </div>
@@ -154,6 +160,8 @@ const Tabs = ({
                     alt="contributor"
                     width={1136}
                     height={629}
+                    placeholder="blur"
+                    blurDataURL={contributorImg1?.data.attributes.url}
                   />
                 )}
               </div>
@@ -177,6 +185,8 @@ const Tabs = ({
                     alt="contributor"
                     width={249}
                     height={492}
+                    placeholder="blur"
+                    blurDataURL={contributorImg2?.data.attributes.url}
                   />
                 )}
               </div>
@@ -191,6 +201,8 @@ const Tabs = ({
                       alt="point"
                       width={isMobile ? 48 : 100}
                       height={isMobile ? 48 : 100}
+                      placeholder="blur"
+                      blurDataURL={point?.img.data.attributes.url}
                     />
                     <p>{point?.point}</p>
                   </div>

@@ -56,6 +56,10 @@ const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
               alt="banner"
               width={520}
               height={376}
+              placeholder="blur"
+              blurDataURL={
+                bannerArticle?.attributes?.image?.data?.attributes?.url
+              }
             />
             <article className="info">
               <h3>{bannerArticle?.attributes?.name}</h3>
@@ -124,6 +128,7 @@ const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
                 width={100}
                 height={100}
                 objectFit="contain"
+                placeholder="blur"
               />
               <p>Podcasts</p>
             </button>

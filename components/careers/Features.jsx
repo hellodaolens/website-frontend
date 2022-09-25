@@ -27,6 +27,8 @@ const Features = ({ section2Heading, buildingFor }) => {
                   alt={name}
                   width={636}
                   height={352}
+                  placeholder="blur"
+                  blurDataURL={image?.data?.attributes?.url}
                 />
               </div>
             </article>

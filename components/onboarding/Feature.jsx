@@ -35,6 +35,8 @@ const Features = ({ Features }) => {
                     alt={name}
                     width={636}
                     height={352}
+                    placeholder="blur"
+                    blurDataURL={image?.data?.attributes?.url}
                   />
                 )}
               </div>

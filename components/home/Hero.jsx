@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import Image from 'next/image';
-import heroImg from '../../public/assets/homepage/hero-img.svg';
-import heroBCG from '../../public/assets/homepage/hero-bcg.png';
+import heroBCGSmall from '../../public/assets/homepage/hero-bcg-small.png';
+import heroBCGBig from '../../public/assets/homepage/hero-bcg-big.png';
 import { Navbar } from '../common';
 
 const Hero = ({
@@ -24,9 +23,6 @@ const Hero = ({
                 {heroCTAText}
               </a>
             </article>
-            <article className="hero-img">
-              <Image src={heroImg} alt="hero" />
-            </article>
           </div>
         </div>
       </main>
@@ -35,11 +31,11 @@ const Hero = ({
 };
 
 export const Container = styled.section`
-  background: url(${heroBCG.src}) top/cover no-repeat;
-  nav {
-    .link-right {
-      z-index: 5;
-    }
+  background: url(${heroBCGSmall.src}) center/cover no-repeat;
+
+  @media (min-width: 792px) {
+    background: url(${heroBCGBig.src}) center/contain no-repeat;
+    background-size: 100vw 100%;
   }
 
   main {
@@ -50,7 +46,6 @@ export const Container = styled.section`
 
     @media (min-width: 792px) {
       min-height: 85vh;
-      position: relative;
     }
 
     .hero-banner {
@@ -70,9 +65,7 @@ export const Container = styled.section`
       margin: 0 auto;
 
       @media (min-width: 792px) {
-        position: absolute;
-        top: 45%;
-        transform: translate(0%, -50%);
+        transform: translate(0%, -2rem);
         max-width: 40rem;
       }
     }
@@ -87,19 +80,6 @@ export const Container = styled.section`
 
     .hero-info p {
       margin: 2rem 0;
-    }
-
-    .hero-img {
-      text-align: right;
-      position: absolute;
-      z-index: 2;
-      right: 0;
-      top: 50%;
-      transform: translate(0%, -50%);
-
-      @media (max-width: 792px) {
-        display: none;
-      }
     }
   }
 `;

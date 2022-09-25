@@ -33,6 +33,8 @@ const Hero = ({
               width={903.91}
               height={454}
               objectFit="contain"
+              placeholder="blur"
+              blurDataURL={heroImg?.data?.attributes?.url}
             />
           </div>
         </main>

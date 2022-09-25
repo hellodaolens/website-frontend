@@ -25,6 +25,8 @@ const Navbar = ({ navItems }) => {
                 alt={navItems?.logo?.data?.attributes?.name}
                 width={145}
                 height={28}
+                placeholder="blur"
+                blurDataURL={navItems?.logo?.data?.attributes?.url}
               />
             </a>
           </Link>
@@ -119,7 +121,7 @@ export const NavContainer = styled.nav`
       background: #372744;
       border-radius: 12px;
       padding: 0.5rem 0;
-      z-index: 100;
+      z-index: 5;
       margin-top: 0.5rem;
 
       .dropdown-link {

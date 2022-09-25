@@ -41,6 +41,8 @@ const Footer = () => {
                   alt="logo"
                   width={isMobile ? 104 : 150}
                   height={isMobile ? 20 : 28}
+                  placeholder="blur"
+                  blurDataURL={footerData?.logo?.data?.attributes?.url}
                 />
               </a>
             </Link>
@@ -61,6 +63,8 @@ const Footer = () => {
                       width={isMobile ? 24 : 28}
                       height={isMobile ? 24 : 28}
                       objectFit="contain"
+                      placeholder="blur"
+                      blurDataURL={socialMediaLink?.logo?.data?.attributes?.url}
                     />
                   </a>
                 );

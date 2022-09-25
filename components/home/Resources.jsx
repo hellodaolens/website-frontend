@@ -33,10 +33,14 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleFilterResources = (type) => {
-    const tempResources = DAOResources?.filter(
-      (resource) => resource.type.toLowerCase() === type.toLowerCase()
-    );
-    setResources(tempResources);
+    if (type === 'all') {
+      setResources(DAOResources);
+    } else {
+      const tempResources = DAOResources?.filter(
+        (resource) => resource.type.toLowerCase() === type.toLowerCase()
+      );
+      setResources(tempResources);
+    }
   };
 
   const setDimension = () => {
@@ -60,6 +64,9 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
         </div>
 
         <div className="tabs-container">
+          <button className="btn2" onClick={() => handleFilterResources('all')}>
+            all
+          </button>
           <button
             className="btn2"
             onClick={() => handleFilterResources('product')}
@@ -106,6 +113,8 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
                     width={isMobile ? 44 : 80}
                     height={isMobile ? 44 : 80}
                     objectFit="contain"
+                    placeholder="blur"
+                    blurDataURL={resource?.logo?.data?.attributes?.url}
                   />
                   <div className="resource-info">
                     <h5>{resource?.name}</h5>

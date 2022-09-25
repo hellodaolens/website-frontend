@@ -64,6 +64,10 @@ const Users = ({ users: customers, usedByHeading }) => {
                     alt={customer?.attributes?.name}
                     width={isMobile ? 44 : 64}
                     height={isMobile ? 44 : 64}
+                    placeholder="blur"
+                    blurDataURL={
+                      customer?.attributes?.logo?.data?.attributes?.url
+                    }
                   />
                   <p>{customer?.attributes?.name}</p>
                 </article>

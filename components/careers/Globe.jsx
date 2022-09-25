@@ -15,6 +15,8 @@ const Globe = ({ section1Heading, section1Description, section1Img }) => {
             alt="globe"
             width={1230}
             height={452.71}
+            placeholder="blur"
+            blurDataURL={section1Img?.data?.attributes?.url}
           />
         </div>
       </div>

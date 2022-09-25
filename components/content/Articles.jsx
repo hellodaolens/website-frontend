@@ -6,12 +6,19 @@ import Link from 'next/link';
 
 const Articles = ({ allArticles }) => {
   const [articles, setArticles] = useState(allArticles);
+  const [showAll, setShowAll] = useState(false);
+  const articlesToShow = showAll ? articles : articles?.slice(0, 2);
 
   const handleFilterArticles = (type) => {
-    const tempArticles = allArticles?.filter(
-      (article) => article.attributes.type.toLowerCase() === type.toLowerCase()
-    );
-    setArticles(tempArticles);
+    if (type === 'all') {
+      setArticles(allArticles);
+    } else {
+      const tempArticles = allArticles?.filter(
+        (article) =>
+          article.attributes.type.toLowerCase() === type.toLowerCase()
+      );
+      setArticles(tempArticles);
+    }
   };
 
   return (
@@ -20,9 +27,9 @@ const Articles = ({ allArticles }) => {
         <div className="tabs">
           <button
             className="tab-btn"
-            onClick={() => handleFilterArticles('popular')}
+            onClick={() => handleFilterArticles('all')}
           >
-            Popular
+            All
           </button>
           <button
             className="tab-btn"
@@ -46,7 +53,7 @@ const Articles = ({ allArticles }) => {
       </div>
 
       <div className="content">
-        {articles?.map((article) => {
+        {articlesToShow?.map((article) => {
           const { id, attributes } = article;
           const {
             name,
@@ -65,6 +72,8 @@ const Articles = ({ allArticles }) => {
                   alt={name}
                   width={304}
                   height={156}
+                  placeholder="blur"
+                  blurDataURL={image?.data?.attributes?.url}
                 />
                 <div>
                   <h4>{name}</h4>
@@ -84,9 +93,13 @@ const Articles = ({ allArticles }) => {
         <h4 style={{ textAlign: 'center' }}>No articles to display...</h4>
       )}
 
-      <div className="btn-container">
-        <button className="btn2">View more</button>
-      </div>
+      {articles?.length > 2 && (
+        <div className="btn-container">
+          <button className="btn2" onClick={() => setShowAll(!showAll)}>
+            View {showAll ? 'Less' : 'More'}
+          </button>
+        </div>
+      )}
     </Container>
   );
 };

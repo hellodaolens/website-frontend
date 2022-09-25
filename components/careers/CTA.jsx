@@ -67,6 +67,8 @@ const CTA = ({ teamHeading, teamDescription, teamImages }) => {
                     width={isMobile ? 595 : 1136}
                     height={isMobile ? 300 : 480}
                     objectFit="contain"
+                    placeholder="blur"
+                    blurDataURL={team?.attributes.url}
                   />
                 </div>
               );

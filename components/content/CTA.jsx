@@ -44,6 +44,8 @@ const CTA = ({
               alt={CTAText}
               width={508}
               height={308}
+              placeholder="blur"
+              blurDataURL={image?.data?.attributes?.url}
             />
           </article>
         </div>
@@ -57,6 +59,8 @@ const CTA = ({
                   alt="point"
                   width={isMobile ? 48 : 100}
                   height={isMobile ? 48 : 100}
+                  placeholder="blur"
+                  blurDataURL={point?.img.data.attributes.url}
                 />
                 <p>{point?.point}</p>
               </div>

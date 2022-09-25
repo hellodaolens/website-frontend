@@ -26,6 +26,8 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
                 alt="contributions"
                 width={1136}
                 height={629}
+                placeholder="blur"
+                blurDataURL={heroImg1?.data.attributes.url}
               />
             )}
           </div>
@@ -50,6 +52,8 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
                 alt="contributions"
                 width={249}
                 height={492}
+                placeholder="blur"
+                blurDataURL={heroImg2?.data.attributes.url}
               />
             )}
           </div>

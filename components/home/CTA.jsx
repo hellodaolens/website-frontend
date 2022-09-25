@@ -42,6 +42,8 @@ const CTA = ({
                 height={316}
                 objectFit="cover"
                 className="image"
+                placeholder="blur"
+                blurDataURL={lastSectionImg?.data?.attributes?.url}
               />
             )}
           </article>
