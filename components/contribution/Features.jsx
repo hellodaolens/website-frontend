@@ -36,6 +36,7 @@ const Features = ({
                   alt={feature?.name}
                   width={636}
                   height={352}
+                  style={{ maxWidth: '636px' }}
                   autoPlay
                   loop
                   muted
@@ -63,6 +64,7 @@ const Features = ({
                       src={image?.data?.attributes?.url}
                       alt={name}
                       width={636}
+                      style={{ maxWidth: '636px' }}
                       height={352}
                       autoPlay
                       loop

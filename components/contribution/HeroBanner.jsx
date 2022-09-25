@@ -14,6 +14,7 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
                 src={heroImg1?.data.attributes.url}
                 alt="contributions"
                 width={1136}
+                style={{ maxWidth: '1136px' }}
                 height={629}
                 autoPlay
                 loop
@@ -37,6 +38,7 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
                 src={heroImg2?.data.attributes.url}
                 alt="contributions"
                 width={249}
+                style={{ maxWidth: '249px' }}
                 height={492}
                 autoPlay
                 loop

@@ -309,3 +309,8 @@ button {
     width: 95vw;
   }
 }
+
+video {
+  width: 100%;
+  height: auto;
+}

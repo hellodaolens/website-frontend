@@ -1,8 +1,19 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Navbar = ({ navItems }) => {
+  const [showMenu, setShowMenu] = useState(false);
+  const { pathname } = useRouter();
+
+  const handleNavClick = (item) => {
+    if (item?.navLinks2.length > 0) {
+      setShowMenu(!showMenu);
+    }
+  };
+
   return (
     <NavContainer>
       <div className="section-center nav-center">
@@ -22,17 +33,42 @@ const Navbar = ({ navItems }) => {
         <div className="links">
           {navItems?.navLinks?.map((item) => {
             return (
-              <Link key={item?.id} href={`/${item.to}`}>
-                <a className="link">{item?.name}</a>
+              <Link
+                key={item?.id}
+                href={item?.navLinks2.length > 0 ? pathname : `/${item.to}`}
+              >
+                <a
+                  className="link"
+                  id={pathname === `/${item?.to}` ? 'active' : ''}
+                  onClick={() => handleNavClick(item)}
+                >
+                  <span>{item?.name}</span>
+                  {showMenu > 0 && (
+                    <div className="dropdown">
+                      {item?.navLinks2?.map((item) => {
+                        return (
+                          <Link key={item?.id} href={`/${item?.to}`}>
+                            <a
+                              className="dropdown-link link"
+                              id={pathname === `/${item?.to}` ? 'active' : ''}
+                            >
+                              <span>{item?.name}</span>
+                            </a>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </a>
               </Link>
             );
           })}
         </div>
 
         <div className="link-right">
-          <Link href="/" style={{ cursor: 'pointer' }}>
-            <a className="btn2">{navItems?.anotherLink}</a>
-          </Link>
+          <a href={navItems?.anotherLinkDestination} className="btn2">
+            {navItems?.anotherLink}
+          </a>
         </div>
       </div>
     </NavContainer>
@@ -60,7 +96,7 @@ export const NavContainer = styled.nav`
       backdrop-filter: blur(100px);
       width: fit-content;
       margin: 0 auto;
-      padding: 5px 20px;
+      padding: 5px 1rem;
       border: 2px solid #372744;
     }
 
@@ -72,6 +108,46 @@ export const NavContainer = styled.nav`
     .link-right {
       .btn2 {
         margin-top: 0;
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      display: flex;
+      flex-direction: column;
+      background: #372744;
+      border-radius: 12px;
+      padding: 0.5rem 0;
+      z-index: 100;
+      margin-top: 0.5rem;
+
+      .dropdown-link {
+        padding: 0.75rem 1rem;
+
+        &:hover {
+          background-color: #43334f;
+        }
+      }
+    }
+
+    #active {
+      background: #200734;
+      border-radius: 2rem;
+      padding: 0.25rem 0.5rem;
+
+      span {
+        background: linear-gradient(
+            85.21deg,
+            #5fb5fc -7.59%,
+            #844aff 62.28%,
+            #df52ff 113.15%
+          ),
+          #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
       }
     }
 

@@ -33,6 +33,7 @@ const FeaturesThree = ({
                     src={image?.data?.attributes?.url}
                     alt={name}
                     width={636}
+                    style={{ maxWidth: '636px' }}
                     height={352}
                     autoPlay
                     loop

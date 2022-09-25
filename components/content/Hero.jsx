@@ -147,6 +147,7 @@ export const Container = styled.section`
     padding: 1.5rem;
     border-radius: 20px;
     display: grid;
+    margin-top: 2rem;
 
     @media (min-width: 992px) {
       grid-template-columns: 1fr 1fr;

@@ -27,6 +27,7 @@ const Features = ({ Features }) => {
                     autoPlay
                     loop
                     muted
+                    style={{ maxWidth: '636px' }}
                   />
                 ) : (
                   <Image

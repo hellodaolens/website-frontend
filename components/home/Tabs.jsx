@@ -71,6 +71,7 @@ const Tabs = ({
                     loop
                     muted
                     width={1136}
+                    style={{ maxWidth: '1136px' }}
                     height={629}
                   />
                 ) : (
@@ -94,6 +95,7 @@ const Tabs = ({
                     muted
                     alt="admin"
                     width={249}
+                    style={{ maxWidth: '249px' }}
                     height={492}
                   />
                 ) : (
@@ -143,6 +145,7 @@ const Tabs = ({
                     loop
                     muted
                     width={1136}
+                    style={{ maxWidth: '1136px' }}
                     height={629}
                   />
                 ) : (
@@ -165,6 +168,7 @@ const Tabs = ({
                     loop
                     muted
                     width={249}
+                    style={{ maxWidth: '249px' }}
                     height={492}
                   />
                 ) : (

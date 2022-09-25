@@ -68,7 +68,7 @@ export async function getStaticProps() {
 
   // nav data
   const navRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate[0]=navLinks&populate[1]=navLinks.navLinks2&populate[2]=logo`
   );
   const navData = await navRes.json();
 

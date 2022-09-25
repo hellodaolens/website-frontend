@@ -31,6 +31,7 @@ const CTA = ({
                 muted
                 width={512}
                 height={316}
+                style={{ maxWidth: '512px' }}
                 className="image"
               />
             ) : (
