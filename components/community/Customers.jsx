@@ -1,9 +1,29 @@
 import { useState, useEffect } from 'react';
+import Carousel from 'react-multi-carousel';
 import styled from 'styled-components';
 import Image from 'next/image';
 import ctaBCG from '../../public/assets/onboarding/cta-bcg.png';
 
 const Customers = ({ customers, section2Heading }) => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2,
+    },
+  };
   const [isMobile, setIsMobile] = useState(false);
 
   const setDimension = () => {
@@ -27,19 +47,31 @@ const Customers = ({ customers, section2Heading }) => {
         </div>
 
         <div className="customer-center">
-          {customers?.map((customer) => {
-            return (
-              <article key={customer?.id} className="customer">
-                <Image
-                  src={customer?.attributes?.logo?.data?.attributes?.url}
-                  alt={customer?.attributes?.name}
-                  width={isMobile ? 44 : 64}
-                  height={isMobile ? 44 : 64}
-                />
-                <p>{customer?.attributes?.name}</p>
-              </article>
-            );
-          })}
+          <Carousel
+            showDots={true}
+            renderDotsOutside={true}
+            containerClass="carousel-container"
+            rewind={true}
+            responsive={responsive}
+            renderButtonGroupOutside={true}
+            removeArrowOnDeviceType={['tablet', 'mobile']}
+            keyBoardControl={true}
+          >
+            {customers?.map((customer) => {
+              return (
+                <article key={customer?.id} className="customer">
+                  <Image
+                    src={customer?.attributes?.logo?.data?.attributes?.url}
+                    alt={customer?.attributes?.name}
+                    width={isMobile ? 44 : 64}
+                    height={isMobile ? 44 : 64}
+                    objectFit="contain"
+                  />
+                  <p>{customer?.attributes?.name}</p>
+                </article>
+              );
+            })}
+          </Carousel>
         </div>
 
         <p className="bottom-text">And many more...</p>
@@ -59,31 +91,36 @@ export const Container = styled.section`
     }
   }
 
+  .carousel-container {
+    width: 100%;
+  }
+
   .customer-center {
     margin: 4rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    margin-bottom: 8rem;
+
+    .react-multiple-carousel__arrow--left {
+      left: 0%;
+    }
+    .react-multiple-carousel__arrow--right {
+      right: 0%;
+    }
+
+    .react-multi-carousel-dot-list {
+      margin-top: 4rem;
+      bottom: unset;
+    }
   }
 
   .customer {
     display: flex;
+    /* grid-template-columns: auto auto; */
     align-items: center;
     gap: 1rem;
+    margin: 0 0.5rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 100px;
     padding: 8px 32px 8px 8px;
-  }
-
-  .customer-img {
-    width: 44px;
-    height: 44px;
-
-    @media screen and (min-width: 792px) {
-      width: 64px;
-      height: 64px;
-    }
   }
 
   .customer p {

@@ -1,8 +1,28 @@
 import { useState, useEffect } from 'react';
+import Carousel from 'react-multi-carousel';
 import styled from 'styled-components';
 import Image from 'next/image';
 
 const Users = ({ users, usedByHeading }) => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2,
+    },
+  };
   const [isMobile, setIsMobile] = useState(false);
 
   const setDimension = () => {
@@ -26,19 +46,30 @@ const Users = ({ users, usedByHeading }) => {
         </div>
 
         <div className="customer-center">
-          {users?.map((customer) => {
-            return (
-              <article key={customer?.id} className="customer">
-                <Image
-                  src={customer?.attributes?.logo?.data?.attributes?.url}
-                  alt={customer?.attributes?.name}
-                  width={isMobile ? 44 : 64}
-                  height={isMobile ? 44 : 64}
-                />
-                <p>{customer?.attributes?.name}</p>
-              </article>
-            );
-          })}
+          <Carousel
+            showDots={true}
+            renderDotsOutside={true}
+            containerClass="carousel-container"
+            rewind={true}
+            responsive={responsive}
+            renderButtonGroupOutside={true}
+            removeArrowOnDeviceType={['tablet', 'mobile']}
+            keyBoardControl={true}
+          >
+            {users?.map((customer) => {
+              return (
+                <article key={customer?.id} className="customer">
+                  <Image
+                    src={customer?.attributes?.logo?.data?.attributes?.url}
+                    alt={customer?.attributes?.name}
+                    width={isMobile ? 44 : 64}
+                    height={isMobile ? 44 : 64}
+                  />
+                  <p>{customer?.attributes?.name}</p>
+                </article>
+              );
+            })}
+          </Carousel>
         </div>
       </div>
     </Container>
@@ -55,22 +86,33 @@ export const Container = styled.section`
     }
   }
 
+  .carousel-container {
+    width: 100%;
+  }
+
   .customer-center {
     margin: 4rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem 4rem;
+    margin-bottom: 8rem;
 
-    @media (max-width: 768px) {
-      gap: 2rem;
+    .react-multiple-carousel__arrow--left {
+      left: 0%;
+    }
+    .react-multiple-carousel__arrow--right {
+      right: 0%;
+    }
+
+    .react-multi-carousel-dot-list {
+      margin-top: 4rem;
+      bottom: unset;
     }
   }
 
   .customer {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 1rem;
+    margin: 0 1rem;
   }
 
   .customer-img {

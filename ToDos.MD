@@ -1,12 +1,15 @@
 - [x] create tabs btn and functionality for homepage admin section
 - [x] set up view more functionality for investors section
 - [x] set up view more functionality for reviews section
-- [ ] set up slider functionality for resources section on small screen
-- [ ] set up tabs for resources section
+- [x] set up slider functionality for resources section on small screen
+- [x] set up tabs for resources section
 - [x] Check urls & hrefs for all the btns
 - [x] improve component nomenclature
-- [ ] sliders and buttons on contribution page
-- [ ] slider for careers page CTA section
+- [x] slider on home page - customers section
+- [x] slider on onboarding page - users section
+- [x] slider on contribution page - users section
+- [x] slider on community page - customers section
+- [x] slider pn careers page - CTA section
 - [x] wrap footer in layout
 - [x] set up head element
 - [x] make top bar
@@ -16,4 +19,4 @@
 - [x] set up twitter feed component
 - [x] set up youtube component
 - [x] set up spotify component
-- [ ] fix navbar menu
+- [x] fix navbar menu
