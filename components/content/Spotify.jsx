@@ -1,15 +1,6 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const Spotify = () => {
-  const [podcasts, setPodcasts] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/podcast-embeds?populate=*`)
-      .then((res) => res.json())
-      .then((data) => setPodcasts(data?.data));
-  }, []);
-
+const Spotify = ({ podcasts }) => {
   return (
     <Container className="section">
       <div className="content-center">

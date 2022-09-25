@@ -5,17 +5,19 @@ import Link from 'next/link';
 import { Navbar } from '../common';
 
 const Hero = ({
+  navItems,
   heroHeading,
   heroDescription,
   heroCTAText,
   heroCTADestination,
   heroImg1,
   heroImg2,
+  users,
   usedByHeading,
 }) => {
   return (
     <Container>
-      <Navbar />
+      <Navbar navItems={navItems} />
       <main>
         <div className="main section-center">
           <div className="hero-content">
@@ -28,6 +30,7 @@ const Hero = ({
         </div>
 
         <HeroBanner
+          users={users}
           heroImg1={heroImg1}
           heroImg2={heroImg2}
           usedByHeading={usedByHeading}

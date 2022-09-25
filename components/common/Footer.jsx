@@ -98,7 +98,7 @@ export const Container = styled.section`
   .icons {
     margin-top: 3rem;
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 
     @media (max-width: 592px) {
       margin-top: 1rem;
@@ -106,6 +106,7 @@ export const Container = styled.section`
   }
 
   .social-icons p {
+    margin-top: 0.75rem;
     margin-bottom: 0;
   }
 

@@ -1,7 +1,7 @@
 import { HeadSeo } from '../components/common';
 import { Hero, Banner, Feature, CTA, LiveDemo } from '../components/onboarding';
 
-const OnBoarding = ({ data }) => {
+const OnBoarding = ({ data, navItems, users }) => {
   const {
     heroHeading,
     heroSubHeading,
@@ -31,6 +31,8 @@ const OnBoarding = ({ data }) => {
     <>
       <HeadSeo title={heroHeading} description={heroSubHeading} />
       <Hero
+        navItems={navItems}
+        users={users}
         heroHeading={heroHeading}
         heroSubHeading={heroSubHeading}
         heroCTAText={heroCTAText}
@@ -72,8 +74,23 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  const navRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+  );
+  const navData = await navRes.json();
+
+  // users data
+  const usersRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+  );
+  const usersData = await usersRes.json();
+
   return {
-    props: { data },
+    props: {
+      data,
+      navItems: navData?.data?.attributes,
+      users: usersData?.data,
+    },
     revalidate: 1,
   };
 }

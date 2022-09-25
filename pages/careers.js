@@ -7,7 +7,7 @@ import {
 } from '../components/careers';
 import { HeadSeo } from '../components/common';
 
-const Careers = ({ data }) => {
+const Careers = ({ data, navItems }) => {
   const {
     heroHeading,
     heroDescription,
@@ -32,6 +32,7 @@ const Careers = ({ data }) => {
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
       <Hero
+        navItems={navItems}
         heroHeading={heroHeading}
         heroDescription={heroDescription}
         heroCTAText={heroCTAText}
@@ -67,8 +68,13 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  const navRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+  );
+  const navData = await navRes.json();
+
   return {
-    props: { data },
+    props: { data, navItems: navData?.data?.attributes },
     revalidate: 1,
   };
 }

@@ -21,6 +21,8 @@ export const Container = styled.div`
   padding: 0.5rem 2rem;
   text-align: center;
   width: 100%;
+  position: relative;
+  z-index: 3;
 
   p {
     margin: 0 auto;

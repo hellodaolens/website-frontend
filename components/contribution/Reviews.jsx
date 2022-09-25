@@ -5,9 +5,10 @@ import review1 from '../../public/assets/homepage/review1.png';
 import review2 from '../../public/assets/homepage/review2.png';
 import review3 from '../../public/assets/homepage/review3.png';
 
-const Reviews = () => {
-  const [reviews, setReviews] = useState([]);
+const Reviews = ({ reviews }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const reviewsToShow = showAll ? reviews : reviews?.slice(0, 4);
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 595;
@@ -22,12 +23,6 @@ const Reviews = () => {
     };
   }, [isMobile]);
 
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/testimonials?populate=*`)
-      .then((res) => res.json())
-      .then((data) => setReviews(data?.data));
-  }, []);
-
   return (
     <Container className="section">
       <div className="section-center">
@@ -36,7 +31,7 @@ const Reviews = () => {
         </div>
 
         <div className="reviews-center">
-          {reviews?.map((review) => {
+          {reviewsToShow?.map((review) => {
             return (
               <article key={review?.id} className="review">
                 <Image
@@ -55,6 +50,12 @@ const Reviews = () => {
             );
           })}
         </div>
+
+        <div className="btn-wrapper">
+          <button className="btn2" onClick={() => setShowAll(!showAll)}>
+            View {showAll ? 'Less' : 'More'}
+          </button>
+        </div>
       </div>
     </Container>
   );
@@ -62,6 +63,11 @@ const Reviews = () => {
 
 export const Container = styled.section`
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+
+  .btn-wrapper {
+    margin-top: 4rem;
+    text-align: center;
+  }
 
   .title {
     text-align: center;

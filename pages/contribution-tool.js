@@ -6,7 +6,7 @@ import {
   Reviews,
 } from '../components/contribution';
 
-const Contribution = ({ data: { data } }) => {
+const Contribution = ({ data: { data }, navItems, reviews, users }) => {
   const {
     heroHeading,
     heroDescription,
@@ -30,12 +30,14 @@ const Contribution = ({ data: { data } }) => {
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
       <Hero
+        navItems={navItems}
         heroHeading={heroHeading}
         heroDescription={heroDescription}
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
         heroImg1={heroImg1}
         heroImg2={heroImg2}
+        users={users}
         usedByHeading={usedByHeading}
       />
       <Features
@@ -51,7 +53,7 @@ const Contribution = ({ data: { data } }) => {
         features3CTAText={features3CTAText}
         features3CTADestination={features3CTADestination}
       />
-      <Reviews />
+      <Reviews reviews={reviews} />
     </>
   );
 };
@@ -64,8 +66,31 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  // nav data
+  const navRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+  );
+  const navData = await navRes.json();
+
+  // reviews data
+  const reviewsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/testimonials?populate=*`
+  );
+  const reviewsData = await reviewsRes.json();
+
+  // users data
+  const usersRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+  );
+  const usersData = await usersRes.json();
+
   return {
-    props: { data },
+    props: {
+      data,
+      navItems: navData?.data?.attributes,
+      reviews: reviewsData?.data,
+      users: usersData?.data,
+    },
     revalidate: 1,
   };
 }

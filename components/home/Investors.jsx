@@ -1,17 +1,8 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import investorBCG from '../../public/assets/homepage/investor-bcg.png';
 
-const Investors = () => {
-  const [investors, setInvestors] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/investors?populate=*`)
-      .then((res) => res.json())
-      .then((data) => setInvestors(data?.data));
-  }, []);
-
+const Investors = ({ investors }) => {
   return (
     <Container className="section">
       <div className="section-center">

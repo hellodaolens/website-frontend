@@ -2,7 +2,7 @@ import Users from './Users';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-const HeroBanner = ({ heroImg1, heroImg2, usedByHeading }) => {
+const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
   return (
     <Container>
       <div className="section-center">
@@ -27,7 +27,7 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading }) => {
             />
           </div>
         </div>
-        <Users usedByHeading={usedByHeading} />
+        <Users users={users} usedByHeading={usedByHeading} />
       </div>
     </Container>
   );

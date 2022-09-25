@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import moment from 'moment/moment';
 import ReactMarkdown from 'react-markdown';
 
-const SingleBlogPage = ({ article }) => {
+const SingleBlogPage = ({ article, navItems }) => {
   const { author, content, name, shortDescription, createdAt } =
     article?.attributes;
 
@@ -11,7 +11,7 @@ const SingleBlogPage = ({ article }) => {
     <>
       <HeadSeo title={name} description={shortDescription} />
       <Container>
-        <Navbar />
+        <Navbar navItems={navItems} />
         <main className="section">
           <div className="section-center blog-center">
             <div className="title">
@@ -57,15 +57,20 @@ export default SingleBlogPage;
 
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articles`);
-  const data = await res.json();
-  const article = data?.data.find(
-    (article) => article?.attributes?.slug === slug
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`
   );
+  const data = await res.json();
+
+  const navRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+  );
+  const navData = await navRes.json();
 
   return {
     props: {
-      article,
+      article: data?.data[0],
+      navItems: navData?.data?.attributes,
     },
   };
 };

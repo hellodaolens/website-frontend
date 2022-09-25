@@ -7,7 +7,7 @@ import {
   CTA,
 } from '../components/community';
 
-const Community = ({ data }) => {
+const Community = ({ data, navItems, customers }) => {
   const {
     heroSubHeading,
     heroHeading,
@@ -30,6 +30,7 @@ const Community = ({ data }) => {
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
       <Hero
+        navItems={navItems}
         heroSubHeading={heroSubHeading}
         heroHeading={heroHeading}
         heroDescription={heroDescription}
@@ -41,7 +42,7 @@ const Community = ({ data }) => {
         section1Heading={section1Heading}
         section1LastHeading={section1LastHeading}
       />
-      <Customers section2Heading={section2Heading} />
+      <Customers customers={customers} section2Heading={section2Heading} />
       <Services
         section3Heading={section3Heading}
         section2Points={section2Points}
@@ -59,13 +60,30 @@ const Community = ({ data }) => {
 export default Community;
 
 export async function getStaticProps() {
+  // page data
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/community-page?populate[0]=section2Points&populate[1]=section2Points.img`
   );
   const data = await res.json();
 
+  // nav data
+  const navRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+  );
+  const navData = await navRes.json();
+
+  // customer data
+  const customerRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+  );
+  const customerData = await customerRes.json();
+
   return {
-    props: { data },
+    props: {
+      data,
+      navItems: navData?.data?.attributes,
+      customers: customerData?.data,
+    },
     revalidate: 1,
   };
 }

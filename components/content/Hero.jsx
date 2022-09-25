@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import heroBcg from '../../public/assets/content/hero-bcg.png';
 import bannerBcg from '../../public/assets/content/banner-bcg.png';
@@ -14,8 +14,7 @@ import { Navbar } from '../common';
 import Videos from './Videos';
 import Modal from './Modal';
 
-const Hero = () => {
-  const [bannerArticle, setBannerArticle] = useState();
+const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
   const [option, setOption] = useState('articles');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -46,17 +45,9 @@ const Hero = () => {
     updateOptionBtns(e);
   };
 
-  useEffect(() => {
-    fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&filters[isHighLight][$eq]=True&populate=*`
-    )
-      .then((res) => res.json())
-      .then((data) => setBannerArticle(data?.data[0]));
-  }, []);
-
   return (
     <Container>
-      <Navbar />
+      <Navbar navItems={navItems} />
       <main className="section">
         <div className="section-center">
           <div className="banner">
@@ -138,9 +129,9 @@ const Hero = () => {
             </button>
           </div>
 
-          {option === 'articles' && <Articles />}
-          {option === 'youtube' && <Videos />}
-          {option === 'spotify' && <Spotify />}
+          {option === 'articles' && <Articles allArticles={allArticles} />}
+          {option === 'youtube' && <Videos videos={videos} />}
+          {option === 'spotify' && <Spotify podcasts={podcasts} />}
         </div>
       </main>
     </Container>

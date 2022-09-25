@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-const Users = ({ usedByHeading }) => {
-  const [customers, setCustomers] = useState([]);
+const Users = ({ users, usedByHeading }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const setDimension = () => {
@@ -19,12 +18,6 @@ const Users = ({ usedByHeading }) => {
     };
   }, [isMobile]);
 
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`)
-      .then((res) => res.json())
-      .then((data) => setCustomers(data?.data));
-  }, []);
-
   return (
     <Container className="section">
       <div className="section-center">
@@ -33,7 +26,7 @@ const Users = ({ usedByHeading }) => {
         </div>
 
         <div className="customer-center">
-          {customers?.map((customer) => {
+          {users?.map((customer) => {
             return (
               <article key={customer?.id} className="customer">
                 <Image

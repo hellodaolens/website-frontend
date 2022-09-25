@@ -11,7 +11,13 @@ import {
   TopBar,
 } from '../components/home';
 
-export default function Home({ data }) {
+export default function Home({
+  data,
+  navItems,
+  reviews,
+  customers,
+  investors,
+}) {
   const {
     DAOResourcesHeading,
     DAOResources,
@@ -53,6 +59,7 @@ export default function Home({ data }) {
         heroDesription={heroDesription}
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
+        navItems={navItems}
       />
       <Banner
         section1MainHeading={section1MainHeading}
@@ -75,12 +82,13 @@ export default function Home({ data }) {
       <Customers
         customersHeading={customersHeading}
         customersSubHeading={customersSubHeading}
+        customers={customers}
       />
       <Resources
         DAOResourcesHeading={DAOResourcesHeading}
         DAOResources={DAOResources}
       />
-      <Reviews />
+      <Reviews reviews={reviews} />
       <CTA
         lastSectionSubHeading={lastSectionSubHeading}
         lastSectionHeading={lastSectionHeading}
@@ -89,19 +97,50 @@ export default function Home({ data }) {
         lastSectionCTAText={lastSectionCTAText}
         lastSectionCTADestination={lastSectionCTADestination}
       />
-      <Investors />
+      <Investors investors={investors} />
     </>
   );
 }
 
 export async function getStaticProps() {
+  // page data
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo&populate[7]=contributorImg1&populate[8]=contributorImg2&populate[9]=contributorPoints&populate[10]=contributorPoints.img`
   );
   const data = await res.json();
 
+  // nav data
+  const navRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`
+  );
+  const navData = await navRes.json();
+
+  // reviews data
+  const reviewsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/testimonials?populate=*`
+  );
+  const reviewsData = await reviewsRes.json();
+
+  // customers data
+  const customersRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+  );
+  const customersData = await customersRes.json();
+
+  // investors data
+  const investorsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/investors?populate=*`
+  );
+  const investorsData = await investorsRes.json();
+
   return {
-    props: { data },
+    props: {
+      data,
+      navItems: navData?.data?.attributes,
+      reviews: reviewsData?.data,
+      customers: customersData?.data,
+      investors: investorsData?.data,
+    },
     revalidate: 1,
   };
 }

@@ -1,17 +1,8 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Navbar = () => {
-  const [navItems, setNavItems] = useState(null);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/header?populate=*`)
-      .then((res) => res.json())
-      .then((data) => setNavItems(data?.data?.attributes));
-  }, []);
-
+const Navbar = ({ navItems }) => {
   return (
     <NavContainer>
       <div className="section-center nav-center">

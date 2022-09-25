@@ -1,6 +1,6 @@
 - [x] create tabs btn and functionality for homepage admin section
-- [ ] set up view more functionality for investors section
-- [ ] set up view more functionality for reviews section
+- [x] set up view more functionality for investors section
+- [x] set up view more functionality for reviews section
 - [ ] set up slider functionality for resources section on small screen
 - [ ] set up tabs for resources section
 - [x] Check urls & hrefs for all the btns

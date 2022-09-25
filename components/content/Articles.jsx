@@ -1,23 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import articleBCG from '../../public/assets/content/article-bcg.png';
 import Link from 'next/link';
 
-const Articles = () => {
-  const [allArticles, setAllArticles] = useState([]);
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&populate=*`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setAllArticles(data?.data);
-        setArticles(data?.data);
-      });
-  }, []);
+const Articles = ({ allArticles }) => {
+  const [articles, setArticles] = useState(allArticles);
 
   const handleFilterArticles = (type) => {
     const tempArticles = allArticles?.filter(

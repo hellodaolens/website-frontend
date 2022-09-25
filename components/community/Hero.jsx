@@ -3,6 +3,7 @@ import heroBCG from '../../public/assets/community/hero-bcg.png';
 import { Navbar } from '../common';
 
 const Hero = ({
+  navItems,
   heroSubHeading,
   heroHeading,
   heroDescription,
@@ -11,7 +12,7 @@ const Hero = ({
 }) => {
   return (
     <Container>
-      <Navbar />
+      <Navbar navItems={navItems} />
       <main>
         <div className="section-center">
           <h5>{heroSubHeading}</h5>

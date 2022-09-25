@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import HeroBanner from './HeroBanner';
 import heroBCG from '../../public/assets/onboarding/hero-bcg.png';
-import Link from 'next/link';
 import { Navbar } from '../common';
 
 const Hero = ({
+  navItems,
+  users,
   heroHeading,
   heroSubHeading,
   heroCTAText,
@@ -15,7 +16,7 @@ const Hero = ({
 }) => {
   return (
     <Container>
-      <Navbar />
+      <Navbar navItems={navItems} />
 
       <main>
         <div className="main section-center">
@@ -29,6 +30,7 @@ const Hero = ({
         </div>
 
         <HeroBanner
+          users={users}
           heroImg1={heroImg1}
           heroImg2={heroImg2}
           usedByHeading={usedByHeading}

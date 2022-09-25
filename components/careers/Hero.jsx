@@ -4,6 +4,7 @@ import heroBCG from '../../public/assets/careers/hero-bcg.png';
 import { Navbar } from '../common';
 
 const Hero = ({
+  navItems,
   heroHeading,
   heroDescription,
   heroCTAText,
@@ -13,7 +14,7 @@ const Hero = ({
   return (
     <>
       <Container>
-        <Navbar />
+        <Navbar navItems={navItems} />
         <main>
           <div className="section-center">
             <article className="info">

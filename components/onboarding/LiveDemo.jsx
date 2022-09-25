@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import liveDemoBCG from '../../public/assets/onboarding/live-demo-bcg.png';
+import arrow from '../../public/assets/onboarding/arrow.svg';
 
 const LiveDemo = ({
   lastSectionSubHeading,
@@ -17,6 +18,10 @@ const LiveDemo = ({
           <p className="subheading">{lastSectionSubHeading}</p>
           <h3>{lastSectionHeading}</h3>
           <p>{lastSectionDescription}</p>
+        </article>
+
+        <article className="arrow">
+          <Image src={arrow} alt="arrow" objectFit="contain" />
         </article>
 
         <article className="img">
@@ -54,10 +59,14 @@ export const Container = styled.section`
       margin-right: auto;
     }
 
+    .arrow {
+      display: none;
+    }
+
     @media (min-width: 992px) {
-      grid-template-columns: auto auto;
+      grid-template-columns: auto auto auto;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
       text-align: left;
 
       p {
@@ -67,6 +76,13 @@ export const Container = styled.section`
 
       .info {
         max-width: 30rem;
+        margin: 0 auto;
+      }
+
+      .arrow {
+        display: block;
+        transform: rotate(-15deg);
+        padding: 0.5rem;
       }
     }
   }

@@ -1,16 +1,7 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player/lazy';
 
-const Videos = () => {
-  const [videos, setVideos] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/you-tube-embeds?populate=*`)
-      .then((res) => res.json())
-      .then((data) => setVideos(data?.data));
-  }, []);
-
+const Videos = ({ videos }) => {
   return (
     <Container className="section">
       <div className="content-center">

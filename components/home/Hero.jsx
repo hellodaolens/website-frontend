@@ -9,10 +9,11 @@ const Hero = ({
   heroDesription,
   heroCTAText,
   heroCTADestination,
+  navItems,
 }) => {
   return (
     <Container>
-      <Navbar />
+      <Navbar navItems={navItems} />
       <main>
         <div className="section-center">
           <div className="hero-banner">
