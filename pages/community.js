@@ -74,7 +74,7 @@ export async function getStaticProps() {
 
   // customer data
   const customerRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/community-customers?populate=*`
   );
   const customerData = await customerRes.json();
 

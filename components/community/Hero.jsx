@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import heroBCG from '../../public/assets/community/hero-bcg.png';
 import { Navbar } from '../common';
@@ -10,10 +11,16 @@ const Hero = ({
   heroCTAText,
   heroCTADestination,
 }) => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <Container>
-      <Navbar navItems={navItems} />
-      <main>
+      <Navbar
+        navItems={navItems}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
+      <main onClick={() => setShowMenu(false)}>
         <div className="section-center">
           <h5>{heroSubHeading}</h5>
           <h1>{heroHeading}</h1>

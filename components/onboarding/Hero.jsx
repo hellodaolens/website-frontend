@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import HeroBanner from './HeroBanner';
 import heroBCG from '../../public/assets/onboarding/hero-bcg.png';
@@ -14,11 +15,16 @@ const Hero = ({
   heroImg2,
   usedByHeading,
 }) => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <Container>
-      <Navbar navItems={navItems} />
-
-      <main>
+      <Navbar
+        navItems={navItems}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
+      <main onClick={() => setShowMenu(false)}>
         <div className="main section-center">
           <div className="hero-content">
             <h2>{heroHeading}</h2>

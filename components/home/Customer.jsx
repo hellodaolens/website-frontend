@@ -118,6 +118,10 @@ export const Container = styled.section`
     align-items: center;
     gap: 1rem;
     margin: 0 1rem;
+
+    img {
+      border-radius: 50%;
+    }
   }
 
   .customer-img {

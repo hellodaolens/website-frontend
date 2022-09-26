@@ -125,6 +125,10 @@ export const Container = styled.section`
     background: rgba(255, 255, 255, 0.05);
     border-radius: 100px;
     padding: 8px 32px 8px 8px;
+
+    img {
+      border-radius: 50%;
+    }
   }
 
   .customer p {

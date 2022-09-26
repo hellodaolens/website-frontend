@@ -13,9 +13,9 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               <video
                 src={heroImg1?.data.attributes.url}
                 alt="onboarding"
-                width={1136}
-                style={{ maxWidth: '1136px' }}
-                height={629}
+                width={880}
+                style={{ maxWidth: '880px' }}
+                height={495}
                 autoPlay
                 loop
                 muted
@@ -24,22 +24,22 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               <Image
                 src={heroImg1?.data.attributes.url}
                 alt="onboarding"
-                width={1136}
-                height={629}
+                width={880}
+                height={495}
               />
             )}
           </div>
           <div
             className="small-img"
-            style={{ position: 'absolute', top: '35%', right: '10%' }}
+            style={{ position: 'absolute', top: '25%', right: '5%' }}
           >
             {checkMediaType(heroImg2) === 'video' ? (
               <video
                 src={heroImg2?.data.attributes.url}
                 alt="onboarding"
-                width={249}
-                height={492}
-                style={{ maxWidth: '249px' }}
+                width={225}
+                height={400}
+                style={{ maxWidth: '225px' }}
                 autoPlay
                 loop
                 muted
@@ -48,8 +48,8 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               <Image
                 src={heroImg2?.data.attributes.url}
                 alt="onboarding"
-                width={249}
-                height={492}
+                width={225}
+                height={400}
               />
             )}
           </div>
@@ -63,6 +63,14 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
 export const Container = styled.div`
   background: var(--clr-black);
   padding-bottom: 0;
+  .big-img {
+    margin: 0 auto;
+    text-align: center;
+  }
+  img,
+  video {
+    border-radius: 1rem;
+  }
 
   .img {
     position: relative;

@@ -81,7 +81,7 @@ export async function getStaticProps() {
 
   // users data
   const usersRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/onboardingtool-customers?populate=*`
   );
   const usersData = await usersRes.json();
 

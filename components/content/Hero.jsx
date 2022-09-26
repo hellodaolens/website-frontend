@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import readingTime from 'reading-time';
 import heroBcg from '../../public/assets/content/hero-bcg.png';
 import bannerBcg from '../../public/assets/content/banner-bcg.png';
 import youtube from '../../public/assets/content/youtube.png';
@@ -15,6 +16,7 @@ import Videos from './Videos';
 import Modal from './Modal';
 
 const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
+  const [showMenu, setShowMenu] = useState(false);
   const [option, setOption] = useState('articles');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -45,10 +47,16 @@ const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
     updateOptionBtns(e);
   };
 
+  const readingStats = readingTime(bannerArticle?.attributes?.content);
+
   return (
     <Container>
-      <Navbar navItems={navItems} />
-      <main className="section">
+      <Navbar
+        navItems={navItems}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
+      <main onClick={() => setShowMenu(false)} className="section">
         <div className="section-center">
           <div className="banner">
             <Image
@@ -73,7 +81,7 @@ const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
 
               <div className="btn-container">
                 <Link href={`/blog/${bannerArticle?.attributes?.slug}`}>
-                  <a className="btn">5 min read</a>
+                  <a className="btn">{readingStats.text}</a>
                 </Link>
                 {bannerArticle?.attributes?.showCTAinHighlight && (
                   <button onClick={openModal} className="btn2">

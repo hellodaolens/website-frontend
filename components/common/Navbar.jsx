@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const Navbar = ({ navItems }) => {
-  const [showMenu, setShowMenu] = useState(false);
-  const { pathname } = useRouter();
+const Navbar = ({ navItems, showMenu, setShowMenu }) => {
+  const { asPath } = useRouter();
 
   const handleNavClick = (item) => {
     if (item?.navLinks2.length > 0) {
@@ -37,11 +35,11 @@ const Navbar = ({ navItems }) => {
             return (
               <Link
                 key={item?.id}
-                href={item?.navLinks2.length > 0 ? pathname : `/${item.to}`}
+                href={item?.navLinks2.length > 0 ? asPath : `/${item.to}`}
               >
                 <a
                   className="link"
-                  id={pathname === `/${item?.to}` ? 'active' : ''}
+                  id={asPath === `/${item?.to}` ? 'active' : ''}
                   onClick={() => handleNavClick(item)}
                 >
                   <span>{item?.name}</span>
@@ -52,7 +50,7 @@ const Navbar = ({ navItems }) => {
                           <Link key={item?.id} href={`/${item?.to}`}>
                             <a
                               className="dropdown-link link"
-                              id={pathname === `/${item?.to}` ? 'active' : ''}
+                              id={asPath === `/${item?.to}` ? 'active' : ''}
                             >
                               <span>{item?.name}</span>
                             </a>
@@ -79,6 +77,8 @@ const Navbar = ({ navItems }) => {
 
 export const NavContainer = styled.nav`
   background: transparent;
+  position: relative;
+  z-index: 10;
 
   .nav-center {
     max-width: 1136px;
@@ -100,6 +100,12 @@ export const NavContainer = styled.nav`
       margin: 0 auto;
       padding: 5px 1rem;
       border: 2px solid #372744;
+
+      @media (max-width: 345px) {
+        padding: 5px;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+      }
     }
 
     .link {

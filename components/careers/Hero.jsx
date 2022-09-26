@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import heroBCG from '../../public/assets/careers/hero-bcg.png';
@@ -11,35 +12,39 @@ const Hero = ({
   heroCTADestination,
   heroImg,
 }) => {
-  return (
-    <>
-      <Container>
-        <Navbar navItems={navItems} />
-        <main>
-          <div className="section-center">
-            <article className="info">
-              <div>
-                <h2>{heroHeading}</h2>
-                <p>{heroDescription}</p>
-                <a href={heroCTADestination} className="btn">
-                  {heroCTAText}
-                </a>
-              </div>
-            </article>
+  const [showMenu, setShowMenu] = useState(false);
 
-            <Image
-              src={heroImg?.data?.attributes?.url}
-              alt="hero"
-              width={903.91}
-              height={454}
-              objectFit="contain"
-              placeholder="blur"
-              blurDataURL={heroImg?.data?.attributes?.url}
-            />
-          </div>
-        </main>
-      </Container>
-    </>
+  return (
+    <Container>
+      <Navbar
+        navItems={navItems}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
+      <main onClick={() => setShowMenu(false)}>
+        <div className="section-center">
+          <article className="info">
+            <div>
+              <h2>{heroHeading}</h2>
+              <p>{heroDescription}</p>
+              <a href={heroCTADestination} className="btn">
+                {heroCTAText}
+              </a>
+            </div>
+          </article>
+
+          <Image
+            src={heroImg?.data?.attributes?.url}
+            alt="hero"
+            width={903.91}
+            height={454}
+            objectFit="contain"
+            placeholder="blur"
+            blurDataURL={heroImg?.data?.attributes?.url}
+          />
+        </div>
+      </main>
+    </Container>
   );
 };
 

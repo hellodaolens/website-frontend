@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { HeadSeo, Navbar } from '../../../components/common';
 import styled from 'styled-components';
 import moment from 'moment/moment';
 import ReactMarkdown from 'react-markdown';
 
 const SingleBlogPage = ({ article, navItems }) => {
+  const [showMenu, setShowMenu] = useState(false);
   const { author, content, name, shortDescription, createdAt } =
     article?.attributes;
 
@@ -11,8 +13,12 @@ const SingleBlogPage = ({ article, navItems }) => {
     <>
       <HeadSeo title={name} description={shortDescription} />
       <Container>
-        <Navbar navItems={navItems} />
-        <main className="section">
+        <Navbar
+          navItems={navItems}
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+        />
+        <main onClick={() => setShowMenu(false)} className="section">
           <div className="section-center blog-center">
             <div className="title">
               <h3>{name}</h3>
