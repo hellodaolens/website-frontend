@@ -9,8 +9,20 @@ const Content = ({
   podcasts,
   videos,
 }) => {
-  const { heading, description, CTAText, CTADestination, image, points } =
-    data.data.attributes;
+  const {
+    heading,
+    description,
+    CTAText,
+    CTADestination,
+    image,
+    points,
+    modalBtnText,
+    modalHeading,
+    modalPara,
+    inputBoxFieldName1,
+    inputBoxFieldName2,
+    inputBoxFieldName3,
+  } = data.data.attributes;
 
   return (
     <>
@@ -21,6 +33,12 @@ const Content = ({
         allArticles={allArticles}
         podcasts={podcasts}
         videos={videos}
+        modalBtnText={modalBtnText}
+        modalHeading={modalHeading}
+        modalPara={modalPara}
+        inputBoxFieldName1={inputBoxFieldName1}
+        inputBoxFieldName2={inputBoxFieldName2}
+        inputBoxFieldName3={inputBoxFieldName3}
       />
       <CTA
         heading={heading}

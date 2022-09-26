@@ -290,6 +290,10 @@ export const Container = styled.section`
     margin-top: 4rem;
     position: relative;
 
+    img {
+      border-radius: 1rem;
+    }
+
     @media (max-width: 792px) {
       margin-top: 2rem;
     }

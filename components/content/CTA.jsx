@@ -103,7 +103,6 @@ export const Container = styled.section`
     gap: 1rem;
 
     @media (min-width: 792px) {
-      /* margin-top: 4rem; */
       grid-template-columns: [start] 1fr [col-1] 1fr [end];
       grid-template-rows: [start] 1fr [col-1] 1fr [end];
       gap: 2rem;

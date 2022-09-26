@@ -110,6 +110,12 @@ export const Container = styled.section`
       bottom: unset;
     }
   }
+
+  .team-item {
+    img {
+      border-radius: 1rem;
+    }
+  }
 `;
 
 export default CTA;

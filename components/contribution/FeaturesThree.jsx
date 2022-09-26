@@ -89,6 +89,13 @@ export const Container = styled.section`
     border-radius: 1rem;
     margin: 0 auto;
 
+    .img {
+      img,
+      video {
+        border-radius: 1rem;
+      }
+    }
+
     @media (min-width: 992px) {
       background: transparent;
       display: grid;

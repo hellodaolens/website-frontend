@@ -67,7 +67,8 @@ export const Container = styled.section`
   }
 
   .service {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     gap: 1rem;
     align-items: center;
 

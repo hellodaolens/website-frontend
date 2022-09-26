@@ -15,7 +15,19 @@ import { Navbar } from '../common';
 import Videos from './Videos';
 import Modal from './Modal';
 
-const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
+const Hero = ({
+  navItems,
+  bannerArticle,
+  allArticles,
+  podcasts,
+  videos,
+  modalBtnText,
+  modalHeading,
+  modalPara,
+  inputBoxFieldName1,
+  inputBoxFieldName2,
+  inputBoxFieldName3,
+}) => {
   const [showMenu, setShowMenu] = useState(false);
   const [option, setOption] = useState('articles');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -85,7 +97,7 @@ const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
                 </Link>
                 {bannerArticle?.attributes?.showCTAinHighlight && (
                   <button onClick={openModal} className="btn2">
-                    Join now
+                    {modalBtnText}
                   </button>
                 )}
 
@@ -93,6 +105,11 @@ const Hero = ({ navItems, bannerArticle, allArticles, podcasts, videos }) => {
                   <Modal
                     isModalOpen={isModalOpen}
                     setIsModalOpen={setIsModalOpen}
+                    modalHeading={modalHeading}
+                    modalPara={modalPara}
+                    inputBoxFieldName1={inputBoxFieldName1}
+                    inputBoxFieldName2={inputBoxFieldName2}
+                    inputBoxFieldName3={inputBoxFieldName3}
                   />
                 )}
               </div>

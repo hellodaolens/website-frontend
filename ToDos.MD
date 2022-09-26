@@ -20,12 +20,15 @@
 - [x] set up youtube component
 - [x] set up spotify component
 - [x] fix navbar menu
+
+#### Latest Fixes
+
 - [x] Drop down of product menu
-- [ ] modal heading, optional para and modal button texts from strapi
+- [x] modal heading, optional para and modal button texts from strapi
 - [ ] view more in blog (set of 6 for each view more)
 - [x] Different customer collection types for different pages
-- [ ] rounding issue on images
-- [ ] Sizing issue on points (home page, community page)
+- [x] rounding issue on images
+- [x] Sizing issue on points (home page, community page)
 - [ ] investors (ishighlight-only3-sort by date)
 - [x] onboarding and contribution hero image too big
 - [x] 5 min read

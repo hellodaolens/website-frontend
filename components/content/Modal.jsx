@@ -4,7 +4,15 @@ import bannerBcg from '../../public/assets/content/banner-bcg.png';
 import { FaTimes } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
-const Modal = ({ isModalOpen, setIsModalOpen }) => {
+const Modal = ({
+  isModalOpen,
+  setIsModalOpen,
+  modalHeading,
+  modalPara,
+  inputBoxFieldName1,
+  inputBoxFieldName2,
+  inputBoxFieldName3,
+}) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -15,43 +23,51 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(
-        `https://api.mailmodo.com/api/v1/addToList`,
-        {
-          method: 'POST',
-          headers: {
-            mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email,
-            data: {
-              first_name: firstName,
-              last_name: lastName,
+    if (!firstName || !lastName || !email) {
+      toast.error('Please enter all the details', {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+    } else {
+      try {
+        const response = await fetch(
+          `https://api.mailmodo.com/api/v1/addToList`,
+          {
+            method: 'POST',
+            headers: {
+              mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
+              'Content-Type': 'application/json',
             },
-            listName: 'My Emails',
-          }),
-        }
-      );
-      toast.success("Thank you for submitting, you'll receive it soon!", {
-        position: 'top-center',
-        autoClose: 5000,
-        closeOnClick: true,
-      });
-      console.log('Completed!', response);
-    } catch (err) {
-      toast.error(err, {
-        position: 'top-center',
-        autoClose: 5000,
-        closeOnClick: true,
-      });
-      console.error(`Error: ${err}`);
+            body: JSON.stringify({
+              email,
+              data: {
+                first_name: firstName,
+                last_name: lastName,
+              },
+              listName: 'My Emails',
+            }),
+          }
+        );
+        toast.success("Thank you for submitting, you'll receive it soon!", {
+          position: 'top-center',
+          autoClose: 5000,
+          closeOnClick: true,
+        });
+        console.log('Completed!', response);
+      } catch (err) {
+        toast.error(err, {
+          position: 'top-center',
+          autoClose: 5000,
+          closeOnClick: true,
+        });
+        console.error(`Error: ${err}`);
+      }
+      closeModal();
+      setFirstName('');
+      setLastName('');
+      setEmail('');
     }
-    closeModal();
-    setFirstName('');
-    setLastName('');
-    setEmail('');
   };
 
   return (
@@ -62,7 +78,8 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
         }`}
       >
         <div className="modal-container">
-          <h3>Join Now</h3>
+          <h3>{modalHeading}</h3>
+          {modalPara && <p>{modalPara}</p>}
           <FormContainer
             method="post"
             action="https://api.mailmodo.com/api/v1/addToList"
@@ -70,7 +87,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
           >
             <article>
               <div className="form-control">
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName">{inputBoxFieldName1}</label>
                 <input
                   type="text"
                   id="firstName"
@@ -79,7 +96,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
               </div>
 
               <div className="form-control">
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName">{inputBoxFieldName2}</label>
                 <input
                   type="text"
                   id="lastName"
@@ -89,7 +106,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
             </article>
 
             <div className="form-control">
-              <label htmlFor="email">E-mail</label>
+              <label htmlFor="email">{inputBoxFieldName3}</label>
               <input
                 type="email"
                 id="email"
