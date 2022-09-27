@@ -2,16 +2,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import ctaBCG from '../../public/assets/content/cta-bcg.png';
+import { toast } from 'react-toastify';
 
-const CTA = ({
-  heading,
-  description,
-  CTAText,
-  CTADestination,
-  image,
-  points,
-}) => {
+const CTA = ({ heading, description, CTAText, image, points }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [email, setEmail] = useState('');
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 595;
@@ -26,6 +21,40 @@ const CTA = ({
     };
   }, [isMobile]);
 
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        `https://api.mailmodo.com/api/v1/addToList`,
+        {
+          method: 'POST',
+          headers: {
+            mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            listName: 'email subscribers',
+          }),
+        }
+      );
+      toast.success("Thank you for submitting, you'll receive it soon!", {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+      console.log('Completed!', response);
+    } catch (err) {
+      toast.error(err, {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+      console.error(`Error: ${err}`);
+    }
+    setEmail('');
+  };
+
   return (
     <Container className="section">
       <div className="section-center">
@@ -34,9 +63,23 @@ const CTA = ({
             <h2>{heading}</h2>
             <p>{description}</p>
 
-            <a href={CTADestination} className="btn">
-              {CTAText}
-            </a>
+            <form
+              method="post"
+              action="https://api.mailmodo.com/api/v1/addToList"
+              onSubmit={onSubmit}
+            >
+              <input
+                required
+                className="email-input"
+                type="email"
+                placeholder="Enter your Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button type="submit" className="btn">
+                {CTAText}
+              </button>
+            </form>
           </article>
           <article className="image">
             <Image
@@ -93,6 +136,38 @@ export const Container = styled.section`
       gap: 6rem;
       text-align: unset;
     }
+  }
+
+  form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  input {
+    width: 320px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 90px;
+    border: none;
+    padding: 14px 20px;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 592px) {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    height: 48px;
   }
 
   .points {

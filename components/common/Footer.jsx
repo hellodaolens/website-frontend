@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import footerBCG from '../../public/assets/footer-bcg.png';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 const Footer = () => {
   const [footerData, setFooterData] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
+  const [email, setEmail] = useState('');
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 595;
@@ -28,6 +30,40 @@ const Footer = () => {
       .then((res) => res.json())
       .then((data) => setFooterData(data?.data?.attributes));
   }, []);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        `https://api.mailmodo.com/api/v1/addToList`,
+        {
+          method: 'POST',
+          headers: {
+            mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            listName: 'email subscribers',
+          }),
+        }
+      );
+      toast.success("Thank you for submitting, you'll receive it soon!", {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+      console.log('Completed!', response);
+    } catch (err) {
+      toast.error(err, {
+        position: 'top-center',
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+      console.error(`Error: ${err}`);
+    }
+    setEmail('');
+  };
 
   return (
     <Container className="section">
@@ -77,8 +113,18 @@ const Footer = () => {
 
         <article className="footer-form">
           <p>{footerData?.subscribeHeading}</p>
-          <form>
-            <input type="email" placeholder="Enter your Email Address" />
+          <form
+            method="post"
+            action="https://api.mailmodo.com/api/v1/addToList"
+            onSubmit={onSubmit}
+          >
+            <input
+              required
+              type="email"
+              placeholder="Enter your Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <button type="submit" className="btn">
               {footerData?.subscribeCTAText}
             </button>
@@ -135,6 +181,7 @@ export const Container = styled.section`
       border-radius: 90px;
       border: none;
       padding: 14px 20px;
+      color: #fff;
       &::placeholder {
         color: #fff;
         font-style: normal;

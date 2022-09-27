@@ -89,6 +89,14 @@ body {
   font-size: 0.875rem;
 }
 
+button,
+input,
+textarea {
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
 h1,
 h2,
 h3,

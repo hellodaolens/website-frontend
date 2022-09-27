@@ -45,7 +45,7 @@ const Modal = ({
                 first_name: firstName,
                 last_name: lastName,
               },
-              listName: 'My Emails',
+              listName: 'industry report',
             }),
           }
         );
@@ -91,6 +91,7 @@ const Modal = ({
                 <input
                   type="text"
                   id="firstName"
+                  value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
@@ -100,6 +101,7 @@ const Modal = ({
                 <input
                   type="text"
                   id="lastName"
+                  value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
@@ -110,6 +112,7 @@ const Modal = ({
               <input
                 type="email"
                 id="email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
