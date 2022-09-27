@@ -130,7 +130,7 @@ export async function getStaticProps() {
 
   // investors data
   const investorsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/investors?populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/investors?sort=isHightlight:desc&populate=*`
   );
   const investorsData = await investorsRes.json();
 

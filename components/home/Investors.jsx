@@ -13,7 +13,14 @@ const Investors = ({ investors }) => {
         <div className="investor-center">
           {investors?.map((investor) => {
             return (
-              <article key={investor?.id} className="investor">
+              <article
+                key={investor?.id}
+                className={`${
+                  investor?.attributes?.isHightlight
+                    ? 'highlight investor'
+                    : 'investor'
+                }`}
+              >
                 <Image
                   src={investor?.attributes?.logo?.data?.attributes?.url}
                   alt={investor?.attributes?.name}
@@ -41,6 +48,7 @@ export const Container = styled.section`
   }
 
   .investor {
+    /* order: 50; */
     padding: 1rem;
     background: rgba(0, 0, 0, 0.02);
     backdrop-filter: blur(100px);
@@ -55,26 +63,24 @@ export const Container = styled.section`
     }
   }
 
-  .investor {
-    &:nth-child(1),
-    &:nth-child(4),
-    &:nth-child(5) {
-      justify-content: center;
-      p {
-        display: none;
-      }
-      span {
-        width: 150px !important;
-      }
+  .investor.highlight {
+    /* order: 1; */
+
+    justify-content: center;
+    p {
+      display: none;
+    }
+    span {
+      width: 150px !important;
     }
 
     &:nth-child(1) {
       grid-row: 1 / 4;
     }
-    &:nth-child(4) {
+    &:nth-child(2) {
       grid-row: 4 / 6;
     }
-    &:nth-child(5) {
+    &:nth-child(3) {
       grid-row: 6 / 8;
     }
   }
@@ -92,14 +98,14 @@ export const Container = styled.section`
       grid-template-rows: repeat(5, 1fr);
     }
 
-    .investor {
+    .investor.highlight {
       &:nth-child(1) {
         grid-row: 1 / 5;
       }
-      &:nth-child(4) {
+      &:nth-child(2) {
         grid-row: 1 / 3;
       }
-      &:nth-child(5) {
+      &:nth-child(3) {
         grid-row: 3 / 5;
       }
     }

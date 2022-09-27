@@ -25,14 +25,14 @@
 
 - [x] Drop down of product menu
 - [x] modal heading, optional para and modal button texts from strapi
-- [ ] view more in blog (set of 6 for each view more)
+- [x] view more in blog (set of 6 for each view more)
 - [x] Different customer collection types for different pages
 - [x] rounding issue on images
 - [x] Sizing issue on points (home page, community page)
-- [ ] investors (ishighlight-only3-sort by date)
+- [x] investors (ishighlight-only3-sort by date)
 - [x] onboarding and contribution hero image too big
 - [x] 5 min read
-- [ ] can the twitter timeline be fast?
+- [x] can the twitter timeline be fast?
 - [x] top bar optional
 - [x] nav links breaking in small screens
 - [x] make customer images rounded

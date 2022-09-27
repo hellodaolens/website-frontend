@@ -7,12 +7,10 @@ import Link from 'next/link';
 const Articles = ({ allArticles }) => {
   const [articles, setArticles] = useState(allArticles);
   const [isMobile, setIsMobile] = useState(false);
-  const [showAll, setShowAll] = useState(false);
-  const articlesToShow = isMobile
-    ? showAll
-      ? articles
-      : articles?.slice(0, 2)
-    : articles;
+
+  const numOfArticlesToShow = isMobile ? 2 : 6;
+  const [numOfArticles, setNumOfArticles] = useState(numOfArticlesToShow);
+  const articlesToShow = articles?.slice(0, numOfArticles);
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 768;
@@ -111,10 +109,15 @@ const Articles = ({ allArticles }) => {
         <h4 style={{ textAlign: 'center' }}>No articles to display...</h4>
       )}
 
-      {articles?.length > 2 && (
+      {articlesToShow?.length < articles?.length && (
         <div className="btn-container">
-          <button className="btn2" onClick={() => setShowAll(!showAll)}>
-            View {showAll ? 'Less' : 'More'}
+          <button
+            className="btn2"
+            onClick={() =>
+              setNumOfArticles(numOfArticles + numOfArticlesToShow)
+            }
+          >
+            View More
           </button>
         </div>
       )}
@@ -181,10 +184,6 @@ export const Container = styled.section`
     text-align: center;
     margin: 2rem auto 0;
     justify-content: center;
-
-    @media (min-width: 768px) {
-      display: none !important;
-    }
 
     .btn2 {
       font-size: 14px;

@@ -21,7 +21,7 @@ const TwitterFeed = () => {
         </div>
 
         <div className="tweets-center">
-          <a
+          {/* <a
             className="twitter-timeline"
             data-height="792"
             data-dnt="true"
@@ -34,7 +34,13 @@ const TwitterFeed = () => {
             async
             src="https://platform.twitter.com/widgets.js"
             charset="utf-8"
-          ></script>
+          ></script> */}
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="DaoLens"
+            theme="dark"
+            options={{ height: 792 }}
+          />
         </div>
       </div>
     </Container>
