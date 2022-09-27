@@ -35,11 +35,13 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
             return (
               <Link
                 key={item?.id}
-                href={item?.navLinks2.length > 0 ? asPath : `/${item.to}`}
+                href={
+                  item?.navLinks2.length > 0 ? asPath : `/${item?.to.trim()}`
+                }
               >
                 <a
                   className="link"
-                  id={asPath === `/${item?.to}` ? 'active' : ''}
+                  id={asPath === `/${item?.to.trim()}` ? 'active' : ''}
                   onClick={() => handleNavClick(item)}
                 >
                   <span>{item?.name}</span>
@@ -47,10 +49,12 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
                     <div className="dropdown">
                       {item?.navLinks2?.map((item) => {
                         return (
-                          <Link key={item?.id} href={`/${item?.to}`}>
+                          <Link key={item?.id} href={`/${item?.to.trim()}`}>
                             <a
                               className="dropdown-link link"
-                              id={asPath === `/${item?.to}` ? 'active' : ''}
+                              id={
+                                asPath === `/${item?.to.trim()}` ? 'active' : ''
+                              }
                             >
                               <span>{item?.name}</span>
                             </a>

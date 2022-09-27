@@ -31,7 +31,7 @@ const Articles = ({ allArticles }) => {
     } else {
       const tempArticles = allArticles?.filter(
         (article) =>
-          article.attributes.type.toLowerCase() === type.toLowerCase()
+          article.attributes.type.trim().toLowerCase() === type.toLowerCase()
       );
       setArticles(tempArticles);
     }

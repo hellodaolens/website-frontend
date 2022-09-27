@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 import Carousel from 'react-multi-carousel';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -37,7 +38,7 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
       setResources(DAOResources);
     } else {
       const tempResources = DAOResources?.filter(
-        (resource) => resource.type.toLowerCase() === type.toLowerCase()
+        (resource) => resource.type.trim().toLowerCase() === type.toLowerCase()
       );
       setResources(tempResources);
     }
@@ -105,6 +106,9 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
             keyBoardControl={true}
           >
             {resources?.map((resource) => {
+              const [readMore, setReadMore] = useState(false);
+              const { name, description } = resource;
+              const showMoreBtn = description?.length > 130;
               return (
                 <article key={resource?.id} className="resource">
                   <Image
@@ -117,8 +121,30 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
                     blurDataURL={resource?.logo?.data?.attributes?.url}
                   />
                   <div className="resource-info">
-                    <h5>{resource?.name}</h5>
-                    <p>{resource?.description}</p>
+                    <h5>{name}</h5>
+                    <p>
+                      {description.substr(0, 120)}
+                      {showMoreBtn &&
+                        (readMore
+                          ? description.substr(120, description.length)
+                          : `... `)}
+                      {showMoreBtn && (
+                        <button
+                          id="toggle-text"
+                          onClick={() => setReadMore(!readMore)}
+                        >
+                          {readMore ? (
+                            <>
+                              &nbsp;show less <FaAngleUp />
+                            </>
+                          ) : (
+                            <>
+                              read more <FaAngleDown />
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </p>
                   </div>
                 </article>
               );
@@ -192,6 +218,19 @@ export const Container = styled.section`
     padding: 2rem;
     border-radius: 20px;
     margin: 0 1rem;
+  }
+
+  #toggle-text {
+    background: transparent;
+    outline: none;
+    text-transform: capitalize;
+    color: rgb(121, 187, 241);
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    svg {
+      vertical-align: middle;
+    }
   }
 `;
 
