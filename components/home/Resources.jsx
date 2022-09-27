@@ -109,9 +109,9 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
             keyBoardControl={true}
           >
             {resources?.map((resource) => {
+               const { name, description } = resource;
+               const showMoreBtn = description?.length > 130;
               return (
-                  const { name, description } = resource;
-                  const showMoreBtn = description?.length > 130;
                 <article key={resource?.id} className="resource">
                   <Image
                     src={resource?.logo?.data?.attributes?.url}
