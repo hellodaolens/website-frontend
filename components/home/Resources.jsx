@@ -32,6 +32,9 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
 
   const [resources, setResources] = useState(DAOResources);
   const [isMobile, setIsMobile] = useState(false);
+  
+  const [readMore, setReadMore] = useState(false);
+
 
   const handleFilterResources = (type) => {
     if (type === 'all') {
@@ -106,10 +109,9 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
             keyBoardControl={true}
           >
             {resources?.map((resource) => {
-              const [readMore, setReadMore] = useState(false);
-              const { name, description } = resource;
-              const showMoreBtn = description?.length > 130;
               return (
+                  const { name, description } = resource;
+                  const showMoreBtn = description?.length > 130;
                 <article key={resource?.id} className="resource">
                   <Image
                     src={resource?.logo?.data?.attributes?.url}
