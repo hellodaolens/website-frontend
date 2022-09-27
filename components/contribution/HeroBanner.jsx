@@ -11,7 +11,7 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
           <div className="big-img">
             {checkMediaType(heroImg1) === 'video' ? (
               <video
-                src={heroImg1?.data.attributes.url}
+                src={heroImg1?.data?.attributes.url}
                 alt="contributions"
                 width={880}
                 style={{ maxWidth: '880px' }}
@@ -22,12 +22,12 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
               />
             ) : (
               <Image
-                src={heroImg1?.data.attributes.url}
+                src={heroImg1?.data?.attributes.url}
                 alt="contributions"
                 width={880}
                 height={495}
                 placeholder="blur"
-                blurDataURL={heroImg1?.data.attributes.url}
+                blurDataURL={heroImg1?.data?.attributes.url}
               />
             )}
           </div>
@@ -37,7 +37,7 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
           >
             {checkMediaType(heroImg2) === 'video' ? (
               <video
-                src={heroImg2?.data.attributes.url}
+                src={heroImg2?.data?.attributes.url}
                 alt="contributions"
                 width={225}
                 style={{ maxWidth: '225px' }}
@@ -48,12 +48,12 @@ const HeroBanner = ({ heroImg1, heroImg2, usedByHeading, users }) => {
               />
             ) : (
               <Image
-                src={heroImg2?.data.attributes.url}
+                src={heroImg2?.data?.attributes.url}
                 alt="contributions"
                 width={225}
                 height={400}
                 placeholder="blur"
-                blurDataURL={heroImg2?.data.attributes.url}
+                blurDataURL={heroImg2?.data?.attributes.url}
               />
             )}
           </div>

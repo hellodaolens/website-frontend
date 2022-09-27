@@ -93,6 +93,7 @@ export const Container = styled.section`
 
   .carousel-container {
     width: 100%;
+    justify-content: center;
   }
 
   .customer-center {

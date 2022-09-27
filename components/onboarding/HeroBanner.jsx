@@ -11,7 +11,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
           <div className="big-img">
             {checkMediaType(heroImg1) === 'video' ? (
               <video
-                src={heroImg1?.data.attributes.url}
+                src={heroImg1?.data?.attributes.url}
                 alt="onboarding"
                 width={880}
                 style={{ maxWidth: '880px' }}
@@ -22,7 +22,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               />
             ) : (
               <Image
-                src={heroImg1?.data.attributes.url}
+                src={heroImg1?.data?.attributes.url}
                 alt="onboarding"
                 width={880}
                 height={495}
@@ -35,7 +35,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
           >
             {checkMediaType(heroImg2) === 'video' ? (
               <video
-                src={heroImg2?.data.attributes.url}
+                src={heroImg2?.data?.attributes.url}
                 alt="onboarding"
                 width={225}
                 height={400}
@@ -46,7 +46,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               />
             ) : (
               <Image
-                src={heroImg2?.data.attributes.url}
+                src={heroImg2?.data?.attributes.url}
                 alt="onboarding"
                 width={225}
                 height={400}
