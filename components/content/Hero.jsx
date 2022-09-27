@@ -224,9 +224,20 @@ export const Container = styled.section`
   }
 
   .btn-container {
-    display: flex;
-    flex-wrap: wrap;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 1rem;
+
+    @media (max-width: 375px) {
+      gap: 0.5rem;
+      font-size: 0.75rem;
+
+      .btn,
+      .btn2 {
+        padding: 10px 16px;
+      }
+    }
   }
 `;
 

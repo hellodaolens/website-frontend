@@ -153,15 +153,16 @@ export const Container = styled.aside`
     border-radius: var(--radius);
     width: 90vw;
     min-height: 50vh;
-    max-width: var(--fixedWidth);
+    max-width: 692px;
     text-align: center;
     display: grid;
     place-items: center;
     position: relative;
     border-radius: 0.5rem;
-    padding: 2rem 4rem;
-    @media (max-width: 492px) {
+    padding: 4rem;
+    @media (max-width: 592px) {
       padding: 1.5rem;
+      padding: 4rem 1rem;
     }
   }
 
@@ -177,13 +178,19 @@ export const Container = styled.aside`
   }
 
   h3 {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+
+    @media (max-width: 492px) {
+      margin-bottom: 1rem;
+    }
   }
 `;
 
 export const FormContainer = styled.form`
   text-align: left;
-  max-width: 692px;
+  width: 100%;
+  max-width: 792px;
   margin: 0 auto;
   border-radius: var(--borderRadius);
 

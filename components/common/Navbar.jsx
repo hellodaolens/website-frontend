@@ -101,7 +101,7 @@ export const NavContainer = styled.nav`
       padding: 5px 1rem;
       border: 2px solid #372744;
 
-      @media (max-width: 345px) {
+      @media (max-width: 375px) {
         padding: 5px;
         gap: 0.5rem;
         font-size: 0.75rem;
@@ -111,6 +111,7 @@ export const NavContainer = styled.nav`
     .link {
       color: var(--clr-white);
       cursor: pointer;
+      text-align: center;
     }
 
     .link-right {

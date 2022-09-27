@@ -150,6 +150,12 @@ export const Container = styled.section`
     outline: none;
     cursor: pointer;
     width: max-content;
+    padding: 0.5rem 1rem;
+
+    @media (max-width: 375px) {
+      padding: 5px 10px;
+      font-size: 0.75rem;
+    }
   }
 
   .content {

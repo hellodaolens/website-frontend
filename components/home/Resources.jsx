@@ -143,6 +143,10 @@ export const Container = styled.section`
     border: 2px solid #372744;
     width: fit-content;
 
+    @media (max-width: 375px) {
+      justify-content: center;
+    }
+
     .btn2 {
       text-transform: capitalize;
       cursor: pointer;
@@ -154,12 +158,16 @@ export const Container = styled.section`
       &:hover {
         background: transparent;
       }
+      @media (max-width: 375px) {
+        padding: 5px;
+        font-size: 0.75rem;
+      }
     }
   }
 
   .carousel-container {
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .resources-center {
