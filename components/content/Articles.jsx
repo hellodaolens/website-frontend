@@ -83,10 +83,10 @@ const Articles = ({ allArticles }) => {
                   placeholder="blur"
                   blurDataURL={image?.data?.attributes?.url}
                 />
-                <div>
-                  <h4>{name}</h4>
-                  <p>{shortDescription}</p>
-                </div>
+
+                <h4>{name}</h4>
+                <p>{shortDescription}</p>
+
                 <div className="author">
                   <p>
                     - {author}, {authorDesignation}
@@ -169,13 +169,14 @@ export const Container = styled.section`
     padding: 1.5rem;
     border-radius: 20px;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
 
     p {
       margin-bottom: 0;
+      align-self: flex-start;
     }
   }
 
