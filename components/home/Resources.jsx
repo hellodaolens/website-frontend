@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react';
-import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
+import { useState } from 'react';
 import Carousel from 'react-multi-carousel';
-import Image from 'next/image';
 import styled from 'styled-components';
 import resourcesBCG from '../../public/assets/homepage/resources-bcg.png';
-import resource from '../../public/assets/homepage/resource.png';
+import SingleResource from './SingleResource';
 
 const Resources = ({ DAOResourcesHeading, DAOResources }) => {
   const responsive = {
@@ -31,31 +29,23 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
   };
 
   const [resources, setResources] = useState(DAOResources);
-  const [isMobile, setIsMobile] = useState(false);
+  const filters = [
+    'all',
+    ...new Set(
+      DAOResources?.map((resource) => resource.type.trim().toLowerCase())
+    ),
+  ];
 
   const handleFilterResources = (type) => {
     if (type === 'all') {
       setResources(DAOResources);
     } else {
       const tempResources = DAOResources?.filter(
-        (resource) => resource.type.trim().toLowerCase() === type.toLowerCase()
+        (resource) => resource.type.trim().toLowerCase() === type
       );
       setResources(tempResources);
     }
   };
-
-  const setDimension = () => {
-    const ismobile = window.innerWidth < 595;
-    if (ismobile !== isMobile) setIsMobile(ismobile);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', setDimension, false);
-
-    return () => {
-      window.removeEventListener('resize', setDimension);
-    };
-  }, [isMobile]);
 
   return (
     <Container className="section">
@@ -65,33 +55,17 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
         </div>
 
         <div className="tabs-container">
-          <button className="btn2" onClick={() => handleFilterResources('all')}>
-            all
-          </button>
-          <button
-            className="btn2"
-            onClick={() => handleFilterResources('product')}
-          >
-            product
-          </button>
-          <button
-            className="btn2"
-            onClick={() => handleFilterResources('service')}
-          >
-            service
-          </button>
-          <button
-            className="btn2"
-            onClick={() => handleFilterResources('investment')}
-          >
-            investment
-          </button>
-          <button
-            className="btn2"
-            onClick={() => handleFilterResources('charity')}
-          >
-            charity
-          </button>
+          {filters.map((filter, index) => {
+            return (
+              <button
+                key={index}
+                className="btn2"
+                onClick={() => handleFilterResources(filter)}
+              >
+                {filter}
+              </button>
+            );
+          })}
         </div>
 
         <div className="resources-center">
@@ -105,50 +79,9 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
             removeArrowOnDeviceType={['tablet', 'mobile']}
             keyBoardControl={true}
           >
-            {resources?.map((resource) => {
-              const [readMore, setReadMore] = useState(false);
-              const { name, description } = resource;
-              const showMoreBtn = description?.length > 130;
-              return (
-                <article key={resource?.id} className="resource">
-                  <Image
-                    src={resource?.logo?.data?.attributes?.url}
-                    alt={resource?.name}
-                    width={isMobile ? 44 : 80}
-                    height={isMobile ? 44 : 80}
-                    objectFit="contain"
-                    placeholder="blur"
-                    blurDataURL={resource?.logo?.data?.attributes?.url}
-                  />
-                  <div className="resource-info">
-                    <h5>{name}</h5>
-                    <p>
-                      {description.substr(0, 120)}
-                      {showMoreBtn &&
-                        (readMore
-                          ? description.substr(120, description.length)
-                          : `... `)}
-                      {showMoreBtn && (
-                        <button
-                          id="toggle-text"
-                          onClick={() => setReadMore(!readMore)}
-                        >
-                          {readMore ? (
-                            <>
-                              &nbsp;show less <FaAngleUp />
-                            </>
-                          ) : (
-                            <>
-                              read more <FaAngleDown />
-                            </>
-                          )}
-                        </button>
-                      )}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
+            {resources?.map((resource) => (
+              <SingleResource key={resource?.id} resource={resource} />
+            ))}
           </Carousel>
         </div>
       </div>
@@ -210,35 +143,6 @@ export const Container = styled.section`
     .react-multi-carousel-dot-list {
       margin-top: 4rem;
       bottom: unset;
-    }
-  }
-
-  .resource {
-    background: url(${resource.src}) center/cover no-repeat;
-    padding: 2rem;
-    border-radius: 20px;
-    margin: 0 1rem;
-    height: 100%;
-
-    .resource-info {
-      margin-top: 1rem;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-  }
-
-  #toggle-text {
-    background: transparent;
-    outline: none;
-    text-transform: capitalize;
-    color: rgb(121, 187, 241);
-    border: none;
-    font-size: 0.9rem;
-    cursor: pointer;
-    svg {
-      vertical-align: middle;
     }
   }
 `;

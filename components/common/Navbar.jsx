@@ -41,7 +41,11 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
               >
                 <a
                   className="link"
-                  id={asPath === `/${item?.to.trim()}` ? 'active' : ''}
+                  id={
+                    asPath === `/${item?.to.trim()}` && asPath !== `/`
+                      ? 'active'
+                      : ''
+                  }
                   onClick={() => handleNavClick(item)}
                 >
                   <span>{item?.name}</span>

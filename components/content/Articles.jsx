@@ -11,6 +11,14 @@ const Articles = ({ allArticles }) => {
   const numOfArticlesToShow = isMobile ? 2 : 6;
   const [numOfArticles, setNumOfArticles] = useState(numOfArticlesToShow);
   const articlesToShow = articles?.slice(0, numOfArticles);
+  const filters = [
+    'all',
+    ...new Set(
+      allArticles?.map((article) =>
+        article.attributes.type.trim().toLowerCase()
+      )
+    ),
+  ];
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 768;
@@ -30,8 +38,7 @@ const Articles = ({ allArticles }) => {
       setArticles(allArticles);
     } else {
       const tempArticles = allArticles?.filter(
-        (article) =>
-          article.attributes.type.trim().toLowerCase() === type.toLowerCase()
+        (article) => article.attributes.type.trim().toLowerCase() === type
       );
       setArticles(tempArticles);
     }
@@ -41,30 +48,15 @@ const Articles = ({ allArticles }) => {
     <Container className="section">
       <div className="tabs-container">
         <div className="tabs">
-          <button
-            className="tab-btn"
-            onClick={() => handleFilterArticles('all')}
-          >
-            All
-          </button>
-          <button
-            className="tab-btn"
-            onClick={() => handleFilterArticles('Case Study')}
-          >
-            Case study
-          </button>
-          <button
-            className="tab-btn"
-            onClick={() => handleFilterArticles('Trends')}
-          >
-            Trends
-          </button>
-          <button
-            className="tab-btn"
-            onClick={() => handleFilterArticles('DAOS')}
-          >
-            DAOS
-          </button>
+          {filters?.map((filter, index) => (
+            <button
+              key={index}
+              onClick={() => handleFilterArticles(filter)}
+              className="tab-btn"
+            >
+              {filter}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -151,6 +143,7 @@ export const Container = styled.section`
     cursor: pointer;
     width: max-content;
     padding: 0.5rem 1rem;
+    text-transform: capitalize;
 
     @media (max-width: 375px) {
       padding: 5px 10px;
