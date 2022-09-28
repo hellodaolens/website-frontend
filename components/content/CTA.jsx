@@ -142,6 +142,10 @@ export const Container = styled.section`
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+
+    @media (min-width: 610px) and (max-width: 990px) {
+      justify-content: center;
+    }
   }
 
   input {
@@ -168,6 +172,7 @@ export const Container = styled.section`
 
   .btn {
     height: 48px;
+    padding: 10px 20px;
   }
 
   .points {

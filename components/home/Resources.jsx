@@ -218,6 +218,15 @@ export const Container = styled.section`
     padding: 2rem;
     border-radius: 20px;
     margin: 0 1rem;
+    height: 100%;
+
+    .resource-info {
+      margin-top: 1rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   #toggle-text {
