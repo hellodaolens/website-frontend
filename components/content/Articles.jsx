@@ -62,7 +62,6 @@ const Articles = ({ allArticles }) => {
 
       <div className="content">
         {articlesToShow?.map((article) => {
-          const { id, attributes } = article;
           const {
             name,
             shortDescription,
@@ -70,10 +69,10 @@ const Articles = ({ allArticles }) => {
             author,
             authorDesignation,
             slug,
-          } = attributes;
+          } = article?.attributes;
 
           return (
-            <Link key={id} href={`/blog/${slug}`}>
+            <Link key={article?.id} href={`/blog/${slug}`}>
               <article className="article">
                 <Image
                   src={image?.data?.attributes?.url}

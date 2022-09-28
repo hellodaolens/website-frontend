@@ -3,9 +3,39 @@ import { HeadSeo, Navbar } from '../../../components/common';
 import styled from 'styled-components';
 import moment from 'moment/moment';
 import ReactMarkdown from 'react-markdown';
+import { useRouter } from 'next/router';
 
 const SingleBlogPage = ({ article, navItems }) => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const { isFallback } = useRouter();
+
+  if (isFallback) {
+    return (
+      <>
+        <HeadSeo title={'Blog'} />
+        <Container>
+          <Navbar
+            navItems={navItems}
+            showMenu={showMenu}
+            setShowMenu={setShowMenu}
+          />
+          <main onClick={() => setShowMenu(false)} className="section">
+            <div className="section-center blog-center">
+              <div className="title">
+                <h3>Loading...</h3>
+              </div>
+              <div className="author">
+                <p>Loading...</p>
+              </div>
+              <div className="content">Loading...</div>
+            </div>
+          </main>
+        </Container>
+      </>
+    );
+  }
+
   const { author, content, name, shortDescription, createdAt } =
     article?.attributes;
 
