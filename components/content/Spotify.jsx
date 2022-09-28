@@ -30,27 +30,6 @@ const Spotify = ({ podcasts }) => {
 export const Container = styled.section`
   padding-bottom: 0;
 
-  /* .podcast {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 592px;
-    &::after {
-      padding-top: 56.25%;
-      padding-top: 50%;
-      display: block;
-      content: '';
-    }
-    iframe {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 0.5rem;
-    }
-  } */
-
   .content-center {
     display: grid;
     gap: 2rem;

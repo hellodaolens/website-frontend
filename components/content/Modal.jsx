@@ -220,7 +220,7 @@ export const FormContainer = styled.form`
       color: var(--clr-white);
 
       &::placeholder {
-        color: var(--clr-white);
+        color: rgba(255, 255, 255, 0.75);
       }
     }
   }

@@ -183,7 +183,7 @@ export const Container = styled.section`
       padding: 14px 20px;
       color: #fff;
       &::placeholder {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.75);
         font-style: normal;
         font-weight: 400;
         font-size: 16px;

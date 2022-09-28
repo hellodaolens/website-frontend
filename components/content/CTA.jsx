@@ -149,7 +149,8 @@ export const Container = styled.section`
   }
 
   input {
-    width: 320px;
+    width: 100%;
+    max-width: 420px;
     height: 48px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -158,7 +159,7 @@ export const Container = styled.section`
     padding: 14px 20px;
     color: #fff;
     &::placeholder {
-      color: #fff;
+      color: rgba(255, 255, 255, 0.75);
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
