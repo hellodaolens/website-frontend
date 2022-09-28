@@ -33,6 +33,7 @@ const SingleResource = ({ resource }) => {
         objectFit="contain"
         placeholder="blur"
         blurDataURL={resource?.logo?.data?.attributes?.url}
+        className="resource-logo"
       />
       <div className="resource-info">
         <h5>{name}</h5>
@@ -64,7 +65,17 @@ export const Container = styled.article`
   padding: 2rem;
   border-radius: 20px;
   margin: 0 1rem;
-  height: 100%;
+  display: grid;
+  min-height: 100%;
+
+  @media (min-width: 640px) {
+    align-items: center;
+    min-height: 365px;
+  }
+
+  span {
+    justify-self: left;
+  }
 
   .resource-info {
     margin-top: 1rem;
