@@ -29,12 +29,19 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
   };
 
   const [resources, setResources] = useState(DAOResources);
+<<<<<<< HEAD
   const filters = [
     'all',
     ...new Set(
       DAOResources?.map((resource) => resource.type.trim().toLowerCase())
     ),
   ];
+=======
+  const [isMobile, setIsMobile] = useState(false);
+  
+  const [readMore, setReadMore] = useState(false);
+
+>>>>>>> a4fb2b15ee2e6294b38a23b6cb4b8d520d6a8b01
 
   const handleFilterResources = (type) => {
     if (type === 'all') {
@@ -79,9 +86,55 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
             removeArrowOnDeviceType={['tablet', 'mobile']}
             keyBoardControl={true}
           >
+<<<<<<< HEAD
             {resources?.map((resource) => (
               <SingleResource key={resource?.id} resource={resource} />
             ))}
+=======
+            {resources?.map((resource) => {
+               const { name, description } = resource;
+               const showMoreBtn = description?.length > 130;
+              return (
+                <article key={resource?.id} className="resource">
+                  <Image
+                    src={resource?.logo?.data?.attributes?.url}
+                    alt={resource?.name}
+                    width={isMobile ? 44 : 80}
+                    height={isMobile ? 44 : 80}
+                    objectFit="contain"
+                    placeholder="blur"
+                    blurDataURL={resource?.logo?.data?.attributes?.url}
+                  />
+                  <div className="resource-info">
+                    <h5>{name}</h5>
+                    <p>
+                      {description.substr(0, 120)}
+                      {showMoreBtn &&
+                        (readMore
+                          ? description.substr(120, description.length)
+                          : `... `)}
+                      {showMoreBtn && (
+                        <button
+                          id="toggle-text"
+                          onClick={() => setReadMore(!readMore)}
+                        >
+                          {readMore ? (
+                            <>
+                              &nbsp;show less <FaAngleUp />
+                            </>
+                          ) : (
+                            <>
+                              read more <FaAngleDown />
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </p>
+                  </div>
+                </article>
+              );
+            })}
+>>>>>>> a4fb2b15ee2e6294b38a23b6cb4b8d520d6a8b01
           </Carousel>
         </div>
       </div>
