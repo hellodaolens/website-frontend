@@ -19,7 +19,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
                 autoPlay
                 loop
                 muted
-                playsinline
+                playsInline
               />
             ) : (
               <Image
@@ -44,7 +44,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
                 autoPlay
                 loop
                 muted
-                playsinline
+                playsInline
               />
             ) : (
               <Image
