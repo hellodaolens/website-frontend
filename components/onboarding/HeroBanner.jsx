@@ -13,15 +13,14 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               <video
                 src={heroImg1?.data?.attributes.url}
                 type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
-                preload='auto'
                 alt='onboarding'
                 width={880}
                 style={{ maxWidth: '880px' }}
                 height={495}
-                muted
-                autoPlay
-                loop
-                playsInline
+                // muted
+                // autoPlay
+                // loop
+                // playsInline
               />
             ) : (
               <Image
@@ -40,15 +39,14 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
               <video
                 src={heroImg2?.data?.attributes.url}
                 type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
-                preload='auto'
                 alt='onboarding'
                 width={225}
                 height={400}
                 style={{ maxWidth: '225px' }}
-                muted
-                autoPlay
-                loop
-                playsInline
+                // muted
+                // autoPlay
+                // loop
+                // playsInline
               />
             ) : (
               <Image
