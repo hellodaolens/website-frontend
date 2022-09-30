@@ -44,6 +44,7 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
                 autoPlay
                 loop
                 muted
+                playsinline
               />
             ) : (
               <Image
