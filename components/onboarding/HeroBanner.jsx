@@ -17,10 +17,10 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
                 width={880}
                 style={{ maxWidth: '880px' }}
                 height={495}
-                // muted
-                // autoPlay
-                // loop
-                // playsInline
+                muted
+                autoPlay
+                loop
+                playsInline
               />
             ) : (
               <Image
@@ -43,10 +43,10 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
                 width={225}
                 height={400}
                 style={{ maxWidth: '225px' }}
-                // muted
-                // autoPlay
-                // loop
-                // playsInline
+                muted
+                autoPlay
+                loop
+                playsInline
               />
             ) : (
               <Image
