@@ -71,16 +71,19 @@ const Hero = ({
       <main onClick={() => setShowMenu(false)} className="section">
         <div className="section-center">
           <div className="banner">
-            <Image
-              src={bannerArticle?.attributes?.image?.data?.attributes?.url}
-              alt="banner"
-              width={520}
-              height={376}
-              placeholder="blur"
-              blurDataURL={
-                bannerArticle?.attributes?.image?.data?.attributes?.url
-              }
-            />
+            <div className='banner-image'>
+              <img
+                src={bannerArticle?.attributes?.image?.data?.attributes?.url}
+                alt="banner"
+                width={520}
+                height={376}
+                placeholder="blur"
+                blurDataURL={
+                  bannerArticle?.attributes?.image?.data?.attributes?.url
+                }
+                style={{ objectFit: "fill" }}
+              />
+            </div>
             <article className="info">
               <h3>{bannerArticle?.attributes?.name}</h3>
               <div>

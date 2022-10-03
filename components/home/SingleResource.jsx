@@ -38,22 +38,7 @@ const SingleResource = ({ resource }) => {
       <div className="resource-info">
         <h5>{name}</h5>
         <p>
-          {description.substr(0, 120)}
-          {showMoreBtn &&
-            (readMore ? description.substr(120, description.length) : `... `)}
-          {showMoreBtn && (
-            <button id="toggle-text" onClick={() => setReadMore(!readMore)}>
-              {readMore ? (
-                <>
-                  &nbsp;show less <FaAngleUp />
-                </>
-              ) : (
-                <>
-                  read more <FaAngleDown />
-                </>
-              )}
-            </button>
-          )}
+          {description}
         </p>
       </div>
     </Container>
@@ -66,11 +51,11 @@ export const Container = styled.article`
   border-radius: 20px;
   margin: 0 1rem;
   display: grid;
-  min-height: 100%;
+  height: 100%;
 
   @media (min-width: 640px) {
     align-items: center;
-    min-height: 365px;
+    height: 100%;
   }
 
   span {

@@ -1,17 +1,27 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import investorBCG from '../../public/assets/homepage/investor-bcg.png';
+import {useState} from 'react'
+
 
 const Investors = ({ investors }) => {
+
+  let inves = investors.filter((investor, idx) => idx < 13 && investor)
+
+  const [showAllInvestors, setShowAllInvestors] = useState(false)
+
+  const investorsToBeShown = showAllInvestors ? investors : inves
+
   return (
     <Container className="section">
       <div className="section-center">
+
         <div className="title">
           <h2>Our investors</h2>
         </div>
 
         <div className="investor-center">
-          {investors?.map((investor) => {
+          {investorsToBeShown?.map((investor) => {
             return (
               <article
                 key={investor?.id}
@@ -24,19 +34,31 @@ const Investors = ({ investors }) => {
                 <Image
                   src={investor?.attributes?.logo?.data?.attributes?.url}
                   alt={investor?.attributes?.name}
-                  width={40}
-                  height={40}
+                  width={75}
+                  height={75}
                   objectFit="contain"
                   placeholder="blur"
                   blurDataURL={
                     investor?.attributes?.logo?.data?.attributes?.url
                   }
+                  className={!investor?.attributes?.isHightlight ? "rounded-full" : undefined}
                 />
                 <p>{investor?.attributes?.name}</p>
               </article>
             );
           })}
         </div>
+
+        <div className="btn-container btn-investors">
+            <button
+              className="btn2"
+              onClick={() =>
+              setShowAllInvestors(prev => !prev)
+              }>
+            {showAllInvestors ? "Show Less" : "Show More"}
+         </button>
+        </div>
+
       </div>
     </Container>
   );
@@ -45,6 +67,10 @@ const Investors = ({ investors }) => {
 export const Container = styled.section`
   .title {
     text-align: center;
+  }
+
+  .rounded-full{
+    border-radius: 50%;
   }
 
   .investor {
@@ -61,6 +87,14 @@ export const Container = styled.section`
     p {
       margin-bottom: 0;
     }
+  }
+
+
+  .btn-investors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
   }
 
   .investor.highlight {
