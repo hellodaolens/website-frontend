@@ -1,4 +1,5 @@
-import { HeadSeo } from '../components/common';
+import { useState } from "react";
+import { HeadSeo } from "../components/common";
 import {
   Hero,
   Banner,
@@ -9,7 +10,7 @@ import {
   CTA,
   Investors,
   TopBar,
-} from '../components/home';
+} from "../components/home";
 
 export default function Home({
   data,
@@ -109,6 +110,7 @@ export async function getStaticProps() {
     `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo&populate[7]=contributorImg1&populate[8]=contributorImg2&populate[9]=contributorPoints&populate[10]=contributorPoints.img`
   );
   const data = await res.json();
+  // console.log(data);
 
   // nav data
   const navRes = await fetch(

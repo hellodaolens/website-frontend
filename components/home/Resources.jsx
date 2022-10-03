@@ -47,6 +47,8 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
     }
   };
 
+  // console.log(resources)
+
   return (
     <Container className="section">
       <div className="section-center">

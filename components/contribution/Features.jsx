@@ -176,6 +176,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: 100%;
 
     .info {
       p {
