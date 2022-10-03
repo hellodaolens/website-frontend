@@ -12,14 +12,14 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
             {checkMediaType(heroImg1) === 'video' ? (
               <video
                 src={heroImg1?.data?.attributes.url}
+                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
                 alt='onboarding'
                 width={880}
                 style={{ maxWidth: '880px' }}
                 height={495}
-                // autoPlay
-                controls
-                // loop
                 muted
+                autoPlay
+                loop
                 playsInline
               />
             ) : (
@@ -38,14 +38,14 @@ const HeroBanner = ({ users, heroImg1, heroImg2, usedByHeading }) => {
             {checkMediaType(heroImg2) === 'video' ? (
               <video
                 src={heroImg2?.data?.attributes.url}
+                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
                 alt='onboarding'
                 width={225}
                 height={400}
                 style={{ maxWidth: '225px' }}
-                // autoPlay
-                controls
-                // loop
                 muted
+                autoPlay
+                loop
                 playsInline
               />
             ) : (
