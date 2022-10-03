@@ -3,16 +3,33 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'react-multi-carousel/lib/styles.css';
 import { ToastContainer } from 'react-toastify';
 import { Footer } from '../components/common';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=G-G742ZL661B`}
+      />
+
+      <Script id='google-analytics' strategy='lazyOnload'>
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G742ZL661B', {
+              page_path: window.location.pathname,
+            });
+                `}
+      </Script>
+
       <ToastContainer
-        position="top-center"
+        position='top-center'
         autoClose={5000}
         closeOnClick
         rtl={false}
-        theme="dark"
+        theme='dark'
         width={'400px'}
       />
       <Component {...pageProps} />
