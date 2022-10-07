@@ -1,19 +1,23 @@
-import '../styles/globals.css';
-import 'react-toastify/dist/ReactToastify.css';
-import 'react-multi-carousel/lib/styles.css';
-import { ToastContainer } from 'react-toastify';
-import { Footer } from '../components/common';
-import Script from 'next/script';
-
+import "../styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import "react-multi-carousel/lib/styles.css";
+import { ToastContainer } from "react-toastify";
+import { Footer } from "../components/common";
+import Script from "next/script";
+import TagManager from "react-gtm-module";
+const tagManagerArgs = {
+  gtmId: "GTM-PH3ZXT3",
+};
+TagManager.initialize(tagManagerArgs);
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Script
-        strategy='lazyOnload'
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
 
-      <Script id='google-analytics' strategy='lazyOnload'>
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -25,12 +29,12 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       <ToastContainer
-        position='top-center'
+        position="top-center"
         autoClose={5000}
         closeOnClick
         rtl={false}
-        theme='dark'
-        width={'400px'}
+        theme="dark"
+        width={"400px"}
       />
       <Component {...pageProps} />
       <Footer />
