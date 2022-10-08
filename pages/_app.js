@@ -5,11 +5,15 @@ import { ToastContainer } from "react-toastify";
 import { Footer } from "../components/common";
 import Script from "next/script";
 import TagManager from "react-gtm-module";
+import { useEffect } from "react";
 const tagManagerArgs = {
   gtmId: "GTM-PH3ZXT3",
 };
-TagManager.initialize(tagManagerArgs);
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <>
       <Script
