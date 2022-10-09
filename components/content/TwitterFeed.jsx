@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterFollowButton,
-  TwitterHashtagButton,
-  TwitterMentionButton,
-  TwitterTweetEmbed,
-  TwitterMomentShare,
-  TwitterDMButton,
-  TwitterVideoEmbed,
-  TwitterOnAirButton,
-} from 'react-twitter-embed';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { useState, useEffect } from 'react';
+import reviewBCG from '../../public/assets/content/twitterBcg.png';
+import twitterLogo from '../../public/assets/content/twitter-logo.jpg';
+import { MdVerified } from 'react-icons/md';
 
 const TwitterFeed = () => {
+  const [tweets, setTweets] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+  const tweetsToShow = showAll ? tweets : tweets?.slice(0, 4);
+
+  useEffect(() => {
+    fetch(`/api/twitter`)
+      .then((res) => res.json())
+      .then((data) => setTweets(data?.data.sort((a, b) => b?.id - a?.id)));
+  }, []);
+
   return (
     <Container className="section">
       <div className="section-center">
@@ -21,26 +24,35 @@ const TwitterFeed = () => {
         </div>
 
         <div className="tweets-center">
-          {/* <a
-            className="twitter-timeline"
-            data-height="792"
-            data-dnt="true"
-            data-theme="dark"
-            href="https://twitter.com/DaoLens?ref_src=twsrc%5Etfw"
-          >
-            Tweets by DaoLens
-          </a>{' '}
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script> */}
-          <TwitterTimelineEmbed
+          {/* <TwitterTimelineEmbed
             sourceType="profile"
             screenName="DaoLens"
             theme="dark"
             options={{ height: 792 }}
-          />
+          /> */}
+          {tweetsToShow?.map((tweet) => {
+            return (
+              <article key={tweet?.id} className="tweet">
+                <div className="tweet-header">
+                  <img
+                    src={twitterLogo.src}
+                    alt="@DaoLens"
+                    className="twitter-logo"
+                  />
+                  <h4>
+                    DaoLens <MdVerified />
+                  </h4>
+                </div>
+                <p>{tweet?.text}</p>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="btn-wrapper">
+          <button className="btn2" onClick={() => setShowAll(!showAll)}>
+            View {showAll ? 'Less' : 'More'}
+          </button>
         </div>
       </div>
     </Container>
@@ -55,9 +67,42 @@ export const Container = styled.section`
     margin-bottom: 4rem;
   }
 
-  a {
-    color: var(--clr-white);
-    text-decoration: underline;
+  .btn-wrapper {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .tweets-center {
+    display: grid;
+    gap: 2rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .tweet {
+    background: url(${reviewBCG.src}) center no-repeat;
+    background-size: 100% 100%;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: left;
+
+    .twitter-logo {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 2px solid var(--clr-black);
+    }
+
+    h4 svg {
+      fill: #4d9eea;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
   }
 `;
 
