@@ -4,8 +4,7 @@ const handler = async (req, res) => {
       'https://api.twitter.com/2/tweets/search/recent?query=from:daolens -is:reply',
       {
         headers: {
-          Authorization:
-            'Bearer AAAAAAAAAAAAAAAAAAAAAGe%2BhwEAAAAAhOeE0PkOfldxnmLUhVEDLMpYpd4%3D5WJAoEZpEjKimoutuhwHtzNuPkcpbz5lQF8UiaPTq9aYy1UNzb',
+          Authorization: `Bearer ${process.env.TWITTER_API_TOKEN}`,
         },
       }
     );
