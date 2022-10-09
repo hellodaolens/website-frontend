@@ -52,12 +52,12 @@ export const Container = styled.section`
   main {
     display: grid;
     align-items: center;
-    margin-top: -4rem;
+    margin-top: -10rem;
 
     .main.section-center {
       display: grid;
       place-items: center;
-      min-height: 100vh;
+      min-height: calc(100vh + 4rem);
     }
 
     .hero-content {

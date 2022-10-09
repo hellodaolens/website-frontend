@@ -47,6 +47,10 @@ export const Container = styled.section`
     align-items: center;
     padding: 4rem 0;
     padding-top: 2rem;
+
+    @media (min-width: 792px) {
+      padding-top: 0;
+    }
   }
 
   h5 {

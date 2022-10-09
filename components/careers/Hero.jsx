@@ -59,14 +59,13 @@ export const Container = styled.section`
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 5rem 0 0;
+    padding-top: 4rem;
 
     .section-center {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       gap: 2rem;
-      height: 100%;
     }
 
     .info {

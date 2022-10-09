@@ -53,6 +53,7 @@ export const Container = styled.section`
 
     @media (min-width: 792px) {
       min-height: 85vh;
+      padding: 0;
     }
 
     .hero-banner {

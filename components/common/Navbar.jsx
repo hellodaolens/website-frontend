@@ -98,7 +98,7 @@ export const NavContainer = styled.nav`
 
     .links {
       display: flex;
-      /* gap: 1rem; */
+      gap: 0.25rem;
       justify-content: center;
       align-items: center;
       border-radius: 90px;
@@ -110,8 +110,8 @@ export const NavContainer = styled.nav`
       border: 2px solid #372744;
 
       @media (max-width: 375px) {
+        gap: 5px;
         padding: 5px;
-        /* gap: 0.5rem; */
         font-size: 0.75rem;
       }
     }
@@ -121,6 +121,9 @@ export const NavContainer = styled.nav`
       cursor: pointer;
       text-align: center;
       padding: 0.25rem 0.5rem;
+      @media (max-width: 375px) {
+        padding: 0.25rem;
+      }
 
       &:hover {
         background: #200734;

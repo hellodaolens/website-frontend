@@ -79,7 +79,7 @@ export const Container = styled.div`
 
   .img {
     position: relative;
-    margin-top: -10rem;
+    margin-top: -8rem;
 
     @media (max-width: 792px) {
       margin-top: -6rem;
