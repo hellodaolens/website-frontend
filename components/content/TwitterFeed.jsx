@@ -32,19 +32,27 @@ const TwitterFeed = () => {
           /> */}
           {tweetsToShow?.map((tweet) => {
             return (
-              <article key={tweet?.id} className="tweet">
-                <div className="tweet-header">
-                  <img
-                    src={twitterLogo.src}
-                    alt="@DaoLens"
-                    className="twitter-logo"
-                  />
-                  <h4>
-                    DaoLens <MdVerified />
-                  </h4>
-                </div>
-                <p>{tweet?.text}</p>
-              </article>
+              <a
+                key={tweet?.id}
+                href={`https://twitter.com/DaoLens/status/${tweet?.id}`}
+                className="tweet"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <article>
+                  <div className="tweet-header">
+                    <img
+                      src={twitterLogo.src}
+                      alt="@DaoLens"
+                      className="twitter-logo"
+                    />
+                    <h4>
+                      DaoLens <MdVerified />
+                    </h4>
+                  </div>
+                  <p>{tweet?.text}</p>
+                </article>
+              </a>
             );
           })}
         </div>
@@ -87,6 +95,11 @@ export const Container = styled.section`
     padding: 2rem;
     border-radius: 20px;
     text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
 
     .twitter-logo {
       width: 4rem;
@@ -96,7 +109,11 @@ export const Container = styled.section`
       border: 2px solid var(--clr-black);
     }
 
-    h4 svg {
+    h4 {
+      color: var(--clr-white);
+    }
+
+    svg {
       fill: #4d9eea;
     }
 

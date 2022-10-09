@@ -1,7 +1,7 @@
 const handler = async (req, res) => {
   if (req.method === 'GET') {
     const twitterRes = await fetch(
-      'https://api.twitter.com/2/tweets/search/recent?query=from:daolens -is:reply',
+      'https://api.twitter.com/2/tweets/search/recent?query=from:daolens -is:reply&tweet.fields=id',
       {
         headers: {
           Authorization: `Bearer ${process.env.TWITTER_API_TOKEN}`,

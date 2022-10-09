@@ -21,9 +21,16 @@ export const Container = styled.section`
   background: url(${bannerBCG.src}) center/cover no-repeat;
   text-align: center;
 
+  .section-center {
+    width: unset;
+    max-width: unset;
+  }
+
   h3 {
     margin: 2rem auto;
     color: #cbbde9;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
   }
   p {
     margin-left: auto;

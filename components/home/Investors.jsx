@@ -4,11 +4,17 @@ import investorBCG from '../../public/assets/homepage/investor-bcg.png';
 import { useState } from 'react';
 
 const Investors = ({ investors }) => {
-  let inves = investors.filter((investor, idx) => idx < 12 && investor);
+  const [numOfInvestors, setNumOfInvestors] = useState(12);
+  const investorsToBeShown = investors?.slice(0, numOfInvestors);
+  const allInvestorsShown = investorsToBeShown.length === investors.length;
 
-  const [showAllInvestors, setShowAllInvestors] = useState(false);
-
-  const investorsToBeShown = showAllInvestors ? investors : inves;
+  const viewMoreHandler = () => {
+    if (allInvestorsShown) {
+      setNumOfInvestors(12);
+    } else {
+      setNumOfInvestors(numOfInvestors + 12);
+    }
+  };
 
   return (
     <Container className="section">
@@ -51,11 +57,8 @@ const Investors = ({ investors }) => {
         </div>
 
         <div className="btn-container btn-investors">
-          <button
-            className="btn2"
-            onClick={() => setShowAllInvestors((prev) => !prev)}
-          >
-            {showAllInvestors ? 'Show Less' : 'Show More'}
+          <button className="btn2" onClick={viewMoreHandler}>
+            View {allInvestorsShown ? 'Less' : 'More'}
           </button>
         </div>
       </div>

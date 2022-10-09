@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { HeadSeo } from "../components/common";
+import { useState } from 'react';
+import { HeadSeo } from '../components/common';
 import {
   Hero,
   Banner,
@@ -10,7 +10,7 @@ import {
   CTA,
   Investors,
   TopBar,
-} from "../components/home";
+} from '../components/home';
 
 export default function Home({
   data,
@@ -132,7 +132,7 @@ export async function getStaticProps() {
 
   // investors data
   const investorsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/investors?sort=isHightlight:desc&populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/investors?pagination[start]=0&pagination[limit]=100&sort=isHightlight:desc&populate=*`
   );
   const investorsData = await investorsRes.json();
 
