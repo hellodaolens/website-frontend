@@ -47,8 +47,6 @@ const Resources = ({ DAOResourcesHeading, DAOResources }) => {
     }
   };
 
-  // console.log(resources)
-
   return (
     <Container className="section">
       <div className="section-center">
@@ -98,11 +96,12 @@ export const Container = styled.section`
     margin: 3rem 0 4rem;
     display: flex;
     background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.75rem;
     flex-wrap: wrap;
     border-radius: 90px;
     border: 2px solid #372744;
     width: fit-content;
+    gap: 0.5rem;
 
     @media (max-width: 375px) {
       justify-content: center;
@@ -113,7 +112,7 @@ export const Container = styled.section`
       cursor: pointer;
       border: none;
       outline: none;
-      padding: 0.25rem 0.5rem;
+      padding: 0.5rem 0.75rem;
       background: transparent;
 
       &:hover {

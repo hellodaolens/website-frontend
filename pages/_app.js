@@ -1,14 +1,14 @@
-import "../styles/globals.css";
-import "react-toastify/dist/ReactToastify.css";
-import "react-multi-carousel/lib/styles.css";
-import { ToastContainer } from "react-toastify";
-import { Footer } from "../components/common";
-import Script from "next/script";
-import TagManager from "react-gtm-module";
+import '../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-multi-carousel/lib/styles.css';
+import { ToastContainer } from 'react-toastify';
+import { Footer } from '../components/common';
+import Script from 'next/script';
+import TagManager from 'react-gtm-module';
 const tagManagerArgs = {
-  gtmId: "GTM-PH3ZXT3",
+  gtmId: 'GTM-PH3ZXT3',
 };
-TagManager.initialize(tagManagerArgs);
+// TagManager.initialize(tagManagerArgs);
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
         closeOnClick
         rtl={false}
         theme="dark"
-        width={"400px"}
+        width={'400px'}
       />
       <Component {...pageProps} />
       <Footer />

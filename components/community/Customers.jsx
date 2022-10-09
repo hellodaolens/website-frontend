@@ -102,7 +102,10 @@ export const Container = styled.section`
 
   .customer-center {
     margin: 4rem auto;
-    margin-bottom: 8rem;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 8rem;
+    }
 
     .react-multiple-carousel__arrow--left {
       left: 0%;
@@ -119,7 +122,6 @@ export const Container = styled.section`
 
   .customer {
     display: flex;
-    /* grid-template-columns: auto auto; */
     align-items: center;
     gap: 1rem;
     margin: 0 0.5rem;

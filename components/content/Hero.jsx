@@ -71,17 +71,16 @@ const Hero = ({
       <main onClick={() => setShowMenu(false)} className="section">
         <div className="section-center">
           <div className="banner">
-            <div className='banner-image'>
-              <img
+            <div className="banner-image">
+              <Image
                 src={bannerArticle?.attributes?.image?.data?.attributes?.url}
                 alt="banner"
-                width={520}
-                height={376}
+                width={640}
+                height={306}
                 placeholder="blur"
                 blurDataURL={
                   bannerArticle?.attributes?.image?.data?.attributes?.url
                 }
-                style={{ objectFit: "fill" }}
               />
             </div>
             <article className="info">
@@ -184,6 +183,7 @@ export const Container = styled.section`
 
     @media (min-width: 992px) {
       grid-template-columns: 1fr 1fr;
+      align-items: center;
       gap: 2rem;
       padding: 2rem;
     }
@@ -214,6 +214,14 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+
+    span {
+      transition: var(--transition);
+    }
+
+    &:hover span {
+      transform: scale(1.05);
+    }
   }
 
   .option.active-opt {

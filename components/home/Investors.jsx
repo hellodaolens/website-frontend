@@ -1,21 +1,18 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import investorBCG from '../../public/assets/homepage/investor-bcg.png';
-import {useState} from 'react'
-
+import { useState } from 'react';
 
 const Investors = ({ investors }) => {
+  let inves = investors.filter((investor, idx) => idx < 12 && investor);
 
-  let inves = investors.filter((investor, idx) => idx < 13 && investor)
+  const [showAllInvestors, setShowAllInvestors] = useState(false);
 
-  const [showAllInvestors, setShowAllInvestors] = useState(false)
-
-  const investorsToBeShown = showAllInvestors ? investors : inves
+  const investorsToBeShown = showAllInvestors ? investors : inves;
 
   return (
     <Container className="section">
       <div className="section-center">
-
         <div className="title">
           <h2>Our investors</h2>
         </div>
@@ -41,7 +38,11 @@ const Investors = ({ investors }) => {
                   blurDataURL={
                     investor?.attributes?.logo?.data?.attributes?.url
                   }
-                  className={!investor?.attributes?.isHightlight ? "rounded-full" : undefined}
+                  className={
+                    !investor?.attributes?.isHightlight
+                      ? 'rounded-full'
+                      : undefined
+                  }
                 />
                 <p>{investor?.attributes?.name}</p>
               </article>
@@ -50,15 +51,13 @@ const Investors = ({ investors }) => {
         </div>
 
         <div className="btn-container btn-investors">
-            <button
-              className="btn2"
-              onClick={() =>
-              setShowAllInvestors(prev => !prev)
-              }>
-            {showAllInvestors ? "Show Less" : "Show More"}
-         </button>
+          <button
+            className="btn2"
+            onClick={() => setShowAllInvestors((prev) => !prev)}
+          >
+            {showAllInvestors ? 'Show Less' : 'Show More'}
+          </button>
         </div>
-
       </div>
     </Container>
   );
@@ -69,12 +68,11 @@ export const Container = styled.section`
     text-align: center;
   }
 
-  .rounded-full{
+  .rounded-full {
     border-radius: 50%;
   }
 
   .investor {
-    /* order: 50; */
     padding: 1rem;
     background: rgba(0, 0, 0, 0.02);
     backdrop-filter: blur(100px);
@@ -89,8 +87,7 @@ export const Container = styled.section`
     }
   }
 
-
-  .btn-investors{
+  .btn-investors {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,8 +95,6 @@ export const Container = styled.section`
   }
 
   .investor.highlight {
-    /* order: 1; */
-
     justify-content: center;
     p {
       display: none;
@@ -134,13 +129,16 @@ export const Container = styled.section`
 
     .investor.highlight {
       &:nth-child(1) {
-        grid-row: 1 / 5;
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
       }
       &:nth-child(2) {
         grid-row: 1 / 3;
+        grid-column: 2 / 3;
       }
       &:nth-child(3) {
-        grid-row: 3 / 5;
+        grid-row: 1 / 3;
+        grid-column: 3 / 4;
       }
     }
   }

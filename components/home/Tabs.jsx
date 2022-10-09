@@ -43,12 +43,14 @@ const Tabs = ({
           <button
             className={tabs === 'admin' ? 'active' : ''}
             onClick={() => setTabs('admin')}
+            title={adminHeading}
           >
             <p>Admin</p>
           </button>
           <button
             className={tabs === 'contributor' ? 'active' : ''}
             onClick={() => setTabs('contributor')}
+            title={contributorHeading}
           >
             <p>Contributor</p>
           </button>
@@ -247,6 +249,10 @@ export const Container = styled.section`
         margin-bottom: 0;
         cursor: pointer;
       }
+
+      &:hover {
+        transform: scale(0.95);
+      }
     }
 
     button.active {
@@ -302,45 +308,28 @@ export const Container = styled.section`
   .tab-points {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem;
 
-    @media (min-width: 792px) {
-      margin-top: 4rem;
-      grid-template-columns: [start] 1fr [col-1] 1fr [end];
-      grid-template-rows: [start] 1fr [col-1] 1fr [end];
-      gap: 2rem;
-
-      .point {
-        &:nth-child(1) {
-          grid-column: start/col-1;
-          grid-row: start/col-1;
-        }
-        &:nth-child(2) {
-          grid-column: start/col-1;
-          grid-row: col-1/end;
-        }
-        &:nth-child(3) {
-          grid-column: col-1/end;
-          grid-row: col-1/end;
-        }
-      }
+    @media (min-width: 992px) {
+      margin-top: 8rem;
+      gap: 0 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: space-between;
     }
 
     .point {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: 1rem;
+      gap: 0.5rem;
       align-items: center;
 
       p {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
       }
     }
   }
 
-  @media (max-width: 792px) {
+  @media (max-width: 992px) {
     .small-img {
       display: none;
     }

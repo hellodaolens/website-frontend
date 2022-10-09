@@ -11,7 +11,7 @@ const Banner = ({
       <div className="section-center">
         <p>{section1SubHeading}</p>
         <h3>{section1Heading}</h3>
-        <p>{section1LastHeading}</p>
+        <p className="last">{section1LastHeading}</p>
       </div>
     </Container>
   );
@@ -28,6 +28,10 @@ export const Container = styled.section`
   p {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  p.last {
+    margin-bottom: 0;
   }
 `;
 

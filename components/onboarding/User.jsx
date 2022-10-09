@@ -96,8 +96,12 @@ export const Container = styled.section`
   }
 
   .customer-center {
-    margin: 4rem auto;
-    margin-bottom: 8rem;
+    margin: 4rem auto 0;
+    /* margin-bottom: 8rem; */
+
+    @media (max-width: 1024px) {
+      margin: 4rem auto;
+    }
 
     .react-multiple-carousel__arrow--left {
       left: 0%;

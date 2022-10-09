@@ -53,7 +53,7 @@ export const Container = styled.section`
 
   .section-center {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .feature {

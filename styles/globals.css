@@ -296,7 +296,7 @@ button {
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .section-center {
@@ -311,7 +311,7 @@ button {
 
 @media (min-width: 792px) {
   .section {
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
   .section-center {
     width: 95vw;

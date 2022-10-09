@@ -41,40 +41,44 @@ const Users = ({ users, usedByHeading }) => {
   return (
     <Container className="section">
       <div className="section-center">
-        <div className="title">
-          <h4>{usedByHeading}</h4>
-        </div>
+        {users.length > 0 && (
+          <>
+            <div className="title">
+              <h4>{usedByHeading}</h4>
+            </div>
 
-        <div className="customer-center">
-          <Carousel
-            showDots={true}
-            renderDotsOutside={true}
-            containerClass="carousel-container"
-            rewind={true}
-            responsive={responsive}
-            renderButtonGroupOutside={true}
-            removeArrowOnDeviceType={['tablet', 'mobile']}
-            keyBoardControl={true}
-          >
-            {users?.map((customer) => {
-              return (
-                <article key={customer?.id} className="customer">
-                  <Image
-                    src={customer?.attributes?.logo?.data?.attributes?.url}
-                    alt={customer?.attributes?.name}
-                    width={isMobile ? 44 : 64}
-                    height={isMobile ? 44 : 64}
-                    placeholder="blur"
-                    blurDataURL={
-                      customer?.attributes?.logo?.data?.attributes?.url
-                    }
-                  />
-                  <p>{customer?.attributes?.name}</p>
-                </article>
-              );
-            })}
-          </Carousel>
-        </div>
+            <div className="customer-center">
+              <Carousel
+                showDots={true}
+                renderDotsOutside={true}
+                containerClass="carousel-container"
+                rewind={true}
+                responsive={responsive}
+                renderButtonGroupOutside={true}
+                removeArrowOnDeviceType={['tablet', 'mobile']}
+                keyBoardControl={true}
+              >
+                {users?.map((customer) => {
+                  return (
+                    <article key={customer?.id} className="customer">
+                      <Image
+                        src={customer?.attributes?.logo?.data?.attributes?.url}
+                        alt={customer?.attributes?.name}
+                        width={isMobile ? 44 : 64}
+                        height={isMobile ? 44 : 64}
+                        placeholder="blur"
+                        blurDataURL={
+                          customer?.attributes?.logo?.data?.attributes?.url
+                        }
+                      />
+                      <p>{customer?.attributes?.name}</p>
+                    </article>
+                  );
+                })}
+              </Carousel>
+            </div>
+          </>
+        )}
       </div>
     </Container>
   );
@@ -96,8 +100,12 @@ export const Container = styled.section`
   }
 
   .customer-center {
-    margin: 4rem auto;
-    margin-bottom: 8rem;
+    margin: 4rem auto 0;
+    /* margin-bottom: 8rem; */
+
+    @media (max-width: 1024px) {
+      margin: 4rem auto;
+    }
 
     .react-multiple-carousel__arrow--left {
       left: 0%;

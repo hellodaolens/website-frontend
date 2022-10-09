@@ -36,3 +36,27 @@
 - [x] top bar optional
 - [x] nav links breaking in small screens
 - [x] make customer images rounded
+
+#### Changes 09.10.2022
+
+- [x] 1
+- [x] 2
+- [ ] 3
+- [-] 4
+- [x] 5
+- [x] 6
+- [x] 7
+- [-] 8
+- [x] 9
+- [x] 10
+- [x] 11
+- [-] 12
+- [x] 13
+- [x] 14
+- [x] 15
+- [x] 16
+- [x] 17
+- [-] 18
+- [x] 19
+- [-] 20
+- [ ] 21
