@@ -8,12 +8,12 @@ const HiringBanner = ({
   lastSectionCTADestination,
 }) => {
   return (
-    <Container className="section">
-      <div className="section-center">
+    <Container className='section'>
+      <div className='section-center'>
         <h3>{lastSectionHeading}</h3>
         <p>{lastSectionDescription}</p>
 
-        <a href={lastSectionCTADestination} className="btn">
+        <a href={lastSectionCTADestination} className='Jobs-2'>
           {lastSectionCTAText}
         </a>
       </div>
@@ -32,8 +32,27 @@ export const Container = styled.section`
     margin-right: auto;
   }
 
-  .btn {
+  .Jobs-2 {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 49px;
+    padding: 10px 32px;
+    border: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%);
     margin-top: 2rem;
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          85.21deg,
+          #5fb5fc -7.59%,
+          #844aff 62.28%,
+          #df52ff 113.15%
+        );
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
   }
 `;
 

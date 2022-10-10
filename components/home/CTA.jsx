@@ -13,42 +13,42 @@ const CTA = ({
   lastSectionCTADestination,
 }) => {
   return (
-    <Container className="section">
-      <div className="section-center">
-        <div className="last-section-center">
-          <article className="info">
+    <Container className='section'>
+      <div className='section-center'>
+        <div className='last-section-center'>
+          <article className='info'>
             <p>{lastSectionSubHeading}</p>
             <h2>{lastSectionHeading}</h2>
             <p>{lastSectionDescription}</p>
           </article>
-          <article className="img">
+          <article className='img'>
             {checkMediaType(lastSectionImg) === 'video' ? (
               <video
                 src={lastSectionImg?.data?.attributes?.url}
-                alt="last section image"
+                alt='last section image'
                 autoPlay
                 loop
                 muted
                 width={512}
                 height={316}
                 style={{ maxWidth: '512px' }}
-                className="image"
+                className='image'
               />
             ) : (
               <Image
                 src={lastSectionImg?.data?.attributes?.url}
-                alt="last section image"
+                alt='last section image'
                 width={512}
                 height={316}
-                objectFit="cover"
-                className="image"
-                placeholder="blur"
+                objectFit='cover'
+                className='image'
+                placeholder='blur'
                 blurDataURL={lastSectionImg?.data?.attributes?.url}
               />
             )}
           </article>
         </div>
-        <a href={lastSectionCTADestination} className="btn">
+        <a href={lastSectionCTADestination} className='Discord-1'>
           {lastSectionCTAText}
         </a>
       </div>
@@ -58,6 +58,28 @@ const CTA = ({
 
 export const Container = styled.section`
   background: url(${heroLastSection.src}) center/cover no-repeat;
+
+  .Discord-1 {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 49px;
+    padding: 10px 32px;
+    border: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%);
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          85.21deg,
+          #5fb5fc -7.59%,
+          #844aff 62.28%,
+          #df52ff 113.15%
+        );
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
+  }
 
   .section-center {
     @media (max-width: 992px) {

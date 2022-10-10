@@ -15,21 +15,21 @@ const Features = ({
   const feature = features1[0];
 
   return (
-    <Container className="section">
-      <div className="section-center">
-        <div className="title">
+    <Container className='section'>
+      <div className='section-center'>
+        <div className='title'>
           <h2>{featuresHeading}</h2>
         </div>
 
-        <article className="features1-center">
-          <div className="feature">
-            <div className="info">
+        <article className='features1-center'>
+          <div className='feature'>
+            <div className='info'>
               <div>
                 <h4>{feature?.name}as</h4>
                 <p>{feature?.description}</p>
               </div>
             </div>
-            <div className="img">
+            <div className='img'>
               {checkMediaType(feature?.image) === 'video' ? (
                 <video
                   src={feature?.image?.data?.attributes?.url}
@@ -47,7 +47,7 @@ const Features = ({
                   alt={feature?.name}
                   width={636}
                   height={352}
-                  placeholder="blur"
+                  placeholder='blur'
                   blurDataURL={feature?.image?.data?.attributes?.url}
                 />
               )}
@@ -55,12 +55,12 @@ const Features = ({
           </div>
         </article>
 
-        <article className="features2-center">
+        <article className='features2-center'>
           {features2?.map((feature) => {
             const { id, name, description, image } = feature;
             return (
-              <article key={id} className="feature2">
-                <div className="img">
+              <article key={id} className='feature2'>
+                <div className='img'>
                   {checkMediaType(image) === 'video' ? (
                     <video
                       src={image?.data?.attributes?.url}
@@ -78,12 +78,12 @@ const Features = ({
                       alt={name}
                       width={636}
                       height={352}
-                      placeholder="blur"
+                      placeholder='blur'
                       blurDataURL={image?.data?.attributes?.url}
                     />
                   )}
                 </div>
-                <div className="info">
+                <div className='info'>
                   <div>
                     <h4>{name}</h4>
                     <p>{description}</p>
@@ -94,8 +94,8 @@ const Features = ({
           })}
         </article>
 
-        <div className="btn-wrap">
-          <a href={features2Destination} className="btn">
+        <div className='btn-wrap'>
+          <a href={features2Destination} className='Typeform-8'>
             {features2CTAtext}
           </a>
         </div>
@@ -106,6 +106,28 @@ const Features = ({
 
 export const Container = styled.section`
   background: url(${featuresBCG.src}) center/cover no-repeat;
+
+  .Typeform-8 {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 49px;
+    padding: 10px 32px;
+    border: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%);
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          85.21deg,
+          #5fb5fc -7.59%,
+          #844aff 62.28%,
+          #df52ff 113.15%
+        );
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
+  }
 
   .title {
     text-align: center;

@@ -14,23 +14,23 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
 
   return (
     <NavContainer>
-      <div className="section-center nav-center">
-        <div className="logo">
-          <Link href="/">
+      <div className='section-center nav-center'>
+        <div className='logo'>
+          <Link href='/'>
             <a>
               <Image
                 src={navItems?.logo?.data?.attributes?.url}
                 alt={navItems?.logo?.data?.attributes?.name}
                 width={145}
                 height={28}
-                placeholder="blur"
+                placeholder='blur'
                 blurDataURL={navItems?.logo?.data?.attributes?.url}
               />
             </a>
           </Link>
         </div>
 
-        <div className="links">
+        <div className='links'>
           {navItems?.navLinks?.map((item) => {
             return (
               <Link
@@ -40,7 +40,7 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
                 }
               >
                 <a
-                  className="link"
+                  className='link'
                   id={
                     asPath === `/${item?.to.trim()}` && asPath !== `/`
                       ? 'active'
@@ -50,12 +50,12 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
                 >
                   <span>{item?.name}</span>
                   {showMenu > 0 && (
-                    <div className="dropdown">
+                    <div className='dropdown'>
                       {item?.navLinks2?.map((item) => {
                         return (
                           <Link key={item?.id} href={`/${item?.to.trim()}`}>
                             <a
-                              className="dropdown-link link"
+                              className='dropdown-link link'
                               id={
                                 asPath === `/${item?.to.trim()}` ? 'active' : ''
                               }
@@ -73,8 +73,8 @@ const Navbar = ({ navItems, showMenu, setShowMenu }) => {
           })}
         </div>
 
-        <div className="link-right">
-          <a href={navItems?.anotherLinkDestination} className="btn2">
+        <div className='link-right'>
+          <a href={navItems?.anotherLinkDestination} className='Typeform-1'>
             {navItems?.anotherLink}
           </a>
         </div>
@@ -87,6 +87,27 @@ export const NavContainer = styled.nav`
   background: transparent;
   position: relative;
   z-index: 10;
+
+  .Typeform-1 {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 49px;
+    padding: 10px 32px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(100px);
+    border: 1px solid transparent;
+    background: linear-gradient(to right, #2e1d3c, #2e1d3c),
+      linear-gradient(to right, #5fb5fc, #844aff, #df52ff);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    &:hover {
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
+  }
 
   .nav-center {
     max-width: 1136px;
@@ -132,7 +153,7 @@ export const NavContainer = styled.nav`
     }
 
     .link-right {
-      .btn2 {
+      .Typeform-1 {
         margin-top: 0;
       }
     }
@@ -204,7 +225,7 @@ export const NavContainer = styled.nav`
         text-align: right;
         margin-right: 5vw;
 
-        .btn2 {
+        .Typeform-1 {
           padding: 10px 20px;
         }
       }

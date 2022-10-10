@@ -21,11 +21,11 @@ const Hero = ({
         setShowMenu={setShowMenu}
       />
       <main onClick={() => setShowMenu(false)}>
-        <div className="section-center">
+        <div className='section-center'>
           <h5>{heroSubHeading}</h5>
           <h1>{heroHeading}</h1>
           <h4>{heroDescription}</h4>
-          <a href={heroCTADestination} className="btn">
+          <a href={heroCTADestination} className='Lead'>
             {heroCTAText}
           </a>
         </div>
@@ -40,6 +40,30 @@ export const Container = styled.section`
   grid-template-rows: auto 1fr;
   @media (min-width: 792px) {
     min-height: 100vh;
+  }
+
+  .Lead {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 49px;
+    padding: 10px 32px;
+    border: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%);
+    margin-top: 1.5rem;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          85.21deg,
+          #5fb5fc -7.59%,
+          #844aff 62.28%,
+          #df52ff 113.15%
+        );
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
   }
 
   main {
@@ -67,10 +91,6 @@ export const Container = styled.section`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-  }
-
-  .btn {
-    margin-top: 1.5rem;
   }
 `;
 

@@ -11,23 +11,23 @@ const FeaturesThree = ({
   features3CTADestination,
 }) => {
   return (
-    <Container className="section">
-      <div className="section-center">
-        <div className="title">
+    <Container className='section'>
+      <div className='section-center'>
+        <div className='title'>
           <h2>{features3Heading}</h2>
         </div>
 
         {features3.map((feature) => {
           const { id, name, description, image } = feature;
           return (
-            <article key={id} className="feature">
-              <div className="info">
+            <article key={id} className='feature'>
+              <div className='info'>
                 <div>
                   <h4>{name}as</h4>
                   <p>{description}</p>
                 </div>
               </div>
-              <div className="img">
+              <div className='img'>
                 {checkMediaType(image) === 'video' ? (
                   <video
                     src={image?.data?.attributes?.url}
@@ -45,7 +45,7 @@ const FeaturesThree = ({
                     alt={name}
                     width={636}
                     height={352}
-                    placeholder="blur"
+                    placeholder='blur'
                     blurDataURL={image?.data?.attributes?.url}
                   />
                 )}
@@ -54,8 +54,8 @@ const FeaturesThree = ({
           );
         })}
 
-        <div className="btn-wrap">
-          <a href={features3CTADestination} className="btn">
+        <div className='btn-wrap'>
+          <a href={features3CTADestination} className='Typeform-9'>
             {features3CTAText}
           </a>
         </div>
@@ -66,6 +66,28 @@ const FeaturesThree = ({
 
 export const Container = styled.section`
   background: url(${features3BCG.src}) center/cover no-repeat;
+
+  .Typeform-9 {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: 49px;
+    padding: 10px 32px;
+    border: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%);
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          85.21deg,
+          #5fb5fc -7.59%,
+          #844aff 62.28%,
+          #df52ff 113.15%
+        );
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
+  }
 
   .section-center {
     display: grid;
