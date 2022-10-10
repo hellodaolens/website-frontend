@@ -86,6 +86,7 @@ export const Container = styled.section`
     margin-left: auto;
     margin-right: auto;
     max-width: unset;
+    color:#fff;
   }
 `;
 
