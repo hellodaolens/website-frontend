@@ -25,7 +25,7 @@ const Features = ({
           <div className='feature'>
             <div className='info'>
               <div>
-                <h4>{feature?.name}as</h4>
+                <h4>{feature?.name}</h4>
                 <p>{feature?.description}</p>
               </div>
             </div>
