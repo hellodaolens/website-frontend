@@ -23,7 +23,7 @@ const FeaturesThree = ({
             <article key={id} className='feature'>
               <div className='info'>
                 <div>
-                  <h4>{name}as</h4>
+                  <h4>{name}</h4>
                   <p>{description}</p>
                 </div>
               </div>
