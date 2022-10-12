@@ -5,8 +5,15 @@ import {
   FeaturesThree,
   Reviews,
 } from '../components/contribution';
+import { TopBar } from '../components/home';
 
-const Contribution = ({ data: { data }, navItems, reviews, users }) => {
+const Contribution = ({
+  data: { data },
+  topBarInfo,
+  navItems,
+  reviews,
+  users,
+}) => {
   const {
     heroHeading,
     heroDescription,
@@ -24,11 +31,13 @@ const Contribution = ({ data: { data }, navItems, reviews, users }) => {
     features3,
     features3CTAText,
     features3CTADestination,
+    TopBar: topBar,
   } = data.attributes;
 
   return (
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
+      {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         navItems={navItems}
         heroHeading={heroHeading}
@@ -66,6 +75,12 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  // home-page data (topbar info)
+  const homeRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
+  );
+  const homeData = await homeRes.json();
+
   // nav data
   const navRes = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate[0]=navLinks&populate[1]=navLinks.navLinks2&populate[2]=logo`
@@ -87,6 +102,7 @@ export async function getStaticProps() {
   return {
     props: {
       data,
+      topBarInfo: homeData?.data?.attributes?.topBarInfo,
       navItems: navData?.data?.attributes,
       reviews: reviewsData?.data,
       users: usersData?.data,

@@ -6,8 +6,9 @@ import {
   HiringBanner,
 } from '../components/careers';
 import { HeadSeo } from '../components/common';
+import { TopBar } from '../components/home';
 
-const Careers = ({ data, navItems }) => {
+const Careers = ({ data, topBarInfo, navItems }) => {
   const {
     heroHeading,
     heroDescription,
@@ -26,11 +27,13 @@ const Careers = ({ data, navItems }) => {
     lastSectionDescription,
     lastSectionCTAText,
     lastSectionCTADestination,
+    TopBar: topBar,
   } = data.data.attributes;
 
   return (
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
+      {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         navItems={navItems}
         heroHeading={heroHeading}
@@ -68,13 +71,23 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  // home-page data (topbar info)
+  const homeRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
+  );
+  const homeData = await homeRes.json();
+
   const navRes = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate[0]=navLinks&populate[1]=navLinks.navLinks2&populate[2]=logo`
   );
   const navData = await navRes.json();
 
   return {
-    props: { data, navItems: navData?.data?.attributes },
+    props: {
+      data,
+      topBarInfo: homeData?.data?.attributes?.topBarInfo,
+      navItems: navData?.data?.attributes,
+    },
     revalidate: 1,
   };
 }

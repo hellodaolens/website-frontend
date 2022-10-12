@@ -1,7 +1,8 @@
 import { HeadSeo } from '../components/common';
 import { Hero, Banner, Feature, CTA, LiveDemo } from '../components/onboarding';
+import { TopBar } from '../components/home';
 
-const OnBoarding = ({ data, navItems, users }) => {
+const OnBoarding = ({ data, topBarInfo, navItems, users }) => {
   const {
     heroHeading,
     heroSubHeading,
@@ -25,11 +26,13 @@ const OnBoarding = ({ data, navItems, users }) => {
     lastSectionCTAText,
     lastSectionCTADestination,
     Features,
+    TopBar: topBar,
   } = data.data.attributes;
 
   return (
     <>
       <HeadSeo title={heroHeading} description={heroSubHeading} />
+      {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         navItems={navItems}
         users={users}
@@ -74,6 +77,12 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  // home-page data (topbar info)
+  const homeRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
+  );
+  const homeData = await homeRes.json();
+
   const navRes = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate[0]=navLinks&populate[1]=navLinks.navLinks2&populate[2]=logo`
   );
@@ -88,6 +97,7 @@ export async function getStaticProps() {
   return {
     props: {
       data,
+      topBarInfo: homeData?.data?.attributes?.topBarInfo,
       navItems: navData?.data?.attributes,
       users: usersData?.data,
     },

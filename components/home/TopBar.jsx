@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 const TopBar = ({ topBarInfo }) => {
   return (
     <Container>
-      <div className="section-center">
+      <div className='section-center'>
         <ReactMarkdown>{topBarInfo}</ReactMarkdown>
       </div>
     </Container>

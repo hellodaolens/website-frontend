@@ -6,8 +6,9 @@ import {
   Services,
   CTA,
 } from '../components/community';
+import { TopBar } from '../components/home';
 
-const Community = ({ data, navItems, customers }) => {
+const Community = ({ data, topBarInfo, navItems, customers }) => {
   const {
     heroSubHeading,
     heroHeading,
@@ -24,11 +25,13 @@ const Community = ({ data, navItems, customers }) => {
     lastSectionDescription,
     lastSectionCTAText,
     lastSectionCTADestination,
+    TopBar: topBar,
   } = data.data.attributes;
 
   return (
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
+      {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         navItems={navItems}
         heroSubHeading={heroSubHeading}
@@ -66,6 +69,12 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
+  // home-page data (topbar info)
+  const homeRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
+  );
+  const homeData = await homeRes.json();
+
   // nav data
   const navRes = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/header?populate[0]=navLinks&populate[1]=navLinks.navLinks2&populate[2]=logo`
@@ -81,6 +90,7 @@ export async function getStaticProps() {
   return {
     props: {
       data,
+      topBarInfo: homeData?.data?.attributes?.topBarInfo,
       navItems: navData?.data?.attributes,
       customers: customerData?.data,
     },

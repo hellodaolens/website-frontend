@@ -68,22 +68,22 @@ const Hero = ({
         showMenu={showMenu}
         setShowMenu={setShowMenu}
       />
-      <main onClick={() => setShowMenu(false)} className="section">
-        <div className="section-center">
-          <div className="banner">
-            <div className="banner-image">
+      <main onClick={() => setShowMenu(false)} className='section'>
+        <div className='section-center'>
+          <div className='banner'>
+            <div className='banner-image'>
               <Image
                 src={bannerArticle?.attributes?.image?.data?.attributes?.url}
-                alt="banner"
+                alt='banner'
                 width={640}
                 height={306}
-                placeholder="blur"
+                placeholder='blur'
                 blurDataURL={
                   bannerArticle?.attributes?.image?.data?.attributes?.url
                 }
               />
             </div>
-            <article className="info">
+            <article className='info'>
               <h3>{bannerArticle?.attributes?.name}</h3>
               <div>
                 <p>{bannerArticle?.attributes?.shortDescription}</p>
@@ -93,12 +93,14 @@ const Hero = ({
                 </p>
               </div>
 
-              <div className="btn-container">
-                <Link href={`/blog/${bannerArticle?.attributes?.slug}`}>
-                  <a className="btn">{readingStats.text}</a>
-                </Link>
+              <div className='btn-container'>
+                {bannerArticle?.attributes?.showReadMoreInHightlight && (
+                  <Link href={`/blog/${bannerArticle?.attributes?.slug}`}>
+                    <a className='btn'>{readingStats.text}</a>
+                  </Link>
+                )}
                 {bannerArticle?.attributes?.showCTAinHighlight && (
-                  <button onClick={openModal} className="btn2">
+                  <button onClick={openModal} className='btn2'>
                     {modalBtnText}
                   </button>
                 )}
@@ -118,44 +120,44 @@ const Hero = ({
             </article>
           </div>
 
-          <div className="options">
+          <div className='options'>
             <button
-              className="option active-opt"
+              className='option active-opt'
               onClick={(e) => selectOption(e, 'articles')}
             >
               <Image
                 src={articles}
-                alt="articles"
+                alt='articles'
                 width={100}
                 height={100}
-                objectFit="contain"
+                objectFit='contain'
               />
               <p>Articles</p>
             </button>
             <button
-              className="option"
+              className='option'
               onClick={(e) => selectOption(e, 'youtube')}
             >
               <Image
                 src={youtube}
-                alt="youtube"
+                alt='youtube'
                 width={100}
                 height={100}
-                objectFit="contain"
+                objectFit='contain'
               />
               <p>Youtube playlists</p>
             </button>
             <button
-              className="option"
+              className='option'
               onClick={(e) => selectOption(e, 'spotify')}
             >
               <Image
                 src={spotify}
-                alt="spotify"
+                alt='spotify'
                 width={100}
                 height={100}
-                objectFit="contain"
-                placeholder="blur"
+                objectFit='contain'
+                placeholder='blur'
               />
               <p>Podcasts</p>
             </button>
@@ -187,6 +189,10 @@ export const Container = styled.section`
       gap: 2rem;
       padding: 2rem;
     }
+  }
+
+  .banner-image img {
+    border-radius: 12px;
   }
 
   .info {

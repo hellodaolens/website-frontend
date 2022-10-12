@@ -13,11 +13,7 @@ const Articles = ({ allArticles }) => {
   const articlesToShow = articles?.slice(0, numOfArticles);
   const filters = [
     'all',
-    ...new Set(
-      allArticles?.map((article) =>
-        article.attributes.type.trim().toLowerCase()
-      )
-    ),
+    ...new Set(allArticles?.map((article) => article.attributes.type.trim())),
   ];
 
   const setDimension = () => {
@@ -38,21 +34,21 @@ const Articles = ({ allArticles }) => {
       setArticles(allArticles);
     } else {
       const tempArticles = allArticles?.filter(
-        (article) => article.attributes.type.trim().toLowerCase() === type
+        (article) => article.attributes.type.trim() === type
       );
       setArticles(tempArticles);
     }
   };
 
   return (
-    <Container className="section">
-      <div className="tabs-container">
-        <div className="tabs">
+    <Container className='section'>
+      <div className='tabs-container'>
+        <div className='tabs'>
           {filters?.map((filter, index) => (
             <button
               key={index}
               onClick={() => handleFilterArticles(filter)}
-              className="tab-btn"
+              className='tab-btn'
             >
               {filter}
             </button>
@@ -60,7 +56,7 @@ const Articles = ({ allArticles }) => {
         </div>
       </div>
 
-      <div className="content">
+      <div className='content'>
         {articlesToShow?.map((article) => {
           const {
             name,
@@ -73,20 +69,20 @@ const Articles = ({ allArticles }) => {
 
           return (
             <Link key={article?.id} href={`/blog/${slug}`}>
-              <article className="article">
+              <article className='article'>
                 <Image
                   src={image?.data?.attributes?.url}
                   alt={name}
                   width={304}
                   height={156}
-                  placeholder="blur"
+                  placeholder='blur'
                   blurDataURL={image?.data?.attributes?.url}
                 />
 
                 <h4>{name}</h4>
                 <p>{shortDescription}</p>
 
-                <div className="author">
+                <div className='author'>
                   <p>
                     - {author}, {authorDesignation}
                   </p>
@@ -101,9 +97,9 @@ const Articles = ({ allArticles }) => {
       )}
 
       {articlesToShow?.length < articles?.length && (
-        <div className="btn-container">
+        <div className='btn-container'>
           <button
-            className="btn2"
+            className='btn2'
             onClick={() =>
               setNumOfArticles(numOfArticles + numOfArticlesToShow)
             }

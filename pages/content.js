@@ -1,8 +1,10 @@
 import { HeadSeo } from '../components/common';
 import { Hero, CTA, TwitterFeed } from '../components/content';
+import { TopBar } from '../components/home';
 
 const Content = ({
   data,
+  topBarInfo,
   navItems,
   bannerArticle,
   allArticles,
@@ -22,11 +24,13 @@ const Content = ({
     inputBoxFieldName1,
     inputBoxFieldName2,
     inputBoxFieldName3,
+    TopBar: topBar,
   } = data.data.attributes;
 
   return (
     <>
-      <HeadSeo title="Content" />
+      <HeadSeo title='Content' />
+      {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         navItems={navItems}
         bannerArticle={bannerArticle}
@@ -59,6 +63,12 @@ export async function getStaticProps() {
     `${process.env.NEXT_PUBLIC_API_URL}/api/content-page?populate[0]=image&populate[1]=points&populate[2]=points.img`
   );
   const data = await res.json();
+
+  // home-page data (topbar info)
+  const homeRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
+  );
+  const homeData = await homeRes.json();
 
   // nav data
   const navRes = await fetch(
@@ -93,6 +103,7 @@ export async function getStaticProps() {
   return {
     props: {
       data,
+      topBarInfo: homeData?.data?.attributes?.topBarInfo,
       navItems: navData?.data?.attributes,
       bannerArticle: heroData?.data[0],
       allArticles: articlesData?.data,
