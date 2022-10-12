@@ -14,6 +14,8 @@ import Spotify from './Spotify';
 import { Navbar } from '../common';
 import Videos from './Videos';
 import Modal from './Modal';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const Hero = ({
   navItems,
@@ -28,6 +30,8 @@ const Hero = ({
   inputBoxFieldName2,
   inputBoxFieldName3,
 }) => {
+  const { query } = useRouter();
+
   const [showMenu, setShowMenu] = useState(false);
   const [option, setOption] = useState('articles');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,6 +39,10 @@ const Hero = ({
   const openModal = () => {
     setIsModalOpen(true);
   };
+
+  useEffect(() => {
+    query?.modal === 'open' && setIsModalOpen(true);
+  }, [query]);
 
   const updateOptionBtns = (e) => {
     if (e.target.parentNode.classList.contains('option')) {
