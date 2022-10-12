@@ -88,6 +88,11 @@ export const Container = styled.section`
     max-width: unset;
     color:#fff;
   }
+  
+  a{
+    color: rgba(206,81,251,255);
+  }
+  
 `;
 
 export default SingleBlogPage;
