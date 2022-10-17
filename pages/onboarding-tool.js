@@ -27,6 +27,8 @@ const OnBoarding = ({ data, topBarInfo, navItems, users }) => {
     lastSectionCTADestination,
     Features,
     TopBar: topBar,
+    section2YtLink,
+    secction2ShowYtVideo,
   } = data.data.attributes;
 
   return (
@@ -56,6 +58,8 @@ const OnBoarding = ({ data, topBarInfo, navItems, users }) => {
         section2Heading={section2Heading}
         section2Description={section2Description}
         section2Img={section2Img}
+        section2YtLink={section2YtLink}
+        secction2ShowYtVideo={secction2ShowYtVideo}
       />
       <LiveDemo
         lastSectionSubHeading={lastSectionSubHeading}

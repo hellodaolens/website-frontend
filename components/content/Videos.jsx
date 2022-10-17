@@ -3,16 +3,16 @@ import ReactPlayer from 'react-player/lazy';
 
 const Videos = ({ videos }) => {
   return (
-    <Container className="section">
-      <div className="content-center">
+    <Container className='section'>
+      <div className='content-center'>
         {videos?.map((video) => {
           return (
-            <article key={video?.id} className="video">
+            <article key={video?.id} className='video'>
               <ReactPlayer
                 url={video?.attributes?.link}
                 controls={true}
-                width="100%"
-                height="100%"
+                width='100%'
+                height='100%'
               />
             </article>
           );
