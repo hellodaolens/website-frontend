@@ -16,6 +16,7 @@ import Videos from './Videos';
 import Modal from './Modal';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import ReactPlayer from 'react-player/lazy';
 
 const Hero = ({
   navItems,
@@ -69,6 +70,9 @@ const Hero = ({
 
   const readingStats = readingTime(bannerArticle?.attributes?.content);
 
+  const url = bannerArticle?.attributes?.podcastLink;
+  const id = url.split('/')[4];
+
   return (
     <Container>
       <Navbar
@@ -80,16 +84,42 @@ const Hero = ({
         <div className='section-center'>
           <div className='banner'>
             <div className='banner-image'>
-              <Image
-                src={bannerArticle?.attributes?.image?.data?.attributes?.url}
-                alt='banner'
-                width={640}
-                height={306}
-                placeholder='blur'
-                blurDataURL={
-                  bannerArticle?.attributes?.image?.data?.attributes?.url
-                }
-              />
+              {!bannerArticle?.attributes?.showPodcast &&
+                !bannerArticle?.attributes?.showYt && (
+                  <Image
+                    src={
+                      bannerArticle?.attributes?.image?.data?.attributes?.url
+                    }
+                    alt='banner'
+                    width={640}
+                    height={306}
+                    placeholder='blur'
+                    blurDataURL={
+                      bannerArticle?.attributes?.image?.data?.attributes?.url
+                    }
+                  />
+                )}
+              {bannerArticle?.attributes?.showYt && (
+                <div className='video'>
+                  <ReactPlayer
+                    url={bannerArticle?.attributes?.ytLink}
+                    controls={true}
+                    width='100%'
+                    height='100%'
+                  />
+                </div>
+              )}
+              {bannerArticle?.attributes?.showPodcast && (
+                <iframe
+                  style={{ borderRadius: '15px' }}
+                  src={`https://open.spotify.com/embed/episode/${id}?utm_source=generator&theme=0`}
+                  width='100%'
+                  height='352'
+                  allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+                  loading='lazy'
+                  frameBorder='0'
+                ></iframe>
+              )}
             </div>
             <article className='info'>
               <h3>{bannerArticle?.attributes?.name}</h3>
@@ -201,6 +231,26 @@ export const Container = styled.section`
 
   .banner-image img {
     border-radius: 12px;
+  }
+
+  .video {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 592px;
+    &::after {
+      padding-top: 56.25%;
+      display: block;
+      content: '';
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+    }
   }
 
   .info {

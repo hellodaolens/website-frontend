@@ -32,6 +32,7 @@ const Contribution = ({
     features3CTAText,
     features3CTADestination,
     TopBar: topBar,
+    testimonalHeading,
   } = data.attributes;
 
   return (
@@ -62,7 +63,7 @@ const Contribution = ({
         features3CTAText={features3CTAText}
         features3CTADestination={features3CTADestination}
       />
-      <Reviews reviews={reviews} />
+      <Reviews reviews={reviews} heading={testimonalHeading} />
     </>
   );
 };
@@ -89,7 +90,7 @@ export async function getStaticProps() {
 
   // reviews data
   const reviewsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/testimonials?populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/contributiontool-testimonials?populate=*`
   );
   const reviewsData = await reviewsRes.json();
 

@@ -5,7 +5,9 @@ import { useState } from 'react';
 
 const Investors = ({ investors }) => {
   const [numOfInvestors, setNumOfInvestors] = useState(12);
-  const investorsToBeShown = investors?.slice(0, numOfInvestors);
+  const investorsToBeShown = investors
+    ?.sort((a, b) => a?.attributes?.order - b?.attributes?.order)
+    ?.slice(0, numOfInvestors);
   const allInvestorsShown = investorsToBeShown.length === investors.length;
 
   const viewMoreHandler = () => {
@@ -17,13 +19,13 @@ const Investors = ({ investors }) => {
   };
 
   return (
-    <Container className="section">
-      <div className="section-center">
-        <div className="title">
+    <Container className='section'>
+      <div className='section-center'>
+        <div className='title'>
           <h2>Our investors</h2>
         </div>
 
-        <div className="investor-center">
+        <div className='investor-center'>
           {investorsToBeShown?.map((investor) => {
             return (
               <article
@@ -39,8 +41,8 @@ const Investors = ({ investors }) => {
                   alt={investor?.attributes?.name}
                   width={75}
                   height={75}
-                  objectFit="contain"
-                  placeholder="blur"
+                  objectFit='contain'
+                  placeholder='blur'
                   blurDataURL={
                     investor?.attributes?.logo?.data?.attributes?.url
                   }
@@ -56,8 +58,8 @@ const Investors = ({ investors }) => {
           })}
         </div>
 
-        <div className="btn-container btn-investors">
-          <button className="btn2" onClick={viewMoreHandler}>
+        <div className='btn-container btn-investors'>
+          <button className='btn2' onClick={viewMoreHandler}>
             View {allInvestorsShown ? 'Less' : 'More'}
           </button>
         </div>

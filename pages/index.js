@@ -50,11 +50,12 @@ export default function Home({
     section1SubHeading,
     topBar,
     topBarInfo,
+    testimonalHeading,
   } = data.data.attributes;
 
   return (
     <>
-      <HeadSeo title="Personalised DAO Onboarding" />
+      <HeadSeo title='Personalised DAO Onboarding' />
       {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         heroHeading={heroHeading}
@@ -90,7 +91,7 @@ export default function Home({
         DAOResourcesHeading={DAOResourcesHeading}
         DAOResources={DAOResources}
       />
-      <Reviews reviews={reviews} />
+      <Reviews reviews={reviews} heading={testimonalHeading} />
       <CTA
         lastSectionSubHeading={lastSectionSubHeading}
         lastSectionHeading={lastSectionHeading}

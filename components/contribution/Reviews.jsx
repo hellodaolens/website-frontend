@@ -5,10 +5,10 @@ import review1 from '../../public/assets/homepage/review1.png';
 import review2 from '../../public/assets/homepage/review2.png';
 import review3 from '../../public/assets/homepage/review3.png';
 
-const Reviews = ({ reviews }) => {
+const Reviews = ({ reviews, heading }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [showAll, setShowAll] = useState(false);
-  const reviewsToShow = showAll ? reviews : reviews?.slice(0, 4);
+  const reviewsToShow = showAll ? reviews : reviews?.slice(0, 2);
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 595;
@@ -24,22 +24,22 @@ const Reviews = ({ reviews }) => {
   }, [isMobile]);
 
   return (
-    <Container className="section">
-      <div className="section-center">
-        <div className="title">
-          <h2>What DAOs are saying about us?</h2>
+    <Container className='section'>
+      <div className='section-center'>
+        <div className='title'>
+          <h2>{heading}</h2>
         </div>
 
-        <div className="reviews-center">
+        <div className='reviews-center'>
           {reviewsToShow?.map((review) => {
             return (
-              <article key={review?.id} className="review">
+              <article key={review?.id} className='review'>
                 <Image
                   src={review?.attributes?.image?.data?.attributes?.url}
                   alt={review?.attributes?.company}
                   width={isMobile ? 44 : 64}
                   height={isMobile ? 44 : 64}
-                  placeholder="blur"
+                  placeholder='blur'
                   blurDataURL={review?.attributes?.image?.data?.attributes?.url}
                 />
                 <p>{review?.attributes?.testimonial}</p>
@@ -53,11 +53,13 @@ const Reviews = ({ reviews }) => {
           })}
         </div>
 
-        <div className="btn-wrapper">
-          <button className="btn2" onClick={() => setShowAll(!showAll)}>
-            View {showAll ? 'Less' : 'More'}
-          </button>
-        </div>
+        {reviews?.length > 2 && (
+          <div className='btn-wrapper'>
+            <button className='btn2' onClick={() => setShowAll(!showAll)}>
+              View {showAll ? 'Less' : 'More'}
+            </button>
+          </div>
+        )}
       </div>
     </Container>
   );
@@ -96,7 +98,7 @@ export const Container = styled.section`
     border-radius: 20px;
 
     &:nth-child(2) {
-      background: url(${review3.src}) center no-repeat;
+      background: url(${review1.src}) center no-repeat;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -113,7 +115,7 @@ export const Container = styled.section`
     }
 
     &:nth-child(3) {
-      background: url(${review2.src}) center no-repeat;
+      background: url(${review1.src}) center no-repeat;
     }
   }
 `;
