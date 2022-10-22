@@ -20,15 +20,15 @@ const SingleBlogPage = ({ article, navItems }) => {
             showMenu={showMenu}
             setShowMenu={setShowMenu}
           />
-          <main onClick={() => setShowMenu(false)} className="section">
-            <div className="section-center blog-center">
-              <div className="title">
+          <main onClick={() => setShowMenu(false)} className='section'>
+            <div className='section-center blog-center'>
+              <div className='title'>
                 <h3>Loading...</h3>
               </div>
-              <div className="author">
+              <div className='author'>
                 <p>Loading...</p>
               </div>
-              <div className="content">Loading...</div>
+              <div className='content'>Loading...</div>
             </div>
           </main>
         </Container>
@@ -36,8 +36,7 @@ const SingleBlogPage = ({ article, navItems }) => {
     );
   }
 
-  const { author, content, name, shortDescription, createdAt } =
-    article?.attributes;
+  const { author, content, name, shortDescription, date } = article?.attributes;
 
   return (
     <>
@@ -48,17 +47,17 @@ const SingleBlogPage = ({ article, navItems }) => {
           showMenu={showMenu}
           setShowMenu={setShowMenu}
         />
-        <main onClick={() => setShowMenu(false)} className="section">
-          <div className="section-center blog-center">
-            <div className="title">
+        <main onClick={() => setShowMenu(false)} className='section'>
+          <div className='section-center blog-center'>
+            <div className='title'>
               <h3>{name}</h3>
             </div>
-            <div className="author">
+            <div className='author'>
               <p>
-                {author}, {moment(createdAt).format('ll')}
+                {author}, {moment(date).format('ll')}
               </p>
             </div>
-            <div className="content">
+            <div className='content'>
               <ReactMarkdown>{content}</ReactMarkdown>
             </div>
           </div>
@@ -86,13 +85,12 @@ export const Container = styled.section`
     margin-left: auto;
     margin-right: auto;
     max-width: unset;
-    color:#fff;
+    color: #fff;
   }
-  
-  a{
-    color: rgba(206,81,251,255);
+
+  a {
+    color: rgba(206, 81, 251, 255);
   }
-  
 `;
 
 export default SingleBlogPage;
