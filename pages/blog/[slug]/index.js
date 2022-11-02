@@ -36,7 +36,8 @@ const SingleBlogPage = ({ article, navItems }) => {
     );
   }
 
-  const { author, content, name, shortDescription, date } = article?.attributes;
+  const { author, content, name, shortDescription, date, authorSocialLink } =
+    article?.attributes;
 
   return (
     <>
@@ -54,7 +55,12 @@ const SingleBlogPage = ({ article, navItems }) => {
             </div>
             <div className='author'>
               <p>
-                {author}, {moment(date).format('ll')}
+                <span>
+                  <a href={authorSocialLink} target='_blank'>
+                    {author}
+                  </a>
+                </span>
+                , {moment(date).format('ll')}
               </p>
             </div>
             <div className='content'>

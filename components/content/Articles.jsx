@@ -69,7 +69,7 @@ const Articles = ({ allArticles }) => {
 
           return (
             <Link key={article?.id} href={`/blog/${slug}`}>
-              <article className='article'>
+              <a className='article'>
                 <Image
                   src={image?.data?.attributes?.url}
                   alt={name}
@@ -87,7 +87,7 @@ const Articles = ({ allArticles }) => {
                     - {author}, {authorDesignation}
                   </p>
                 </div>
-              </article>
+              </a>
             </Link>
           );
         })}
@@ -168,6 +168,7 @@ export const Container = styled.section`
     align-items: center;
     gap: 1rem;
     cursor: pointer;
+    color: #fff;
 
     p {
       margin-bottom: 0;
