@@ -56,7 +56,7 @@ const SingleBlogPage = ({ article, navItems }) => {
             <div className='author'>
               <p>
                 <span>
-                  <a href={authorSocialLink} target='_blank'>
+                  <a href={authorSocialLink} target='_blank' rel='noreferrer'>
                     {author}
                   </a>
                 </span>
