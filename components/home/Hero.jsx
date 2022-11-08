@@ -3,15 +3,18 @@ import styled from 'styled-components';
 import heroBCGSmall from '../../public/assets/homepage/hero-bcg-small.png';
 import heroBCGBig from '../../public/assets/homepage/hero-bcg-big.png';
 import { Navbar } from '../common';
+import Image from 'next/image';
 
 const Hero = ({
   heroHeading,
   heroDesription,
   heroCTAText,
   heroCTADestination,
+  heroImage,
   navItems,
 }) => {
   const [showMenu, setShowMenu] = useState(false);
+  console.log(heroImage?.data[0]?.attributes?.url);
 
   return (
     <Container>
@@ -21,14 +24,25 @@ const Hero = ({
         setShowMenu={setShowMenu}
       />
       <main onClick={() => setShowMenu(false)}>
-        <div className='section-center'>
-          <div className='hero-banner'>
-            <article className='hero-info'>
+        <div className="section-center">
+          <div className="hero-banner">
+            <article className="hero-info">
               <h1>{heroHeading}</h1>
               <p>{heroDesription}</p>
-              <a href={heroCTADestination} className='Typeform-2'>
+              <a href={heroCTADestination} className="Typeform-2">
                 {heroCTAText}
               </a>
+            </article>
+
+            <article className="hero-image">
+              <div className="image">
+                <Image
+                  src={heroImage?.data[0]?.attributes?.url}
+                  alt="hero"
+                  width={473}
+                  height={343.5}
+                />
+              </div>
             </article>
           </div>
         </div>
@@ -81,12 +95,30 @@ export const Container = styled.section`
     .hero-banner {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 3rem;
       align-items: center;
       justify-content: center;
 
-      @media (min-width: 792px) {
-        grid-template-columns: 1fr 1fr;
+      @media (min-width: 992px) {
+        grid-template-columns: 1fr auto;
+      }
+    }
+
+    .hero-image {
+      margin: 0 auto;
+      position: relative;
+      perspective: 100vw;
+      perspective-origin: 50% 50%;
+      transform-style: preserve-3d;
+      width: 473;
+      height: 343.5;
+
+      @media (min-width: 992px) {
+        transform: translate(0%, -2rem);
+
+        .image {
+          transform: rotateY(-25deg);
+        }
       }
     }
 
@@ -94,7 +126,7 @@ export const Container = styled.section`
       width: 90vw;
       margin: 0 auto;
 
-      @media (min-width: 792px) {
+      @media (min-width: 992px) {
         transform: translate(0%, -2rem);
         max-width: 40rem;
       }

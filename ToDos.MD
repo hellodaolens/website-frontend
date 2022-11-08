@@ -60,3 +60,9 @@
 - [x] 19
 - [-] 20
 - [x] 21
+
+#### Changes 07.11.2022
+
+- [x] Updated tabs buttons for home page
+- [x] Adding image to hero section of home page
+- [x] Reduce size of small icons where points are written

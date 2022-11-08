@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { HeadSeo } from '../components/common';
 import {
   Hero,
@@ -40,6 +39,7 @@ export default function Home({
     heroCTAText,
     heroDesription,
     heroHeading,
+    heroImage,
     lastSectionDescription,
     lastSectionHeading,
     lastSectionSubHeading,
@@ -55,13 +55,14 @@ export default function Home({
 
   return (
     <>
-      <HeadSeo title='Personalised DAO Onboarding' />
+      <HeadSeo title="Personalised DAO Onboarding" />
       {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         heroHeading={heroHeading}
         heroDesription={heroDesription}
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
+        heroImage={heroImage}
         navItems={navItems}
       />
       <Banner
@@ -108,7 +109,7 @@ export default function Home({
 export async function getStaticProps() {
   // page data
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo&populate[7]=contributorImg1&populate[8]=contributorImg2&populate[9]=contributorPoints&populate[10]=contributorPoints.img`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo&populate[7]=contributorImg1&populate[8]=contributorImg2&populate[9]=contributorPoints&populate[10]=contributorPoints.img&populate[11]=heroImage.img`
   );
   const data = await res.json();
   // console.log(data);

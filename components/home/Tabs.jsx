@@ -37,9 +37,9 @@ const Tabs = ({
   }, [isMobile]);
 
   return (
-    <Container className='section'>
-      <div className='section-center'>
-        <div className='tabs-btn-container btn2'>
+    <Container className="section">
+      <div className="section-center">
+        <div className="tabs-btn-container btn2">
           <button
             className={tabs === 'admin' ? 'active' : ''}
             onClick={() => setTabs('admin')}
@@ -56,16 +56,16 @@ const Tabs = ({
           </button>
         </div>
         {tabs === 'admin' && (
-          <div className='tab'>
-            <div className='tab-header'>
+          <div className="tab">
+            <div className="tab-header">
               <h3>{adminHeading}</h3>
-              <a href={adminCTADestination} className='Typeform-3'>
+              <a href={adminCTADestination} className="Typeform-3">
                 {adminCTAText}
               </a>
             </div>
 
-            <div className='tab-img'>
-              <div className='big-img'>
+            <div className="tab-img">
+              <div className="big-img">
                 {checkMediaType(adminImg1) === 'video' ? (
                   <video
                     src={adminImg1?.data.attributes.url}
@@ -79,16 +79,16 @@ const Tabs = ({
                 ) : (
                   <Image
                     src={adminImg1?.data.attributes.url}
-                    alt='admin'
+                    alt="admin"
                     width={1136}
                     height={629}
-                    placeholder='blur'
+                    placeholder="blur"
                     blurDataURL={adminImg1?.data.attributes.url}
                   />
                 )}
               </div>
               <div
-                className='small-img'
+                className="small-img"
                 style={{ position: 'absolute', top: '35%', right: '10%' }}
               >
                 {checkMediaType(adminImg2) === 'video' ? (
@@ -97,7 +97,7 @@ const Tabs = ({
                     autoPlay
                     loop
                     muted
-                    alt='admin'
+                    alt="admin"
                     width={249}
                     style={{ maxWidth: '249px' }}
                     height={492}
@@ -105,26 +105,27 @@ const Tabs = ({
                 ) : (
                   <Image
                     src={adminImg2?.data.attributes.url}
-                    alt='admin'
+                    alt="admin"
                     width={249}
                     height={492}
-                    placeholder='blur'
+                    placeholder="blur"
                     blurDataURL={adminImg2?.data.attributes.url}
                   />
                 )}
               </div>
             </div>
 
-            <div className='tab-points'>
+            <div className="tab-points">
               {adminPoints?.map((point) => {
                 return (
-                  <div key={point?.id} className='point'>
+                  <div key={point?.id} className="point">
                     <Image
                       src={point?.img.data.attributes.url}
-                      alt='point'
-                      width={isMobile ? 48 : 100}
-                      height={isMobile ? 48 : 100}
-                      placeholder='blur'
+                      alt="point"
+                      width={isMobile ? 38 : 57}
+                      height={isMobile ? 58 : 87}
+                      objectFit="contain"
+                      placeholder="blur"
                       blurDataURL={point?.img.data.attributes.url}
                     />
                     <p>{point?.point}</p>
@@ -136,16 +137,16 @@ const Tabs = ({
         )}
 
         {tabs === 'contributor' && (
-          <div className='tab'>
-            <div className='tab-header'>
+          <div className="tab">
+            <div className="tab-header">
               <h3>{contributorHeading}</h3>
-              <a href={contributorCTADestination} className='Typeform-4'>
+              <a href={contributorCTADestination} className="Typeform-4">
                 {contributorCTAText}
               </a>
             </div>
 
-            <div className='tab-img'>
-              <div className='big-img'>
+            <div className="tab-img">
+              <div className="big-img">
                 {checkMediaType(contributorImg1) === 'video' ? (
                   <video
                     src={contributorImg1?.data.attributes.url}
@@ -159,16 +160,16 @@ const Tabs = ({
                 ) : (
                   <Image
                     src={contributorImg1?.data.attributes.url}
-                    alt='contributor'
+                    alt="contributor"
                     width={1136}
                     height={629}
-                    placeholder='blur'
+                    placeholder="blur"
                     blurDataURL={contributorImg1?.data.attributes.url}
                   />
                 )}
               </div>
               <div
-                className='small-img'
+                className="small-img"
                 style={{ position: 'absolute', top: '35%', right: '10%' }}
               >
                 {checkMediaType(contributorImg2) === 'video' ? (
@@ -184,26 +185,27 @@ const Tabs = ({
                 ) : (
                   <Image
                     src={contributorImg2?.data.attributes.url}
-                    alt='contributor'
+                    alt="contributor"
                     width={249}
                     height={492}
-                    placeholder='blur'
+                    placeholder="blur"
                     blurDataURL={contributorImg2?.data.attributes.url}
                   />
                 )}
               </div>
             </div>
 
-            <div className='tab-points'>
+            <div className="tab-points">
               {contributorPoints?.map((point) => {
                 return (
-                  <div key={point?.id} className='point'>
+                  <div key={point?.id} className="point">
                     <Image
                       src={point?.img.data.attributes.url}
-                      alt='point'
-                      width={isMobile ? 48 : 100}
-                      height={isMobile ? 48 : 100}
-                      placeholder='blur'
+                      alt="point"
+                      width={isMobile ? 38 : 57}
+                      height={isMobile ? 58 : 87}
+                      objectFit="contain"
+                      placeholder="blur"
                       blurDataURL={point?.img.data.attributes.url}
                     />
                     <p>{point?.point}</p>
@@ -271,11 +273,34 @@ export const Container = styled.section`
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0.35rem;
+    padding: 0.2rem;
     display: flex;
     justify-content: center;
     width: fit-content;
     margin: 0 auto;
+    background: #550264;
+    backdrop-filter: blur(115.51px);
+    border-image-source: linear-gradient(
+      32.95deg,
+      #5fb5fc 1.87%,
+      #844aff 49.17%,
+      #df52ff 97.86%
+    );
+    border: 1.16px solid #844aff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120%;
+      height: 150%;
+      transform: translate(-10%, -10%);
+      background: rgba(96, 182, 253, 0.3);
+      filter: blur(37.5739px);
+      border-radius: 77.7391px;
+      z-index: -15;
+    }
 
     &:hover {
       box-shadow: none;
@@ -285,8 +310,9 @@ export const Container = styled.section`
       background: transparent;
       border: none;
       outline: none;
-      padding: 0.5rem 1rem;
+      padding: 0.65rem 1rem;
       border-radius: 2rem;
+      width: 8rem;
 
       p {
         color: var(--clr-white);
@@ -295,25 +321,13 @@ export const Container = styled.section`
       }
 
       &:hover {
-        transform: scale(0.95);
+        transform: scale(0.97);
       }
     }
 
     button.active {
-      background: #200734;
-      p {
-        background: linear-gradient(
-            85.21deg,
-            #5fb5fc -7.59%,
-            #844aff 62.28%,
-            #df52ff 113.15%
-          ),
-          #ffffff;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-      }
+      background: #3a0068;
+      color: #ffffff;
     }
   }
 

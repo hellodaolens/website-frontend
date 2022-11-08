@@ -34,10 +34,11 @@ const Services = ({ section3Heading, section2Points }) => {
                 <Image
                   src={img?.data?.attributes?.url}
                   alt={point.substr(0, 15)}
-                  width={isMobile ? 48 : 100}
-                  height={isMobile ? 48 : 100}
+                  width={isMobile ? 38 : 57}
+                  height={isMobile ? 58 : 87}
                   placeholder="blur"
                   blurDataURL={img?.data?.attributes?.url}
+                  objectFit="contain"
                 />
                 <p>{point}</p>
               </article>

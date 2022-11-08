@@ -56,53 +56,54 @@ const CTA = ({ heading, description, CTAText, image, points }) => {
   };
 
   return (
-    <Container className='section'>
-      <div className='section-center'>
-        <div className='header'>
-          <article className='info'>
+    <Container className="section">
+      <div className="section-center">
+        <div className="header">
+          <article className="info">
             <h2>{heading}</h2>
             <p>{description}</p>
 
             <form
-              method='post'
-              action='https://api.mailmodo.com/api/v1/addToList'
+              method="post"
+              action="https://api.mailmodo.com/api/v1/addToList"
               onSubmit={onSubmit}
             >
               <input
                 required
-                className='email-input'
-                type='email'
-                placeholder='Enter your Email Address'
+                className="email-input"
+                type="email"
+                placeholder="Enter your Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button type='submit' className='btn'>
+              <button type="submit" className="btn">
                 {CTAText}
               </button>
             </form>
           </article>
-          <article className='image'>
+          <article className="image">
             <Image
               src={image?.data?.attributes?.url}
               alt={CTAText}
               width={508}
               height={308}
-              placeholder='blur'
+              placeholder="blur"
               blurDataURL={image?.data?.attributes?.url}
             />
           </article>
         </div>
 
-        <div className='points'>
+        <div className="points">
           {points?.map((point) => {
             return (
-              <div key={point?.id} className='point'>
+              <div key={point?.id} className="point">
                 <Image
                   src={point?.img.data.attributes.url}
-                  alt='point'
-                  width={isMobile ? 48 : 100}
-                  height={isMobile ? 48 : 100}
-                  placeholder='blur'
+                  alt="point"
+                  width={isMobile ? 38 : 57}
+                  height={isMobile ? 58 : 87}
+                  objectFit="contain"
+                  placeholder="blur"
                   blurDataURL={point?.img.data.attributes.url}
                 />
                 <p>{point?.point}</p>
