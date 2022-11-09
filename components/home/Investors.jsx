@@ -19,13 +19,13 @@ const Investors = ({ investors }) => {
   };
 
   return (
-    <Container className='section'>
-      <div className='section-center'>
-        <div className='title'>
+    <Container className="section">
+      <div className="section-center">
+        <div className="title">
           <h2>Our investors</h2>
         </div>
 
-        <div className='investor-center'>
+        <div className="investor-center">
           {investorsToBeShown?.map((investor) => {
             return (
               <article
@@ -41,8 +41,8 @@ const Investors = ({ investors }) => {
                   alt={investor?.attributes?.name}
                   width={75}
                   height={75}
-                  objectFit='contain'
-                  placeholder='blur'
+                  objectFit="contain"
+                  placeholder="blur"
                   blurDataURL={
                     investor?.attributes?.logo?.data?.attributes?.url
                   }
@@ -58,8 +58,8 @@ const Investors = ({ investors }) => {
           })}
         </div>
 
-        <div className='btn-container btn-investors'>
-          <button className='btn2' onClick={viewMoreHandler}>
+        <div className="btn-container btn-investors">
+          <button className="btn2" onClick={viewMoreHandler}>
             View {allInvestorsShown ? 'Less' : 'More'}
           </button>
         </div>
@@ -109,13 +109,13 @@ export const Container = styled.section`
     }
 
     &:nth-child(1) {
-      grid-row: 1 / 4;
+      grid-row: 1 / 3;
     }
     &:nth-child(2) {
-      grid-row: 4 / 6;
+      grid-row: 3 / 5;
     }
     &:nth-child(3) {
-      grid-row: 6 / 8;
+      grid-row: 5 / 7;
     }
   }
 

@@ -37,9 +37,7 @@ const SingleResource = ({ resource }) => {
       />
       <div className="resource-info">
         <h5>{name}</h5>
-        <p>
-          {description}
-        </p>
+        <p>{description}</p>
       </div>
     </Container>
   );
@@ -49,11 +47,11 @@ export const Container = styled.article`
   background: url(${resource.src}) center/cover no-repeat;
   padding: 2rem;
   border-radius: 20px;
-  margin: 0 1rem;
   display: grid;
   height: 100%;
 
   @media (min-width: 640px) {
+    margin: 0 1rem;
     align-items: center;
     height: 100%;
   }

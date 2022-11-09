@@ -359,12 +359,12 @@ export const Container = styled.section`
     }
 
     @media (max-width: 792px) {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
   }
 
   .tab-points {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     display: grid;
 
     @media (min-width: 992px) {
@@ -382,7 +382,7 @@ export const Container = styled.section`
       align-items: center;
 
       p {
-        margin-bottom: 0;
+        margin-bottom: -1rem;
       }
     }
   }

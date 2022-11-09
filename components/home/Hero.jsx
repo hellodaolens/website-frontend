@@ -112,8 +112,10 @@ export const Container = styled.section`
       transform-style: preserve-3d;
       width: 473;
       height: 343.5;
+      display: none;
 
-      @media (min-width: 992px) {
+      @media (min-width: 792px) {
+        display: block;
         transform: translate(0%, -2rem);
 
         .image {

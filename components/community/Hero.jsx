@@ -21,11 +21,11 @@ const Hero = ({
         setShowMenu={setShowMenu}
       />
       <main onClick={() => setShowMenu(false)}>
-        <div className='section-center'>
+        <div className="section-center">
           <h5>{heroSubHeading}</h5>
           <h1>{heroHeading}</h1>
           <h4>{heroDescription}</h4>
-          <a href={heroCTADestination} className='Lead'>
+          <a href={heroCTADestination} className="Lead">
             {heroCTAText}
           </a>
         </div>
@@ -69,7 +69,7 @@ export const Container = styled.section`
   main {
     display: grid;
     align-items: center;
-    padding: 4rem 0;
+    padding: 4rem 0 3rem;
     padding-top: 2rem;
 
     @media (min-width: 792px) {

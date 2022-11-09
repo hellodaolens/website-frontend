@@ -74,7 +74,7 @@ export const Container = styled.section`
     align-items: center;
 
     p {
-      margin-bottom: 0;
+      margin-bottom: -1rem;
     }
   }
 `;

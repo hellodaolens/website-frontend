@@ -8,13 +8,13 @@ const Banner = ({
   section1CTADestination,
 }) => {
   return (
-    <Container className='section'>
-      <div className='section-center'>
-        <div className='info'>
-          <p className='subheading'>{section1SubHeading}</p>
+    <Container className="section">
+      <div className="section-center">
+        <div className="info">
+          <p className="subheading">{section1SubHeading}</p>
           <h3>{section1Heading}</h3>
 
-          <a href={section1CTADestination} className='Typeform-6'>
+          <a href={section1CTADestination} className="Typeform-6">
             {section1CTAText}
           </a>
         </div>
@@ -59,7 +59,7 @@ export const Container = styled.section`
     }
 
     h3 {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
 `;

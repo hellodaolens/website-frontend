@@ -13,42 +13,42 @@ const CTA = ({
   lastSectionCTADestination,
 }) => {
   return (
-    <Container className='section'>
-      <div className='section-center'>
-        <div className='last-section-center'>
-          <article className='info'>
+    <Container className="section">
+      <div className="section-center">
+        <div className="last-section-center">
+          <article className="info">
             <p>{lastSectionSubHeading}</p>
             <h2>{lastSectionHeading}</h2>
             <p>{lastSectionDescription}</p>
           </article>
-          <article className='img'>
+          <article className="img">
             {checkMediaType(lastSectionImg) === 'video' ? (
               <video
                 src={lastSectionImg?.data?.attributes?.url}
-                alt='last section image'
+                alt="last section image"
                 autoPlay
                 loop
                 muted
                 width={512}
                 height={316}
                 style={{ maxWidth: '512px' }}
-                className='image'
+                className="image"
               />
             ) : (
               <Image
                 src={lastSectionImg?.data?.attributes?.url}
-                alt='last section image'
+                alt="last section image"
                 width={512}
                 height={316}
-                objectFit='cover'
-                className='image'
-                placeholder='blur'
+                objectFit="cover"
+                className="image"
+                placeholder="blur"
                 blurDataURL={lastSectionImg?.data?.attributes?.url}
               />
             )}
           </article>
         </div>
-        <a href={lastSectionCTADestination} className='Discord-1'>
+        <a href={lastSectionCTADestination} className="Discord-1">
           {lastSectionCTAText}
         </a>
       </div>
@@ -115,6 +115,10 @@ export const Container = styled.section`
 
   .img {
     margin-top: 2rem;
+
+    @media (max-width: 992px) {
+      margin-top: 1rem;
+    }
   }
 
   .img span {
@@ -122,8 +126,10 @@ export const Container = styled.section`
     border-radius: 20px;
   }
 
-  .btn {
-    margin-top: 2rem;
+  .Discord-1 {
+    @media (max-width: 992px) {
+      margin-top: 2rem;
+    }
   }
 `;
 

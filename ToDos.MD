@@ -66,3 +66,24 @@
 - [x] Updated tabs buttons for home page
 - [x] Adding image to hero section of home page
 - [x] Reduce size of small icons where points are written
+
+#### Changes 09.11.2022 -> Only for small screens
+
+Homepage
+
+- [x] Remove hero image from homepage
+- [x] Vertical alignment of points
+- [x] Consistent spacing for tabs section
+- [x] Left side spacing not equal for "How DaoLens can help you?" section
+- [ ] Users slider first icon not showing properly on swipe
+- [x] Button spacing not well above investors section
+- [x] Investors section -> first card is bigger than rest
+
+Community Page
+
+- [x] Hero btn top bottom spacing not matching
+
+Onboarding Page
+
+- [ ] Users slider -> first icon not visible
+- [x] Button below it -> top bottom spacing not matching
