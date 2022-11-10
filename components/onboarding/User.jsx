@@ -93,6 +93,10 @@ export const Container = styled.section`
   .carousel-container {
     width: 100%;
     justify-content: center;
+
+    @media (max-width: 464px) {
+      justify-content: flex-start;
+    }
   }
 
   .customer-center {

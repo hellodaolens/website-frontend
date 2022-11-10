@@ -75,7 +75,7 @@ Homepage
 - [x] Vertical alignment of points
 - [x] Consistent spacing for tabs section
 - [x] Left side spacing not equal for "How DaoLens can help you?" section
-- [ ] Users slider first icon not showing properly on swipe
+- [x] Users slider first icon not showing properly on swipe
 - [x] Button spacing not well above investors section
 - [x] Investors section -> first card is bigger than rest
 
@@ -85,5 +85,5 @@ Community Page
 
 Onboarding Page
 
-- [ ] Users slider -> first icon not visible
+- [x] Users slider -> first icon not visible
 - [x] Button below it -> top bottom spacing not matching

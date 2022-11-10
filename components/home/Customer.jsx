@@ -21,6 +21,7 @@ const Customers = ({ customers, customersHeading, customersSubHeading }) => {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
+      slidesToSlide: 1,
     },
   };
   const [isMobile, setIsMobile] = useState(false);
@@ -94,6 +95,10 @@ export const Container = styled.section`
   .carousel-container {
     width: 100%;
     justify-content: center;
+
+    @media (max-width: 464px) {
+      justify-content: flex-start;
+    }
   }
 
   .customer-center {
