@@ -1,25 +1,35 @@
-import '../styles/globals.css';
-import 'react-toastify/dist/ReactToastify.css';
-import 'react-multi-carousel/lib/styles.css';
-import { ToastContainer } from 'react-toastify';
-import { Footer } from '../components/common';
-import Script from 'next/script';
-import TagManager from 'react-gtm-module';
-import { useEffect } from 'react';
+import '../styles/globals.css'
+import 'react-toastify/dist/ReactToastify.css'
+import 'react-multi-carousel/lib/styles.css'
+import { ToastContainer } from 'react-toastify'
+import { Footer } from '../components/common'
+import Script from 'next/script'
+import TagManager from 'react-gtm-module'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const tagManagerArgs = {
   gtmId: 'GTM-PH3ZXT3',
-};
+}
 
 // TagManager.initialize(tagManagerArgs);
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
   useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
-  }, []);
+    TagManager.initialize(tagManagerArgs)
+  }, [])
 
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href={`https://www.daolens.com${router?.asPath?.split('?')?.[0]}`}
+          key="canonical"
+        />
+      </Head>
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -47,7 +57,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Footer />
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp
