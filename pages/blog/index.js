@@ -1,6 +1,6 @@
-import { HeadSeo } from '../components/common';
-import { Hero, CTA, TwitterFeed } from '../components/content';
-import { TopBar } from '../components/home';
+import { HeadSeo } from '../../components/common';
+import { Hero, CTA, TwitterFeed } from '../../components/content';
+import { TopBar } from '../../components/home';
 
 const Content = ({
   data,
