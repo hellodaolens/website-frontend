@@ -4,7 +4,6 @@ const MetaDecorator = (props) => {
   return (
     <Head>
       <title>{props.title}</title>
-      <meta name="robots" content="noindex"/>
       <meta name="description" content={props.description} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={props.title} />
