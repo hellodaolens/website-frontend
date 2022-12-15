@@ -18,20 +18,23 @@ function generateSiteMap(posts) {
        <loc>https://www.daolens.com/contribution-tool</loc>
      </url>
      <url>
+     <loc>https://www.daolens.com/community-manager</loc>
+     </url>
+     <url>
        <loc>https://www.daolens.com/onboarding-tool</loc>
      </url>
      <url>
        <loc>https://www.daolens.com/blog</loc>
      </url>
           ${posts?.data
-            .map((post) => {
-              return `
+      .map((post) => {
+        return `
        <url>
            <loc>${`https://www.daolens.com/blog/${post?.attributes?.slug}`}</loc>
        </url>
      `;
-            })
-            .join('')}
+      })
+      .join('')}
    </urlset>
  `;
 }

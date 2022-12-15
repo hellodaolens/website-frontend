@@ -14,7 +14,6 @@ const Hero = ({
   navItems,
 }) => {
   const [showMenu, setShowMenu] = useState(false);
-  console.log(heroImage?.data[0]?.attributes?.url);
 
   return (
     <Container>
