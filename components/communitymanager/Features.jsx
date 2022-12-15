@@ -28,7 +28,7 @@ const Features = ({
     return () => {
       removeInterval()
     }
-  }, [])
+  }, [accordian.length])
 
 
 

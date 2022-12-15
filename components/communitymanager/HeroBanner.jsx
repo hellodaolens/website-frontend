@@ -39,6 +39,7 @@ const HeroBanner = ({ heroImg }) => {
       />
       <div style={{ display: "flex", gap: " 8px" }}>{heroImg.map((img, idx) =>
         <img
+          key={idx}
           src={img?.attributes.url}
           alt="contributions"
           width={158}
