@@ -20,104 +20,104 @@ const SingleDaoPage = () => {
       >
         <DaoNavbar />
 
-        <Container className="section section-center">
+        <Container className='section section-center'>
           <div
-            className="hero-banner"
+            className='hero-banner'
             style={{
               background: `url(${dao?.attributes?.twittercover}) center/cover no-repeat`,
             }}
           >
-            <div className="title">
+            <div className='title'>
               <Image
-                className="logo"
+                className='logo'
                 src={dao?.attributes?.twitterdp}
                 alt={dao?.attributes?.Token}
                 width={103.93}
                 height={104.57}
-                objectFit="contain"
+                objectFit='contain'
               />
               <h1>{dao?.attributes?.Token.replace('$', '')}</h1>
             </div>
 
-            <div className="links">
+            <div className='links'>
               <a
                 href={dao?.attributes?.websiteLink}
-                className="website-link"
-                target="_blank"
-                rel="noreferrer"
+                className='website-link'
+                target='_blank'
+                rel='noreferrer'
               >
                 Visit Website
               </a>
               <a
                 href={dao?.attributes?.discordLink}
-                className="social-link"
-                target="_blank"
-                rel="noreferrer"
+                className='social-link'
+                target='_blank'
+                rel='noreferrer'
               >
                 <FaDiscord />
               </a>
               <a
                 href={dao?.attributes?.twitterLink}
-                className="social-link"
-                target="_blank"
-                rel="noreferrer"
+                className='social-link'
+                target='_blank'
+                rel='noreferrer'
               >
                 <FaTwitter />
               </a>
             </div>
           </div>
 
-          <div className="dao-info">
-            <div className="dao-info-left">
+          <div className='dao-info'>
+            <div className='dao-info-left'>
               <h3>{dao?.attributes?.Token}</h3>
               <p>{dao?.attributes?.About.replace(/\\|\"/g, '')}</p>
-              <div className="footer">
+              <div className='footer'>
                 <span>Founded in {dao?.attributes?.age}</span>
                 <span>On {dao?.attributes?.Blockchain} Blockchain</span>
               </div>
             </div>
 
-            <div className="dao-info-right">
-              <div className="tags">
+            <div className='dao-info-right'>
+              <div className='tags'>
                 {dao?.attributes?.type.split(', ').map((tag, index) => (
-                  <span className="tag-btn" key={index}>
-                    {tag}
+                  <span className='tag-btn' key={index}>
+                    #{tag}
                   </span>
                 ))}
               </div>
 
-              <div className="community">
-                <span className="tag-btn">
+              <div className='community'>
+                <span className='tag-btn'>
                   {dao?.attributes?.Community} Token Holders
                 </span>
               </div>
 
-              <div className="token">
-                <span className="tag-btn">Token {dao?.attributes?.Token}</span>
+              <div className='token'>
+                <span className='tag-btn'>Token {dao?.attributes?.Token}</span>
               </div>
             </div>
           </div>
 
-          <div className="how-to-join">
+          <div className='how-to-join'>
             <h4>How to join:</h4>
             <p>{dao?.attributes?.HowToJoin.replace(/\\|\"/g, '')}</p>
           </div>
 
-          <div className="banner">
-            <div className="info">
+          <div className='banner'>
+            <div className='info'>
               <h2>{banner.heading}</h2>
               <p>{banner.description}</p>
               <small>{banner.subDescription}</small>
             </div>
 
-            <div className="btn-container">
-              <a href={banner.buttonLink} className="banner-btn">
+            <div className='btn-container'>
+              <a href={banner.buttonLink} className='banner-btn'>
                 {banner.buttonText} <FaArrowRight />
               </a>
             </div>
           </div>
 
-          <div className="more-info">
+          <div className='more-info'>
             <h4>More info</h4>
             <a href={dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, '')}>
               {dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, '')}
