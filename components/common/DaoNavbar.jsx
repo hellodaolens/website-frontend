@@ -25,7 +25,7 @@ const DaoNavbar = () => {
           <Link href="/all-daos">
             <a className="all-link">All DAO's</a>
           </Link>
-          <a href="#" className="btn">
+          <a href="https://daolens.typeform.com/to/C6t2Y6vr" className="btn">
             Submit Your DAO
           </a>
         </div>

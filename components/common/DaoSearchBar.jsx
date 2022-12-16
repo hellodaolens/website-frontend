@@ -37,7 +37,10 @@ const SearchBar = () => {
             {showResults?.map((result) => {
               return (
                 <Link
-                  href={`/discover-dao/${result.attributes.Token}`}
+                  href={`/discover-dao/${result.attributes.Token.replace(
+                    '$',
+                    ''
+                  )}`}
                   key={result.id}
                 >
                   <a className="result">
@@ -49,7 +52,7 @@ const SearchBar = () => {
                       height={104.57}
                     />
                     <div>
-                      <h5>{result.attributes.Token}</h5>
+                      <h5>{result.attributes.Token.replace('$', '')}</h5>
                       <span>
                         {result?.attributes?.type
                           ?.split(' ')

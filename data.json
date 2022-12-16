@@ -587,11 +587,13 @@
       "FoundingTeam": "\"\"\"Annabelle Huang, Founding Member\"\"She is the Managing Partner at Amber Group and has previously worked in Deutsche Bank as an Investment Banking Analyst and FX Structurer. She was also a FX & Risk Rates Advisory at Nomura and Asia Lead at AirSwap.\"\"https://www.linkedin.com/in/annabelle-huang/\"\"Susruth Nadimpalli, Founding Member\"\"He is the Co-Founder and CEO at Catalog, Co-Founder of Ren Labs and has completed Bachelors of Advanced Computing (Honours) in Computer Science from the Australian National University. \"\"https://www.linkedin.com/in/susruth-nadimpalli/\"\"Bainy Zhang, Founding Member\"\"He is the Co-founder of Shuffle, Founder of Fisher8 Capital and has completed Bachelor’s Degree in Finance from UNSW.\"\"https://www.linkedin.com/in/bainy-zhang/\"\"Joey Zacherl, Founder and CTO\"\"He is the Founder and President of VolleyFire, LLC, a liquidity service provider for decentralized exchanges and Bootstrap Delegate at 0x Labs.\"\"https://www.linkedin.com/in/joeyzacherl/\"\"Tiantian Z. Kullander, Founding Member\"\"He is the Board Member of Fnatic and Co-founder of Amber Group. He was also Emerging Markets Trader at Morgan Stanley and Structured Credit Trading at Goldman Sachs. \"\"https://www.linkedin.com/in/0xttk/\nTiyang Zhang, , Founding Member\"\"He is the Co-founder of Talo Labs. He was also the Venture Partner at Alameda Research and Co-founder and CEO of Ren.\"\"https://www.linkedin.com/in/taiyangzhang/\"",
       "AdditionalInfo": "\" \"\"Docs\"",
       "discordLink": "https://discord.com/invite/rook",
-      "twitterLink": "",
+      "twitterLink": "https://twitter.com/rook",
       "websiteLink": "https://www.rook.fi/",
       "updatedAt": "2022-11-22T19:02:00.000Z",
       "publishedAt": "",
       "createdAt": "2022-10-11T06:59:00.000Z",
+      "twitterdp": "https://pbs.twimg.com/profile_images/1517558478365245440/UTC1QAsB_400x400.jpg",
+      "twittercover": "https://pbs.twimg.com/profile_banners/1153167226729406465/1660071856/1080x360",
       "isPopular": false
     }
   },
@@ -1677,27 +1679,6 @@
     }
   },
   {
-    "id": "d597ad5b-0d74-4c68-9da0-97530b6e181e",
-    "attributes": {
-      "age": "",
-      "Token": "$",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "k / k",
-      "About": "\" \"",
-      "HowToJoin": "",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"\n\nWho’s the founding Team:\n\nHelpful Resources: \"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-10-22T19:18:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-18T11:31:00.000Z",
-      "isPopular": false
-    }
-  },
-  {
     "id": "ff2bd268-29d0-496f-8dc7-ba2c7f2ae414",
     "attributes": {
       "age": "2021",
@@ -1923,27 +1904,6 @@
       "createdAt": "2022-10-18T11:34:00.000Z",
       "twitterdp": "https://pbs.twimg.com/profile_images/1597961461858435075/5cfRKFgo_400x400.jpg",
       "twittercover": "https://pbs.twimg.com/profile_banners/1231831448509829121/1669828937/1500x500",
-      "isPopular": false
-    }
-  },
-  {
-    "id": "6ba03551-a8ad-47f9-af09-48fe290b4aae",
-    "attributes": {
-      "age": "",
-      "Token": "$",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "k / k",
-      "About": "\" \"",
-      "HowToJoin": "",
-      "FoundingTeam": "",
-      "AdditionalInfo": "",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-10-18T12:52:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-18T11:34:00.000Z",
       "isPopular": false
     }
   },
