@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'pbs.twimg.com'],
   },
   async redirects() {
     return [
@@ -12,7 +12,7 @@ const nextConfig = {
         destination: '/blog',
         permanent: true,
       },
-    ]
+    ];
   },
   async rewrites() {
     return [
@@ -20,8 +20,8 @@ const nextConfig = {
         source: '/robots.txt',
         destination: '/api/robots',
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
