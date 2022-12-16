@@ -53,7 +53,7 @@ const DAOs = () => {
           {daos.map((item) => {
             return (
               <Link
-                href={`/discover-dao/${item.attributes.Token}`}
+                href={`/discover-dao/${item.attributes.Token.replace('$', '')}`}
                 key={item.id}
               >
                 <a className="dao">
@@ -65,9 +65,12 @@ const DAOs = () => {
                     height={104.57}
                   />
                   <div className="info">
-                    <h5>{item.attributes.Token}</h5>
+                    <h5>{item.attributes.Token.replace('$', '')}</h5>
                     <small>
-                      {item.attributes.About.substring(0, 130)}
+                      {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
+                        0,
+                        130
+                      )}
                       ...
                     </small>
                   </div>
@@ -82,7 +85,7 @@ const DAOs = () => {
         </div>
 
         <div className="btn-container">
-          <a href="#" className="btn">
+          <a href="https://daolens.typeform.com/to/C6t2Y6vr" className="btn">
             Submit Your DAO
           </a>
         </div>
