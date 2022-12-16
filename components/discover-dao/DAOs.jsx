@@ -67,10 +67,7 @@ const DAOs = () => {
                   <div className="info">
                     <h5>{item.attributes.Token}</h5>
                     <small>
-                      {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
-                        0,
-                        130
-                      )}
+                      {item.attributes.About.substring(0, 130)}
                       ...
                     </small>
                   </div>
