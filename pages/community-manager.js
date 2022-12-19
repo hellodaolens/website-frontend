@@ -3,8 +3,9 @@ import {
   Hero,
   Features,
   FeaturesThree,
-  Reviews,
+  FeatureTwo
 } from '../components/communitymanager';
+import FeatureFour from '../components/communitymanager/FeatureFour';
 import { TopBar } from '../components/home';
 
 const CommunityTool = ({
@@ -21,6 +22,8 @@ const CommunityTool = ({
     TopBar: topBar,
     section1,
     section2,
+    section3,
+    section4
   } = data.attributes;
   return (
     <>
@@ -41,6 +44,10 @@ const CommunityTool = ({
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
       />
+      <FeatureTwo
+        heading={section3.heading}
+        data={section3.data}
+      />
       <FeaturesThree
         title={section2.name}
         description={section2.description}
@@ -48,6 +55,10 @@ const CommunityTool = ({
         heading={section2.heading}
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
+      />
+      <FeatureFour
+        heading={section4.heading}
+        data={section4.data}
       />
     </>
   );
@@ -57,7 +68,7 @@ export default CommunityTool;
 
 export async function getStaticProps() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/communitymanager-page?populate[1]=heroImg&populate[2]=section1.accordian.image&populate[3]=section2.content`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/communitymanager-page?populate[1]=heroImg&populate[2]=section1.accordian.image&populate[3]=section2.content&populate[4]=section3.data.image&populate[5]=section4.data.image`
   );
   const data = await res.json();
 

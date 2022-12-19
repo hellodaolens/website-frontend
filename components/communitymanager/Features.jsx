@@ -34,7 +34,7 @@ const Features = ({
 
   return (
     <Container className='section'>
-      <div style={{ width: "500px" }}>
+      <div>
         <h3>{title}</h3>
         <p>{description}</p>
         <div style={{ marginBottom: "28px", marginRight: "80px" }}>
@@ -81,7 +81,16 @@ const Features = ({
                   </div>
                   {open === idx && <div class="panel" style={{ marginTop: "40px" }}>
                     <p>{accordianItem.description}</p>
-                  </div>}</div>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={accordianItem?.ctaDestiation} style={{
+                        color: "#689FFD", fontSize: "16px", lineHeight: "32px",
+                        textDecoration: "underline",
+                      }}>{accordianItem?.ctaText}</a>
+
+                  </div>}
+                </div>
               </div>
               {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ marginTop: "28px", borderRadius: "12px" }} />
               }
@@ -93,7 +102,7 @@ const Features = ({
           {heroCTAText}
         </a>
       </div>
-      <div className='right-view' style={{ alignItems: "center", position: "relative", justifyContent: "center" }}>
+      <div className='right-view' style={{ width: "50%", alignItems: "center", position: "relative", justifyContent: "center" }}>
 
 
         <img src={accordian[open].image.data.attributes.url}
@@ -116,7 +125,7 @@ const Features = ({
 
 export const Container = styled.section`
   background: url(${featuresBCG.src}) center/cover no-repeat;
-  padding:0px 32px;
+  padding:0px 10%;
   padding-top:100px;
   display:flex;
   justify-content:center;

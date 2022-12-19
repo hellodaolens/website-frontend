@@ -14,7 +14,7 @@ const FeaturesThree = ({
 }) => {
   return (
     <Container className='section'>
-      <div style={{ width: "500px", display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         {checkMediaType(content) === 'video' ? (
           <video
             src={content?.data?.attributes?.url}
