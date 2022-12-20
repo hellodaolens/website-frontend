@@ -87,7 +87,7 @@ const Hero = ({ setCurrentTag, bodyRef }) => {
                 );
               })}
               <div className="item" key={4}>
-                <a href='https://www.daolens.com/blog/governance-magnified-by-dao-lens-1' target="_blank">
+                <a href='https://www.daolens.com/blog/governance-magnified-by-dao-lens-1' target="_blank" rel="noreferrer">
                   <Image
                     src="https://res.cloudinary.com/daolens/image/upload/v1665561040/89_d3589cc9c7.png"
                     alt="abc"
