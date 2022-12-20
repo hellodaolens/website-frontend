@@ -33,9 +33,8 @@ const DAOs = () => {
               return (
                 <button
                   key={i}
-                  className={`${
-                    sectionTitle === tag.category ? 'active' : ''
-                  } tag-btn`}
+                  className={`${sectionTitle === tag.category ? 'active' : ''
+                    } tag-btn`}
                   onClick={() => handleTagFilter(tag.category)}
                 >
                   {tag.category}
@@ -49,21 +48,21 @@ const DAOs = () => {
           {daos.map((item) => {
             return (
               <Link
-                href={`/discover-dao/${item.attributes.Token.replace('$', '')}`}
+                href={`/discover-dao/${item.attributes?.Token.replace('$', '')}`}
                 key={item.id}
               >
                 <a className="dao">
                   <Image
                     className="logo"
-                    src={item.attributes.twitterdp}
-                    alt={item.attributes.Token}
+                    src={item.attributes?.twitterdp}
+                    alt={item.attributes?.Token}
                     width={103.93}
                     height={104.57}
                   />
                   <div className="info">
-                    <h5>{item.attributes.Token.replace('$', '')}</h5>
+                    <h5>{item.attributes?.Token.replace('$', '')}</h5>
                     <small>
-                      {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
+                      {item.attributes?.About.replace(/[^\w\s]/gi, '').substring(
                         0,
                         130
                       )}
@@ -71,7 +70,7 @@ const DAOs = () => {
                     </small>
                   </div>
 
-                  <a href={item.attributes.discordLink} className="join-btn">
+                  <a href={item.attributes?.discordLink} className="join-btn">
                     Join
                   </a>
                 </a>

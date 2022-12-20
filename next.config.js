@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['res.cloudinary.com', 'pbs.twimg.com'],
+    domains: ['res.cloudinary.com', 'pbs.twimg.com', 'res.cloudinary.com', 'pbs.twimg.com', 'abs.twimg.com',],
   },
   async redirects() {
     return [

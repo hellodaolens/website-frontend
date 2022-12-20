@@ -101,9 +101,6 @@ export const Container = styled.section`
     .large{
       display:block;
     }
-    .card{
-      height:256px;
-    }
     .content{
       &:hover {
         border-radius:16px 16px 0px 0px;

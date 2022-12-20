@@ -6,12 +6,12 @@ import banner from '../../../banner.json';
 import Image from 'next/image';
 import { FaArrowRight, FaDiscord, FaTwitter } from 'react-icons/fa';
 import howToJoinBCG from '../../../public/assets/discover-daos/how-to-join-bcg.png';
+import ReactLinkify from 'react-linkify';
 
 const SingleDaoPage = () => {
   const router = useRouter();
   const { token } = router.query;
   const dao = data?.find((dao) => dao.attributes.Token === `$${token}`);
-
   return (
     <>
       <HeadSeo title={dao?.attributes?.Token} />
@@ -21,6 +21,7 @@ const SingleDaoPage = () => {
         <DaoNavbar />
 
         <Container className='section section-center'>
+
           <div
             className='hero-banner'
             style={{
@@ -37,7 +38,10 @@ const SingleDaoPage = () => {
                 objectFit='contain'
               />
               <h1>{dao?.attributes?.Token.replace('$', '')}</h1>
+
             </div>
+
+
 
             <div className='links'>
               <a
@@ -65,7 +69,29 @@ const SingleDaoPage = () => {
                 <FaTwitter />
               </a>
             </div>
+            <div style={{
+              position: "absolute",
+              display: "flex",
+              padding: "16px",
+              gap: "10px",
+              alignItems: "center",
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(40px)",
+              borderRadius: "24px",
+              bottom: -50,
+            }}>
+              <Image
+                className='logo'
+                src={dao?.attributes?.twitterdp}
+                alt={dao?.attributes?.Token}
+                width={80}
+                height={80}
+                objectFit='contain'
+              />
+              <h2>{dao?.attributes?.title}</h2>
+            </div>
           </div>
+
 
           <div className='dao-info'>
             <div className='dao-info-left'>
@@ -86,9 +112,15 @@ const SingleDaoPage = () => {
                 ))}
               </div>
 
+
               <div className='community'>
                 <span className='tag-btn'>
-                  {dao?.attributes?.Community} Token Holders
+                  {dao?.attributes?.Community.split("/")[0]} Token Holders
+                </span>
+              </div>
+              <div className='community'>
+                <span className='tag-btn'>
+                  {dao?.attributes?.Community.split("/")[1]} Community Members
                 </span>
               </div>
 
@@ -100,7 +132,11 @@ const SingleDaoPage = () => {
 
           <div className='how-to-join'>
             <h4>How to join:</h4>
-            <p>{dao?.attributes?.HowToJoin.replace(/\\|\"/g, '')}</p>
+            <ReactLinkify>
+              <p style={{ whiteSpace: "pre-line" }}>
+                {dao?.attributes?.HowToJoin.replace(/\\|\"/g, '\n').trim()}</p>
+            </ReactLinkify>
+
           </div>
 
           <div className='banner'>
@@ -118,7 +154,7 @@ const SingleDaoPage = () => {
           </div>
 
           <div className='more-info'>
-            <h4>More info</h4>
+            <h4>Helpful resources</h4>
             <a href={dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, '')}>
               {dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, '')}
             </a>
@@ -205,7 +241,7 @@ export const Container = styled.section`
   }
 
   .dao-info {
-    margin: 2rem 0;
+    margin: 4rem 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -254,8 +290,7 @@ export const Container = styled.section`
     padding: 2rem 3rem;
 
     p {
-      max-width: 900px;
-      word-break: break-all;
+      max-width: 100%;
     }
   }
 

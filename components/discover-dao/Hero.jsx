@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
-import heroImg1 from '../../public/assets/discover-daos/hero-img.png';
+import heroImg1 from '../../public/assets/discover-daos/Discover_DAO_Banner.png';
+import heroImg2 from '../../public/assets/discover-daos/Discover_DAO_Banner_2.png';
+import heroImg3 from '../../public/assets/discover-daos/Discover_DAO_Banner_3.png';
 import { DaoNavbar } from '../common';
+import { tags } from './DAOs';
 
-const Hero = () => {
+const Hero = ({ setCurrentTag, bodyRef }) => {
   const heroImages = [
     {
       id: 1,
@@ -13,18 +16,13 @@ const Hero = () => {
     },
     {
       id: 2,
-      img: heroImg1,
+      img: heroImg2,
       alt: 'hero image 2',
     },
     {
       id: 3,
-      img: heroImg1,
+      img: heroImg3,
       alt: 'hero image 3',
-    },
-    {
-      id: 4,
-      img: heroImg1,
-      alt: 'hero image 4',
     },
   ];
   const responsive = {
@@ -46,6 +44,7 @@ const Hero = () => {
       items: 1,
     },
   };
+  console.log(bodyRef)
 
   return (
     <Container>
@@ -68,10 +67,14 @@ const Hero = () => {
               keyBoardControl={true}
               infinite={true}
             >
-              {heroImages?.map((item) => {
+              {heroImages?.map((item, index) => {
                 return (
                   <div className="item" key={item.id}>
                     <Image
+                      onClick={() => {
+                        setCurrentTag(tags[index]);
+                        bodyRef?.current?.scrollIntoView({ behavior: 'smooth' });
+                      }}
                       src={item.img}
                       alt={item.alt}
                       width={1068}
@@ -83,6 +86,20 @@ const Hero = () => {
                   </div>
                 );
               })}
+              <div className="item" key={4}>
+                <a href='https://www.daolens.com/blog/governance-magnified-by-dao-lens-1' target="_blank">
+                  <Image
+                    src="https://res.cloudinary.com/daolens/image/upload/v1665561040/89_d3589cc9c7.png"
+                    alt="abc"
+                    style={{ borderRadius: "12px" }}
+                    width={1068}
+                    height={389}
+                    objectFit="cover"
+                    placeholder="blur"
+                    blurDataURL="https://res.cloudinary.com/daolens/image/upload/v1665561040/89_d3589cc9c7.png"
+                  />
+                </a>
+              </div>
             </Carousel>
           </div>
         </div>

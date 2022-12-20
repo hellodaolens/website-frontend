@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import daosData from '../../data.json';
 import Carousel from 'react-multi-carousel';
+import Link from 'next/link';
 
 const DaoList = () => {
   const responsive = {
@@ -53,16 +54,23 @@ const DaoList = () => {
           autoPlay={true}
           autoPlaySpeed={1000}
         >
-          {logos.map((logo, i) => {
+          {logos.slice(0, 20).map((logo, i) => {
             return (
-              <Image
+              <Link
+                href={`/discover-dao/${logo.alt.replace('$', '')}`}
+                style={{ cursor: "pointer" }}
                 key={i}
-                className="logo"
-                src={logo.src}
-                alt={logo.alt}
-                width={103.93}
-                height={104.57}
-              />
+              >
+                <Image
+                  style={{ cursor: "pointer" }}
+                  key={i}
+                  className="logo"
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={103.93}
+                  height={104.57}
+                />
+              </Link>
             );
           })}
         </Carousel>
@@ -70,7 +78,7 @@ const DaoList = () => {
         <Carousel
           showDots={false}
           renderDotsOutside={true}
-          containerClass="carousel-container second-carousel"
+          containerClass="carousel-container"
           rewind={false}
           responsive={responsive}
           renderButtonGroupOutside={false}
@@ -85,17 +93,21 @@ const DaoList = () => {
           autoPlay={true}
           autoPlaySpeed={1000}
         >
-          {logos
+          {logos.slice(21, 40)
             .map((logo, i) => {
               return (
-                <Image
+                <Link
+                  href={`/discover-dao/${logo.alt.replace('$', '')}`}
+                  style={{ cursor: "pointer" }}
                   key={i}
-                  className="logo"
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={103.93}
-                  height={104.57}
-                />
+                >
+                  <Image
+                    className="logo"
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={103.93}
+                    height={104.57}
+                  /></Link>
               );
             })
             .reverse()}

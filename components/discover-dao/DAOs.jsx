@@ -4,22 +4,23 @@ import Image from 'next/image';
 import daosData from '../../data.json';
 import Link from 'next/link';
 import daoBCG from '../../public/assets/discover-daos/dao-bcg.png';
-import { tags } from '../utils/getPopularTags';
+// import { tags } from '../utils/getPopularTags';
 import { DaoSearchBar } from '../common';
-
-const DAOs = () => {
+import { useEffect } from 'react';
+export let tags = ["Social", "Infrastructure", "Investment"];
+const DAOs = ({ currentTag, setCurrentTag, bodyRef }) => {
   const hottestDaos = daosData.filter((item) => item.attributes.isPopular);
   const [daos, setDaos] = useState(hottestDaos);
   const [sectionTitle, setSectionTitle] = useState('Hottest DAOs');
 
-  const handleTagFilter = (tag) => {
-    const newDaos = daosData.filter((item) => item.attributes.type === tag);
+  useEffect(() => {
+    const newDaos = daosData.filter((item) => item.attributes.type.toLowerCase().includes(currentTag.toLowerCase()));
     setDaos(newDaos.slice(0, 6));
-    setSectionTitle(tag);
-  };
+    setSectionTitle(currentTag);
+  }, [currentTag])
 
   return (
-    <Container className="section">
+    <Container ref={bodyRef} className="section">
       <div className="section-center">
         <header>
           <form className="search-box">
@@ -30,12 +31,11 @@ const DAOs = () => {
               return (
                 <button
                   key={i}
-                  className={`${
-                    sectionTitle === tag.category ? 'active' : ''
-                  } tag-btn`}
-                  onClick={() => handleTagFilter(tag.category)}
+                  className={`${sectionTitle === tag ? 'active' : ''
+                    } tag-btn`}
+                  onClick={() => setCurrentTag(tag)}
                 >
-                  {tag.category}
+                  {tag}
                 </button>
               );
             })}
@@ -53,19 +53,19 @@ const DAOs = () => {
           {daos.map((item) => {
             return (
               <Link
-                href={`/discover-dao/${item.attributes.Token.replace('$', '')}`}
+                href={`/discover-dao/${item.attributes?.Token.replace('$', '')}`}
                 key={item.id}
               >
                 <a className="dao">
                   <Image
                     className="logo"
-                    src={item.attributes.twitterdp}
+                    src={item.attributes?.twitterdp}
                     alt={item.attributes.Token}
                     width={103.93}
                     height={104.57}
                   />
                   <div className="info">
-                    <h5>{item.attributes.Token.replace('$', '')}</h5>
+                    <h5>{item.attributes.title}</h5>
                     <small>
                       {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
                         0,
@@ -75,7 +75,7 @@ const DAOs = () => {
                     </small>
                   </div>
 
-                  <a href={item.attributes.discordLink} className="join-btn">
+                  <a href={item.attributes?.discordLink} className="join-btn">
                     Join
                   </a>
                 </a>

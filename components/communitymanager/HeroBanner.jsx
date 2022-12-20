@@ -37,16 +37,16 @@ const HeroBanner = ({ heroImg }) => {
         blurDataURL={heroImg[imageIndex]?.attributes.url}
         style={{ borderRadius: "12px" }}
       />
-      <div style={{ display: "flex", gap: " 8px" }}>{heroImg.map((img, idx) =>
+      <div style={{ display: "flex", gap: "8px", justifyContent: "center" }}>{heroImg.map((img, idx) =>
         <img
           key={idx}
           src={img?.attributes.url}
           alt="contributions"
-          width={158}
-          height={94}
           placeholder="blur"
           blurDataURL={img?.attributes.url}
           style={{
+            maxWidth: "200px",
+            width: "30%",
             borderRadius: "12px", cursor: "pointer", padding: "2px", background: idx === imageIndex ?
               `linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
           linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%)`: ""

@@ -15,7 +15,8 @@ const SearchBar = () => {
     setResults(
       data
         .filter((item) =>
-          item.attributes.Token.toLowerCase().includes(query.toLowerCase())
+          item.attributes.Token.toLowerCase().includes(query.toLowerCase()) ||
+          item.attributes.type.toLowerCase().includes(query.toLowerCase())
         )
         .slice(0, 3)
     );
@@ -46,7 +47,7 @@ const SearchBar = () => {
                   <a className="result">
                     <Image
                       className="logo"
-                      src={result.attributes.twitterdp}
+                      src={result.attributes?.twitterdp}
                       alt={result.attributes.Token}
                       width={103.93}
                       height={104.57}

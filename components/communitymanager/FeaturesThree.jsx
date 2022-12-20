@@ -38,7 +38,7 @@ const FeaturesThree = ({
         {/* <img src={content.data.attributes.url} style={{ marginTop: "28px", borderRadius: "12px", objectFit: "contain", }} /> */}
       </div>
 
-      <div style={{ width: "500px" }}>
+      <div>
         <p>{heading}</p>
         <h3>{title}</h3>
         <p>{description}</p>

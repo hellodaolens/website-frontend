@@ -6,10 +6,10 @@ const getPopularTags = (data) => {
   const output = [];
 
   for (let i = 0; i < data.length; i++) {
-    if (!obj[data[i].attributes.type]) {
-      obj[data[i].attributes.type] = 1;
+    if (!obj[data[i].attributes?.type]) {
+      obj[data[i].attributes?.type] = 1;
     } else {
-      obj[data[i].attributes.type]++;
+      obj[data[i].attributes?.type]++;
     }
   }
 
