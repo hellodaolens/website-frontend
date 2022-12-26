@@ -53,7 +53,6 @@ const Footer = () => {
         autoClose: 5000,
         closeOnClick: true,
       });
-      // console.log('Completed!', response);
     } catch (err) {
       toast.error(err, {
         position: 'top-center',
