@@ -4,46 +4,85 @@ import Image from 'next/image';
 import daosData from '../../data.json';
 import Link from 'next/link';
 import daoBCG from '../../public/assets/discover-daos/dao-bcg.png';
-// import { tags } from '../utils/getPopularTags';
+import search from '../../public/assets/discover-daos/search.svg';
 import { DaoSearchBar } from '../common';
 import { useEffect } from 'react';
-export let tags = ["Social", "Infrastructure", "Investment"];
-const DAOs = ({ currentTag, setCurrentTag, bodyRef }) => {
-  const hottestDaos = daosData.filter((item) => item.attributes.isPopular);
-  const [daos, setDaos] = useState(hottestDaos);
-  const [sectionTitle, setSectionTitle] = useState('Hottest DAOs');
-
+import { hotTags, tags as tag, alltags } from '../utils/getPopularTags';
+const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
+  const [daos, setDaos] = useState([]);
   useEffect(() => {
-    const newDaos = daosData.filter((item) => item.attributes.type.toLowerCase().includes(currentTag.toLowerCase()));
-    setDaos(newDaos.slice(0, 6));
-    setSectionTitle(currentTag);
+    let newDaos = [];
+    if (currentTag === "All DAOs") {
+      newDaos = daosData;
+    } else
+      if (currentTag === "Hottest DAOs") {
+        newDaos = daosData.filter((item) => item.attributes.isPopular);
+      }
+      else {
+        newDaos = daosData.filter((item) => item.attributes.type.toLowerCase().includes(currentTag.toLowerCase()));
+      }
+    setDaos(allDao ? newDaos : newDaos.slice(0, 6));;
+
   }, [currentTag])
+  console.log(daos)
 
   return (
-    <Container ref={bodyRef} className="section">
+    <Container ref={bodyRef} className="section" style={{marginTop:allDao?"0px":""}}>
       <div className="section-center">
         <header>
           <form className="search-box">
             <DaoSearchBar />
           </form>
           <div className="tags">
-            {tags.map((tag, i) => {
+            {hotTags.map((tag, i) => {
               return (
                 <button
                   key={i}
-                  className={`${sectionTitle === tag ? 'active' : ''
+                  className={`${currentTag && tag.includes(currentTag) ? 'active' : ''
                     } tag-btn`}
-                  onClick={() => setCurrentTag(tag)}
+                  onClick={() => setCurrentTag(tag.split(" ")[1])}
                 >
                   {tag}
                 </button>
               );
             })}
+
+            <div style={{
+              borderRadius: "100px",
+              border: "1px solid #E2E8F0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              <select
+                value={currentTag}
+                style={{
+                  height: "100%",
+                  borderRadius: "100px",
+                  borderLeft: "none",
+                  borderTop: "none",
+                  borderBottom: "none",
+                  borderRight: "16px solid transparent",
+                  padding: "8px 12px",
+                  color: "#64748B",
+                  font: "normal 500 16px/16px Inter",
+
+                }} onChange={(e) => {
+                  setCurrentTag(e.target.value)
+                }}
+              >
+
+                {alltags.map((tag,i) => <option key={i} value={tag.split(" ")[1]}>{tag}</option>)}
+              </select>
+            </div>
+
+
+
           </div>
         </header>
 
         <div className="title">
-          <h3>{sectionTitle}</h3>
+          <h3>{currentTag}</h3>
           <Link href="/all-daos">
             <a>See all</a>
           </Link>
@@ -51,50 +90,106 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef }) => {
 
         <div className="daos-center">
           {daos.map((item) => {
+            let localTags = item?.attributes?.type.split(', ');
             return (
               <Link
                 href={`/discover-dao/${item.attributes?.Token.replace('$', '')}`}
                 key={item.id}
               >
-                <a className="dao">
-                  <Image
-                    className="logo"
-                    src={item.attributes?.twitterdp}
-                    alt={item.attributes.Token}
-                    width={103.93}
-                    height={104.57}
-                  />
-                  <div className="info">
-                    <h5>{item.attributes.title}</h5>
-                    <small>
-                      {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
-                        0,
-                        130
-                      )}
-                      ...
-                    </small>
+                <div
+                  className='card'
+                  style={{
+                    border: "1px solid #E2E8F0",
+                    background: "white",
+                    padding: "20px",
+                    borderRadius: "12px",
+                  }} >
+                  <div style={{ display: "flex", gap: "12px" }}>
+                    <img
+                      className="logo"
+                      src={item.attributes?.twitterdp}
+                      alt={item.attributes.Token}
+                      style={{ borderRadius: "12px", width: "60px", height: "60px" }}
+                    />
+                    <div>
+                      <h5 style={{ font: "normal 700 18px/24px Inter" }}>{item.attributes.title}</h5>
+                      <small style={{ font: "normal 400 12px/16px Inter", color: "#64748B" }}>
+                        {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
+                          0,
+                          130
+                        )}
+                        ...
+                      </small>
+                    </div>
                   </div>
+                  {localTags.length > 0 &&
+                    <div className="tags-list">
+                      {localTags.map((tag, i) => {
+                        if (i > 1) {
+                          return null;
+                        }
+                        return (
+                          <button
+                            key={i}
+                            className={`${tag.toLowerCase().includes(currentTag.toLowerCase()) && currentTag !== "" ? 'active' : ''
+                              } tag-btn`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setCurrentTag(tag)
+                            }}
+                          >
+                            {tag}
+                          </button>
+                        );
+                      })}
 
-                  <a href={item.attributes?.discordLink} className="join-btn">
-                    Join
-                  </a>
-                </a>
+                      {localTags.length > 2 && `+${localTags.length - 2} more`}
+
+                    </div>}
+
+                </div>
+
               </Link>
             );
           })}
         </div>
+        {!allDao ?
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Link href="/all-daos">
+              <div style={{
+                display: "inline-block", padding: "20px",
+                border: "1px solid #E2E8F0",
+                borderRadius: "100px",
+                font: "normal 500 18px/24px Inter",
+                color: "#64748B",
+                margin: "20px",
+                cursor: "pointer",
+                background: "white"
+              }}>
+                Load more
+              </div></Link></div> :
+          <div style={{
+            display: "inline-block",
+          }}></div>}
 
-        <div className="btn-container">
-          <a href="https://daolens.typeform.com/to/C6t2Y6vr" className="btn">
-            Submit Your DAO
-          </a>
-        </div>
+
       </div>
-    </Container>
+    </Container >
   );
 };
 
 export const Container = styled.section`
+  z-index:10;
+  position: relative;
+  margin-top: 650px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 500px;
+  }
+
+  @media screen and (max-width: 792px) {
+    margin-top: 450px;
+  }
+
   header {
     display: flex;
     flex-wrap: wrap;
@@ -108,41 +203,77 @@ export const Container = styled.section`
 
     form {
       width: 100%;
-      max-width: 573px;
-      position: relative;
+      max-width: 400px;
     }
 
     input {
       width: 100%;
-      background: rgba(103, 103, 103, 0.37);
-      border-radius: 10px;
-      border: none;
-      padding: 0.75rem 1.25rem;
-      color: var(--clr-white);
-
-      &::placeholder {
-        color: #ccc;
-      }
+      border-radius: 100px;
+      border: 1px solid #DED0FB;
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem ;
+      background: white url(${search.src}) no-repeat 3% 50%;
+      background-size: 20px 20px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+  
+  }
+  .card{
+    background:pink;
+    cursor: pointer;
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          85.21deg,
+          #5fb5fc -7.59%,
+          #844aff 62.28%,
+          #df52ff 113.15%
+        );
+      box-shadow: 0px 1px 32px #aa47e5;
+    }
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
-      button {
-        background: rgba(103, 103, 103, 0.37);
-        border-radius: 10px;
-        border: none;
-        padding: 0.75rem 1.25rem;
-        color: #ccc;
-        cursor: pointer;
-      }
+    button {
+      background: white;
+      border-radius: 100px;
+      border: 1px solid #E2E8F0;
+      padding: 8px 12px;
+      color: #64748B;
+      
+    }
 
-      .active {
-        background: rgba(103, 103, 103, 0.9);
-        color: var(--clr-white);
-      }
+    .active {
+      background: #9061F9;
+      color: white;
+    }
+  }
+  .tags-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top:16px;
+    color: #64748B;
+
+    font: normal 500 12px/16px Inter;
+
+    button {
+      background: white;
+      border-radius: 100px;
+      border: 1px solid #E2E8F0;
+      padding: 8px 12px;
+      color: #64748B;
+      cursor: pointer;
+
+      font: normal 500 12px/16px Inter;
+    }
+
+    .active {
+      background: #9061F9;
+      color: white;
     }
   }
 
@@ -205,32 +336,6 @@ export const Container = styled.section`
       border: none;
       padding: 0.5rem 1.25rem;
       cursor: pointer;
-    }
-  }
-
-  .btn-container {
-    text-align: center;
-  }
-
-  .btn {
-    display: inline-block;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s linear;
-    border-radius: 49px;
-    padding: 10px 32px;
-    border: none;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-      linear-gradient(85.21deg, #5fb5fc -7.59%, #844aff 62.28%, #df52ff 113.15%);
-    &:hover {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-        linear-gradient(
-          85.21deg,
-          #5fb5fc -7.59%,
-          #844aff 62.28%,
-          #df52ff 113.15%
-        );
-      box-shadow: 0px 1px 32px #aa47e5;
     }
   }
 `;

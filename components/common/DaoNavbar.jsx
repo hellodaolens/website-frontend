@@ -3,6 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import logo from '../../public/assets/discover-daos/logo.webp';
+import search from '../../public/assets/discover-daos/search.svg';
+import pattern from '../../public/assets/discover-daos/pattern.png';
+
+
 import { DaoSearchBar } from '.';
 
 const DaoNavbar = () => {
@@ -17,13 +21,10 @@ const DaoNavbar = () => {
           </Link>
         </div>
 
-        <form>
-          <DaoSearchBar />
-        </form>
 
         <div className="links">
           <Link href="/all-daos">
-            <a className="all-link">All DAO's</a>
+            <a className="all-link" style={{ color: "#6637F2" }}>All DAO's</a>
           </Link>
           <a href="https://daolens.typeform.com/to/C6t2Y6vr" className="btn">
             Submit Your DAO
@@ -35,14 +36,17 @@ const DaoNavbar = () => {
 };
 
 export const NavContainer = styled.nav`
-  background: transparent;
-  position: relative;
-  z-index: 10;
-
+  position: fixed;
+  width:100%;
+  background:url('${pattern.src}')  center;
+  background-size:100%;
+  top:0;
+  z-index: 20;
+  backdrop-filter: blur(77.544px);
   .nav-center {
     max-width: 1260px;
     margin: 0 auto;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -79,15 +83,12 @@ export const NavContainer = styled.nav`
 
     input {
       width: 100%;
-      background: rgba(103, 103, 103, 0.37);
-      border-radius: 10px;
-      border: none;
-      padding: 0.75rem 1.25rem;
-      color: var(--clr-white);
-
-      &::placeholder {
-        color: #ccc;
-      }
+      border-radius: 100px;
+      border: 1px solid #DED0FB;
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem ;
+      color: #6637F2;
+      background: transparent url(${search.src}) no-repeat 3% 50%;
+      background-size: 20px 20px;
     }
 
     .links {

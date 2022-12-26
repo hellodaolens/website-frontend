@@ -52,9 +52,24 @@ const SearchBar = () => {
                       width={103.93}
                       height={104.57}
                     />
-                    <div>
-                      <h5>{result.attributes.Token.replace('$', '')}</h5>
+                    <div >
+                      <h5>{result.attributes.title}</h5>
+                      <div
+                        style={{
+                          color: "#211030",
+                          fontWeight: "400",
+                          fontSize: "18px",
+                          lineHeight: "18px",
+                          margin: "10px 0px",
+                        }}>
+                        {result.attributes.About.replace(/[^\w\s]/gi, '').substring(
+                          0,
+                          30
+                        )}
+                        ...
+                      </div>
                       <span>
+
                         {result?.attributes?.type
                           ?.split(' ')
                           ?.map((item, i) => {
@@ -74,14 +89,15 @@ const SearchBar = () => {
 };
 
 const ResultsContainer = styled.div`
-  background: rgba(103, 103, 103, 0.37);
+  background: rgba(232, 232, 232, 0.37);
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(11.5px);
   padding: 12px;
   position: absolute;
   border-radius: 10px;
   top: calc(100% + 10px);
   z-index: 100;
-
+  
   .results-center {
     display: grid;
     grid-template-columns: 1fr;
@@ -91,8 +107,7 @@ const ResultsContainer = styled.div`
   .result {
     display: flex;
     gap: 1rem;
-    background: rgba(0, 0, 0, 0.02);
-    backdrop-filter: blur(76.0563px);
+    background: white;
     border-radius: 15.2113px;
     padding: 10px;
 
@@ -101,8 +116,7 @@ const ResultsContainer = styled.div`
     }
 
     h5 {
-      color: #fff;
-      margin-bottom: 1rem;
+      color: black;
     }
 
     span {
@@ -112,10 +126,11 @@ const ResultsContainer = styled.div`
     }
 
     small {
-      background: rgba(103, 103, 103, 0.7);
+      background: #F5F5F5;
+      border: 1px solid #DED0FB;
       border-radius: 10.8614px;
       padding: 5px 10px;
-      color: #fff;
+      color: black;
     }
   }
 `;

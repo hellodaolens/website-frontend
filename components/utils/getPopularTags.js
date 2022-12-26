@@ -26,3 +26,53 @@ const getPopularTags = (data) => {
 };
 
 export const tags = getPopularTags(data);
+
+export let hotTags = ["💰 DeFi", "💹 Investment", "👥 Social"]
+export let alltags = [
+  "📈 Analytics",
+
+  "🖼️ Art",
+
+  "🏢 City",
+
+  "🕺🏻 Culture",
+
+  "🛠️ DAO Tool",
+
+  "👩‍💻 Developers",
+
+  "📚 Education",
+
+  "🎪 Events / Experiences",
+
+  "🔮 Future Of Work",
+
+  "🎮 Gaming",
+
+  "🌱 Incubator",
+
+  "🏗️ Infrastructure",
+
+  "🪄 Metaverse",
+
+  "🎵 Music",
+
+  "🖼️ NFTs",
+
+  "⛳️ P2E",
+
+  "💜 Public Good Funding",
+
+  "🌎 Real World Asset Purchase",
+
+  "🔬 Research",
+
+  "🧪 Science",
+
+  "⚽️ Sports",
+
+  "🏕️ Sustainability",
+
+  "🗃️ Venture",
+
+  "💲 Grants",];

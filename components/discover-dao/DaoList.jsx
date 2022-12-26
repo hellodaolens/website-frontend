@@ -33,127 +33,88 @@ const DaoList = () => {
   });
 
   return (
-    <Container>
-      <hr />
-      <div className="logos-center">
-        <Carousel
-          showDots={false}
-          renderDotsOutside={true}
-          containerClass="carousel-container"
-          rewind={true}
-          responsive={responsive}
-          renderButtonGroupOutside={false}
-          removeArrowOnDeviceType={[
-            'superLargeDesktop',
-            'desktop',
-            'tablet',
-            'mobile',
-          ]}
-          keyBoardControl={true}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={1000}
-        >
-          {logos.slice(0, 20).map((logo, i) => {
+    <Container style={{overflowX:"hidden",width:"100%"}}>
+      <div 
+        class="container play" 
+        style={{
+          display:"flex",
+          gap:"12px",position:"relative",marginBottom:"16px"}}>
+      {logos.splice(0,20).map((logo, i) => {
             return (
               <Link
                 href={`/discover-dao/${logo.alt.replace('$', '')}`}
                 style={{ cursor: "pointer" }}
                 key={i}
               >
-                <Image
-                  style={{ cursor: "pointer" }}
+                <img
+                  style={{ cursor: "pointer",borderRadius:"12px" ,width:"100px"}}
                   key={i}
-                  className="logo"
                   src={logo.src}
                   alt={logo.alt}
-                  width={103.93}
-                  height={104.57}
                 />
               </Link>
             );
           })}
-        </Carousel>
-
-        <Carousel
-          showDots={false}
-          renderDotsOutside={true}
-          containerClass="carousel-container"
-          rewind={false}
-          responsive={responsive}
-          renderButtonGroupOutside={false}
-          removeArrowOnDeviceType={[
-            'superLargeDesktop',
-            'desktop',
-            'tablet',
-            'mobile',
-          ]}
-          keyBoardControl={true}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={1000}
-        >
-          {logos.slice(21, 40)
-            .map((logo, i) => {
-              return (
-                <Link
-                  href={`/discover-dao/${logo.alt.replace('$', '')}`}
-                  style={{ cursor: "pointer" }}
+          </div>
+          <div class="container play-reverse" style={{display:"flex",gap:"12px",position:"relative"}}>
+      {logos.splice(21,40).map((logo, i) => {
+            return (
+              <Link
+                href={`/discover-dao/${logo.alt.replace('$', '')}`}
+                style={{ cursor: "pointer" }}
+                key={i}
+              >
+                <img
+                  style={{ cursor: "pointer",borderRadius:"12px" ,width:"100px"}}
                   key={i}
-                >
-                  <Image
-                    className="logo"
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={103.93}
-                    height={104.57}
-                  /></Link>
-              );
-            })
-            .reverse()}
-        </Carousel>
-      </div>
+                  src={logo.src}
+                  alt={logo.alt}
+                />
+              </Link>
+            );
+          })}
+          </div>
     </Container>
   );
 };
 
 export const Container = styled.section`
-  hr {
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid rgba(96, 182, 253, 0.15);
-  }
 
-  .carousel-container {
-    width: 100%;
+.play {
+  animation: moveRow 55s infinite linear;
+}
+.play-reverse {
+  animation: moveRowRev 55s infinite linear;
+}
 
-    ul {
-      gap: 1rem;
+@keyframes moveRow {
+    0% {
+        transform: translate3d(0, 0, 0)
     }
-  }
 
-  .second-carousel {
-    justify-content: center;
-  }
-
-  .banner-center {
-    margin: 3rem auto 0;
-
-    @media (max-width: 1024px) {
-      margin: 4rem auto 2rem;
+    50% {
+        transform: translate3d(-60%, 0, 0)
     }
-  }
 
-  .logos-center {
-    padding: 4rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    img {
-      border-radius: 0.5rem;
+    100% {
+        transform: translate3d(10%, 0, 0)
     }
-  }
+}
+@keyframes moveRowRev {
+        0% {
+        transform: translate3d(-50%, 0, 0)
+    }
+
+    50% {
+        transform: translate3d(10%, 0, 0)
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0)
+    }
+}
+
+
 `;
 
 export default DaoList;

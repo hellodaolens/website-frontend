@@ -1,15 +1,22 @@
 import { DaoNavbar, HeadSeo } from '../components/common';
-import { DAOs } from '../components/all-daos';
+import { DAOs } from '../components/discover-dao';
+import pattern from '../public/assets/discover-daos/pattern.png';
+import { useState } from 'react';
 
 const AllDaos = () => {
+  const [currentTag, setCurrentTag] = useState("All DAOs");
   return (
     <>
       <HeadSeo title="All DAOs" />
-      <main
-        style={{ background: `linear-gradient(to right, #000, #01182B, #000)` }}
-      >
+      <main style={{ background: ` white`, color: "black" }}>
         <DaoNavbar />
-        <DAOs />
+        <div style={{
+          background: `url('${pattern.src}') white center`,
+          backgroundSize: "105%",
+        }}>
+          <DAOs currentTag={currentTag} setCurrentTag={setCurrentTag} allDao />
+        </div>
+
       </main>
     </>
   );

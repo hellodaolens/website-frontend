@@ -8,6 +8,7 @@ import TagManager from 'react-gtm-module'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import LightFooter from '../components/common/LightFooter'
 
 const tagManagerArgs = {
   gtmId: 'GTM-PH3ZXT3',
@@ -19,7 +20,8 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
     TagManager.initialize(tagManagerArgs)
-  }, [])
+  }, []);
+  let pathname = router.pathname;
 
   return (
     <>
@@ -55,7 +57,8 @@ function MyApp({ Component, pageProps }) {
         width={'400px'}
       />
       <Component {...pageProps} />
-      <Footer />
+      {pathname.includes("/discover-dao") || pathname.includes("/all-daos") ? <LightFooter /> :
+        <Footer />}
     </>
   )
 }
