@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import featuresBCG from '../../public/assets/contribution/features3-bcg.png';
+import background1 from '../../public/assets/community-manager/background1.png';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { useEffect, useRef, useState } from 'react';
 
@@ -37,7 +37,7 @@ const Features = ({
       <div>
         <h3>{title}</h3>
         <p>{description}</p>
-        <div style={{ marginBottom: "28px", marginRight: "80px" }}>
+        <div style={{ marginBottom: "28px" }}>
           {accordian.map((accordianItem, idx) =>
             <>
 
@@ -47,7 +47,7 @@ const Features = ({
                   borderTop: "0.5px solid",
                   borderBottom: "0.5px solid",
                   borderColor: "rgba(255, 255, 255, 0.31)",
-                  background: open === idx ? "rgba(255,255,255, 0.13)" : "",
+                  background: open === idx ? "#352542" : "",
                   display: "flex",
                   position: "relative",
                 }}>
@@ -70,16 +70,16 @@ const Features = ({
 
                 }} />
 
-                <div style={{ width: "100%" }}>
+                <div style={{ width: "100%", textAlign: "left" }}>
                   <div
                     onClick={() => {
                       removeInterval();
                       setOpen(idx)
                     }}
-                    style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "10px" }}>
                     {accordianItem.name} {open === idx ? <FaChevronDown /> : <FaChevronRight />}
                   </div>
-                  {open === idx && <div class="panel" style={{ marginTop: "40px" }}>
+                  {open === idx && <div class="panel" style={{ marginTop: "20px" }}>
                     <p>{accordianItem.description}</p>
                     <a
                       target="_blank"
@@ -92,7 +92,7 @@ const Features = ({
                   </div>}
                 </div>
               </div>
-              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ marginTop: "28px", borderRadius: "12px" }} />
+              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12¸¸px 0px", borderRadius: "12px" }} />
               }
             </>)}
 
@@ -102,21 +102,15 @@ const Features = ({
           {heroCTAText}
         </a>
       </div>
-      <div className='right-view' style={{ width: "50%", alignItems: "center", position: "relative", justifyContent: "center" }}>
 
 
-        <img src={accordian[open].image.data.attributes.url}
-          style={{
-            maxWidth: "500px",
-            objectFit: "contain",
-            borderRadius: "12px",
-            height: "auto",
-          }} />
-        <div style={{ width: "80%", height: "600px", position: "absolute", borderRadius: "20px", background: "rgba(255, 255, 255, 0.05) ", zIndex: -1 }}>
-
-        </div>
-      </div>
-
+      <img src={accordian[open].image.data.attributes.url}
+        className='right-view'
+        style={{
+          objectFit: "cover",
+          borderRadius: "12px",
+          width: "500px",
+        }} />
 
 
     </Container >
@@ -124,12 +118,13 @@ const Features = ({
 };
 
 export const Container = styled.section`
-  background: url(${featuresBCG.src}) center/cover no-repeat;
+  background: url(${background1.src}) center/cover no-repeat;
   padding:0px 10%;
   padding-top:100px;
   display:flex;
+  gap:48px;
   justify-content:center;
-  alignItems:center;
+  align-items:center;
   text-align:center;
   
 
@@ -141,7 +136,7 @@ export const Container = styled.section`
   .right-view{
     display: none;
     @media (min-width: 792px) {
-      display: flex;
+      display: inline-block;
     }
   }
   .body-image{

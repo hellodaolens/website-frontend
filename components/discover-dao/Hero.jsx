@@ -46,7 +46,6 @@ const Hero = ({ setCurrentTag, bodyRef }) => {
       items: 1,
     },
   };
-  console.log(bodyRef)
 
   return (
     <Container>

@@ -24,10 +24,9 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
     setDaos(allDao ? newDaos : newDaos.slice(0, 6));;
 
   }, [currentTag])
-  console.log(daos)
 
   return (
-    <Container ref={bodyRef} className="section" style={{marginTop:allDao?"0px":""}}>
+    <Container ref={bodyRef} className="section" style={{ marginTop: allDao ? "0px" : "" }}>
       <div className="section-center">
         <header>
           <form className="search-box">
@@ -72,7 +71,7 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                 }}
               >
 
-                {alltags.map((tag,i) => <option key={i} value={tag.split(" ")[1]}>{tag}</option>)}
+                {alltags.map((tag, i) => <option key={i} value={tag.split(" ")[1]}>{tag}</option>)}
               </select>
             </div>
 

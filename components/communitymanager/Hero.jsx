@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import HeroBanner from './HeroBanner';
-import heroBCG from '../../public/assets/contribution/hero-bcg.png';
+import heroBCG from '../../public/assets/community-manager/background.png';
 import { Navbar } from '../common';
+import Image from 'next/image';
 
 const Hero = ({
   navItems,
@@ -23,15 +24,29 @@ const Hero = ({
       />
       <main
         onClick={() => setShowMenu(false)}
-        style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "68px" }}>
-        <h2 style={{ maxWidth: "750px", textAlign: "center" }}>{heroHeading}</h2>
-        <p style={{ textAlign: "center", marginBottom: "40px" }}>{heroDescription}</p>
-        <a href={heroCTADestination} className='Typeform-7' style={{ marginBottom: "68px" }}>
+        style={{ display: "flex", alignItems: "center", padding: "68px 0px", gap: "12px" }}>
+        <div style={{}}>
+          <h3 style={{}}>{heroHeading}</h3>
+          <p style={{}}>{heroDescription}</p>
+          <a href={heroCTADestination} className='Typeform-7 large' >
+            {heroCTAText}
+          </a>
+
+        </div>
+        <div>
+          <Image
+            src={heroImg[0]?.attributes.url}
+            alt="contributions"
+            width={500}
+            height={250}
+            placeholder="blur"
+            blurDataURL={heroImg[0]?.attributes.url}
+            style={{ borderRadius: "12px" }}
+          />
+        </div>
+        <a href={heroCTADestination} className='Typeform-7 small' >
           {heroCTAText}
         </a>
-        <HeroBanner
-          heroImg={heroImg}
-        />
 
 
 
@@ -43,11 +58,34 @@ const Hero = ({
 };
 
 export const Container = styled.section`
-  background: url(${heroBCG.src}) top/cover no-repeat;
+  background: url(${heroBCG.src}) center/cover no-repeat;
+  main{
+    max-width: 1136px;
+    margin: auto;
+    text-align:center;
+    flex-direction: column;
+    .large{
+      display:none;
+    }
+    .small{
+      display:inline-block;
+    }
+    @media (min-width: 792px) {
+      flex-direction: row;
+      text-align: left;
+      .large{
+        display:inline-block;
+      }
+      .small{
+        display:none;
+      }
+    }
+  }
 
   .Typeform-7 {
     display: inline-block;
     color: #fff;
+    margin-top: 12px;
     cursor: pointer;
     transition: all 0.3s linear;
     border-radius: 49px;

@@ -54,7 +54,6 @@ const Modal = ({
           autoClose: 5000,
           closeOnClick: true,
         });
-        console.log('Completed!', response);
       } catch (err) {
         toast.error(err, {
           position: 'top-center',
@@ -73,9 +72,8 @@ const Modal = ({
   return (
     <Container>
       <div
-        className={`${
-          isModalOpen ? 'modal-overlay show-modal' : 'modal-overlay'
-        }`}
+        className={`${isModalOpen ? 'modal-overlay show-modal' : 'modal-overlay'
+          }`}
       >
         <div className="modal-container">
           <h3>{modalHeading}</h3>

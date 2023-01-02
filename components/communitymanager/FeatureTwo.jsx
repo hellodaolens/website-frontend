@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
 import Image from 'next/image';
 import featuresBCG from '../../public/assets/contribution/features3-bcg.png';
-import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { FaArrowRight, FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { useEffect, useRef, useState } from 'react';
 
 const FeatureTwo = ({
@@ -9,14 +9,26 @@ const FeatureTwo = ({
   data
 }) => {
   const [selectedCard, setSelectCard] = useState(null);
-  const [showDropdon, setShowDropdown] = useState(null);
+  const [accordian, setAccordian] = useState(0);
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
+  let res = showAllFeatures ? data : data.slice(0, 3);
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setAccordian(prev => (prev + 1) % res.length)
+    }, 3000);
+    return () => {
+      clearInterval(interval);
+    }
+  }, [res.length]);
 
   return (
     <Container className='section'>
       <h3>{heading}</h3>
-      <div style={{
-        display: "flex", columnGap: "20px", rowGap: "40px", marginTop: "40px", flexWrap: "wrap", justifyContent: "center"
-      }}>
+      <div
+        className='large'
+        style={{
+          columnGap: "20px", rowGap: "40px", marginTop: "40px", flexWrap: "wrap", justifyContent: "center"
+        }}>
         {data?.map((item, index) =>
           <div
             key={index}
@@ -29,8 +41,6 @@ const FeatureTwo = ({
             className="card"
             style={{
               width: "350px",
-              position: "relative",
-              zIndex: 20 - index,
             }}>
             <div
               className="content"
@@ -41,37 +51,74 @@ const FeatureTwo = ({
                 flexDirection: "column",
                 gap: "12px",
               }}>
-              <img
-                className='large'
-                style={{ borderRadius: "16px", height: "200px", objectFit: "cover" }}
-                src={item.image.data.attributes.url}
-              />
-              {showDropdon === index && <img className='small'
-                style={{ borderRadius: "16px", height: "200px", objectFit: "cover" }}
-                src={item.image.data.attributes.url}
-              />}
+
+              {selectedCard === index ? <p >{item.description}</p> :
+                <img
+                  style={{ borderRadius: "16px", height: "200px", objectFit: "cover" }}
+                  src={item.image.data.attributes.url}
+                />}
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {item.name}
-                <div className='small' onClick={() => {
-                  setShowDropdown(prev => prev === index ? null : index)
-                }}>{showDropdon === index ? <FaChevronDown /> : <FaChevronRight />}</div>
               </div>
-              {showDropdon === index && <p className='small'>{item.description}</p>}
-
-
             </div>
-            {selectedCard === index && <p
-              className='large'
-              style={{
-                padding: "14px 0px 14px 14px",
-                borderRadius: "0px 0px 16px 16px",
-                background: "rgba(255, 255, 255, 0.05)",
-                backdropFilter: "blur(8.20388px)",
-                WebkitBackdropFilter: "blur(8.20388px)"
-              }}>{item.description}</p>}
           </div>)
+        }
 
-        }</div>
+      </div>
+      <div
+        className='small'
+        style={{
+          columnGap: "20px", rowGap: "40px", marginTop: "40px", flexWrap: "wrap", justifyContent: "center"
+        }}>
+        {res?.map((item, index) =>
+          <div
+            key={index}
+            onMouseEnter={() => {
+              setSelectCard(index);
+            }}
+            onMouseLeave={() => {
+              setSelectCard(null)
+            }}
+            className="card"
+            style={{
+              width: "350px",
+            }}>
+            <div
+              className="content"
+              style={{
+                background: "rgba(255, 255, 255, 0.05)",
+                padding: "14px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+              }}>
+              {accordian === index ? <p>{item.description}</p> :
+                <img
+                  style={{ borderRadius: "16px", height: "200px", objectFit: "cover" }}
+                  src={item.image.data.attributes.url}
+                />}
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {item.name}
+              </div>
+            </div>
+          </div>)
+        }
+
+      </div>
+      {!showAllFeatures && <div className='small' style={{ justifyContent: "center" }}>
+        <div
+          onClick={() => {
+            setShowAllFeatures(true)
+          }}
+          style={{
+            background: "rgba(255, 255, 255, 0.12)",
+            boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.05)",
+            borderRadius: "4px",
+            padding: "8px 12px",
+            marginTop: "20px",
+            cursor: "pointer"
+          }}>+ 3 more features <FaArrowRight size="12px" />
+        </div></div>}
 
 
 
@@ -82,8 +129,12 @@ const FeatureTwo = ({
 export const Container = styled.section`
   background: url(${featuresBCG.src}) center/cover no-repeat;
   padding:100px 10%;
+  text-align:center;
+  .card{
+    border-radius:16px;
+  }
   .small{
-    display:block;
+    display:flex;
   }
 
   .large{
@@ -99,15 +150,8 @@ export const Container = styled.section`
       display:none;
     }
     .large{
-      display:block;
+      display:flex;
     }
-    .content{
-      &:hover {
-        border-radius:16px 16px 0px 0px;
-
-    }
-    }
-   
    
   }
 

@@ -15,7 +15,7 @@ function generateSiteMap(posts) {
        <loc>https://www.daolens.com/community</loc>
      </url>
      <url>
-       <loc>https://www.daolens.com/contribution-tool</loc>
+       <loc>https://www.daolens.com/dao-manager</loc>
      </url>
      <url>
      <loc>https://www.daolens.com/community-manager</loc>
