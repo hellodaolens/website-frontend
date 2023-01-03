@@ -2,6 +2,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import featuresBCG from '../../public/assets/contribution/features3-bcg.png';
 import checkMediaType from '../utils/checkMediaType';
+import background from '../../public/assets/community-manager/background3.png';
+
 
 
 const FeaturesThree = ({
@@ -10,42 +12,46 @@ const FeaturesThree = ({
   heading,
   heroCTAText,
   heroCTADestination,
-  content
+  content,
+  embedUrl
 }) => {
   return (
     <Container className='section'>
+      <a href={heroCTADestination} className='small Typeform-8 '>
+        {heroCTAText}
+      </a>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        {checkMediaType(content) === 'video' ? (
-          <video
-            src={content?.data?.attributes?.url}
-            width={636}
-            height={352}
-            style={{ maxWidth: '636px', objectFit: "contain" }}
-            autoPlay
-            loop
-            muted
-          />
-        ) : (
-          <Image
-            src={content?.data?.attributes?.url}
-            width={636}
-            height={352}
-            objectFit="contain"
-            placeholder='blur'
-            blurDataURL={content?.data?.attributes?.url}
-          />
-        )}
-        {/* <img src={content.data.attributes.url} style={{ marginTop: "28px", borderRadius: "12px", objectFit: "contain", }} /> */}
+        {embedUrl ?
+          <iframe width="560" height="415" src={embedUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style={{ borderRadius: "12px" }} allowfullscreen> </iframe>
+          :
+          checkMediaType(content) === 'video' ? (
+
+            <video
+              src={content?.data?.attributes?.url}
+              style={{ maxWidth: '600px', objectFit: "contain", borderRadius: "12px" }}
+              autoPlay
+              loop
+              muted
+              controls
+            />
+          ) : (
+            <img
+              src={content?.data?.attributes?.url}
+              style={{ maxWidth: '600px', objectFit: "contain", borderRadius: "12px" }}
+              blurDataURL={content?.data?.attributes?.url}
+            />
+          )}
       </div>
 
-      <div>
+      <div style={{ maxWidth: "400px" }}>
         <p>{heading}</p>
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href={heroCTADestination} className='Typeform-8' style={{ marginTop: "68px", }}>
+        <a href={heroCTADestination} className='large Typeform-8 ' style={{ marginTop: "68px" }}>
           {heroCTAText}
         </a>
       </div>
+
 
 
     </Container>
@@ -53,24 +59,37 @@ const FeaturesThree = ({
 };
 
 export const Container = styled.section`
-  background: url(${featuresBCG.src}) center/cover no-repeat;
+  background: url(${background.src}) bottom left/contain no-repeat;
   display:flex;
   justify-content:center;
-  alignItems:center;
-  padding:50px 10%;
+  align-items:center;
+  padding:120px 10%;
   gap:80px;
   flex-direction: column-reverse;
   text-align:center;
-  
-
+  h3{
+    font:normal 600 40px/52px Inter;
+  }
+  .large {
+    display:none;
+  }
+  .small{
+    display:inline-block;
+  }
   @media (min-width: 792px) {
     flex-direction: row;
     text-align:left;
+    .large{
+      display:inline-block;
+    }
+    .small{
+      display:none;
+    }
    
   }
 
+
   .Typeform-8 {
-    display: inline-block;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s linear;

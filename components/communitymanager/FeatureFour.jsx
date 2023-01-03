@@ -42,17 +42,13 @@ const FeatureFour = ({
               position: "relative"
             }}>
               <div style={{ position: "absolute", background: colors[index], height: "100%", width: "8px", opacity: "0.4", filter: "blur(8px)" }}></div>
-              {accordian === index ? <p className='small' style={{ margin: "12px 12px 0px 12px" }} >{item.description}</p> : <img className='small'
-                style={{ height: "200px", objectFit: "cover" }}
-                src={item.image.data.attributes.url}
-              />}
               <img
                 className='large'
                 style={{ height: "200px", objectFit: "cover" }}
                 src={item.image.data.attributes.url}
               />
               <div style={{ margin: " 4px 16px " }}>
-                <h5>{item.name}</h5>
+                <div>{item.name}</div>
                 <p className='description'>{item.description}</p>
 
               </div>
@@ -73,35 +69,13 @@ export const Container = styled.section`
   padding:100px 10%;
   h3{
   text-align:center;
-  }
-  .small{
-    display:block;
-  }
-
-  .large{
-    display:none;
-  }
-  .description{
-    display:none;
+  font:normal 600 40px/52px Inter;
   }
   
   @media (min-width: 792px) {
     h3{
     text-align:left;
 
-    }
-    .small{
-      display:none;
-    }
-    .large{
-      display:block;
-    }
-    .card{
-      &:hover {
-        .description{
-        display:block;
-        }
-      }
     }
   }
 

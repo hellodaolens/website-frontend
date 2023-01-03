@@ -52,7 +52,7 @@ const FeatureTwo = ({
                 gap: "12px",
               }}>
 
-              {selectedCard === index ? <p >{item.description}</p> :
+              {selectedCard === index ? <p style={{ height: "200px", margin: "0", wordBreak: "break-word", overflow: "hidden" }} >{item.description} </p> :
                 <img
                   style={{ borderRadius: "16px", height: "200px", objectFit: "cover" }}
                   src={item.image.data.attributes.url}
@@ -130,6 +130,10 @@ export const Container = styled.section`
   background: url(${featuresBCG.src}) center/cover no-repeat;
   padding:100px 10%;
   text-align:center;
+  h3{
+    font:normal 600 40px/52px Inter;
+  }
+  
   .card{
     border-radius:16px;
   }

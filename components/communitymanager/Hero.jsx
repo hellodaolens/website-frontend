@@ -24,10 +24,10 @@ const Hero = ({
       />
       <main
         onClick={() => setShowMenu(false)}
-        style={{ display: "flex", alignItems: "center", padding: "68px 0px", gap: "12px" }}>
+        style={{ display: "flex", alignItems: "center", padding: "68px 0px", gap: "12px", height: "70%" }}>
         <div style={{}}>
-          <h3 style={{}}>{heroHeading}</h3>
-          <p style={{}}>{heroDescription}</p>
+          <h3>{heroHeading}</h3>
+          <p style={{ width: "500px", marginBottom: "30px" }}>{heroDescription}</p>
           <a href={heroCTADestination} className='Typeform-7 large' >
             {heroCTAText}
           </a>
@@ -37,8 +37,8 @@ const Hero = ({
           <Image
             src={heroImg[0]?.attributes.url}
             alt="contributions"
-            width={500}
-            height={250}
+            width={800}
+            height={400}
             placeholder="blur"
             blurDataURL={heroImg[0]?.attributes.url}
             style={{ borderRadius: "12px" }}
@@ -59,6 +59,12 @@ const Hero = ({
 
 export const Container = styled.section`
   background: url(${heroBCG.src}) center/cover no-repeat;
+  height:100vh;
+ 
+  h3{
+    font:normal 600 40px/52px Inter;
+  }
+  
   main{
     max-width: 1136px;
     margin: auto;

@@ -1,18 +1,14 @@
-import { HeadSeo } from '../components/common';
+import { HeadSeo } from "../components/common";
 import {
   Hero,
   Features,
   FeaturesThree,
-  FeatureTwo
-} from '../components/communitymanager';
-import FeatureFour from '../components/communitymanager/FeatureFour';
-import { TopBar } from '../components/home';
+  FeatureTwo,
+} from "../components/communitymanager";
+import FeatureFour from "../components/communitymanager/FeatureFour";
+import { TopBar } from "../components/home";
 
-const CommunityTool = ({
-  data: { data },
-  topBarInfo,
-  navItems,
-}) => {
+const CommunityTool = ({ data: { data }, topBarInfo, navItems }) => {
   const {
     heroHeading,
     heroDescription,
@@ -23,7 +19,7 @@ const CommunityTool = ({
     section1,
     section2,
     section3,
-    section4
+    section4,
   } = data.attributes;
   return (
     <>
@@ -44,11 +40,9 @@ const CommunityTool = ({
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
       />
-      <FeatureTwo
-        heading={section3.heading}
-        data={section3.data}
-      />
+      <FeatureTwo heading={section3.heading} data={section3.data} />
       <FeaturesThree
+        embedUrl={section2.embedUrl}
         title={section2.name}
         description={section2.description}
         content={section2.content}
@@ -56,10 +50,7 @@ const CommunityTool = ({
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
       />
-      <FeatureFour
-        heading={section4.heading}
-        data={section4.data}
-      />
+      <FeatureFour heading={section4.heading} data={section4.data} />
     </>
   );
 };

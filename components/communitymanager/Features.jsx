@@ -35,7 +35,7 @@ const Features = ({
   return (
     <Container className='section'>
       <div>
-        <h3>{title}</h3>
+        <h3 style={{ width: "650px" }}>{title}</h3>
         <p>{description}</p>
         <div style={{ marginBottom: "28px" }}>
           {accordian.map((accordianItem, idx) =>
@@ -76,7 +76,7 @@ const Features = ({
                       removeInterval();
                       setOpen(idx)
                     }}
-                    style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "10px" }}>
+                    style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", height: "10px" }}>
                     {accordianItem.name} {open === idx ? <FaChevronDown /> : <FaChevronRight />}
                   </div>
                   {open === idx && <div class="panel" style={{ marginTop: "20px" }}>
@@ -92,7 +92,7 @@ const Features = ({
                   </div>}
                 </div>
               </div>
-              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12¸¸px 0px", borderRadius: "12px" }} />
+              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12px 0px", borderRadius: "12px" }} />
               }
             </>)}
 
@@ -126,6 +126,10 @@ export const Container = styled.section`
   justify-content:center;
   align-items:center;
   text-align:center;
+
+  h3{
+    font:normal 600 40px/52px Inter;
+  }
   
 
   @media (min-width: 792px) {
