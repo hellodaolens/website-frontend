@@ -95,7 +95,6 @@ const ResultsContainer = styled.div`
   padding: 12px;
   position: absolute;
   border-radius: 10px;
-  top: calc(100% + 10px);
   z-index: 100;
   
   .results-center {
