@@ -1,10 +1,22 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import bannerBcg from '../../public/assets/content/banner-bcg.png';
+import bannerBcg2 from '../../public/assets/content/banner2-bcg.png';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const HighlightedArticle = ({ banner, openModal }) => {
+  const router = useRouter();
+  const path = router.pathname;
+
   return (
-    <Container>
+    <Container
+      style={{
+        background: `url(${
+          path === '/blog' ? bannerBcg.src : bannerBcg2.src
+        }) center/cover no-repeat`,
+      }}
+    >
       <div className="banner-image">
         <Image
           src={banner?.attributes?.image?.data?.attributes?.url}
@@ -39,7 +51,6 @@ const HighlightedArticle = ({ banner, openModal }) => {
 export default HighlightedArticle;
 
 export const Container = styled.article`
-  background: url(${bannerBcg.src}) top/cover no-repeat;
   padding: 1.5rem;
   border-radius: 20px;
   display: grid;

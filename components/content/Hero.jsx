@@ -233,6 +233,10 @@ const Hero = ({
 export const Container = styled.section`
   background: url(${heroBcg.src}) top/cover no-repeat;
 
+  main.section {
+    padding: 3rem 0;
+  }
+
   .sidebar {
     display: none;
 

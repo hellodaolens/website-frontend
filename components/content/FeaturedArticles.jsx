@@ -1,11 +1,22 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import bannerBcg from '../../public/assets/content/banner-bcg.png';
+import bannerBcg2 from '../../public/assets/content/banner2-bcg.png';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const FeaturedArticles = ({ articles }) => {
+  const router = useRouter();
+  const path = router.pathname;
+
   return (
-    <Container>
+    <Container
+      style={{
+        background: `url(${
+          path === '/blog' ? bannerBcg.src : bannerBcg2.src
+        }) center/cover no-repeat`,
+      }}
+    >
       {articles?.map((article) => {
         return (
           <Link key={article?.id} href={`/blog/${article?.attributes?.slug}`}>
@@ -36,7 +47,6 @@ const FeaturedArticles = ({ articles }) => {
 export default FeaturedArticles;
 
 export const Container = styled.article`
-  background: url(${bannerBcg.src}) center/cover no-repeat;
   padding: 1.5rem;
   border-radius: 20px;
   display: grid;
