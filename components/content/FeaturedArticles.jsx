@@ -70,6 +70,7 @@ export const Container = styled.article`
 
   img {
     width: 100%;
+    border-radius: 0.5rem;
   }
 
   small {

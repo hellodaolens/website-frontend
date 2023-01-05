@@ -90,6 +90,7 @@ Onboarding Page
 
 #### Changes 05.01.2023
 
-- [ ] Add sidebar to blog page
-- [ ] Add sidebar to single blog page
+- [x] Add sidebar to blog page
+- [x] Add sidebar to single blog page
 - [ ] Update footer for blog pages
+- [x] Add top posts section

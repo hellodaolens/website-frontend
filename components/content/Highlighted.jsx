@@ -16,6 +16,7 @@ const HighlightedArticle = ({ banner, openModal }) => {
           path === '/blog' ? bannerBcg.src : bannerBcg2.src
         }) center/cover no-repeat`,
       }}
+      className="highlighted-article"
     >
       <div className="banner-image">
         <Image
@@ -60,6 +61,7 @@ export const Container = styled.article`
 
   img {
     width: 100%;
+    border-radius: 0.5rem;
   }
 
   .btn-container {

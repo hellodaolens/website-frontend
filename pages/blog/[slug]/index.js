@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import moment from 'moment/moment';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
-import { PageBanner, PageBannerSmall } from '../../../components/content';
+import {
+  PageBanner,
+  PageBannerSmall,
+  TopPosts,
+} from '../../../components/content';
 import Link from 'next/link';
 import HighlightedArticle from '../../../components/content/Highlighted';
 import FeaturedArticles from '../../../components/content/FeaturedArticles';
@@ -16,6 +20,7 @@ const SingleBlogPage = ({
   pageBanner2,
   featuredArticles,
   highlightedArticles,
+  topPosts,
 }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { isFallback } = useRouter();
@@ -98,6 +103,8 @@ const SingleBlogPage = ({
                 </div>
 
                 <PageBannerSmall banner={pageBanner2} />
+
+                <TopPosts topPosts={topPosts} />
               </div>
 
               {/* sidebar */}
@@ -105,6 +112,7 @@ const SingleBlogPage = ({
                 {highlightedArticles[0] && (
                   <HighlightedArticle banner={highlightedArticles[0]} />
                 )}
+                <h3>Featured posts</h3>
                 <FeaturedArticles articles={featuredArticles} />
                 {highlightedArticles[1] && (
                   <HighlightedArticle banner={highlightedArticles[1]} />
@@ -122,22 +130,36 @@ export const Container = styled.section`
   background-color: #12111a;
 
   .sidebar {
-    display: none;
+    .highlighted-article {
+      display: none;
+    }
+
+    h3 {
+      display: block;
+    }
 
     @media (min-width: 892px) {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
+      .highlighted-article {
+        display: grid;
+      }
+
+      h3 {
+        display: none;
+      }
     }
   }
 
   .blog-section {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
 
     @media (min-width: 892px) {
       grid-template-columns: 1fr 364px;
+      gap: 1.5rem;
     }
     @media (min-width: 1150px) {
       grid-template-columns: 1fr 400px;
@@ -219,6 +241,12 @@ export const getStaticProps = async ({ params }) => {
   );
   const featuredData = await featuredRes.json();
 
+  // top articles
+  const topRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=4&filters[isTopPost][$eq]=True&populate=*`
+  );
+  const topArticlesData = await topRes.json();
+
   // highlighted articles
   const highlightedArticlesRes = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=2&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=True&populate=*`
@@ -233,6 +261,7 @@ export const getStaticProps = async ({ params }) => {
       pageBanner2: pageBannerData2?.data,
       featuredArticles: featuredData?.data,
       highlightedArticles: highlightedArticlesData?.data,
+      topPosts: topArticlesData?.data,
     },
   };
 };
