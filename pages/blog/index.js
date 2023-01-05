@@ -1,5 +1,10 @@
 import { HeadSeo } from '../../components/common';
-import { Hero, CTA, TwitterFeed } from '../../components/content';
+import {
+  Hero,
+  CTA,
+  TwitterFeed,
+  PageBannerSmall,
+} from '../../components/content';
 import { TopBar } from '../../components/home';
 
 const Content = ({
@@ -7,6 +12,10 @@ const Content = ({
   topBarInfo,
   navItems,
   bannerArticle,
+  bannerArticle2,
+  featuredArticles,
+  pageBanner,
+  pageBanner2,
   allArticles,
   podcasts,
   videos,
@@ -29,11 +38,14 @@ const Content = ({
 
   return (
     <>
-      <HeadSeo title='Content' />
+      <HeadSeo title="Content" />
       {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
         navItems={navItems}
         bannerArticle={bannerArticle}
+        bannerArticle2={bannerArticle2}
+        featuredArticles={featuredArticles}
+        pageBanner={pageBanner}
         allArticles={allArticles}
         podcasts={podcasts}
         videos={videos}
@@ -44,14 +56,17 @@ const Content = ({
         inputBoxFieldName2={inputBoxFieldName2}
         inputBoxFieldName3={inputBoxFieldName3}
       />
-      <CTA
+      <section className="section-center">
+        <PageBannerSmall banner={pageBanner2} />
+      </section>
+      {/* <CTA
         heading={heading}
         description={description}
         CTAText={CTAText}
         CTADestination={CTADestination}
         image={image}
         points={points}
-      />
+      /> */}
       <TwitterFeed />
     </>
   );
@@ -76,11 +91,34 @@ export async function getStaticProps() {
   );
   const navData = await navRes.json();
 
+  // page banners
+  const pageBannersRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/blog-page-banner`
+  );
+  const pageBannersData = await pageBannersRes.json();
+
+  const pageBannerRes2 = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/blog-page-banner2`
+  );
+  const pageBannerData2 = await pageBannerRes2.json();
+
   // hero
   const heroRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&filters[isHighLight][$eq]=True&populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=1&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=False&populate=*`
   );
   const heroData = await heroRes.json();
+
+  // second highlight article
+  const secondHeroRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=1&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=True&populate=*`
+  );
+  const secondHeroData = await secondHeroRes.json();
+
+  // featured articles
+  const featuredRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=4&filters[isFeaturedSide][$eq]=True&populate=*`
+  );
+  const featuredData = await featuredRes.json();
 
   // articles
   const articlesRes = await fetch(
@@ -106,6 +144,10 @@ export async function getStaticProps() {
       topBarInfo: homeData?.data?.attributes?.topBarInfo,
       navItems: navData?.data?.attributes,
       bannerArticle: heroData?.data[0],
+      bannerArticle2: secondHeroData?.data[0],
+      featuredArticles: featuredData?.data,
+      pageBanner: pageBannersData?.data,
+      pageBanner2: pageBannerData2?.data,
       allArticles: articlesData?.data,
       podcasts: spotifyData?.data,
       videos: videosData?.data,

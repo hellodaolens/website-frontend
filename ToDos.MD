@@ -87,3 +87,10 @@ Onboarding Page
 
 - [x] Users slider -> first icon not visible
 - [x] Button below it -> top bottom spacing not matching
+
+#### Changes 05.01.2023
+
+- [x] Add sidebar to blog page
+- [x] Add sidebar to single blog page
+- [ ] Update footer for blog pages
+- [x] Add top posts section

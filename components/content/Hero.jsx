@@ -17,10 +17,16 @@ import Modal from './Modal';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import ReactPlayer from 'react-player/lazy';
+import PageBanner from './PageBanner';
+import HighlightedArticle from './Highlighted';
+import FeaturedArticles from './FeaturedArticles';
 
 const Hero = ({
   navItems,
   bannerArticle,
+  bannerArticle2,
+  pageBanner,
+  featuredArticles,
   allArticles,
   podcasts,
   videos,
@@ -80,122 +86,136 @@ const Hero = ({
         showMenu={showMenu}
         setShowMenu={setShowMenu}
       />
-      <main onClick={() => setShowMenu(false)} className='section'>
-        <div className='section-center'>
-          <div className='banner'>
-            <div className='banner-image'>
-              {!bannerArticle?.attributes?.showPodcast &&
-                !bannerArticle?.attributes?.showYt && (
-                  <Image
-                    src={
-                      bannerArticle?.attributes?.image?.data?.attributes?.url
-                    }
-                    alt='banner'
-                    width={640}
-                    height={306}
-                    placeholder='blur'
-                    blurDataURL={
-                      bannerArticle?.attributes?.image?.data?.attributes?.url
-                    }
-                  />
+      <main onClick={() => setShowMenu(false)} className="section">
+        <div className="section-center">
+          <PageBanner banner={pageBanner} />
+
+          <div className="banner-container">
+            {/* banner */}
+            <div className="banner">
+              <div className="banner-image">
+                {!bannerArticle?.attributes?.showPodcast &&
+                  !bannerArticle?.attributes?.showYt && (
+                    <Image
+                      src={
+                        bannerArticle?.attributes?.image?.data?.attributes?.url
+                      }
+                      alt="banner"
+                      width={640}
+                      height={380}
+                      placeholder="blur"
+                      blurDataURL={
+                        bannerArticle?.attributes?.image?.data?.attributes?.url
+                      }
+                    />
+                  )}
+                {bannerArticle?.attributes?.showYt && (
+                  <div className="video">
+                    <ReactPlayer
+                      url={bannerArticle?.attributes?.ytLink}
+                      controls={true}
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
                 )}
-              {bannerArticle?.attributes?.showYt && (
-                <div className='video'>
-                  <ReactPlayer
-                    url={bannerArticle?.attributes?.ytLink}
-                    controls={true}
-                    width='100%'
-                    height='100%'
-                  />
+                {bannerArticle?.attributes?.showPodcast && (
+                  <iframe
+                    style={{ borderRadius: '15px' }}
+                    src={`https://open.spotify.com/embed/episode/${id}?utm_source=generator&theme=0`}
+                    width="100%"
+                    height="352"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    frameBorder="0"
+                  ></iframe>
+                )}
+              </div>
+              <article className="info">
+                <h3>{bannerArticle?.attributes?.name}</h3>
+                <div>
+                  <p>{bannerArticle?.attributes?.shortDescription}</p>
+                  <p>
+                    - {bannerArticle?.attributes?.author},{' '}
+                    {bannerArticle?.attributes?.authorDesignation}
+                  </p>
                 </div>
-              )}
-              {bannerArticle?.attributes?.showPodcast && (
-                <iframe
-                  style={{ borderRadius: '15px' }}
-                  src={`https://open.spotify.com/embed/episode/${id}?utm_source=generator&theme=0`}
-                  width='100%'
-                  height='352'
-                  allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
-                  loading='lazy'
-                  frameBorder='0'
-                ></iframe>
-              )}
+
+                <div className="btn-container">
+                  {bannerArticle?.attributes?.showReadMoreInHightlight && (
+                    <Link href={`/blog/${bannerArticle?.attributes?.slug}`}>
+                      <a className="btn">{readingStats.text}</a>
+                    </Link>
+                  )}
+                  {bannerArticle?.attributes?.showCTAinHighlight && (
+                    <button onClick={openModal} className="btn2">
+                      {modalBtnText}
+                    </button>
+                  )}
+
+                  {isModalOpen && (
+                    <Modal
+                      isModalOpen={isModalOpen}
+                      setIsModalOpen={setIsModalOpen}
+                      modalHeading={modalHeading}
+                      modalPara={modalPara}
+                      inputBoxFieldName1={inputBoxFieldName1}
+                      inputBoxFieldName2={inputBoxFieldName2}
+                      inputBoxFieldName3={inputBoxFieldName3}
+                    />
+                  )}
+                </div>
+              </article>
             </div>
-            <article className='info'>
-              <h3>{bannerArticle?.attributes?.name}</h3>
-              <div>
-                <p>{bannerArticle?.attributes?.shortDescription}</p>
-                <p>
-                  - {bannerArticle?.attributes?.author},{' '}
-                  {bannerArticle?.attributes?.authorDesignation}
-                </p>
-              </div>
 
-              <div className='btn-container'>
-                {bannerArticle?.attributes?.showReadMoreInHightlight && (
-                  <Link href={`/blog/${bannerArticle?.attributes?.slug}`}>
-                    <a className='btn'>{readingStats.text}</a>
-                  </Link>
-                )}
-                {bannerArticle?.attributes?.showCTAinHighlight && (
-                  <button onClick={openModal} className='btn2'>
-                    {modalBtnText}
-                  </button>
-                )}
-
-                {isModalOpen && (
-                  <Modal
-                    isModalOpen={isModalOpen}
-                    setIsModalOpen={setIsModalOpen}
-                    modalHeading={modalHeading}
-                    modalPara={modalPara}
-                    inputBoxFieldName1={inputBoxFieldName1}
-                    inputBoxFieldName2={inputBoxFieldName2}
-                    inputBoxFieldName3={inputBoxFieldName3}
-                  />
-                )}
-              </div>
-            </article>
+            {/* sidebar */}
+            <aside className="sidebar">
+              <HighlightedArticle
+                banner={bannerArticle2}
+                openModal={openModal}
+              />
+              <FeaturedArticles articles={featuredArticles} />
+            </aside>
           </div>
 
-          <div className='options'>
+          <div className="options">
             <button
-              className='option active-opt'
+              className="option active-opt"
               onClick={(e) => selectOption(e, 'articles')}
             >
               <Image
                 src={articles}
-                alt='articles'
+                alt="articles"
                 width={100}
                 height={100}
-                objectFit='contain'
+                objectFit="contain"
               />
               <p>Articles</p>
             </button>
             <button
-              className='option'
+              className="option"
               onClick={(e) => selectOption(e, 'youtube')}
             >
               <Image
                 src={youtube}
-                alt='youtube'
+                alt="youtube"
                 width={100}
                 height={100}
-                objectFit='contain'
+                objectFit="contain"
               />
               <p>Youtube playlists</p>
             </button>
             <button
-              className='option'
+              className="option"
               onClick={(e) => selectOption(e, 'spotify')}
             >
               <Image
                 src={spotify}
-                alt='spotify'
+                alt="spotify"
                 width={100}
                 height={100}
-                objectFit='contain'
-                placeholder='blur'
+                objectFit="contain"
+                placeholder="blur"
               />
               <p>Podcasts</p>
             </button>
@@ -213,19 +233,48 @@ const Hero = ({
 export const Container = styled.section`
   background: url(${heroBcg.src}) top/cover no-repeat;
 
+  main.section {
+    padding: 3rem 0;
+  }
+
+  .sidebar {
+    display: none;
+
+    @media (min-width: 892px) {
+      display: grid;
+      gap: 1.5rem;
+    }
+  }
+
+  .banner-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 892px) {
+      grid-template-columns: 1fr 364px;
+    }
+    @media (min-width: 1150px) {
+      grid-template-columns: 1fr 400px;
+    }
+  }
+
   .banner {
-    background: url(${bannerBcg.src}) center/cover no-repeat;
+    background: url(${bannerBcg.src}) top/cover no-repeat;
     gap: 1.5rem;
     padding: 1.5rem;
     border-radius: 20px;
     display: grid;
-    margin-top: 2rem;
+    max-width: fit-content;
+    margin: 0 auto;
+
+    @media (min-width: 892px) {
+      margin: 0;
+    }
 
     @media (min-width: 992px) {
-      grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 2rem;
-      padding: 2rem;
     }
   }
 
@@ -299,6 +348,7 @@ export const Container = styled.section`
   }
 
   .btn-container {
+    justify-self: end;
     width: fit-content;
     display: grid;
     grid-template-columns: auto auto;
