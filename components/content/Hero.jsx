@@ -250,7 +250,7 @@ export const Container = styled.section`
     @media (min-width: 892px) {
       grid-template-columns: 1fr 364px;
     }
-    @media (min-width: 115git 0px) {
+    @media (min-width: 1150px) {
       grid-template-columns: 1fr 400px;
     }
   }

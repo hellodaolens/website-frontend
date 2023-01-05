@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
 import { PageBanner, PageBannerSmall } from '../../../components/content';
 import Link from 'next/link';
+import HighlightedArticle from '../../../components/content/Highlighted';
+import FeaturedArticles from '../../../components/content/FeaturedArticles';
 
 const SingleBlogPage = ({
   article,
@@ -60,35 +62,55 @@ const SingleBlogPage = ({
           <div className="section-center blog-center">
             <PageBanner banner={pageBanner} />
 
-            <div className="top-heading">
-              <p>
-                <Link href="/blog">
-                  <a className="back">Blog</a>
-                </Link>
-                &nbsp;&gt; {name}
-              </p>
+            <div className="blog-section">
+              {/* blog */}
+              <div>
+                <div className="top-heading">
+                  <p>
+                    <Link href="/blog">
+                      <a className="back">Blog</a>
+                    </Link>
+                    &nbsp;&gt; {name}
+                  </p>
 
-              <div className="author">
-                <p>
-                  <span>
-                    <a href={authorSocialLink} target="_blank" rel="noreferrer">
-                      {author}
-                    </a>
-                  </span>
-                  , {moment(date).format('ll')}
-                </p>
+                  <div className="author">
+                    <p>
+                      <span>
+                        <a
+                          href={authorSocialLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {author}
+                        </a>
+                      </span>
+                      , {moment(date).format('ll')}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="title">
+                  <h3>{name}</h3>
+                </div>
+
+                <div className="content">
+                  <ReactMarkdown>{content}</ReactMarkdown>
+                </div>
+
+                <PageBannerSmall banner={pageBanner2} />
               </div>
-            </div>
 
-            <div className="title">
-              <h3>{name}</h3>
+              {/* sidebar */}
+              <aside className="sidebar">
+                {highlightedArticles[0] && (
+                  <HighlightedArticle banner={highlightedArticles[0]} />
+                )}
+                <FeaturedArticles articles={featuredArticles} />
+                {highlightedArticles[1] && (
+                  <HighlightedArticle banner={highlightedArticles[1]} />
+                )}
+              </aside>
             </div>
-
-            <div className="content">
-              <ReactMarkdown>{content}</ReactMarkdown>
-            </div>
-
-            <PageBannerSmall banner={pageBanner2} />
           </div>
         </main>
       </Container>
@@ -98,6 +120,29 @@ const SingleBlogPage = ({
 
 export const Container = styled.section`
   background-color: #12111a;
+
+  .sidebar {
+    display: none;
+
+    @media (min-width: 892px) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  .blog-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 892px) {
+      grid-template-columns: 1fr 364px;
+    }
+    @media (min-width: 1150px) {
+      grid-template-columns: 1fr 400px;
+    }
+  }
 
   .section {
     padding: 3rem 0;
@@ -113,6 +158,7 @@ export const Container = styled.section`
 
     p {
       color: #fff;
+      margin-bottom: 0;
     }
 
     .back {
@@ -175,7 +221,7 @@ export const getStaticProps = async ({ params }) => {
 
   // highlighted articles
   const highlightedArticlesRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=2&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=True&filters[isFeaturedSide][$eq]=False&populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=2&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=True&populate=*`
   );
   const highlightedArticlesData = await highlightedArticlesRes.json();
 
