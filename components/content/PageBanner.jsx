@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const PageBanner = ({ banner }) => {
   return (
     <Container
+      href={banner?.attributes?.buttonLink}
       style={{
         background: `url(${banner?.attributes?.imageLink}) center/cover no-repeat`,
       }}
@@ -14,7 +15,7 @@ const PageBanner = ({ banner }) => {
         <small>{banner?.attributes?.subDescription}</small>
       </div>
       <div className="btn-container">
-        <a href={banner?.attributes?.buttonLink} className="banner-btn">
+        <a className="banner-btn">
           {banner?.attributes?.buttonText} <FaArrowRight />
         </a>
       </div>
@@ -24,7 +25,7 @@ const PageBanner = ({ banner }) => {
 
 export default PageBanner;
 
-export const Container = styled.article`
+export const Container = styled.a`
   padding: 2rem 3rem;
   border-radius: 1.25rem;
   display: flex;
@@ -33,6 +34,7 @@ export const Container = styled.article`
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  color: var(--clr-white);
 
   @media (max-width: 768px) {
     padding: 2rem;

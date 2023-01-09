@@ -101,8 +101,8 @@ const Hero = ({
                         bannerArticle?.attributes?.image?.data?.attributes?.url
                       }
                       alt="banner"
-                      width={640}
-                      height={380}
+                      width={655.31}
+                      height={351.48}
                       placeholder="blur"
                       blurDataURL={
                         bannerArticle?.attributes?.image?.data?.attributes?.url
@@ -174,6 +174,7 @@ const Hero = ({
                 banner={bannerArticle2}
                 openModal={openModal}
               />
+              <h4>Latest Blogs</h4>
               <FeaturedArticles articles={featuredArticles} />
             </aside>
           </div>
@@ -240,9 +241,13 @@ export const Container = styled.section`
   .sidebar {
     display: none;
 
+    h4 {
+      margin-bottom: 0;
+    }
+
     @media (min-width: 892px) {
       display: grid;
-      gap: 1.5rem;
+      gap: 1rem;
     }
   }
 
