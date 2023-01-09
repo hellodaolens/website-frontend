@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bannerBcg from '../../public/assets/content/pageBanner3-bcg.png';
+import bannerBcg from '../../public/assets/content/pageBanner2-bcg.png';
 
 const PageBannerSmall = ({ banner }) => {
   return (

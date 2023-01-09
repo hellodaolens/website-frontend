@@ -21,12 +21,14 @@ export default function Home({
   const {
     DAOResourcesHeading,
     DAOResources,
+    adminText,
     adminHeading,
     adminCTAText,
     adminCTADestination,
     adminImg1,
     adminImg2,
     adminPoints,
+    contributorText,
     contributorHeading,
     contributorCTAText,
     contributorCTADestination,
@@ -70,12 +72,14 @@ export default function Home({
         section1SubHeading={section1SubHeading}
       />
       <Tabs
+        adminText={adminText}
         adminHeading={adminHeading}
         adminImg1={adminImg1}
         adminImg2={adminImg2}
         adminPoints={adminPoints}
         adminCTAText={adminCTAText}
         adminCTADestination={adminCTADestination}
+        contributorText={contributorText}
         contributorHeading={contributorHeading}
         contributorCTAText={contributorCTAText}
         contributorCTADestination={contributorCTADestination}

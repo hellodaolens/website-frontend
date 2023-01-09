@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import checkMediaType from '../utils/checkMediaType';
 
 const Tabs = ({
+  adminText,
   adminHeading,
   adminImg1,
   adminImg2,
@@ -12,6 +13,7 @@ const Tabs = ({
   adminCTAText,
   adminCTADestination,
 
+  contributorText,
   contributorHeading,
   contributorCTAText,
   contributorCTADestination,
@@ -45,14 +47,14 @@ const Tabs = ({
             onClick={() => setTabs('admin')}
             title={adminHeading}
           >
-            <p>Admin</p>
+            <p>{adminText}</p>
           </button>
           <button
             className={tabs === 'contributor' ? 'active' : ''}
             onClick={() => setTabs('contributor')}
             title={contributorHeading}
           >
-            <p>Contributor</p>
+            <p>{contributorText}</p>
           </button>
         </div>
         {tabs === 'admin' && (
@@ -313,6 +315,7 @@ export const Container = styled.section`
       padding: 0.65rem 1rem;
       border-radius: 2rem;
       width: 8rem;
+      text-transform: capitalize;
 
       p {
         color: var(--clr-white);
