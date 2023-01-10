@@ -5,7 +5,6 @@ import pattern from "../../public/assets/discover-daos/pattern.png";
 
 const DiscoverDao = () => {
   const [currentTag, setCurrentTag] = useState("Hottest DAOs");
-  console.log(currentTag);
   const ref = useRef(null);
   return (
     <>
