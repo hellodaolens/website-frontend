@@ -104,12 +104,21 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                     borderRadius: "12px",
                   }} >
                   <div style={{ display: "flex", gap: "12px" }}>
-                    <img
-                      className="logo"
-                      src={item.attributes?.twitterdp}
-                      alt={item.attributes.Token}
-                      style={{ borderRadius: "12px", width: "60px", height: "60px" }}
-                    />
+                    <div
+                      style={{ borderRadius: "12px", width: "120px", height: "80px" }}
+                    >
+                      <Image
+                        className="logo"
+                        src={item?.attributes?.twitterdp}
+                        alt={item?.attributes?.Token}
+                        width={100}
+                        height={100}
+                        style={{ borderRadius: "12px" }}
+                        objectFit="contain"
+                      />
+
+                    </div>
+
                     <div>
                       <h5 style={{ font: "normal 700 18px/24px Inter" }}>{item.attributes.title}</h5>
                       <small style={{ font: "normal 400 12px/16px Inter", color: "#64748B" }}>
@@ -299,6 +308,10 @@ export const Container = styled.section`
 
     @media screen and (min-width: 992px) {
       grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
     }
   }
 
