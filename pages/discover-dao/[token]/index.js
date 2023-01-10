@@ -48,18 +48,19 @@ const SingleDaoPage = () => {
                   style={{
                     background: "#844AFF",
                     color: "white",
-                    fontSize: "20px",
                     display: "flex",
                     alignItems: "center",
                     gap: "4px",
                   }}
                 >
                   <FaDiscord size="28px" color="white" />{" "}
-                  {dao?.attributes?.Community.split("/")[0]}
+                  <span className="discord-count">
+                    {dao?.attributes?.Community.split("/")[0]}
+                  </span>
                 </a>
                 <a
                   href={dao?.attributes?.twitterLink}
-                  className="social-link "
+                  className="social-link"
                   target="_blank"
                   rel="noreferrer"
                   style={{ background: "#60B6FD" }}
@@ -67,25 +68,11 @@ const SingleDaoPage = () => {
                   <FaTwitter color="white" />
                 </a>
               </div>
-              <div
-                style={{
-                  position: "absolute",
-                  display: "flex",
-                  padding: "16px",
-                  gap: "10px",
-                  alignItems: "center",
-                  background: "rgba(255, 255, 255, 0.05)",
-                  backdropFilter: "blur(40px)",
-                  borderRadius: "24px",
-                  bottom: -50,
-                }}
-              >
-                <Image
+              <div className="dao-logo-wrapper">
+                <img
                   className="logo"
                   src={dao?.attributes?.twitterdp}
                   alt={dao?.attributes?.Token}
-                  width={80}
-                  height={80}
                   objectFit="contain"
                 />
                 <h2>{dao?.attributes?.title}</h2>
@@ -128,7 +115,14 @@ const SingleDaoPage = () => {
               <div className="content">
                 <h4>How to join:</h4>
                 <ReactLinkify>
-                  <p style={{ whiteSpace: "pre-line" }}>
+                  <p
+                    style={{
+                      overflowWrap: "break-word",
+                      hyphens: "auto",
+                      wordWrap: "break-word",
+                      wordBreak: "break-word",
+                    }}
+                  >
                     {dao?.attributes?.HowToJoin.replace(/\\|\"/g, "\n").trim()}
                   </p>
                 </ReactLinkify>
@@ -164,6 +158,37 @@ const SingleDaoPage = () => {
 
 export const Container = styled.section`
   padding: 6rem 0 0 0;
+
+  .dao-logo-wrapper {
+    position: absolute;
+    display: flex;
+    padding: 16px;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    border-radius: 24px;
+    bottom: -50px;
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (max-width: 550px) {
+      left: 0%;
+      bottom: -26%;
+      background-color: pink;
+      padding: 6px 12px;
+      h2 {
+        font-size: 1.25rem;
+        color: black;
+        margin: 0;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
   .hero-banner {
     padding: 4rem 3rem;
     min-height: 300px;
@@ -203,6 +228,15 @@ export const Container = styled.section`
       font-size: 1.5rem;
       border-radius: 2rem;
       padding: 2px 20px;
+      /* .discord-count {
+        font-size: 1.5rem;
+      } */
+      @media screen and (max-width: 550px) {
+        padding: 2px 10px;
+        .discord-count {
+          font-size: 0.75rem;
+        }
+      }
     }
 
     .website-link {
@@ -213,6 +247,7 @@ export const Container = styled.section`
       border-radius: 49px;
       padding: 10px 32px;
       border: none;
+      font-size: 1.5rem;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
         linear-gradient(
           85.21deg,
@@ -234,6 +269,10 @@ export const Container = styled.section`
           );
         box-shadow: 0px 1px 32px #aa47e5;
       }
+      @media screen and (max-width: 550px) {
+        padding: 12px 18px;
+        font-size: 0.75rem;
+      }
     }
   }
 
@@ -244,6 +283,9 @@ export const Container = styled.section`
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
+    @media screen and (max-width: 550px) {
+      margin: 6rem 0;
+    }
 
     .dao-info-left {
       margin: 0 auto;
