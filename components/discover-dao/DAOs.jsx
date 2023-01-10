@@ -309,6 +309,10 @@ export const Container = styled.section`
     @media screen and (min-width: 992px) {
       grid-template-columns: 1fr 1fr;
     }
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .dao {
