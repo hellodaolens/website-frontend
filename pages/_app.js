@@ -1,25 +1,25 @@
-import '../styles/globals.css'
-import 'react-toastify/dist/ReactToastify.css'
-import 'react-multi-carousel/lib/styles.css'
-import { ToastContainer } from 'react-toastify'
-import { Footer } from '../components/common'
-import Script from 'next/script'
-import TagManager from 'react-gtm-module'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import LightFooter from '../components/common/LightFooter'
+import '../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-multi-carousel/lib/styles.css';
+import { ToastContainer } from 'react-toastify';
+import { BlogPageFooter, Footer } from '../components/common';
+import Script from 'next/script';
+import TagManager from 'react-gtm-module';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import LightFooter from '../components/common/LightFooter';
 
 const tagManagerArgs = {
   gtmId: 'GTM-PH3ZXT3',
-}
+};
 
 // TagManager.initialize(tagManagerArgs);
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
-    TagManager.initialize(tagManagerArgs)
+    TagManager.initialize(tagManagerArgs);
   }, []);
   let pathname = router.pathname;
 
@@ -57,10 +57,16 @@ function MyApp({ Component, pageProps }) {
         width={'400px'}
       />
       <Component {...pageProps} />
-      {pathname.includes("/discover-dao") || pathname.includes("/all-daos") ? <LightFooter /> :
-        <Footer />}
+      {pathname.includes('/blog') ? (
+        <BlogPageFooter />
+      ) : pathname.includes('/discover-dao') ||
+        pathname.includes('/all-daos') ? (
+        <LightFooter />
+      ) : (
+        <Footer />
+      )}
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
