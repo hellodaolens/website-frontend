@@ -116,7 +116,7 @@ export async function getStaticProps() {
 
   // featured articles
   const featuredRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=4&filters[isFeaturedSide][$eq]=True&populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=3&filters[isFeaturedSide][$eq]=True&populate=*`
   );
   const featuredData = await featuredRes.json();
 

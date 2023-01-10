@@ -129,6 +129,10 @@ const SingleBlogPage = ({
 export const Container = styled.section`
   background-color: #12111a;
 
+  main {
+    padding: 3rem 0;
+  }
+
   .sidebar {
     .highlighted-article {
       display: none;
@@ -192,21 +196,21 @@ export const Container = styled.section`
     p {
       color: #b7b4c7;
     }
-  }
 
-  .content p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: unset;
-    color: #fff;
-  }
-
-  a {
-    color: rgba(206, 81, 251, 255);
+    a {
+      color: rgba(206, 81, 251, 255);
+    }
   }
 
   .content {
     margin-bottom: 3rem;
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: unset;
+      color: #fff;
+    }
   }
 `;
 

@@ -25,8 +25,8 @@ const FeaturedArticles = ({ articles }) => {
                 <Image
                   src={article?.attributes?.image?.data?.attributes?.url}
                   alt="banner"
-                  width={100}
-                  height={70}
+                  width={146.75}
+                  height={70.38}
                   placeholder="blur"
                   blurDataURL={
                     article?.attributes?.image?.data?.attributes?.url

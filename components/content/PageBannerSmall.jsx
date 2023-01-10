@@ -3,25 +3,30 @@ import bannerBcg from '../../public/assets/content/pageBanner2-bcg.png';
 
 const PageBannerSmall = ({ banner }) => {
   return (
-    <Container>
+    <Container href={banner?.attributes?.buttonLink}>
+      {/* <a> */}
       <h5>{banner?.attributes?.title}</h5>
       <div className="btn-container">
-        <a href={banner?.attributes?.buttonLink} className="banner-btn">
-          {banner?.attributes?.bottonText}
-        </a>
+        <a className="banner-btn">{banner?.attributes?.bottonText}</a>
       </div>
+      {/* </a> */}
     </Container>
   );
 };
 
 export default PageBannerSmall;
 
-export const Container = styled.article`
+export const Container = styled.a`
   background: url(${bannerBcg.src}) center/cover no-repeat;
   padding: 1.5rem 2rem;
   border-radius: 1.25rem;
   text-align: center;
   overflow: hidden;
+  display: block;
+
+  @media (max-width: 481px) {
+    padding: 1.5rem;
+  }
 
   h5 {
     color: #260044;
@@ -39,15 +44,22 @@ export const Container = styled.article`
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     border-radius: 8.87558px;
     filter: drop-shadow(0px 2.01758px 56.9966px rgba(15, 176, 244, 0.82));
+    font-weight: 700;
+    font-size: 19.8245px;
+    line-height: 23px;
+    font-style: normal;
     color: #80efe2;
-    text-shadow: 0px 4.04348px 8.08696px rgba(51, 255, 231, 0.41);
-    padding: 1rem 2rem;
+
+    text-shadow: 0px 2.63646px 5.27291px rgba(51, 255, 231, 0.41);
+    padding: 0.7rem 2rem;
     width: 90%;
-    max-width: 20rem;
+    max-width: 22.5rem;
 
     @media (max-width: 481px) {
-      padding: 0.75rem 1rem;
-      max-width: 15rem;
+      padding: 0.5rem 1.25rem;
+      max-width: 20rem;
+      font-size: 14.8245px;
+      width: 100%;
     }
   }
 `;
