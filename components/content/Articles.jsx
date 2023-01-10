@@ -3,9 +3,14 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import articleBCG from '../../public/assets/content/article-bcg.png';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import slugify from 'slugify';
 
 const Articles = ({ allArticles }) => {
-  const [articles, setArticles] = useState(allArticles);
+  const router = useRouter();
+  const query = router.query.category;
+
+  const [articles, setArticles] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
 
   const numOfArticlesToShow = isMobile ? 2 : 6;
@@ -40,15 +45,26 @@ const Articles = ({ allArticles }) => {
     }
   };
 
+  useEffect(() => {
+    if (query) {
+      const tempArticles = allArticles?.filter(
+        (article) => slugify(article.attributes.type.trim()) === query
+      );
+      setArticles(tempArticles);
+    } else {
+      setArticles(allArticles);
+    }
+  }, [query]);
+
   return (
-    <Container className='section'>
-      <div className='tabs-container'>
-        <div className='tabs'>
+    <Container className="section">
+      <div className="tabs-container">
+        <div className="tabs">
           {filters?.map((filter, index) => (
             <button
               key={index}
               onClick={() => handleFilterArticles(filter)}
-              className='tab-btn'
+              className="tab-btn"
             >
               {filter}
             </button>
@@ -56,7 +72,7 @@ const Articles = ({ allArticles }) => {
         </div>
       </div>
 
-      <div className='content'>
+      <div className="content">
         {articlesToShow?.map((article) => {
           const {
             name,
@@ -69,20 +85,20 @@ const Articles = ({ allArticles }) => {
 
           return (
             <Link key={article?.id} href={`/blog/${slug}`}>
-              <a className='article'>
+              <a className="article">
                 <Image
                   src={image?.data?.attributes?.url}
                   alt={name}
                   width={304}
                   height={156}
-                  placeholder='blur'
+                  placeholder="blur"
                   blurDataURL={image?.data?.attributes?.url}
                 />
 
                 <h4>{name}</h4>
                 <p>{shortDescription}</p>
 
-                <div className='author'>
+                <div className="author">
                   <p>
                     - {author}, {authorDesignation}
                   </p>
@@ -97,9 +113,9 @@ const Articles = ({ allArticles }) => {
       )}
 
       {articlesToShow?.length < articles?.length && (
-        <div className='btn-container'>
+        <div className="btn-container">
           <button
-            className='btn2'
+            className="btn2"
             onClick={() =>
               setNumOfArticles(numOfArticles + numOfArticlesToShow)
             }
