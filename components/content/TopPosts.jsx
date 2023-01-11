@@ -36,7 +36,7 @@ const TopPosts = ({ topPosts }) => {
 export default TopPosts;
 
 export const Container = styled.section`
-  padding: 3rem 0;
+  padding: 3rem 0 2rem;
 
   .posts-center {
     display: grid;

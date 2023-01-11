@@ -107,6 +107,7 @@ const Hero = ({
                       blurDataURL={
                         bannerArticle?.attributes?.image?.data?.attributes?.url
                       }
+                      objectFit="contain"
                     />
                   )}
                 {bannerArticle?.attributes?.showYt && (

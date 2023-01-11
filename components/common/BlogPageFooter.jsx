@@ -145,6 +145,7 @@ const BlogPageFooter = () => {
                 return (
                   <a
                     key={i}
+                    href={`#${slugify(articleType)}`}
                     onClick={() => {
                       router.push(
                         `/blog?category=${slugify(articleType)}`,
