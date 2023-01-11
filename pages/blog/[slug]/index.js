@@ -112,7 +112,7 @@ const SingleBlogPage = ({
                 {highlightedArticles[0] && (
                   <HighlightedArticle banner={highlightedArticles[0]} />
                 )}
-                <h3>Featured posts</h3>
+                <h3>Latest Blogs</h3>
                 <FeaturedArticles articles={featuredArticles} />
                 {highlightedArticles[1] && (
                   <HighlightedArticle banner={highlightedArticles[1]} />
@@ -138,10 +138,6 @@ export const Container = styled.section`
       display: none;
     }
 
-    h3 {
-      display: block;
-    }
-
     @media (min-width: 892px) {
       display: flex;
       flex-direction: column;
@@ -152,7 +148,7 @@ export const Container = styled.section`
       }
 
       h3 {
-        display: none;
+        margin-bottom: 0;
       }
     }
   }

@@ -57,7 +57,7 @@ const Articles = ({ allArticles }) => {
   }, [query]);
 
   return (
-    <Container className="section">
+    <Container className="section" id={query}>
       <div className="tabs-container">
         <div className="tabs">
           {filters?.map((filter, index) => (
