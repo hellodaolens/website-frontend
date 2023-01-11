@@ -251,7 +251,7 @@
       "createdAt": "2022-10-11T03:15:00.000Z",
       "title": "Aave DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/867100084248469505/1647447386/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1599782625689960451/5I50pgo__400x400.jpg",
+      "twitterdp": "https://cryptologos.cc/logos/aave-aave-logo.png?v=024",
       "isPopular": true
     }
   },
@@ -690,7 +690,7 @@
       "createdAt": "2022-10-11T07:00:00.000Z",
       "title": "Phala",
       "twittercover": "https://pbs.twimg.com/profile_banners/1166273105456578561/1623064211/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1604783616500064258/iAY-MAqc_400x400.jpg"
+      "twitterdp": "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/dao/logo/phala.png"
     }
   },
   {
@@ -851,7 +851,7 @@
       "createdAt": "2022-10-14T17:44:00.000Z",
       "title": "Silo DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1332500746206646277/1661173818/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1602693927345209345/-HXa2f_T_400x400.jpg"
+      "twitterdp": "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/dao/logo/silo.png"
     }
   },
   {
@@ -874,7 +874,7 @@
       "createdAt": "2022-10-14T16:25:00.000Z",
       "title": "Badger DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1289558152581722113/1669824130/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1556672298320629762/OuVH5kfU_400x400.jpg"
+      "twitterdp": "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/dao/logo/badgerdao.jpg"
     }
   },
   {
@@ -966,7 +966,7 @@
       "createdAt": "2022-10-14T19:12:00.000Z",
       "title": "Popcorn DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1366906648204353538/1662551731/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1601173191292063745/PFRobCB7_400x400.jpg"
+      "twitterdp": "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/snapshots/spaces/popcorn-snapshot-new.eth.png"
     }
   },
   {
@@ -1474,7 +1474,7 @@
       "createdAt": "2022-10-16T17:01:00.000Z",
       "title": "Bifrost",
       "twittercover": "https://pbs.twimg.com/profile_banners/1154348832903200768/1657528810/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1478661204919091200/zpvisctQ_400x400.jpg"
+      "twitterdp": "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/dao/logo/bifrost.png"
     }
   },
   {
@@ -1708,28 +1708,6 @@
     }
   },
   {
-    "id": "f3fb33e4-f62b-486b-9599-589143ddf7a9",
-    "attributes": {
-      "age": "2021",
-      "Token": "",
-      "type": "Social / Community DAO",
-      "Blockchain": "",
-      "Community": "1k / -",
-      "About": "\" \"\"H.E.R. DAO is a womxn-centred developer DAO championing innovation & diversity that includes self-identifying women, trans women, and non-binary audiences. Their long-term goal is to become a new launchpad for womxn-led blockchain ventures and to sustainably diversify the blockchain ecosystem, leading to more versatile product & venture development within. H.E.R. DAO is a concept - not a barrier. Non-binary, self-identifying people and people who identify as men can also join. \"\"H.E.R. = HOLISTIC. EMANCIPATION. RESOURCE.\"",
-      "HowToJoin": "\"1. Be a part of the Telegram(https://t.me/herdao) group.\"\"2. Join the Discord(https://discord.gg/UKv4Dwprjz) server,  introduce yourself in # 👋welcome channel.\"\"3. Fill out the ‘Become a Contributor Form’(https://docs.google.com/forms/d/e/1FAIpQLSenzycWFHCigKjhNa3YZcLKaa1s38LnWzsRoCw6RTEU67Hp4w/viewform)- You will be able to join an onboarding call on Discord where you will learn about the DAO, and find out how to contribute to the community. The calls are held on Onboarding voice chat in H.E.R. DAO server every month. Complete the pre-onboarding tasks on Dework here(https://app.dework.xyz/i/52lrpY9YZtKm6ivAKdsTvx).\"",
-      "FoundingTeam": "\"Tracy Bowen, Founder\"\"Tracy is the founder of SonR and Controlr. She had done Research Fellowship at Mozilla, RadicalxChange Foundation and South West Technology Network.\"\"https://www.linkedin.com/in/tracey-bowen/\"",
-      "AdditionalInfo": "\"Linktree(https://linktr.ee/H.E.R.DAO)\"\"The Journey so far (https://open.harmony.one/her-dao-women-developer-dao)\"",
-      "discordLink": "https://discord.com/invite/tMZSEtPjdG",
-      "twitterLink": "https://twitter.com/_HerDAO",
-      "websiteLink": "https://www.herdrop.com/",
-      "updatedAt": "2022-12-26T11:08:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-18T11:31:00.000Z",
-      "title": "H.E.R. DAO",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1507740882027565065/e8jLN9O5_400x400.jpg"
-    }
-  },
-  {
     "id": "22ac169b-dd33-4d24-98d1-5e160a2f2451",
     "attributes": {
       "age": "2021",
@@ -1910,7 +1888,7 @@
       "createdAt": "2022-10-18T11:34:00.000Z",
       "title": "Perpetual Protocol",
       "twittercover": "https://pbs.twimg.com/profile_banners/1231831448509829121/1669828937/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1597961461858435075/5cfRKFgo_400x400.jpg"
+      "twitterdp": "https://pbs.twimg.com/profile_images/1607666845334618113/fszQVN3M_400x400.jpg"
     }
   },
   {
@@ -1933,7 +1911,7 @@
       "createdAt": "2022-10-11T02:55:00.000Z",
       "title": "CoinDCX",
       "twittercover": "https://pbs.twimg.com/profile_banners/968118294174666752/1663690106/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1586991186442477569/JBpgKKvu_400x400.jpg"
+      "twitterdp": "https://pbs.twimg.com/profile_images/1606183736282087425/7r_kPrZE_400x400.jpg"
     }
   },
   {
@@ -1956,7 +1934,7 @@
       "createdAt": "2022-10-21T03:06:00.000Z",
       "title": "The Product House",
       "twittercover": "https://pbs.twimg.com/profile_banners/1131825836007444480/1622890709/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1603838820046491648/e9neaX4X_400x400.jpg"
+      "twitterdp": "https://pbs.twimg.com/profile_images/1608710060460605440/srm__WD__400x400.jpg"
     }
   },
   {
@@ -2048,7 +2026,7 @@
       "createdAt": "2022-10-22T19:19:00.000Z",
       "title": "Fingerprints DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1367092989969973253/1670800370/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1493722061646319618/FKOgn-BV_400x400.jpg"
+      "twitterdp": "https://pbs.twimg.com/profile_images/1605777286141206531/zEGqOXyC_400x400.jpg"
     }
   },
   {
@@ -2163,7 +2141,7 @@
       "createdAt": "2022-10-22T19:35:00.000Z",
       "title": "InsurAce.io",
       "twittercover": "https://pbs.twimg.com/profile_banners/1329412138922696707/1667774671/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1604798114304598016/nkiP-D22_400x400.jpg"
+      "twitterdp": "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/dao/logo/16620551618271.png"
     }
   },
   {
@@ -2673,50 +2651,6 @@
     }
   },
   {
-    "id": "39cc872d-7b3a-4ed3-9b9a-7b7a2e7db05c",
-    "attributes": {
-      "age": "",
-      "Token": "$GAAS",
-      "type": "Protocol DAO, DeFi",
-      "Blockchain": "Ethereum",
-      "Community": " - / 343",
-      "About": "\"\nIt is a DAO operating on the Ethereum Network and is focused on governance solutions, which could include more effectively capturing governance value, increasing governance participation, improving governance efficiency, etc. Congruent aims to establish influence over the decentralized financial (DeFi) ecosystem. It’s a vision to build a community that allows for financial inclusion for all in a transparent, sustainable, and efficient way by becoming a global community-owned and decentralized reserve. \"",
-      "HowToJoin": "\"\n1. Join the forum using:\nhttps://forum.congruent.fi/\n2. Join their social media\n• Discord -- https://discord.com/invite/pZn3ETPRbE\n• Medium -- https://medium.com/@CongruentFi\n• Twitter -- https://twitter.com/CongruentFi\"\"1. Users hold Gaas tokens in order to participate in Congruent's governance and to receive income from Congruent\"\"One can buy gas token from: https://www.coinbase.com/how-to-buy/congruent\n\"",
-      "FoundingTeam": "\"Timothy Quinn\nCo-Founder / Product Manager at Congruent Labs, a blockchain web3 services\ncompany. He has also done a lot of work with Cryptocurrencies, Cryptography,\nSmartcards, PKI, Identity Management, Physical Access Control Systems, and Multi-\nfactor Authentication. He hasw built products entirely cloud-based, but also racked and\nstacked hardware for on-prem deployments. He has worked with a lot of Australian\nGovernment departments, usually build systems involving some form of identity or\nauthentication service or provide Governance Risk & Compliance services.\nhttps://www.linkedin.com/in/timothy-quinn/\"",
-      "AdditionalInfo": "\"\nDashboard- https://app.congruent.fi/#/dashboard \"\"https://coinmarketcap.com/currencies/congruent/ \"\"https://nomics.com/assets/gaas-congruent-dao-token\"\"https://etherscan.io/token/0xb4dffa52fee44bd493f12d85829d775ec8017691\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/CongruentFi",
-      "websiteLink": "https://congruent.fi/",
-      "updatedAt": "2022-12-26T14:03:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-25T13:11:00.000Z",
-      "title": "Congruent DAO"
-    }
-  },
-  {
-    "id": "3140a233-70db-4ff6-b1c7-a5498e460ace",
-    "attributes": {
-      "age": "2021",
-      "Token": "$CRU",
-      "type": "Protocol DAO, Infrstructure",
-      "Blockchain": "Pulkadot Substrate",
-      "Community": "4216/29.8k",
-      "About": "\"\nCrust Network is a decentralized cloud storage provider built on the Polkadot blockchain. It is designed to realize three core values: decentralization, privacy, and assurance. Crust Network has three main functions: NFT and Metaverse Metadata storage, personal file storage, and\nWebsite/dApp hosting. It is designed to build a decentralized cloud ecosystem that values data\nprivacy and ownership.\"",
-      "HowToJoin": "\"\n1. Join their Twitter and Discord\n2. Node Provider - Refer to the Node Guidance to run setup and run Crust Nodes.\n• Step 1: go to the guarantee page\n• Step 2: input guarantee information\n• Step 3: wait for the guarantee to take effect\"\"3. Token Holder - Refer to the Guarantor Guidance to perform staking operations.\"\"One can buy the tokens by following the steps to connect the wallet https://www.bitdegree.org/crypto/tutorials/how-to-use-crust-network#how-to-get-cru-tokens\n4. Contribute through their Github -- Crust Network · GitHub(https://github.com/crustio)\"",
-      "FoundingTeam": "\"Luke Fan\nLuke Fan is the Co-Founder of Crust Network and the Head of Technical Research at Infinity Labs.\nhttps://cn.linkedin.com/in/zikunfan\"\"Leo Wang\nLeo is the Co-Founder of Crust Network, a leading product, and technology. Leo is experienced in distributed storage, cloud computing, and blockchain areas. Leo worked at Microsoft and Cisco as their Development Lead. In Cisco Leo also led a blockchain-based project to store and exchange manufacturing data in different geo-locations.\n\"",
-      "AdditionalInfo": "\"\nCrust Wiki · Wiki for Crust Network(https://wiki.crust.network/en)\nwhitepaper_en.pdf (aliyuncs.com(http://aliyuncs.com/))\nCrustNetwork – Medium(https://medium.com/crustnetwork)\"",
-      "discordLink": "https://discord.com/invite/Jbw2PAUSCR",
-      "twitterLink": "https://twitter.com/CrustNetwork",
-      "websiteLink": "https://crust.network/",
-      "updatedAt": "2022-12-26T14:04:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-25T13:23:00.000Z",
-      "title": "Crust DAO",
-      "twittercover": "https://pbs.twimg.com/profile_banners/1235779219134636032/1664441441/1080x360",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1604935943181332480/h6S7cvE2_400x400.jpg"
-    }
-  },
-  {
     "id": "87f8ff5c-545f-48a7-9a7e-b2aa6ff7dea9",
     "attributes": {
       "age": " 2022",
@@ -3016,28 +2950,6 @@
     }
   },
   {
-    "id": "7281b12f-e0fe-460e-989a-03afa9ae7837",
-    "attributes": {
-      "age": "2021",
-      "Token": "$SPICE",
-      "type": "Service DAO, NFTs",
-      "Blockchain": "Ethereum",
-      "Community": "Inactive / 791",
-      "About": "\"\"\"Spice DAO, a decentralized autonomous organization formed to buy Alejandro Jodorowsky's storyboard collection known as the \"Dune Bible\", unfortunately for Spice DAO, the auctioneer was not accepting offers in crypto, so announced its plan to dissolve and pay out holders of the Spice token in ETH. The Spice has ceased to flow. These spice heads had big plans to convert the book into NFTs, burn the physical copy, and adapt the story into an animated series. There’s just one problem, the purchase didn't mean they actually own the copyright to Dune. \"",
-      "HowToJoin": "\"\"\"1. Twitter -- https://twitter.com/thespicedao\"\"2. One can buy the $SPICE tokens by buying Ethereum as the base token and connecting the wallet.\"",
-      "FoundingTeam": "\"Soban “Soby” Saqib\nCo-founded by Soban “Soby” Saqib and a small group of other crypto enthusiasts to win the auction of a rare copy of the Jodorowsky production manual for a failed earlier production of Dune. The DAO raised a total of roughly $12 million in cryptocurrency last year. When Saqib won a November auction for the equivalent of $2.9 million, that left a huge surplus of money.\"",
-      "AdditionalInfo": "\"\nhttps://www.businessinsider.com/spice-dao-dune-bible-founder-soban-saqib-auction-ether-crypto-2021-12?amp \"\"https://web3isgoinggreat.com/single/dune-dao-will-sell-its-dune-bible-and-become-a-private-company \"",
-      "discordLink": "https://discord.com/invite/SPICEDAO",
-      "twitterLink": "https://twitter.com/TheSpiceDAO",
-      "websiteLink": "https://spicedao.xyz/",
-      "updatedAt": "2022-12-26T14:14:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-29T17:39:00.000Z",
-      "title": "Spice DAO",
-      "twitterdp": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png"
-    }
-  },
-  {
     "id": "7b2d6e06-e195-4ca2-bb21-65317b33cadf",
     "attributes": {
       "age": "2021",
@@ -3268,69 +3180,6 @@
     }
   },
   {
-    "id": "e8c7b538-1ae6-49cb-b1f4-d2a5b165abc9",
-    "attributes": {
-      "age": "",
-      "Token": "$STAKE",
-      "type": "Protocol DAO",
-      "Blockchain": "Ethereum",
-      "Community": "k / k",
-      "About": "\" \"\"STAKEhaus governs STAKE - the validator token for the xDai blockchain, which became the Gnosis Beacon Chain. STAKEhaus is a DAO by and for the xDAI community. Contributors earn STAKE and STAKErs can contribute.\"",
-      "HowToJoin": "",
-      "FoundingTeam": "",
-      "AdditionalInfo": "",
-      "discordLink": "https://discord.com/invite/gnosischain",
-      "twitterLink": "https://twitter.com/gnosischain",
-      "websiteLink": "",
-      "updatedAt": "2022-11-02T11:48:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-30T19:02:00.000Z",
-      "title": "STAKEhaus"
-    }
-  },
-  {
-    "id": "1a7b41f1-f0ae-4c5f-8977-5b9bbc578001",
-    "attributes": {
-      "age": "2019",
-      "Token": "",
-      "type": "",
-      "Blockchain": "",
-      "Community": "",
-      "About": "\" \"\"Apocalypse DAO is a reputation-based collective that operated between Dec. 2019 and May 2020 with the stated mission of providing \"Decentralized Mutual Insurance for The Apocalypse\".\"",
-      "HowToJoin": "",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"GitHub(https://github.com/Hiskrtapps/apocalypse-dao-api)\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/apocalypsedao",
-      "websiteLink": "",
-      "updatedAt": "2022-11-02T11:54:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-30T19:02:00.000Z",
-      "title": "Apocalypse DAO"
-    }
-  },
-  {
-    "id": "4a268c72-5a70-4e8e-a182-6e561720c6fb",
-    "attributes": {
-      "age": "2020",
-      "Token": "",
-      "type": "Events / Experiences",
-      "Blockchain": "",
-      "Community": "",
-      "About": "\" \"\"Orochi is a distributed group of teams in the Ethereum crypto space that joined forces using on-chain collaboration and governance tools. Their initial purpose was a singular experiment, help fund and sponsor an event during devcon 4 in Osaka. That event, Year of the DAOs, was a huge success and now Orochi looks into other events and local meetups to continue experimenting with DAO style organization. OrochiDAO v1 was one of the first Moloch DAOs sponsored by another DAO (Metacartel). V2 is now summoned by the creator of FestDAO (https://alchemy.daostack.io/dao/0x8990e11b69403ea53ef2b32434bbd7dbf84b5234)which is powered by DAOStack. This means OrochiDAO v2 is one of the first cross DAO collaborations.\"",
-      "HowToJoin": "\"To join, each member had to pledge 500 DAI.\"\"- Existing members had to make proposals to add these new members.\"\"- It would have 3 days voting period followed by 3 days grace period which allowed disagreeing members to ragequit.\"\"- Joining period was between 22nd to 31st Jan 2020.\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\" \nGitHub(https://github.com/odyssy-automaton/orochi-dao)\"\"Medium(https://medium.com/orochi-dao)\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/OrochiDAO",
-      "websiteLink": "",
-      "updatedAt": "2022-12-26T11:59:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-30T19:02:00.000Z",
-      "title": "Orochi DAO V2"
-    }
-  },
-  {
     "id": "d394f3f4-5f68-45d1-9c81-e893e62b9ad5",
     "attributes": {
       "age": "2019",
@@ -3351,71 +3200,6 @@
       "title": "LexDAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1196191543490760705/1616981749/1500x500",
       "twitterdp": "https://pbs.twimg.com/profile_images/1376348470999724035/nkC7Sf_2_400x400.jpg"
-    }
-  },
-  {
-    "id": "2db42852-873d-4cc4-8e76-3d72311e80ab",
-    "attributes": {
-      "age": "Feb 2021",
-      "Token": "$PNG",
-      "type": "Protocol DAO, DeFi",
-      "Blockchain": "Ethereum",
-      "Community": " 8722 /0 ",
-      "About": "\"\"\"Pangolin is a community-driven decentralized exchange for Avalanche and Ethereum assets with fast settlement, low transaction fees, and a democratic distribution–powered by Avalanche. Pangolin brings you the best trading opportunities to find and maximize your yield.\"\"Originally an Ava Labs product was handed over to community leadership, allocating 100% of its minted token to the community. Through advanced tooling, deep liquidity, and smooth onboarding, Pangolin offers easy swaps and a great experience for projects and traders alike.\n\nPangolin was originally incubated by Ava Labs to offer a credible DEX AMM solution on the Avalanche C-chain.\"",
-      "HowToJoin": "\"\n1. Join the forum using:\"\"https://gov.pangolin.exchange/\"\"\n2. Keep up with them on other platforms!\n• Medium --https://pangolindex.medium.com/ \n• Telegram --https://t.me/pangolindex\"\"1. Getting started with Pangolin\"\"Set up your MetaMask wallet, and fund it with AVAX\"\"https://pangolin.exchange/tutorials/getting-started/\"",
-      "FoundingTeam": "\"\"\"Pangolin was originally incubated by Ava Labs to offer a credible DEX AMM solution on the Avalanche C-chain.\"\"Justin Trollip, Chief Executive Officer\"\"Justin has an Economics & Finance background, running software implementations within the mining & pharmaceutical sectors before delving into his true passion, Technology & Blockchain.\"\"https://www.linkedin.com/in/justintrollip/?originalSubdomain=au\"\"Firat Akkan,COO at Pangolin Exchange\"\"He is an ex-lawyer and former investment banker pursuing his passion in decentralized finance and web3. His background in law and traditional finance helps him bring a different perspective to the digital assets space. Living in France, Germany, Turkey, the US and Vietnam has given him the ability to connect and communicate with a diverse range of people. He is now the Chief Operating Officer at Pangolin Exchange.\"\"https://www.linkedin.com/in/firat-akkan/\"\"Brandon Mino, Chief Technology Officer\"\"Brandon holds formal degrees in Finance & Computer Science with more than a decade of industry experience architecting, implementing & maintaining software.\"\"Erich Hellstrom,Lead Digital Marketer\"\"Erich has a direct-to-consumer eCommerce background & experience ranging from creating content, developing data-driven marketing strategies, building cohesive branding, and operations to customer services.\"\"Nirav,UI UX Architect\"\"Nirav has 9+ years of experience in UI design and has worked in multiple industries such as VOIP, Fintech, blockchain, etc.\"",
-      "AdditionalInfo": "\"\nhttps://www.coingecko.com/en/coins/pangolin\"\"https://beincrypto.com/learn/pangolin-exchange/\"\"https://defillama.com/protocol/pangolin\"\"https://www.gate.io/trade/PNG_USDT\"\"https://messari.io/asset/pangolin/profile\"\"GitHub(https://github.com/pangolindex)\"",
-      "discordLink": "https://discord.com/invite/PARrDYYbfw",
-      "twitterLink": "https://twitter.com/pangolindex",
-      "websiteLink": "https://pangolin.exchange/",
-      "updatedAt": "2023-01-02T20:54:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-10-31T04:14:00.000Z",
-      "title": "Pangolin",
-      "twittercover": "https://pbs.twimg.com/profile_banners/1330644600801865728/1651077458/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1598702918399676423/_MI07VQN_400x400.jpg"
-    }
-  },
-  {
-    "id": "794f0b5f-d463-400e-b21e-c88b49d22af8",
-    "attributes": {
-      "age": "",
-      "Token": "",
-      "type": "Social / Community",
-      "Blockchain": "",
-      "Community": "",
-      "About": "\" \"\"HelpDAO creates software for local squads to get funding and allocate help to those who need it the most in the current COVID-19 pandemic. HelpDAO aims to launch local squads that help vulnerable groups in the COVID-19 pandemic. HelpDAO provides the software and the documentation for people to create local help squads.\"",
-      "HowToJoin": "\"Help squads are composed of donors, volunteers and supervisors.\"\"Help squads must have a scope, which is comprised of:\"\"- Demographic: E.g. People over 80 year old who live alone\"\"- Location: E.g. Crimea\"\"- Care actions: E.g. Deliver non-perishable food\"\"Donors donate money to a help squad. They receive a membership token which:\"\"- Serves as recognition for their contribution\"\"- Allows them to join the chat group of the help squad\"\"Volunteers then carry out the tasks within the scope of the help squad. They can claim reimbursements by providing proof in the chat.\"\"Supervisors are active members (likely donors) who verify that the volunteers have indeed completed their tasks. Supervisors can also nominate and remove volunteers.\"\"The social identity of all supervisors and volunteers will be public, and donors can determine if they are comfortable with them based on their previous track-record of doing social good and being responsible members of their communities.\"\"They need:\"\"- Users to be able to deposit money into the DAO using their credit card\"\"- Users to be able to get their membership token and store it somewhere\"\"- Users to join the help squad's Telegram chat after they donate\"\"- Volunteers to be able to cash out their Dai into their local currency or bank account\"\"Once multiple squads are set up and working, HelpDAO could start a global fundraiser.\"\"With that global fundraiser, the DAO can then choose which local help squads need funding.\"\"That way, help squads can tap into a pool of global capital.\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\" \nGitHub(https://github.com/helpdao)\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-26T12:00:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-02T12:16:00.000Z",
-      "title": "Help DAO"
-    }
-  },
-  {
-    "id": "5a6286d4-57e0-41fc-b558-b38bf5ee9677",
-    "attributes": {
-      "age": "",
-      "Token": "$",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "3.7k / 294",
-      "About": "\" \"",
-      "HowToJoin": "",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"Docs(https://wiki.metagame.wtf/)\"",
-      "discordLink": "https://discord.com/invite/metagame",
-      "twitterLink": "https://twitter.com/MetaFam?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-      "websiteLink": "https://metagame.wtf/#start",
-      "updatedAt": "2022-11-02T12:28:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-02T12:17:00.000Z",
-      "title": "Metafam"
     }
   },
   {
@@ -3853,27 +3637,6 @@
       "title": "Kokonut Network DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1428867653687459843/1664735800/1500x500",
       "twitterdp": "https://pbs.twimg.com/profile_images/1491193466893836291/tyGH_soe_400x400.jpg"
-    }
-  },
-  {
-    "id": "862a0568-20bb-4420-b670-46abdddbe684",
-    "attributes": {
-      "age": "N/A",
-      "Token": "$WOOINU",
-      "type": "Meme",
-      "Blockchain": "Ethereum",
-      "Community": "- / 450",
-      "About": "\" \"\"You can vote on vital decisions with your $WOOINU, or create a proposal to improve the project.\"",
-      "HowToJoin": "\"\nJoin the community by their telegram. \"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"\nN/A\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/natureboyinu",
-      "websiteLink": "",
-      "updatedAt": "2022-12-26T12:19:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-08T10:11:00.000Z",
-      "title": "Woo Inu Governance"
     }
   },
   {
@@ -4360,27 +4123,6 @@
     }
   },
   {
-    "id": "020bd112-e59e-4bcf-b6aa-a152854f4371",
-    "attributes": {
-      "age": "2021",
-      "Token": "$LEARN",
-      "type": "Social / Community, Education, Events / Experience",
-      "Blockchain": "Ethereum",
-      "Community": "1.8k / ",
-      "About": "\" \"\"Crypto, Culture and Society is a learning DAO exploring the impact of crypto on culture and society. Their mission is to build liberal arts education for crypto. They are a group of technologists, creators, community builders, educators, and lifelong learners.\"",
-      "HowToJoin": "\"Apply here(https://form.typeform.com/to/SnICiSrj) to join them. Learn more about UnSemester here(https://society.mirror.xyz/F-H6m6tWXZLl3Nx_wnWpALuHSnAehR4ZdDgx9VkSoNY).\"\"You will need to connect an ethereum wallet to join and confirm $LEARN or Semester NFT holdings to gain access to the private community channels.\"\"Subscribe to their newsletter here(https://cryptoculturesociety.substack.com/).\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\" \nWeb3 Starter Pack by CCS(/5a922714348e4a7cbaa45b2f0a8861bd)\"\"Mirror(https://society.mirror.xyz/)\"",
-      "discordLink": "https://discord.com/invite/cryptoculturesociety",
-      "twitterLink": "https://twitter.com/CryptoSocietyS1",
-      "websiteLink": "/6a8dd5ee05b04684998b5206ae842195",
-      "updatedAt": "2022-12-26T12:31:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-17T07:01:00.000Z",
-      "title": "Crypto, Culture and Society"
-    }
-  },
-  {
     "id": "c98d81a3-704a-4866-b0fc-886f08a75050",
     "attributes": {
       "age": "2021",
@@ -4401,28 +4143,6 @@
       "title": "Rise DAO",
       "twittercover": "https://pbs.twimg.com/profile_banners/1455150446247563267/1637618820/1500x500",
       "twitterdp": "https://pbs.twimg.com/profile_images/1462882473898033161/vO9iiNFj_400x400.jpg"
-    }
-  },
-  {
-    "id": "b7d1eb3b-a51b-4d3c-bb2a-231aa80e6891",
-    "attributes": {
-      "age": "2022",
-      "Token": "N/A",
-      "type": "Education, Events / Experiences, Social / Community",
-      "Blockchain": "N/A",
-      "Community": "680 / ",
-      "About": "\" \"\"Blu3 DAO’s mission is to empower women to achieve financial freedom through learning, exploring and building their careers in the Web3 space. It aims to onboard more women, nonbinary and allies. Through sponsorship, mentorship, and the support of a stellar community of women, Blu3 DAO aspires to create more women leaders in the web3 space through job opportunities, building dApps, launching DAOs and tokenized communities.\"",
-      "HowToJoin": "\"Read the Blu3 DAO Contributors Guide here(/af36ed0e9ad14d14b6ced526cacd97e2) and fill in the Onboarding Form(https://docs.google.com/forms/d/e/1FAIpQLSeNvZ_NrXuz1jMwtLGFURdCa0-iFbOLC4rMY9GFUC2gVm-sjw/viewform). There are several memebership tiers:\"\"- Community Member: If you have limited time this is the tier for you. A Blu3 community member is in alignment with the mission and vision of Blu3 DAO. A community member strives to keep up to date with Blu3 DAO initiatives, events, and partnerships. Actively contribute to conversations on social channels and make an effort to attend IRL/Virtual events.\"\"- Contributor: If you are passionate about building something from the ground up and working in an environment that fosters creativity, autonomy and team work, this is the tier for you. A Blu3 contributor is a person who is looking to play an active role in building the DAO by taking ownership of a role within the Blu3 Family. There are many contributor roles available. If you do not see what you’re interested in or feel they need additional roles to support the community, reach out to them with your suggestions.\"\"- Ambassador: A Blu3 ambassador is a respected leader in the community they are apart of, or a traveling nomad in the Web 3 space. An ambassador is interested in building the DAO by partnering up with Blu3 in creating brand awareness, partnerships and community expansion. Typically, an ambassador meets one of the following:\"\"1. A leader or point of influence in his/her community with a community or following of 20K+.\"\"2. A social media influencer in with a following of 20K or more.\"\"3. A frequent conference attendee and/ or nomad who meets other conference goers frequently.\"\"A Blu3 ambassador champions the Blu3 community and extends the invite to join Blu3 DAO when meeting like-minded individuals. \"\"- Advisor: A Blu3 Advisor typically holds expertise or acts as subject matter experts for the Blu3 family (legal, crypto accounting, tokenomics, consulting, media, etc.). The goal is to provide in depth knowledge, network and support for Blu3 to grow and thrive.\"",
-      "FoundingTeam": "\"Amy Soon, Founder\"\"Amy has developed strategic and operational HR capabilities with a strong financial aptitude and passion for developing people, programs and culture. She specializes in human capital aspects of mergers, acquisitions, and divestitures through all phases of the deal lifecycle. She has deep technical capabilities in data analytics, project management, business development, client interaction and building teams.\"\"https://www.linkedin.com/in/amysoon/\"",
-      "AdditionalInfo": "\"Linktree(https://linktr.ee/Blu3_dao)\"\"Telegram(https://t.me/blu3dao)\"",
-      "discordLink": "https://discord.com/invite/qkSnvkRWbg",
-      "twitterLink": "https://twitter.com/blu3dao",
-      "websiteLink": "https://blu3-dao.webflow.io/",
-      "updatedAt": "2022-12-26T12:33:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-17T07:01:00.000Z",
-      "title": "Blu3 DAO",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1488749682251628553/c7l6JtMr_400x400.png"
     }
   },
   {
@@ -4518,27 +4238,6 @@
     }
   },
   {
-    "id": "3c1cb3ef-54a2-4278-a2be-fc777a2e8938",
-    "attributes": {
-      "age": "2021",
-      "Token": "$PEOPLE",
-      "type": "Investment",
-      "Blockchain": "Ethereum",
-      "Community": "18k / 17k",
-      "About": "\" \"\"PeopleDAO is an incubator for subDAOs and community projects. They provide seed funding, product development, strategic direction, marketing boosts, and consulting around governance. PeopleDAO was born from a web3 movement to buy a private copy of the US Constitution. When the project failed in its mission the developers burned control of the $PEOPLE token contract, sunsetting their involvement (https://twitter.com/ConstitutionDAO/status/1470970371025293317?ref=people-dao.com). A group of community members formed PeopleDAO and adopted $PEOPLE as its governance token, impressed by the meme coin's decentralization, capped supply, and inspiring history. \"",
-      "HowToJoin": "\"Anyone can join PeopleDAO's Discord and start contributing.\"\"- Conduct the onboarding process described in the #onboarding channel.\"\"- From there check out the #bounty-board channel or Dework(https://app.dework.xyz/peopledao?ref=people-dao.com) page for tasks that need completing. They pay contributors for their work.\"\"$PEOPLE token unlocks two key advantages. It grants you the option to vote in Snapshot proposals and enables you to attain Verified Member status in Discord, which confers benefits such as access to activities, POAPs, or whitelist spots. Buy here(https://www.okx.com/markets/prices/constitutiondao-people?ref=people-dao.com).\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\" \nLinktree(https://linktr.ee/peopledao)\"",
-      "discordLink": "https://discord.com/invite/peopledao",
-      "twitterLink": "https://twitter.com/The_PeopleDAO",
-      "websiteLink": "https://people-dao.com/",
-      "updatedAt": "2022-12-26T12:38:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-17T07:01:00.000Z",
-      "title": "People DAO"
-    }
-  },
-  {
     "id": "3e375b1a-613f-4777-9ac8-be44841a9c8b",
     "attributes": {
       "age": "2016",
@@ -4582,29 +4281,6 @@
       "title": "dYdX",
       "twittercover": "https://pbs.twimg.com/profile_banners/1413217545545568261/1627963828/1500x500",
       "twitterdp": "https://pbs.twimg.com/profile_images/1422398038904123409/1t8muDVp_400x400.jpg"
-    }
-  },
-  {
-    "id": "8de3b973-11e3-4dcf-98c0-c6c589b16240",
-    "attributes": {
-      "age": "2019",
-      "Token": "$DEXE",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "  - / 0",
-      "About": "\"\"\"Dexe network is an ecosystem of various tools and platforms coming together as the go-to one-stop-shop for DeFi trading. The company's platform provides tools for virtual currency allocation, and automatic rebalancing, and eliminates the risks of transferring digital wallet details as well as fixing the absence of decentralized interconnection between users and successful traders, enabling traders to get tools for executing online, decentralized and autonomous.  Most importantly, the DeXe Network connects successful traders and followers in a transparent, verifiable way for the benefit of both groups. DAO DeXe manages the DeXe Network through the voting power of DEXE holders.\"",
-      "HowToJoin": "\"1. Join the forum using: https://discourse.dexe.network/\"\"2. Join the DeXe ecosystem: https://dexe.network/ecosystem\"\"3. Participation in DeXe DAO: It is not required to be a DEXE token holder to participate in DeXe.network and benefit from several of its social trading functions. Moreover, DeXe is uploading DEXE smart contracts into the open-source community which is free speech and is the fundamental tenant of its Memorandum. However, in order to be able to fully participate in the community, receive voting right, contribute through proposals and benefit from the incentives inside the network, basically, to become a member of DAO, users are required to acquire DEXE.\"",
-      "FoundingTeam": "\"Dmitriy Kotliarov, Co-Founder of DeXe\"\"He is one of the co-founders of Dexe Network which consists of a lot of products which they are trying to deliver to DeFi. They have a bunch of products with focus on different trading tools. himself and the other co-founder came into crypto in 2016 starting with mining. They saw huge price volatility for trading crypto. So that gave them the idea to develop various trading and algo trading strategies and tools. Dexe eventually came out of that.\"\"https://twitter.com/kotlyar1986?lang=en \"\"Yuriy Hotoviy, Co-Founder, CEO & Product Manager\"\"He is the Co Founder of 111ProjectGuard, Kattana, Spatium.capital. He is also the CEO of Billtrade.\"\"Linkedin-https://ua.linkedin.com/in/yuriy-hotoviy-2499a3149\"",
-      "AdditionalInfo": "\"\nhttps://wiki.dexe.network/#/README?id=ecosystem\"\"Medium(https://dexenetwork.medium.com/)\"\"Github(https://github.com/dexe-network)\"\"Telegram(https://t.me/Dexe_network)\"\"https://dexenetwork.medium.com/huobis-ama-with-dexe-network-s-dmitriy-kotliarov-is-a-glimpse-into-the-future-of-capital-and-dao-751273b356e0\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/DexeNetwork",
-      "websiteLink": "https://dexe.network/",
-      "updatedAt": "2022-12-23T15:17:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-11-17T08:08:00.000Z",
-      "title": "DeXe DAO",
-      "twittercover": "https://pbs.twimg.com/profile_banners/1171329011357835265/1598862891/1500x500",
-      "twitterdp": "https://pbs.twimg.com/profile_images/1300351328296853505/leL1390x_400x400.jpg"
     }
   },
   {
@@ -4674,1098 +4350,6 @@
       "title": "The Graph",
       "twittercover": "https://pbs.twimg.com/profile_banners/981325507080814592/1608574301/1500x500",
       "twitterdp": "https://pbs.twimg.com/profile_images/1341100720943054848/C4RKAej-_400x400.jpg"
-    }
-  },
-  {
-    "id": "3079f62d-30d5-47c2-a694-c7780e28ac82",
-    "attributes": {
-      "age": "2017",
-      "Token": "$MINA",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "31k / 47",
-      "About": "\"\"\"Mina is a \"lightweight\" smart contract platform with aspirations to be a global payment system. It aims to address the scalability issues present in existing blockchains where the cost to verify the blockchain grows proportionally with total transaction throughput. In these cases, the cost of running a network node eventually exceeds the resources available to most real-world users. Mina is working on achieving an efficient distributed payment system that enables users to natively verify the platform right from the genesis block.\"",
-      "HowToJoin": "\"\"\"To join governance\"\"1. Sign up for a Kraken account(https://www.kraken.com/sign-up): First, enter an email address, create a new username and set a strong password(https://support.kraken.com/hc/en-us/articles/201396497-What-are-the-Password-and-Username-format-requirements-) to protect your account.\"\"2. Verify your account. After providing your details, you can deposit crypto to buy Mina and other cryptocurrencies like ETH(https://www.kraken.com/learn/buy-ethereum-eth) and DOGE(https://www.kraken.com/learn/buy-dogecoin-doge). In order to use cash(https://support.kraken.com/hc/en-us/articles/360000380726-Explanation-of-fiat-currency) (i.e. USD, EUR or CHF), you’ll need to provide our experts with additional supporting documents verifying your identity.\"\"3. Add funds or a payment method to your account: multiple funding(https://support.kraken.com/hc/en-us/categories/360000032263-Fiat-currency-funding) and payment methods(https://support.kraken.com/hc/en-us/articles/360048212832-Debit-and-credit-card-purchase-FAQ), whichever you choose will be based on your location and preferences.\"\"4. Buy Mina Protocol: At this point, you’ll also gain access to all of the powerful products that make the Kraken experience beloved by millions of global traders.\"",
-      "FoundingTeam": "\"Evan Shapiro\"\"CEO of MINA\"\"He is the Co-founder and previously CEO at O(1) Labs.\"\"https://twitter.com/evanashapiro\"\"https://www.linkedin.com/in/evan-shapiro-451731176\"\" Izaak Meckler\"\"CTO at O(1) Labs and MINA\"\"He previously worked as a software developer at Jane Street Capital and as A Tech intern too.\nhttps://www.linkedin.com/in/barfoohttps://www.crunchbase.com/person/izaak-meckler\"\"https://twitter.com/izmeckler?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/izmeckler?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"",
-      "AdditionalInfo": "\"https://minaprotocol.com/community\"\"https://minaprotocol.com/wp-content/uploads/technicalWhitepaper.pdf\"\"https://minaprotocol.com/work-with-mina\"",
-      "discordLink": "https://discord.com/invite/Vexf4ED",
-      "twitterLink": "https://twitter.com/MinaProtocol",
-      "websiteLink": "https://minaprotocol.com/",
-      "updatedAt": "2022-12-20T18:46:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:22:00.000Z",
-      "title": "MINA"
-    }
-  },
-  {
-    "id": "b9f0308a-334d-469e-8227-5a01943a4f7c",
-    "attributes": {
-      "age": "2018",
-      "Token": "$HT",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "- / 51k",
-      "About": "\"\"\"Huobi Token is an ecosystem token launched by Huobi Global, offering benefits such as trading fee and margin discounts and access to certain trading events. HT is the native token of the cryptocurrency exchange Huobi Global. It is a decentralized digital asset based on the Ethereum(https://coinmarketcap.com/currencies/ethereum/)\n blockchain. One key function of the token is to reduce commissions for trading operations on the exchange, which are usually paid from users' wallets. Huobi Token is a relatively young project. It first launched in January 2018, hot on the heels of the release of a native token on rival crypto exchange Binance(https://coinmarketcap.com/exchanges/binance/). \"",
-      "HowToJoin": "\"\"\"To join governance one has to buy HT tokens\"\"1. Register a Houbi Global Account (Provide an email address, create a username and choose a secure password)\"\"2. Verify your Account via your name or DOB or region and phone number\"\"3. Deposit in fiat currency or cryptocurrency (credit cards, cash, or other cryptos accepted)\"\"4. Get the Huobi token price and purchase.\"",
-      "FoundingTeam": "\"Leon Li  \"\"Founder and CEO of Huobi Group.\"\"He became a proponent of Bitcoin(https://coinmarketcap.com/currencies/bitcoin/) in 2011. Li began his career as a computer engineer at Oracle.. In 2013, he founded Huobi Group, took over the management of the company and transformed it into a leading global player in the provision of financial services in the field of digital assets.\"\"https://twitter.com/leonhuobi?lang=en\"\"https://www.linkedin.com/in/leon-li-4578b2226/\"\"Jun Du\"\"Huobi’s co-founder. \"\"He was a community operations director at Comsenz and worked at Tencent. In addition, Du serves as CEO at Node Capital, is the founder of Jinse  and is co-CEO at BiKi.com (a software provider for digital currency trading). Lastly, he has co-founded companies that include AToken and Chainup.\"\"https://twitter.com/dujunx\"\"https://cn.linkedin.com/in/jun-du-98976718b\"",
-      "AdditionalInfo": "\" \"\"https://messari.io/asset/huobi-token\"\"https://www.huobi.com/learn/en-us/how-to-join-the-huobi-global-community/\"\"https://www.huobi.com/en-us/register\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/HuobiGlobal",
-      "websiteLink": "https://www.huobi.com/en-us/",
-      "updatedAt": "2022-12-20T18:50:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:22:00.000Z",
-      "title": "Huobi Token"
-    }
-  },
-  {
-    "id": "c81c67cf-6796-404e-8326-3c221d26dde0",
-    "attributes": {
-      "age": "2017",
-      "Token": "$TWT",
-      "type": "Product DAO, DeFi",
-      "Blockchain": "BNB Smart Chain",
-      "Community": "- / 5",
-      "About": "\"\"\"The Trust Wallet mobile app is a multi-currency crypto wallet that gives users access to a wide range of digital assets. It is itself a mobile cryptocurrency wallet that supports dozens of popular native assets. Trust Wallet’s core modules are open-source and available for any developer to build on. The digital wallet mobile app has fiat onboarding, allowing users to purchase crypto with credit cards. Trust Wallet has integrated with other DEXs such as Pancake Swap, Uniswap, or Binance DEX so that users can buy, hold, and exchange their crypto assets using a single interface.\"",
-      "HowToJoin": "\"\"\"1. Projects and blockchains are required to submit a proposal, which TWT holders are then able to vote on. If the proposal passes a certain threshold, then it is integrated into the Trust Wallet core. Voting takes place through Snapshot(http://governance.trustwallet.com/).\"\"The app submits a snapshot of the wallet’s Smart Chain address when the user cast a vote, which means that voting power is affected if TWT is moved from the account before the voting period ends.\"\"Proposal Template:https://community.trustwallet.com/t/governance-proposal-template/82422\"\"Step-by-step instructions to participate in the governance (https://community.trustwallet.com/t/how-to-vote-in-trust-wallet-governance/77847)\"\"Instructions to submit a proposal(https://community.trustwallet.com/t/how-to-submit-a-proposal/79825)\"\"2. Register a Trust Wallet Account\"\"1. Open the Play Store and search for \"Trust Wallet\".\"\"2. Click install and wait until the application is finished downloading and will automatically be installed on your smartphone.\"\"3. After the process is complete, you can directly register a wallet account by clicking Create New Wallet.\"\"4. You will get 12 words which are called recovery phrases.  Recovery phrases are very important and serve as a prerequisite for logging into a Trust Wallet account on other devices.\"\"5. Enter the recovery phrase that you got earlier and your account is created are ready to use it to store your crypto assets.\"\"Guide to install trust wallet(https://voi.id/en/technology/126674/heres-how-to-install-and-register-trust-wallet-on-android-to-save-crypto-money)\"",
-      "FoundingTeam": "\"Viktor Radchenko\"\"Viktor Radchenko is the founder and CEO of Trust Wallet(https://cryptoslate.com/products/trust-wallet/). Radchenko was an early employee in the secure, cloud-based, communication platform Symphony. Previously, he co-founded a startup in the logistics space, Trucker Path, which provided navigational assistance and freight matching.\"\"https://twitter.com/vikmeup\"",
-      "AdditionalInfo": "\" \"\"https://trustwallet.com/nft-wallet\"\"https://trustwallet.com/dapp\"\"https://trustwallet.com/staking\"\"https://messari.io/asset/trust-wallet-token/profile/governance\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/trustwalletapp",
-      "websiteLink": "https://trustwallet.com/",
-      "updatedAt": "2022-12-20T18:57:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:23:00.000Z",
-      "title": "Trust Wallet Token"
-    }
-  },
-  {
-    "id": "b481e5c6-9749-4364-b259-3ebdf264a431",
-    "attributes": {
-      "age": "2022",
-      "Token": "$APE",
-      "type": "Social/Community DAO",
-      "Blockchain": "Ethereum",
-      "Community": "-/103k",
-      "About": "\"\"\"ApeCoin (APE) is a governance and utility token that grants its holders access to the ApeCoin DAO, a decentralized community of Web3 builders. It aims to empower and incentivize a decentralized community building at the forefront of web3. ApeCoin DAO exists because decentralized governance is critical to building and managing a globally dispersed community—and therefore critical to the success of the APE ecosystem. ApeCoin holders govern themselves via the decentralized governance framework controlling the ApeCoin DAO and vote on how the ApeCoin DAO Ecosystem Fund should be used.\"",
-      "HowToJoin": "\"\"\"Participating in idea submission, commentary, proposal submission, and voting is restricted to ApeCoin DAO members. Holding ApeCoin is the only requirement for membership in the DAO.\"\"1. For idea submissions and commentary: https://forum.apecoin.com/\"\"2. For proposal submission: \"\"A proposal typically includes:\"\"- Abstract - Two or three sentences that summarize the proposal.\"\"- Motivation - A statement on why the APE Community should implement the proposal.\"\"- Rationale - An explanation of how the proposal aligns with the APE Community’s mission and guiding values.\"\"- Key Terms (optional) - Definitions of any terms within the proposal that are unique to the proposal, new to the APE Community, and/or industry-specific.\"\"- Specifications - A detailed breakdown of the platforms and technologies that will be used.\"\"- Steps to Implement - The steps to implement the proposal, including associated costs, manpower, and other resources for each step where applicable.\"\"- Timeline - Relevant timing details, including but not limited to start date, milestones, and completion dates.\"\"- Overall Cost - The total cost to implement the proposal.\"\"An AIP (Ape Improvement Proposal) Idea is submitted as a post in Discourse and must receive confirmation from a moderator that it complies with DAO-approved guidelines(https://apecoin.com/governance#guidelines) before it appears to the community. ApeCoin holders must go through a wallet authentication process to post ideas or give feedback to ideas via comments.\"\"https://forum.apecoin.com/\"\"1. For voting purpose\"\"ApeCoin DAO’s consensus mechanism aims to make placing votes fair, transparent, and low-cost, so that ApeCoin holders can participate in the decision-making of the DAO..DAO members can delegate their vote to another DAO member that they consider to be a trusted subject matter expert. For this purpose, Snapshot is being chosen as a voting tool .\"\"https://snapshot.org/#/apecoin.eth\"",
-      "FoundingTeam": "\"ApeCoin is a decentralized project inspired by Yuga Labs’ Bored Ape Yacht Club project. ApeCoin was founded to be used within the burgeoning APE Ecosystem, which is supported by the APE Foundation.\"\"The following are the board members:\"\"- Alexis OhanianCo-founder of Reddit; General Partner & Founder of Seven Seven Six\"\"- Amy Wu Head of Ventures & Gaming at FTX\"\"- Maaria Bajwa Principal at Sound Ventures\"\"- Yat Siu Co-founder & Chairman of Animoca Brands\"\"- Dean SteinbeckPresident & General Counsel at Horizen Labs\"",
-      "AdditionalInfo": "\"https://apecoin.com/governance\"\"https://messari.io/asset/apecoin/profile\"\"https://www.coinbase.com/price/apecoin\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/apecoin",
-      "websiteLink": "https://apecoin.com/",
-      "updatedAt": "2022-12-20T19:35:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:23:00.000Z",
-      "title": "ApeCoin"
-    }
-  },
-  {
-    "id": "e9a1528b-9c79-407b-9121-9dca8f909b51",
-    "attributes": {
-      "age": "2019",
-      "Token": "$LRC",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "29k/ 72k",
-      "About": "\"\"\"LRC is the Ethereum(https://coinmarketcap.com/currencies/ethereum/)-based cryptocurrency token of Loopring, an open protocol designed for the building of decentralized crypto exchanges. Loopring builds protocols, infrastructure, and user-facing products for the future of finance. Loopring’s goal is to combine centralized order matching with decentralized on-blockchain order settlement into a hybridized product that will take the best aspects of both centralized and decentralized exchanges. \"",
-      "HowToJoin": "\"\"\"1. Join Community\"\"2. If one wants to launch app: first they have to connect their wallet and choose an asset to deposit and the amount and further confirm the deposition \"\"https://loopring.io/#/trade/lite/LRC-ETH\"\"1. To get onboard with looping\"\"1. Head to Loopring L2(https://app.loopring.io/#/). Click ‘Connect Wallet’ and link up your MetaMask, MEW, or WalletConnect-compatible wallet.\"\"1. With your wallet connected, you will see it says “Deposit to Activate Layer-2”. Click that. Choose an asset to deposit and the amount. Confirm the transaction in your wallet to execute the deposit. After 18 Ethereum confirmations, you’ve made it to the zkRollup.\"\"2. There should be an ‘Unlock’ button. Go ahead and click that. This asks your wallet for a signature to unlock your L2 account. Once you’re logged in, you can check out your Loopring L2 balances, deposit other assets, or withdraw\"",
-      "FoundingTeam": "\"Daniel Wang\"\"Founder and CEO of Loopring\"\"Wang has also co-founded several companies like Yunrang (Beijing) Information Technology Ltd. and the cryptocurrency services firm Coinport Technology Ltd. He was a lead software engineer at the medical device manufacturer Boston Scientific, the senior director of engineering, search, recommendation and ads system at  JD.com, as well as a tech lead and senior software engineer at Google.\"\"https://cn.linkedin.com/in/dong77\"",
-      "AdditionalInfo": "\"https://messari.io/asset/loopring\"\"https://blogs.loopring.org/install-loopring-wallet-en/\"\"https://medium.loopring.io/guide-how-to-use-loopring-l2-a267d005255b\"",
-      "discordLink": "https://discord.gg/KkYccYp",
-      "twitterLink": "https://twitter.com/loopringorg",
-      "websiteLink": "https://loopring.org/",
-      "updatedAt": "2022-12-20T19:40:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:23:00.000Z",
-      "title": "Loopring "
-    }
-  },
-  {
-    "id": "7955ea61-916c-4cf3-84f1-1f8da56b7606",
-    "attributes": {
-      "age": "2019",
-      "Token": "$XDCE",
-      "type": "Infrastructure",
-      "Blockchain": "Ethereum",
-      "Community": "- / 5.7k",
-      "About": "\"\"\"The XDC Network (formerly called XinFin Network) is an enterprise-grade, EVM-compatible blockchain equipped with interoperable smart contracts. The XDC Network was designed to meet the needs of enterprises seeking to enhance their business infrastructure, reduce costs and improve visibility through blockchain technology. XDC Network provides you with smart tools to build, manage, and monitor projects.\"",
-      "HowToJoin": "\"\"\"1. Join community\"\"2. For developers to build on XDC: https://www.xdc.org/build\"\"3. To become a governance member:\"\"Use the XDC token on the public state that is identical in functionality to public blockchains.\"\"Or set up private networks to run enterprise use cases.\"\"https://xinfin.org/contactus\"\"https://xinfin.org/governance-member\"",
-      "FoundingTeam": "\"Ritesh Kakkad \"\"Co-Founder of XDC Network\"\"Kakkad was a serial tech entrepreneur with decades of experience in the field of cloud computing. He is the Investor at Airnetz Charter Inc: A private Jet and charter Arrangement company. He also co-founded IndSoft Systems.\"\"https://sg.linkedin.com/in/ritesh-kakkad-b65a0a2\"\"https://twitter.com/riteshkakkad?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/riteshkakkad?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"Atul Khekade.\"\"Co-Founder of XDC Network\"\"Khekade, a computer engineer by training, played the leading role at MonetaGo in the creation of the first permission blockchain network for a consortium of the most prominent Asian banks. He is one of the Funder at Blockdegree and also the co-founder of  TradeFinex\"\"https://twitter.com/atulkhekade?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/atulkhekade?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"https://sg.linkedin.com/in/atul-khekade-9076b36\"",
-      "AdditionalInfo": "\"https://www.xdc.org/resources\"\"https://www.coinbase.com/how-to-buy/xinfin\"\"https://medium.com/xdc-foundation-communications\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/XDCFoundation",
-      "websiteLink": "https://www.xdc.org/",
-      "updatedAt": "2022-12-20T20:21:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:24:00.000Z",
-      "title": "XDC Network"
-    }
-  },
-  {
-    "id": "89db6687-615e-45d6-9b06-4832b88e8d86",
-    "attributes": {
-      "age": "2021",
-      "Token": "$OSMO",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "19.5k / - ",
-      "About": "\"\"\"Osmosis is an automated market maker protocol (AMM) for the ATOM ecosystem. Osmosis was inspired by Balancer and Uniswap and wants to provide tools that go beyond traditional token swaps and offer users DeFi functionality for a cross-chain world. The chain enables developers to design and deploy customized AMMs by using its various modules and leveraging Osmosis' on-chain governance system.\"",
-      "HowToJoin": "\"\"\"1. Apply for a grant:https://grants.osmosis.zone/\"\"2. Join the community via social media\"\" 3.  Github for developers: https://github.com/osmosis-labs/osmosis\"\"1. Buy Osmosis tokens\"",
-      "FoundingTeam": "\"Sunny Aggarwal\"\"Founder of Sikka and Osmosis\"\"An Indian blockchain entrepreneur that runs Sikka, a blockchain infrastructure company focused on participating in protocols and networks for the decentralized internet. His company is also a top five validator on Cosmos. Sunny served three years as a research scientist at the Tendermint protocol and Cosmos Hub before developing Osmosis.\"\"https://www.linkedin.com/in/sunnya97\"\"https://twitter.com/sunnya97\"",
-      "AdditionalInfo": "\"https://www.coinbase.com/how-to-buy/osmosis\"\"https://messari.io/asset/osmosis\"",
-      "discordLink": "https://discord.com/invite/vBzmeDwWpP",
-      "twitterLink": "https://twitter.com/osmosisdao?lang=en",
-      "websiteLink": "https://app.osmosis.zone/",
-      "updatedAt": "2022-12-20T19:51:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:25:00.000Z",
-      "title": "Osmosis"
-    }
-  },
-  {
-    "id": "c81bf774-9479-4415-9712-ac9ffaa850dc",
-    "attributes": {
-      "age": "2019",
-      "Token": "$PAXG",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "- / 25k",
-      "About": "\"\"\"Pax Gold (PAXG) is a gold-backed cryptocurrency, launched by the creators of Paxos Standard (PAX) in September 2019. Pax Gold is tradeable on a large variety of exchanges and has become an accessible way for traders to start investing in gold. The main goal behind Pax Gold is to make gold more tradable, as the physical commodity is not easily divisible or flexible in terms of transport.\"",
-      "HowToJoin": "\"\"\"1. Career(http://1.Career) options are open: https://paxos.com/careers/\"\"2. Join via socials\"\"3. Buy PAXG tokens\"\"   Firstly on has to download coinbase wallet and choose a username and follow all the security procedures and use ETH to buy PAX Gold in the trade tab \"\"https://www.coinbase.com/how-to-buy/pax-gold#:~:text=Use your ETH to buy PAX Gold in the trade tab&text=Then tap on the “Trade, to exchange for PAX Gold(https://www.coinbase.com/how-to-buy/pax-gold#:~:text=Use%20your%20ETH%20to%20buy%20PAX%20Gold%20in%20the%20trade%20tab&text=Then%20tap%20on%20the%20%E2%80%9CTrade,to%20exchange%20for%20PAX%20Gold).\"",
-      "FoundingTeam": "\"Charles Cascarilla\"\"Charles Cascarilla is the founder and chief executive officer of both Paxos Standard and Pax Gold. Cascarilla has an extensive career in capital management, which is what led him to explore the vast possibilities cryptocurrencies offer.He co-founded Cedar Hill Capital Partners in 2005. This was the start of his career in finance and capital management. Since 2005, Mr. Cascarilla has participated in several traditional and blockchain-based venture capital projects.\"\"https://www.linkedin.com/in/charlescascarilla\"",
-      "AdditionalInfo": "\"https://paxos.com/category/common-questions/\"\"https://www.paxos.com/wp-content/uploads/2019/09/PAX-Gold-Whitepaper.pdf\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/paxosglobal",
-      "websiteLink": "https://paxos.com/paxgold/",
-      "updatedAt": "2022-12-23T11:44:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:25:00.000Z",
-      "title": "PAX GOLD"
-    }
-  },
-  {
-    "id": "90e2a990-9f7a-4c95-ab3d-a959a08fa49e",
-    "attributes": {
-      "age": "2021",
-      "Token": "$CSPR",
-      "type": "Developer",
-      "Blockchain": "Ethereum",
-      "Community": "32.5k / 50",
-      "About": "\"\"\"The Casper platform is designed to boost the adoption of blockchain technology, smart contracts, and DApps on a global scale. Casper is designed to ensure the platform is continually developed according to the evolving needs of its users, and that it’s maximally accessible to developers of all backgrounds. Casper is optimized to suit both enterprise and developer needs. Casper’s mission is to usher in a new era for Web3, as demand for intuitive, interconnected services continues to grow across the board.\"",
-      "HowToJoin": "\"\"\"1. For developers:\"\"GitHub: https://github.com/casper-network\"\"via Grant Program: Program to involve developers, researchers, and scientists who are looking for decentralized infrastructure project funding.\"\"https://www.devxdao.com/\"\" https://casper.network/en-us/get-started-developer\"\"1. For Users: https://casper.network/en-us/get-started-regular\"\"2. Join the community https://casper.network/en-us/community\"\"3. To buy Casper Network\"",
-      "FoundingTeam": "\"Medha Parlikar, Co-Founder and CTO\"\"Medha is one of the co-founders of CasperLabs and serves as its CTO. She started working with technology in the early 80s. She has spent the past two decades delivering production SaaS software for major corporations such as Adobe, Omniture, and Avalara.\"\"https://www.linkedin.com/in/mparlikar\"\"https://twitter.com/MParlikar?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/MParlikar?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"Mrinal Manohar, Co-Founder, and CEO\"\"Mrinal has an extensive career as both a computer programmer and a finance professional. Before founding Casper, Mrinal was a Principal and the Technology/Media/Telecom Sector Head at Sagard Capital, a Private Equity Associate at Bain Capital, and an Associate Consultant at Bain & Company. Mrinal has been personally investing in the sector since 2012 as a seed investor in Ethereum, Blockstack, Basis, Maker, Filecoin, and more.\"\"https://www.linkedin.com/in/mrinal-manohar-84422a9\"",
-      "AdditionalInfo": "\"https://casper.network/en-us/documentation\"\"https://arxiv.org/pdf/2101.02159.pdf\"\"https://casperholders.io/\"\"https://casper.network/en-us/case-studies\"\"https://messari.io/asset/casper\"",
-      "discordLink": "https://discord.com/invite/Q38s3Vh",
-      "twitterLink": "https://twitter.com/Casper_Network",
-      "websiteLink": "https://casper.network/en/network",
-      "updatedAt": "2022-12-23T11:54:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:26:00.000Z",
-      "title": "Casper"
-    }
-  },
-  {
-    "id": "fa92fe30-3ac2-4e0e-b555-768f40cbc295",
-    "attributes": {
-      "age": "2019",
-      "Token": "$ALGO",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "40.3k/19",
-      "About": "\"\"\"Algorand is a scalable, secure, and decentralized digital currency and smart contract platform. It is a  blockchain-based network that supports a wide range of applications. These systems are secure, scalable, and efficient, all critical properties for effective applications in the real world. Algorand will support computations that require reliable performance guarantees to create new forms of trust. Algorand was invented to speed up transactions and improve efficiency, in response to the slow transaction times of Bitcoin and other blockchains. Algorand is designed so that there are lower transaction fees.\n\"",
-      "HowToJoin": "\"\"\"1. For career options: https://www.algorand.com/about/careers\"\"2. Community governance: Algo holders will need to go to the Governance web portal and declare how many Algo tokens they will commit to each period during the signup window. To participate, governors will have to sign a transaction to signify their commitment.\"\"https://governance.algorand.foundation/\"\"1. To join the community signup \"\"https://community.algorand.org/accounts/signup/?next=/\"",
-      "FoundingTeam": "\"Silvio Micali\"\"Founder of Algorand\"\"Silvio Micali is a professor of computer science at the Massachusetts Institute of Technology and the founder of Algorand. He is a recipient of the Turing Award (in 2012) for his fundamental contributions to the theory and practice of secure two-party computation, electronic cash, cryptocurrencies, and blockchain protocols. This makes him one of the foremost creators of crypto in the world. \"\"https://www.linkedin.com/in/silvio-micali-26bb37152\"\"https://twitter.com/silviomicali?lang=en\"",
-      "AdditionalInfo": "\"https://www.algorand.com/technology/white-papers\"\"https://medium.com/algorand-foundation\"\"https://www.algorand.com/technology/faq\"\"https://www.algorand.foundation/\"",
-      "discordLink": "https://discord.com/invite/QBYp7Y2",
-      "twitterLink": "https://twitter.com/AlgoFoundation",
-      "websiteLink": "https://www.algorand.com/",
-      "updatedAt": "2022-12-26T04:58:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:26:00.000Z",
-      "title": "Algorand"
-    }
-  },
-  {
-    "id": "70595371-103d-4775-a8dd-81179686416a",
-    "attributes": {
-      "age": "2020",
-      "Token": "$NEAR",
-      "type": "DAO Tool, Developer",
-      "Blockchain": "-",
-      "Community": "57k/1k",
-      "About": "\"\"\"NEAR Protocol is a layer-one blockchain that was designed as a community-run cloud computing platform and that eliminates some of the limitations that have been bogging competing blockchains, such as low transaction speeds, low throughput, and poor interoperability. This provides the ideal environment for DApps and creates a developer and user-friendly platform. Its declared goal is to build a platform that is “secure enough to manage high-value assets like money or identity and performant enough to make them useful for everyday people.” NEAR was a machine learning project before it became a blockchain development platform.\"",
-      "HowToJoin": "\"\"\"1. Join via Open Web Sandbox:A safe place to ask questions, experiment, and get acquainted.\"\"          https://awesomenear.com/open-web-sandbox\"\"1. Join the community via socials\"\"2. Join via their community events    https://near.events/\"\"3. To become a validator\"\"Becoming a validator on NEAR is permissionless. If you have the necessary technical skills and the required $NEAR to meet the minimum seat price, you can set up a node and become a validator within 48-72 hours.\"\"1. To Set up your account\"",
-      "FoundingTeam": "\"Erik Trautman\"\"Founder of Near Protocol\"\"An entrepreneur with experience on Wall Street and founder of Viking Education. He is currently the CEO of Interim. He was the head of operations at Near Inc and CEO of NEAR Foundation.\"\"https://www.linkedin.com/in/erik-trautman\"\"https://twitter.com/ErikTrautman?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/ErikTrautman?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"Illia Polosukhin\"\"Co-founder of Near protocol\"\"He has had more than ten years of industry experience, including three years at Google as Engineering Manager and also worked as a software Engineer at Salford Sytems.\"\"https://www.linkedin.com/in/illia-polosukhin-77b6538\"\"https://twitter.com/ilblackdragon?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/ilblackdragon?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"Alexander Skidanov\"\"Co-founder of Near protocol\"\"He is a computer scientist that worked at Microsoft and went on to join memSQL, where he became the director of engineering.\"\"https://www.linkedin.com/in/skidanovalex\"\"https://twitter.com/alexskidanov\"",
-      "AdditionalInfo": "\"https://awesomenear.com/\"\"Developers(https://near.org/developers?_gl=1*1kzae9z*_up*MQ.._gaMTk1ODYyNDMzMy4xNjY4MjcyNzMz*_ga_9GWCXQJ62J*MTY2ODI3MjczMC4xLjAuMTY2ODI3MjczMC4wLjAuMA..)\"\"https://medium.com/nearprotocol\"\"Governance(https://gov.near.org/?_gl=1*1kzae9z*_up*MQ.._gaMTk1ODYyNDMzMy4xNjY4MjcyNzMz*_ga_9GWCXQJ62J*MTY2ODI3MjczMC4xLjAuMTY2ODI3MjczMC4wLjAuMA..)\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-26T04:58:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:27:00.000Z",
-      "title": "Near Protocol"
-    }
-  },
-  {
-    "id": "c35c0a0f-a818-482b-9a42-66afc6138cb0",
-    "attributes": {
-      "age": "2020",
-      "Token": "$GRO",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "9.1k/ 1.6k",
-      "About": "\"\"\"Gro protocol’s mission is to make decentralized finance more accessible and empower everyone to easily create and share wealth- by combining the best of decentralized and traditional finance. Gro protocol is a stablecoin yield aggregator that tranches risk and yield.\"",
-      "HowToJoin": "\"\"\"1. Join Community via socials\"",
-      "FoundingTeam": "\"Hannes Graph\"\"Founder of GRO \"\"https://www.linkedin.com/in/graah/\"",
-      "AdditionalInfo": "\"https://docs.gro.xyz/gro-docs/labs/faqs\"\"https://docs.gro.xyz/gro-docs/governance/governance-tokenomics\"\"https://www.binance.com/en-IN/how-to-buy/gro-dao-token\"\"https://medium.com/gro-protocol/guide-to-gro-f4012442a19e\"",
-      "discordLink": "https://discord.com/invite/gro",
-      "twitterLink": "https://twitter.com/groprotocol",
-      "websiteLink": "http://www.gro.xyz/#/",
-      "updatedAt": "2022-12-26T05:02:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:28:00.000Z",
-      "title": "GRO DAO"
-    }
-  },
-  {
-    "id": "2f87746b-77de-497b-979c-5eec581330ec",
-    "attributes": {
-      "age": "2017",
-      "Token": "$ADA",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "- / 493k",
-      "About": "\"\"\"Cardano is a blockchain platform for changemakers, innovators, and visionaries, with the tools and technologies required to create possibilities for the many, as well as the few, and bring about positive global change. The platform was built for a sustainable future, to help people work better together, trust one another, and build global solutions to global problems. It's the first to be founded on peer-reviewed research and developed through evidence-based methods.\"",
-      "HowToJoin": "\"\"\"1. Get involved via social media:\"\"2. To join the ambassador program: \"\"The flagship program is designed to promote awareness and educate the wider community to drive the adoption of Cardano for better use cases. There are various roles for a Cardano ambassador like content creator, meetup organizer, moderator, and translator. There are three reward levels designed to reward the most active ambassador.\"\"https://cardano.org/ambassadors/\"\"If one wants to nominate an ambassador … fill the form:https://cardanofoundation.org/forms/ambassadornomination\"",
-      "FoundingTeam": "\"Charles Hoskinson\"\"Founder of Cardano\"\"Charles is a technology entrepreneur and was also one of the co-founders of the Ethereum network. He is the CEO of IOHK, the company that built Cardano’s blockchain. He was the founding chairman of the Bitcoin Foundation's education committee and established the not-for-profit Cryptocurrency Research Group in September of 2013.\"\"https://www.linkedin.com/in/charleshoskinson\"",
-      "AdditionalInfo": "\"https://bscscan.com/token/0x3ee2200efb3400fabb9aacf31297cbdd1d435d47#balances\"\"https://blockchair.com/cardano\"\"https://cardanoscan.io/\"\"https://explorer.cardano.org/en\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/cardano",
-      "websiteLink": "https://cardano.org/",
-      "updatedAt": "2022-12-26T05:07:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:29:00.000Z",
-      "title": "Cardano"
-    }
-  },
-  {
-    "id": "5e482973-a6f0-47c8-a7a5-cabf135bc51d",
-    "attributes": {
-      "age": "2017",
-      "Token": "$TRX",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "85k/295k",
-      "About": "\"\"\"TRON DAO is a community-governed DAO dedicated to accelerating the decentralization of the internet via blockchain technology and dApps. It's a multi-purpose smart contract platform that enables the creation and deployment of decentralized applications (dApps).TRON is arguably most famous for its low-cost ability to make transactions.\"",
-      "HowToJoin": "\"\"\"1. Join the community via Social media platforms\"\"2. For developers: GitHub:https://github.com/tronprotocol\"\"3. To contact them for queries:\"\"press@tron.network(mailto:press@tron.network)\"\"service@tron.network(mailto:service@tron.network)\"\"1. General Governance\"\"Every account in the TRON network can apply and have the opportunity to become a Super Representative (denoted as SR). Everyone can vote for SR candidates. The top 27 candidates with the most votes will become SRs with the right and obligation to generate blocks. The votes are counted every 6 hours and the SRs will change accordingly.\nTo prevent malicious attacks, there is a cost to becoming an SR candidate. When applying, 9999 TRX will be burned from the applicant’s account. Once successful, such account can join the SR election.\"\"1. Voting \"\"TRON Power (denoted as TP) is needed to vote and the amount of TP depends on the voter’s frozen assets (TRX).\nTP is calculated in the following way:\n1 TP = 1 TRX frozen to get the bandwidth\nEvery account in the TRON network has the right to vote for its own SRs.\nAfter the release (unfreeze, available after 3 days), users won't have any frozen assets and lose all TP accordingly. As a result, all votes become invalid for the ongoing and future voting round unless\nTRX is frozen again to vote. Note that the TRON network only records the most recent vote, which means that every new vote will negate all previous votes.\"",
-      "FoundingTeam": "\"Justin Sun\"\"H.E. Justin Sun is the Ambassador and Permanent Representative of Grenada to the WTO, Founder of TRON, and Advisor to Huobi Global, one of the world’s largest crypto exchanges. A protege of Alibaba's Jack Ma, Sun has been named Forbes' 30 under 30 in the Consumer Technology category several times, among other global recognitions. Sun is an avid art collector, gamer, investor, philanthropist, and space enthusiast.\"\"https://twitter.com/justinsuntron\"\"https://www.linkedin.com/in/justinsuntron/\"",
-      "AdditionalInfo": "\"https://tron.network/faq?lng=en\"\"https://tronscan.org/#/data/bestdata\"\"https://messari.io/asset/tron\"\"https://tron.network/static/doc/white_paper_v_2_0.pdf\"\"https://tron.network/resources?lng=en\"\"https://trondao.medium.com/\"",
-      "discordLink": "https://discord.com/invite/YZcRdyykgn",
-      "twitterLink": "https://twitter.com/Tronfoundation",
-      "websiteLink": "https://tron.network/",
-      "updatedAt": "2022-12-26T05:16:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:29:00.000Z",
-      "title": "TRON"
-    }
-  },
-  {
-    "id": "9662e973-8f7a-4049-a9b8-67dfe52c11aa",
-    "attributes": {
-      "age": "2017",
-      "Token": "$LINK",
-      "type": "Product DAO",
-      "Blockchain": "Ethereum",
-      "Community": "113k / -",
-      "About": "\"\"\"Chainlink is a decentralized oracle(https://messari.io/article/oracles) network. It aims to serve as middleware between smart contracts on smart contracting platforms and external data sources, allowing smart contracts to securely access off-chain data feeds. Chainlink allows blockchains to securely interact with external data feeds, events, and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement.\"",
-      "HowToJoin": "\"\"\"1. Buy $LINK to participate in governance: https://coinmarketcap.com/currencies/chainlink/\"\"2. Get involved with community grants: https://chain.link/community/grants \"",
-      "FoundingTeam": "\"Sergey Nazarov\"\"CoFounder of ChainLink\"\"He is also the CoFounder & CEOCoFounder & CEO of Secure Asset Exchange, CoFounder of SmartContract.\"\"https://www.linkedin.com/in/sergeydnazarov/\"",
-      "AdditionalInfo": "\"https://chain.link/techtalks\"\"https://chain.link/case-studies\"\"https://chain.link/faqs\"\"https://chain.link/techtalks\"\"https://chain.link/whitepaper\"",
-      "discordLink": "https://discord.com/invite/aSK4zew",
-      "twitterLink": "https://twitter.com/chainlink",
-      "websiteLink": "https://chain.link/",
-      "updatedAt": "2022-12-26T05:41:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:29:00.000Z",
-      "title": "ChainLink"
-    }
-  },
-  {
-    "id": "27f807f6-46d2-4ba3-b05e-8c9548d1446c",
-    "attributes": {
-      "age": "2016",
-      "Token": "$ZRX",
-      "type": "DeFi, DAO Tool",
-      "Blockchain": "Ethereum",
-      "Community": "18.5k/196.1k",
-      "About": "\"\"\"0x is an open-source, decentralized exchange infrastructure that enables the exchange of tokenized assets on multiple blockchains. It is a permissionless protocol to facilitate the trading of Ethereum-based tokens. 0x is not itself a decentralized exchange, but instead a system of smart contracts that connects liquidity providers and market makers in order to provide exchange functionality in a range of applications. The team has also created a variety of products using 0x like 0x protocol,0x API, NFT swap SDK, etc.\"",
-      "HowToJoin": "\"\"\"1. To get in touch with the team for any kind of help\"\"https://www.0x.org/#contact\"\"1. Join the community via Social Media\"\"2. Many career options are open to joining the team. https://www.0x.org/about/jobs\\\"\"3.  Governance\"\"Every token holder, big or small, can play a role in governance -- from weighing in on ZeroEx Improvement Proposals (ZEIPs) to sharing ideas on how to use DAO treasury funds, to actively contributing to the protocol's advancement in a myriad of other ways. \"\"By participating in 0x governance, you can suggest ways to put communal funds to work, explore opportunities for the protocol to drive value creation and capture, and vote on key protocol upgrades and parameters.\"\"1. Building a project in the 0x ecosystem?\"\"Learn about the Qualification Criteria to apply for a grant from the 0xDAO: https://0xdao.gitbook.io/0x-dao/ecosystem-value-experiment/0xdao-grant-program-framework-v1-1\"",
-      "FoundingTeam": "\"Will Warren\"\"Co-founder of 0x \"\"He works as the CEO of 0x. He worked as the technical Advisor at Basic attention token and as a graduate Research Assistant at Los Alamos national Laboratory.\"\"https://www.linkedin.com/in/will-warren-92aab62b\"\"https://twitter.com/willwarren?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/willwarren?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"Amir Bandeali\"\"Co-founder of 0x\"\"He works as the CTO of 0x. HE previously worked as a trader at DRW and Chopper trading.\"\"https://www.linkedin.com/in/abandeali1\"\"https://twitter.com/abandeali1?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/abandeali1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"",
-      "AdditionalInfo": "\"https://coinmarketcap.com/currencies/0x/\"\"https://forum.0x.org/\"\"https://www.0x.org/about/press\"",
-      "discordLink": "https://discord.com/invite/d3FTX3M",
-      "twitterLink": "https://twitter.com/0xproject",
-      "websiteLink": "https://www.0x.org/",
-      "updatedAt": "2022-12-26T06:02:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:30:00.000Z",
-      "title": "0x"
-    }
-  },
-  {
-    "id": "91051f23-f125-467c-aedf-45d6e8a171aa",
-    "attributes": {
-      "age": "2018",
-      "Token": "$UMA",
-      "type": "DAO Tool",
-      "Blockchain": "Ethereum",
-      "Community": "15k/20k",
-      "About": "\"\"\"UMA is an optimistic oracle (OO) that can record information onto a blockchain. UMA’s OO secures a diverse ecosystem of Web3 applications. UMA’s open-source system consists of two parts: Priceless financial contract designs, which are used to create synthetic tokens, and a Data Verification Mechanism (DVM), a decentralized oracle service. The protocol’s first financial innovations revolved around the idea of trustless tokenization.\"",
-      "HowToJoin": "\"\"\"1. Join Community via socials\"\"2. To apply for jobs: https://cryptojobslist.com/companies/uma\"\"3. The UMA token is primarily a governance token used to contribute to UMA protocol decisions, such as voting on UMA Improvement Proposals (UMIPs), price requests, and disputes made to UMA's Data Verification Mechanism (DVM).\"\"4.  The UMA voting process requires stakeholders to commit and reveal their votes in two separate stages. Each stage is open for 24 hours, so each voting period is 48 hours. \"\"UMA Tokenholders can discuss their votes in the #voting channel of the UMA Discord(https://discord.umaproject.org/) before voting\"\"UMA token holders can use the Voter dApp(https://vote.umaproject.org/) to vote on protocol decisions\"\"1. Buy $UMA token here(https://www.coinbase.com/price/uma)\"",
-      "FoundingTeam": "\" Allison Lu \"\"Co-founder of UMA\"\"She is currently working as the Pledger at the Founders Pledge community. She worked as an advisor at One Daijo Ltd and as VP of Credit and risk analytics at Tala. She was the vice president at Goldman Sachs.\"\"https://www.linkedin.com/in/allisonlu/\"\"https://twitter.com/allilulllc?lang=en\"\" Hart Lambur\"\"Co-founder of UMA\"\"He is also the co-founder and director of Risk labs. He is currently working as the Pledger at the Founders Pledge community. HE previously co-founded and was CEO of OpenFolio and also worked at Goldman Sachs in the field of interest rate trading.\"\"https://ca.linkedin.com/in/hartlambur\"\"https://twitter.com/hal2001\"",
-      "AdditionalInfo": "\"https://coinmarketcap.com/currencies/uma/\"\"https://etherscan.io/token/0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828#balances\"\"https://docs.umaproject.org/\"\"https://projects.umaproject.org/\"\"https://umaproject.org/products\"",
-      "discordLink": "https://discord.com/invite/jsb9XQJ",
-      "twitterLink": "https://twitter.com/umaprotocol",
-      "websiteLink": "https://umaproject.org/",
-      "updatedAt": "2022-12-26T06:17:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:31:00.000Z",
-      "title": "UMA"
-    }
-  },
-  {
-    "id": "da8c136e-6dff-4eec-82aa-1356d02d7da5",
-    "attributes": {
-      "age": "2021",
-      "Token": "$DORA",
-      "type": "Service DAO, Infrastructure",
-      "Blockchain": "Substrate",
-      "Community": "- / 3k",
-      "About": "\"\"\"Dora Factory is one of the first blockchain projects that aim to build an open infrastructure for DAO on Polkadot Substrate. Dora Factory is a programmable, multi-chain DAO-as-a-Service open infrastructure on Substrate. It is an open-source, community-driven venture builder” which gives users the power to create and manage powerful decentralized venture organizations.\"",
-      "HowToJoin": "\"\"\"1. Join the community via Socials\"\"2. How to get DORA\"\"You can buy DORA tokens from exchanges. There are centralized exchanges and decentralized exchanges, you can view active DORA markets from CoinGecko(https://www.coingecko.com/en/coins/dora-factory#markets) or CoinMarketCap(https://coinmarketcap.com/currencies/dora-factory/markets). In addition, you can also buy DORA directly in wallets such as Coinbase Wallet(https://www.coinbase.com/how-to-buy/dora-factory) or MetaMask.\"\"After you get DORA, you can either use a centralized exchange for custody or store it in your own wallet. It is highly recommended to use a non-custodial wallet that has been proven to be secure to store your DORA.\"\"1. To get started with DORA grants: https://dorahacks.io/dora \"\"2. Vote on proposals in forum: https://community.dorahacks.io/\"",
-      "FoundingTeam": "\"\"\"Jiannan Zhang, Architect at Dora Factory, Founder & CEO of DoraHacks\"\"He was one of the board members at TrueChain Foundation. He also founded TopHacker Group. He was an intern at CERN.\"\"https://www.linkedin.com/in/jiannanzhang/?originalSubdomain=hk\"",
-      "AdditionalInfo": "\"https://dorafactory.medium.com/\"\"https://www.binance.com/en-IN/how-to-buy/dora-factory\"\"https://hidorahacks.medium.com/dora-factory-community-grant-round-2-voting-guide-832a243df084\"\"https://doraresear.ch/\"\"https://dorahacks.io/blog/\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/DoraFactory",
-      "websiteLink": "https://dorafactory.org/",
-      "updatedAt": "2022-12-26T06:28:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:31:00.000Z",
-      "title": "DORA"
-    }
-  },
-  {
-    "id": "4db1f5cb-c3f9-438c-b262-253cbbc44f4c",
-    "attributes": {
-      "age": "April 2013",
-      "Token": "$DCR",
-      "type": "",
-      "Blockchain": "Ethereum",
-      "Community": "1.5k / -",
-      "About": "\"\"\"Decred is a blockchain-based cryptocurrency with a strong focus on community input, open governance, and sustainable funding for development. It utilizes a hybrid mining system to ensure that a small group cannot dominate the flow of transactions or make changes to Decred without the input of the community. Decred’s security, privacy, scalability, and decentralized treasury empower stakeholders and provide them with the tools needed to enhance their financial sovereignty.\"",
-      "HowToJoin": "\"\"\"1. Join via social media\"\"2. Proposal for funding \"\"Politeia is Decred's proposal system. It's used to request funding from the Decred treasury. Anyone can submit a proposal to Politeia and the Decred stakeholders will vote on whether to fund or reject the proposal.\"\"https://proposals.decred.org/\"\"1. For voting on proposals \"\"https://voting.decred.org/\"\"1. Anybody who holds enough DCR may time-lock their coins to purchase tickets(https://docs.decred.org/proof-of-stake/overview/)\n and participate in governance. Some of the ticket holder voting occur on-chain, and some of it off-chain.\"",
-      "FoundingTeam": "\"Alex Yocom-Piatt\"\"Decred Co-Founder\"\"A former derivatives trader who helped found Decred and now builds Decred wallet software. He currently leads work on Decrediton, Decred's cross-platform wallet GUI, and also helps with dcrwallet, the back-end wallet software for Decred.\"\"https://twitter.com/_alyp_\"\"David Hill\"\"Co-Founder of Decred\"\"David Hill is the co-founder and Developer of Decred.\"\"https://twitter.com/dajohi\"\"Jake Yocom-Piatt\"\"Co-Founder of Decred\"\"Jake Yocom-Piatt is the Project Lead for Decred and a cryptocurrency pioneer who has been using, funding, and directing the creation of open-source software for over a decade.\"\"https://twitter.com/behindtext\"\"Josh Rickmar\"\"Co-Founder and Developer at Decred\"\"https://twitter.com/joshrickmar\"",
-      "AdditionalInfo": "\"https://docs.decred.org/\"\"https://coinmarketcap.com/currencies/decred/\"\"https://nomics.com/assets/dcr-decred\"\"https://forum.decred.org/\"",
-      "discordLink": "https://discord.com/invite/dXSmwvYury",
-      "twitterLink": "https://twitter.com/decredproject",
-      "websiteLink": "https://decred.org/",
-      "updatedAt": "2022-12-26T06:34:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:32:00.000Z",
-      "title": "Decred"
-    }
-  },
-  {
-    "id": "2133596a-4031-4614-8458-9238e9093525",
-    "attributes": {
-      "age": "2014",
-      "Token": "$DASH",
-      "type": "Protocol DAO",
-      "Blockchain": "",
-      "Community": "5.9k / -",
-      "About": "\"\"\"Dash is an open-source blockchain(https://coinmarketcap.com/alexandria/glossary/blockchain) and cryptocurrency(https://coinmarketcap.com/alexandria/article/what-are-cryptocurrencies) focused on offering a fast, cheap global payments network that is decentralized in nature. It is an open-source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called \"masternodes\". Dash is the only solution on the market today developing a decentralized API as an integral part of its Web3 stack, making it the first choice for developers creating unstoppable apps. Dash seeks to improve Bitcoin (BTC) by providing stronger privacy and faster transactions. \"",
-      "HowToJoin": "\"\"\"1. Buy the governance token from the marketplaces listed here(https://docs.dash.org/en/stable/introduction/how-to-buy.html)\"\"2. Via Bug Bounty program: a program that allows developers to discover and resolve bugs before public release.\"\"https://www.dash.org/bug-bounty/\"\"For reporting the bug one has to fill in the google docs provided below\"\"https://docs.google.com/forms/d/e/1FAIpQLScy1mxnkYuKNmG8aiHm4bhu_6zmvlf0g6N2SbpI0MGOC9AL1w/viewform\"\"1. Join them via social media\"\"2. For more details about governance: https://docs.dash.org/en/stable/governance/understanding.html\"",
-      "FoundingTeam": "\"Evan Duffield, Founder of Dash\"\"Evan Duffield is the founder and former CEO of Dash. He currently works as a strategy advisor for Dash. He also co-founded and owner of HAwk Financial group\"\"https://www.linkedin.com/in/evan-duffield-98645515/\"\"https://medium.com/@eduffield222\"",
-      "AdditionalInfo": "\"https://www.dash.org/learning-resources/\"\"https://www.dash.org/blog/\"\"https://www.dash.org/institutions/\"\"https://dashplatform.readme.io/\"\"https://messari.io/asset/dash/profile\"",
-      "discordLink": "https://discord.com/invite/PXbUxJB",
-      "twitterLink": "https://twitter.com/Dashpay",
-      "websiteLink": "https://www.dash.org/",
-      "updatedAt": "2022-12-20T21:09:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:32:00.000Z",
-      "title": "Dash"
-    }
-  },
-  {
-    "id": "8deb6438-2fdb-4c0b-9743-53926848728f",
-    "attributes": {
-      "age": "2022",
-      "Token": "$CULT",
-      "type": "Investment DAO",
-      "Blockchain": "Ethereum",
-      "Community": "13k/0",
-      "About": "\"\"\"The main goal of CULT DAO is to support the growth of decentralization. The top 50 Stakers are the guardians who submit proposals to the DAO. They help to fight against Centralization and promote Decentralization.\"",
-      "HowToJoin": "\"\"\"1. You can buy $CULT tokens from the following websites:\"\"https://www.binance.com/en-IN/how-to-buy/cult-dao\"\"https://www.coinbase.com/how-to-buy/cult-dao\"\"https://coinmarketcap.com/currencies/cult-dao/\"\"1. Join their community via social media\"\"2. Users can transact CULT and the DAO treasury collects fees. The top 50 CULT owners can submit proposals for Investment will invest wallet address included in the submission. Proposals can be put forward and approved. Investee company sells their tokens to CULT where 50% goes to burn wallet and 50% goes to dCULT owners.\"",
-      "FoundingTeam": "\"Mr. O’Modulus\"\"He is the founder of Cult DAO.\"\"https://mobile.twitter.com/mromodulus\"",
-      "AdditionalInfo": "\"https://wearecultdao.medium.com/\"\"https://doc.cultdao.io/\"\"https://cultdao.io/faqs/\"",
-      "discordLink": "https://discord.com/invite/wearecultdao",
-      "twitterLink": "https://twitter.com/wearecultdao",
-      "websiteLink": "https://cultdao.io/",
-      "updatedAt": "2022-12-20T20:42:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:34:00.000Z",
-      "title": "Cult DAO "
-    }
-  },
-  {
-    "id": "769636fc-1dc7-4bcb-bd6e-ed1973f4338f",
-    "attributes": {
-      "age": "",
-      "Token": "$HOP",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "34.4k/13.8k",
-      "About": "\"\"\"Hop is a multichain bridge allowing users to send tokens across the network securely. It allows users to send tokens from one rollup to another almost immediately without having to wait for the rollup challenge period.\"",
-      "HowToJoin": "\"1. You can buy $HOP tokens from the following websites and participate in governance:\"\"https://coinmarketcap.com/currencies/hop-exchange/\"\"https://www.binance.com/en-IN/how-to-buy/hop-exchange\"\"https://www.coinbase.com/how-to-buy/hop-exchange\"\"Forum: https://forum.hop.exchange/\"\"1. Join their community via social media\"\"2. How to start trading?\"\"         - Click on Use Hop on their website.\"\"         - Then select Connect a Wallet and connect a wallet from the supported ones.\"\"         - Start Trading.\"",
-      "FoundingTeam": "\"\n  \"\"Chris Winfrey\"\"He is the Co-Founder of HOP DAO and authereum\"\"https://twitter.com/whinfreychris/status/1522665654616150016\"",
-      "AdditionalInfo": "\"https://github.com/hop-protocol\"\"https://medium.com/hop-protocol\"\"https://help.hop.exchange/hc/en-us\"\"https://docs.hop.exchange/faq\"",
-      "discordLink": "https://discord.com/invite/PwCF88emV4",
-      "twitterLink": "https://twitter.com/HopProtocol",
-      "websiteLink": "https://hop.exchange/",
-      "updatedAt": "2022-12-20T20:50:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:34:00.000Z",
-      "title": "Hop DAO"
-    }
-  },
-  {
-    "id": "c468a8e9-3614-410b-990d-5be444a84671",
-    "attributes": {
-      "age": "",
-      "Token": "$1INCH",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "20.4k/102.3k",
-      "About": "\"\"",
-      "HowToJoin": "\"\"\"1. Join their community via social media\"\"2.  \"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\" \"",
-      "discordLink": "https://discord.com/invite/1inch",
-      "twitterLink": "https://twitter.com/intent/follow?screen_name=1inch",
-      "websiteLink": "https://1inch.io/dao/",
-      "updatedAt": "2022-12-20T20:46:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:35:00.000Z",
-      "title": "1inch DAO"
-    }
-  },
-  {
-    "id": "5abdde88-f47c-4825-becf-b8f2084af17e",
-    "attributes": {
-      "age": "2020",
-      "Token": "$EUL",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "7.8k/2.1k",
-      "About": "\"\"\"Euler is a decentralized platform that allows users to lend and borrow any crypto asset. Euler is different from other platforms in having a Permissionless listing, Asset Tiers, Reactive Interest rates, and Protected Collateral. Euler is partnered with top security firms like Certora, Sherlock, Holborn, and many more. \"",
-      "HowToJoin": "\"\n1. You can buy $EUL tokens from the following websites and participate in governance:\"\"https://coinmarketcap.com/currencies/euler-finance/\"\"https://www.binance.com/en-IN/how-to-buy/euler-protocol\"\"https://www.coinbase.com/price/euler-finance\"\"1. Join their community\"\" - Join Discord and meet the community.\"\" - Make proposals and discussions on the governance forum. \"\" - Send out your ideas through messages contributing to the protocol.\"\" - Based on your active participation, you can join the community.\"\"Getting started guide: https://www.euler.finance/blog/euler-user-guide-getting-started \"\"Join Forum and vote on proposals: https://forum.euler.finance/ \"\"Euler has unique governing phases. Learn more about it here(https://docs.euler.finance/euler-governance/getting-started/governance-launch-phases)\"",
-      "FoundingTeam": "\"Michael Bentley\"\"He is the Co-Founder and CEO of Euler. He has worked as a Postdoctoral Research Associate at the University of Oxford and UCL. He has also been a Postdoctoral Research Fellow at University of Leeds. He was a Pricing Analyst at the Royal Bank of Scotland Business.\"\"https://www.linkedin.com/in/euler-mab/?originalSubdomain=uk\"\"Dough Hoyte\"\"He is the Co-Founder of Euler\"\"Jack Leon Prior\"\"He is the Co-Founder and Director of Euler. He was a Frontend Developer at Salary Finance, ReactJS Blockchain Front End Developer at Qadre.\"\"https://www.linkedin.com/in/jack-prior-0b36a942/?originalSubdomain=uk\"",
-      "AdditionalInfo": "\"https://www.eulerlabs.com/blog\"\"https://docs.euler.finance/app/faq\"\"https://docs.euler.finance/getting-started/white-paper\"",
-      "discordLink": "https://discord.com/invite/CdG97VSYGk",
-      "twitterLink": "https://twitter.com/eulerfinance",
-      "websiteLink": "https://www.euler.finance/",
-      "updatedAt": "2022-12-20T20:20:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:36:00.000Z",
-      "title": "Euler Finance DAO "
-    }
-  },
-  {
-    "id": "60dc6b7b-7932-4d26-bd14-40667a25d8ca",
-    "attributes": {
-      "age": "2021",
-      "Token": "NA",
-      "type": "Social/Community DAO",
-      "Blockchain": "Ethereum",
-      "Community": "778 / 0",
-      "About": "\"\"\"Dinner DAO is a decentralized platform where old and new friends meet to chill. It is a community creating IRL dinner clubs using non-fungible tokens. It was shared for the people in web3 to share meals and make friends.\"",
-      "HowToJoin": "\"1. Join their community\"",
-      "FoundingTeam": "\"Austin Robey\"\"He is the Founder of Dinner DAO. \"\"https://twitter.com/austinrobey_/status/1430687873393733633\"",
-      "AdditionalInfo": "\"https://dinnerdao.mirror.xyz/r5nfnV5pLMhZvBZeBNtz8m-FaNlhfRy1_Fx_UGlzjZo\"\"https://unlock-protocol.com/blog/dinnerdao\"",
-      "discordLink": "https://discord.com/invite/4SXKAKJdCA",
-      "twitterLink": "https://twitter.com/dinner_dao?lang=en",
-      "websiteLink": "https://dinnerdao.mirror.xyz/",
-      "updatedAt": "2022-12-20T20:10:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T18:36:00.000Z",
-      "title": "Dinner DAO"
-    }
-  },
-  {
-    "id": "6c8b7d93-bff3-45f1-be90-33318778d597",
-    "attributes": {
-      "age": "2021",
-      "Token": "$MINT",
-      "type": "Grants DAO",
-      "Blockchain": "Ethereum",
-      "Community": "/1413",
-      "About": "\"\"\"Mint fund is a community owned and funded initiative helping BIPOC and LGBTQIA+ crypto creators mint NFTs.Its sole purpose is to build a support network for artists interested in bringing their art into the world of cryptos as NFTs .\"\"https://themint.fund/\"",
-      "HowToJoin": "\"\n1.Join their community via Discord :\"\"1. To apply as a partner : https://docs.google.com/forms/d/e/1FAIpQLSfVQ6zf_XGMJtODZyXM0Mn9jND9-z6UtV6Ec_6moGcmbbUPQg/viewform\"\"3.To(http://3.To) contibute to the fund : https://etherscan.io/address/0xC1987f61BDCB5459Afc2C835A66D16c844fd7a54#tokentxns\"",
-      "FoundingTeam": "\"\"\"The core team includes\"\"Sirsu\"\"The co-founder of The Well\"\"https://twitter.com/sirsuhayb\"\"Carlos Mata\"\"The co-founder of ForeFront\"\"https://twitter.com/carlosecgomes\"\"https://www.linkedin.com/in/c-mata\"\"Jess Sloss\"\"The co-founder of Seed Club\"\"https://twitter.com/thattallguy\"\"https://ca.linkedin.com/in/jesssloss\"\"Michail\"\"Co-founder of Zora\"\"https://twitter.com/opiumhum\"\"Samantha\"\"CO-founder of Foundation\"\"https://twitter.com/earthtosam_\"",
-      "AdditionalInfo": "\"https://mint.mirror.xyz/\"\"https://themint.fund/faq\"\"https://mint.mirror.xyz/\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-20T21:15:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T21:15:00.000Z",
-      "title": "Mint Fund"
-    }
-  },
-  {
-    "id": "a7014694-6753-40de-a4d3-2521c3e36617",
-    "attributes": {
-      "age": "May 2020",
-      "Token": "$WHALE",
-      "type": "Collector DAO",
-      "Blockchain": "Ethereum",
-      "Community": "/-",
-      "About": "\"\"\"Whale DAO is called the world’s most elite DAO for a reason. It is the single, most credible & exclusive community of crypto and non-crypto affluents in one place, sharing epic experiences together . It’s ELITE not just because of status, but because of impact. It is an exclusive, self-governed community where crypto & non-crypto affluents gain access to unforgettable experiences, epic projects, & limitless profitability. Its a bunch of crypto-economic incentives through gamified community with an underlying governance token.\"\"https://whaledao.io/membership\"\"https://whaledao.io/home(https://whaledao.io/home#)\"",
-      "HowToJoin": "\"\nTo Join the DAO :\"\"One has to Apply for membership where initial investment if USD 25k needs to be made where entire amount goes into the foundation fund.\"\"https://whaledao.io/membership\"",
-      "FoundingTeam": "\"\"\"Saro Mckeena\"\"Co-founder of Whale DAO\"\"https://www.blockleaders.io/leaders/sarojini-mckenna-alien-worlds-co-founder\"\"Michael\"\"Co-founder of Whale DAO\"\"Rob\"\"Co-founder of Whale DAO\"\"https://medium.com/whalemembers/whale-community-interview-with-the-co-founders-of-alien-worlds-687e2330a71b\"",
-      "AdditionalInfo": "\"https://whaledao.io/projects\"\"https://medium.com/whalemembers/whale-community-interview-with-the-co-founders-of-alien-worlds-687e2330a71b\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-20T21:15:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-20T21:15:00.000Z",
-      "title": "Whale"
-    }
-  },
-  {
-    "id": "2a13256d-e15e-4705-90dc-428f29586abf",
-    "attributes": {
-      "age": "2021",
-      "Token": "$SOCN, $SCNSOL -for socean staked Sol ",
-      "type": "Protocol ",
-      "Blockchain": "SOLANA",
-      "Community": "1 /  2417",
-      "About": "\"\"\"Socean is a non-custodial staking protocol that allows $SOL holders to participate in DeFi trading using its SOCN token they get upon staking, while still earning rewards on their staked $SOL. The protocol is to be upgraded and secured by its DAO, via token holders & team governance.\"\"It is fully transparent,fair and decentralised and have strong stacking stratergy.Their vision is to build best-in-class, positive-sum financial products. We want to be a place where anyone who wants to grow their money can find something that fits their needs and risk preferences.\"\"Customers are always going to want higher returns, lower risks, and better UX. Those are the three things they will constantly optimise for.\"\"https://deepdao.io/organization/e058c6bd-8758-4e52-a1b3-2d862bb04059/organization_data/dig_deeper\"\"https://soceanfinance.medium.com/socean-a-stake-pool-for-solana-e6d4bf3da403\"\"https://soceanfi.notion.site/Mission-Vision-and-Values-c640c62e0e064453b90c82491a5876d9\"",
-      "HowToJoin": "\"\n1.Join their social media\n• Discord -- https://discord.com/invite/socean\n• Medium -- \"\"https://medium.com/@soceanfinance\n• Twitter -- https://twitter.com/SoceanFinance\"",
-      "FoundingTeam": "\"\n\nBefore starting Socean, the core team worked as software engineers and data scientists, with degrees in economics, finance, law, mathematics, and computer science from Oxford, Cambridge, the LSE, and the University of Washington.\"\"F.P.Lord, Co-Founder at Socean Labs\"\"https://www.linkedin.com/in/fplord/\"\"Other founders and angel investors have invested in Socean, including Julian Koh (Ribbon Finance), Francesco Agosti (Phantom), James Moreau (Jet Protocol), Cindy Leow (Drift Protocol), James Simpson (mStable) SOLBig Brain and Cozomo de’ Medici.\"\"https://soceanfi.notion.site/Team-and-Investors-9187c7605b3844f9a514690c635a3db3\"",
-      "AdditionalInfo": "\"ALL INFO-\"\"https://www.notion.so/Socean-Finance-c0dfcb8ae6224fd8b1b87a5355ce774f\"\"\nFAQ—https://soceanfi.notion.site/FAQ-e0e2b353a44a4c11b53f614f3dc7b730#49079e692fcd472baca0d2890279ea9a\"\"https://coinmarketcap.com/currencies/socean-staked-sol/\"",
-      "discordLink": "https://discord.com/invite/socean",
-      "twitterLink": "https://twitter.com/SoceanFinance",
-      "websiteLink": "https://www.socean.fi/en/",
-      "updatedAt": "2022-12-23T11:18:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:18:00.000Z",
-      "title": "Socean "
-    }
-  },
-  {
-    "id": "4a941732-2f96-4691-8e0d-69f9593679f8",
-    "attributes": {
-      "age": "2019",
-      "Token": "$HAUS",
-      "type": "February 2019",
-      "Blockchain": "Ethereum",
-      "Community": "0 / 6293",
-      "About": "\"\"\"HausDAO is the hub from which each working group requests their budget. Each ‘Department’ has its own DAO for optimal autonomy.DAOhaus is the no-code platform for creating and managing a Moloch DAO.DAOhaus allows you to disburse and monitor fund transfers from a shared treasury in a variety of ways.\"\"Our mission is to foster a diverse, open economy of transparent cooperation.DAOs are integral to Ethereum and the growth of digital communities across the globe and DAOhaus is here to make that a reality.\"\"https://daohaus.club/docs/users/intro-why\"\"https://daohaus.club/docs/devs\"\"https://medium.com/daohaus-club/haus-launch-bd781bbbf13a\"",
-      "HowToJoin": "\"\n1.HausParty is the weekly community call and podcast open to all. We usually start with some updates from the community, into some conversation with a guest from the space.\"\"Join their social media\n• Discord -- https://discord.com/invite/daohaus\n• Twitter -- https://twitter.com/nowdaoit\"",
-      "FoundingTeam": "\"\n\"\"John D Storey, Founder of Daohaus and legt.\nEnabling creative & collaborative construction through technical advancements through blockchain enabled finance and governance models to disrupt HOA structures across the globe.\"\"https://www.linkedin.com/in/johndstorey\"",
-      "AdditionalInfo": "\"\nhttps://daohaus.club/docs/users/haus-token\"\"https://ethplorer.io/address/0xf2051511b9b121394fa75b8f7d4e7424337af687#chart=candlestick\"\"https://coinmarketcap.com/currencies/daohaus/\"\"https://coinmarketcap.com/currencies/daohaus/\"",
-      "discordLink": "https://discord.com/invite/daohaus",
-      "twitterLink": "https://twitter.com/nowdaoit",
-      "websiteLink": "https://daohaus.club/",
-      "updatedAt": "2022-12-23T11:19:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:19:00.000Z",
-      "title": "HausDAO"
-    }
-  },
-  {
-    "id": "181d5cc9-73c6-42c7-815d-e7501d5a5079",
-    "attributes": {
-      "age": "restarted 20th June 2022",
-      "Token": "$MDAO",
-      "type": "Investment DAO",
-      "Blockchain": "Ethereum",
-      "Community": "48 /  1075",
-      "About": "\"\"\"MarsDAO is a multifunctional decentralized platform designed for the use of crypto tools.\"\"MarsDAO is a community token of a multifunctional decentralized platform for using various investment instruments in the cryptocurrency market and operating on the principle of decentralized autonomous organizations (DAO).\"\"https://daomars.com/\"\"Marsdao (was inactive) was an offshoot DAO of the unidao project, which built for a scaled launching platform of no-code DeFi investment DAOs on top of the Aragon governance platform. Marsdao carried out over 200 Aragon proposals before it ceased governance at late 2020, leaving most links for both unidao and Marsdao inactive as of at the time of writing (Aug. 2022).\"\"MarsDao is the union of our VC and Blockchain technology, a DeFi platform that creates growth technologies and funding structure for startups, while at the same time reducing risks for investors.\"\"Our focus is on building strong relationships and helping to spur on the development of the ecosystem and our goal is help the most compelling companies in the space to flourish.\"\"https://marsdao.net/\"\"https://deepdao.io/organization/f81b4886-277e-4dbf-89c1-e441bb5669ad/brainstorm\"",
-      "HowToJoin": "\"\n1.Join their social media\n• Discord -- https://bit.ly/3nqUSWQ\n• Medium -- https://bit.ly/3AfmKEZ\n• Twitter -- https://bit.ly/3Nw1RZi\"\"• Telegram -- \"\"https://t.me/unidao_en\"",
-      "FoundingTeam": "\"\n\nWe are a group of blockchain enthusiasts and science fiction fans at the same time. We are deeply inspired by technology, by the speed of blockchain technology, and by the development of smart contracts on top and alongside some of these existing protocols (layer-2 solutions.)\"\"Yawn, co-founder\"\"https://docs.marsecosystem.com/whitepaper/marsdao\"",
-      "AdditionalInfo": "\"\nhttps://coinmarketcap.com/currencies/marsdao/\"\"https://docs.daomars.com/\"\"https://www.coinbase.com/price/marsdao\"",
-      "discordLink": "https://discord.gg/RQ5WYDxUF3",
-      "twitterLink": "https://bit.ly/3Nw1RZi",
-      "websiteLink": "https://daomars.com/",
-      "updatedAt": "2022-12-23T11:19:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:19:00.000Z",
-      "title": "MarsDao"
-    }
-  },
-  {
-    "id": "350f64f3-f961-4306-ac29-4cb5903dfe8d",
-    "attributes": {
-      "age": "January 2020",
-      "Token": "$CRV",
-      "type": "Protocol DAO",
-      "Blockchain": "Ethereum",
-      "Community": "80056/38531",
-      "About": "\"\"\"Curve is an exchange liquidity pool on Ethereum (like Uniswap(https://uniswap.exchange/)) designed for\"\" (1) extremely efficient stablecoin trading \"\"(2) low risk, supplemental fee income for liquidity providers, without an opportunity cost.\"\"Its  built around stablecoin liquidity in order to provide steadier interest returns without having to hold a very volatile asset. Curve aims to help liquidity providers maximize return while also minimizing trader fees, reducing price slippage, mitigate risk, and provide ample liquidity.\"\"https://resources.curve.fi/\"\"https://messari.io/asset/curve\"\"https://coinmarketcap.com/alexandria/people/michael-egorov\"",
-      "HowToJoin": "\"\nJoin their community via their social media\"\"1.discord     https://discord.gg/9uEHakc\"\"2.Telegram    https://t.me/curvefi\n\"",
-      "FoundingTeam": "\"\"\"Michael Egorov\"\"The founder and CEO of Curve\"\"He is currently working as the CEO of Curve and has previously worked as CTO at NUCypher and as a Senior Software Engineer at LInkedIn. Egorov worked on infrastructure tools at LinkedIn, where he faced scaling challenges. He has experience as a scientist and physicist\"\"https://www.linkedin.com/in/michael-egorov\"\"https://twitter.com/newmichwill?lang=en\"\"https://coinmarketcap.com/alexandria/people/michael-egorov\"",
-      "AdditionalInfo": "\"https://curve.fi/rootfaq\"\"https://curve.fi/whitepaper\"\"https://resources.curve.fi/\"\"https://medium.com/@crypto.tutorials/curve-fi-how-does-it-work-b673a8fe16cc\"\"\n\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:23:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:22:00.000Z",
-      "title": "Curve "
-    }
-  },
-  {
-    "id": "3a544ec9-7e22-4c18-bf09-cca9faaee838",
-    "attributes": {
-      "age": "2020",
-      "Token": "$CREAM",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "- / 8.9k",
-      "About": "\"\"\"C.R.E.A.M. Finance is a decentralized lending protocol for individuals, institutions, and protocols to access financial services. Part of the yearn finance ecosystem, it is a permissionless, open source, and blockchain agnostic protocol serving users on Ethereum, Cream is a lending platform that enables users to permissionless borrow or lend from a pool of assets. Rather than interest rates being set by individuals, they are determined algorithmically based on the proportion of assets lent out. The cream is a fork of Compound.\"",
-      "HowToJoin": "\"\"\"1. Join socials for joining the community \"\"1. Via kakaotalk : https://open.kakao.com/o/gQ0wpOUc\"\"2. To contact them via mail: mkt@cream.finance\"\"3.  Detailed steps to buy $CREAM and participate in governance: https://www.binance.com/en-IN/how-to-buy/cream-finance \"",
-      "FoundingTeam": "\"Jeffrey Huang, Founder of CreamFinance\"\"https://www.linkedin.com/in/jeffrey-huang-33b711157/?originalSubdomain=tw\"\"https://twitter.com/machibigbrother\"",
-      "AdditionalInfo": "\"https://blog.naver.com/creamfi\"\"https://forum.cream.finance/\"\"https://immunefi.com/bounty/creamfinance/\"\"https://docs.cream.finance/\"\"https://medium.com/cream-finance\n\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/CreamdotFinance",
-      "websiteLink": "https://app.cream.finance/",
-      "updatedAt": "2022-12-23T11:59:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:22:00.000Z",
-      "title": "CreamFinance"
-    }
-  },
-  {
-    "id": "c65052ea-58c9-4132-bc7e-3625abe508a4",
-    "attributes": {
-      "age": "October 2020",
-      "Token": "$AUDIO",
-      "type": "Protocol DAO",
-      "Blockchain": "Ethereum",
-      "Community": "28246/37502",
-      "About": "\"\"\"Audius is a fully decentralized music streaming protocol built with public blockchain infrastructure and other decentralized technologies. Audius allows artists to distribute to and get paid directly from their fans.The mission of the Audius project is to give everyone the freedom to distribute, monetize, and stream any audio content. The Audius protocol brings artists, node operators, and fans together in an incentive-aligned way.\"\"https://audius.co/\"\"https://messari.io/asset/audius/profile\"",
-      "HowToJoin": "\"\n\n1.To work at Audius : https://audius.org/careers\"\"2.Join via discord : https://discord.com/invite/audius\"\"3.Join via medium: https://medium.com/audius/community-meet-audio-cf1e1d052fd6(https://medium.com/audius)\"",
-      "FoundingTeam": "\"\"\"Roneil Rumburg\"\"Co-founder and CEO of Audius\"\"He worked as the Engineering Partner at KPCB Edge and co-founded Backslash.\"\"https://www.linkedin.com/in/roneilr\"\"https://twitter.com/roneilr?lang=en\"\"Forrest Browning\"\"Co-founder and CPO of Audius\"\"He previously co-founded StacksWare which is acquired by Avi Networks.He also worked as a software engineer at Mithril capital management and was the founding engineer at Chatous.\"\"https://www.linkedin.com/in/forrestbrowning\"\"https://twitter.com/forrestbrowning?lang=en\"",
-      "AdditionalInfo": "\"https://audius.co/daorecords_\"\"https://audius.org/token/\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:24:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:24:00.000Z",
-      "title": "Audius"
-    }
-  },
-  {
-    "id": "46bfc995-3f03-49bd-86b4-631edb8c460a",
-    "attributes": {
-      "age": "2021",
-      "Token": "$OCEAN",
-      "type": "Protocol DAO",
-      "Blockchain": "Ethereum",
-      "Community": "/8594",
-      "About": "\"\"\"OceanDAO is a key component in the growth and sustainability of the Ocean Ecosystem. It also funds a large number of teams that build projects across core DAO pillars. It offers community grants curated by the broader community of OCEAN holders.\"\"https://oceanprotocol.com/dao\"",
-      "HowToJoin": "\"\n\"\"Join their community via\"\"1.Discord:https://discord.com/invite/TnXjkR5\"\"2.Telegram:https://t.me/OceanProtocol_Community\"\"Join as an ambassador through a program where one has to complete the ocean academy \"\"https://oceanacademy.io/\"\"One can get funds too… they have to submit a proposal for DAO to review and register into a Funding Round to recieve the grant\"",
-      "FoundingTeam": "\"https://oceanprotocol.com/community\n\"\"Brune Pon\"\"Co-Founder of Ocean Protocol\"\"He is also Global Innovator at World Economic Forum. He has also co-founded BigchainDB, a blockchain database for data driven use cases and ascribe.io, a service for creators to claim attribution and transfer rights on the blockchain. He was a Founder at Avantalion International Consulting, whose mission is to build banks for the unbanked.\"\"https://twitter.com/BrucePon\"\"https://www.linkedin.com/in/ponbruce/\"\"Cristina Cenuse\"\"Co-Founder of Ocean Protocol\"\"She is currently working as the Marketing Director at BigchainDB . She is also the co-founder at WefflerMark.She worked as the marketing and communication Director at Romsys.\"\"https://twitter.com/PonChristina\"\"https://www.linkedin.com/in/cristinacenuse/\"\"Daryl Arnold\"\"Co-Founder of Ocean Protocol\"\"Daryl Arnold is an entrepreneur experienced in data, marketing, technology, sustainability and health. Daryl is the founder and CEO of ConnectedLife a Singapore headquartered company immersed in clinical research, data science and product development.\"\"https://twitter.com/darylarnold\"\"https://www.linkedin.com/in/darylarnold/\"\"Dimitri De Jonghe\"\"Co-Founder of Ocean Protocol\"\"He is currently working in Working for Ocean Protocol , BigchainDB , ascribe.io(http://ascribe.io) .He is also a co-chair of the W3C Interledger community, a blockchain interoperability protocol.\"\"https://twitter.com/DimitriDeJonghe\"\"https://www.linkedin.com/in/dimitridejonghe/\"\"Don Gossen\"\"Co-Founder of Ocean Protocol\"\"He is a Serial Entrepreneur. He is also the Founder & CEO @ Nevermined. He partly works as the chairperson at Keyko.\"\"https://twitter.com/dongossen\"\"https://www.linkedin.com/in/donald-gossen-40ab96/\"\"Trent McConaghy\"\"Co-Founder of Ocean Protocol\"\"https://twitter.com/trentmc0\"\"https://medium.com/@trentmc0\"",
-      "AdditionalInfo": "\"\n\"\"https://github.com/oceanprotocol/oceandao/wiki\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:25:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:25:00.000Z",
-      "title": "Ocean DAO"
-    }
-  },
-  {
-    "id": "df2c0397-1a14-4adf-8596-6a5651a676ed",
-    "attributes": {
-      "age": "2021",
-      "Token": "$HNY",
-      "type": "Service DAO",
-      "Blockchain": "Solana",
-      "Community": "120+/1102",
-      "About": "\"\"\"HoneyDAO is a collective of influencers, investors, developers and founders working towards improving DeFi. One project at a time is their main principle. It works closely with funded projects to optimize growth in this competitive DeFi ecosystem.\"\"https://www.honeydao.com/\"\"Honey DAO - DAO Profile - Messari(https://messari.io/dao/honey-dao)\"",
-      "HowToJoin": "\"\n\"\" Join their community via their discord \"\"https://discord.com/invite/gGdqrKKyFj\"\"Join their forum for various discussions\"\"https://hive.honeydao.com/login\"\"Users can contact them via mail\"\"business@honeydao.com(mailto:business@honeydao.com) \"",
-      "FoundingTeam": "\"\n\"\"-NA-\"",
-      "AdditionalInfo": "\"\n\"\"https://blog.honeydao.com/\"\"https://tripetto.app/run/E5YYVUH3FQ\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:25:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:25:00.000Z",
-      "title": "HoneyDAO"
-    }
-  },
-  {
-    "id": "50b25b31-3301-4c36-ba49-c5894109f22b",
-    "attributes": {
-      "age": "2020",
-      "Token": "$RGT",
-      "type": "Protocol DAO",
-      "Blockchain": "Ethereum",
-      "Community": "10000+/13619",
-      "About": "\"\"\"Rari Capital is a DAO that provides lending, borrowing and yield farming opportunities. It features a permissionless interest rate protocol called Fuse. This protocol allows anyone to create a lending pool of any supported assets using custom parameters. The DAO also provides earning opportunities through yield farming. It allows you to deposit supported funds. Rari Capital empowers individuals to break free by creating new opportunities, communities and financial products.\"\"https://messari.io/asset/rari-governance-token/profile\"\"https://www.rari.capital/\"",
-      "HowToJoin": "\"\n1.Join via social medias\"",
-      "FoundingTeam": "\"\"\"David Lucid\"\"Co-Founder of Rari Capital\"\"David is the Co-founder and Engineering Lead at Rari Capital.\"\"https://www.linkedin.com/in/david-lucid-241b32167/\"\"https://twitter.com/davidslucid\"\"Jack Lipstone\"\"Co-Founder of Rari Capital\"\"Jack is the Investor at Chapter One Ventures . Jack worked on a mobile wallet called Ambo which acquired by MyCrypto in January 2019. In 2020, Jack founded a DeFi Protocol called Rari Capital.\"\"https://www.linkedin.com/in/jacklipstone/\"\"https://twitter.com/JackLipstone?ref_src=twsrc^google|twcamp^serp|twgr^author(https://twitter.com/JackLipstone?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)\"\"Jai Bhavnani\"\"Co-Founder of Rari Capital\"\"HE is currently the CEO of Pentagon.He worked at MyCrypto as VP. HE was also the consultant at Bain &Company. He previously was the CEO of Ambo as well.\"\"https://www.linkedin.com/in/jaibhavnani/\"\"https://twitter.com/jai_bhavnani\"",
-      "AdditionalInfo": "\"https://forums.rari.capital/\"\"https://info.rari.capital/\"\"http://app.rari.capital/\"\"https://github.com/Rari-Capital\n\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:26:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:26:00.000Z",
-      "title": "Rari Capital"
-    }
-  },
-  {
-    "id": "87d4d20f-29a4-4473-a514-2536a80ed063",
-    "attributes": {
-      "age": "May 2021",
-      "Token": "$ALD",
-      "type": "Protocol DAO",
-      "Blockchain": "Ethereum",
-      "Community": "/7761",
-      "About": "\"\"\"AladdinDAO is a decentralized network to shift crypto investments from venture capitalists to wisdom of crowds through collective value discovery. A group of world class experts in DeFi known as the AladdinDAO Boule identifies the most promising DeFi projects and enables AladdinDAO community members to enjoy the returns of their liquidity mining programs. It is composed of a team of committee members known as DeFi's first boule.\"\"https://coinmarketcap.com/alexandria/article/what-is-aladdindao-ald\"\"https://docs.aladdin.club/\"",
-      "HowToJoin": "\"\"\"1.Join via the following links:\"\"Twitter: https://twitter.com/AladdinDAO\"\"Medium: https://medium.com/aladdindao(https://aladdindao.medium.com/)\"\"Telegram: https://t.me/aladdin_dao\"\"Discord: https://discord.gg/UUabSUvRRs\"\"2.For contributors or developers:\"\"Github: https://github.com/AladdinDAO/\"",
-      "FoundingTeam": "\"\"\"Aladdin DAO created by 14 founding contributors, such as Robert Leshner (Compound) and Kain Warwick (Synthetix)—featuring core contributors from notable crypto organisations such as Polychain, Digital Currency Group, 1kx, Multicoin, CMS, Nascent, Alameda and DeFi Alliance.\"",
-      "AdditionalInfo": "\"\nhttps://forum.aladdin.club/\"\"https://coinmarketcap.com/alexandria/article/what-is-aladdindao-ald\"\"https://collectiveshift.io/ald/\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:26:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:26:00.000Z",
-      "title": "Aladdin DAO"
-    }
-  },
-  {
-    "id": "26b0fd9f-4097-42bc-ba57-70aaa6b1714e",
-    "attributes": {
-      "age": "2020",
-      "Token": "$LAO",
-      "type": "Investment DAO",
-      "Blockchain": "Ethereum",
-      "Community": "5/",
-      "About": "\"\"\"The LAO was organized in the spirit of The DAO, as a member-directed venture capital fund organized in the United States, with an aim to be compliant with U.S. law. Like The DAO, The LAO allows Members to pool capital, invest in projects, and share in any proceeds from the investment.\"\"https://docs.thelao.io/\"",
-      "HowToJoin": "\"\"\"1. To become a Member\"\"  2.Join twitter\"\"https://twitter.com/thelaoofficial\"\"3.Join telegram\"\"https://t.me/joinchat/FLvdBBVz3o9pfi-rfd9BqQ\"\"1. To submit a proposal- Apply for funding from The LAO. If a member is interested in funding your project, they can put it up for a vote and, if more members vote to support the project than no, during a 7 day voting period, the investment will be committed.\"\"https://www.thelao.io/apply\"",
-      "FoundingTeam": "\"\"\"List of mentors can be found in the following link\"\"https://www.thelao.io/mentors\"",
-      "AdditionalInfo": "\"https://www.thelao.io/governance-proposals\"\"https://www.thelao.io/proposals\"\"https://docs.thelao.io/Membership.html#are-there-any-other-requirements-needed-to-become-a-member\"\"https://docs.thelao.io/\"",
-      "discordLink": "",
-      "twitterLink": "",
-      "websiteLink": "",
-      "updatedAt": "2022-12-23T11:27:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-23T11:27:00.000Z",
-      "title": "theLAO"
-    }
-  },
-  {
-    "id": "53930330-7dbe-4a45-8f12-be79f8525102",
-    "attributes": {
-      "age": "September 2020",
-      "Token": "$BAKE",
-      "type": "PROTOCOL",
-      "Blockchain": "Binance Smart Chain",
-      "Community": " no info / no info ",
-      "About": "\"\"\"BakeryToken is a part of the BakerySwap ecosystem. Liquidity providers are rewarded with BAKE tokens which can be used to earn a share of BakerySwap’s trading fees and to participate in voting as part of BakerySwap’s governance process.\"\"https://coinmarketcap.com/currencies/bakerytoken/\"\"On the website of BakerySwap, you can see different kinds of food items and snacks named under the earn BAKE tab, which includes waffles, doughnuts, rolls, latte, croissants, etc. Each snack specifies a different kind of earn BAKE method. It is arranged with a theme if you are hungry take something to earn BAKE, which is a very peculiar method and idea to attract the user. If you are selecting bread you can stake BAKE to earn BAKE. If you are selecting waffles you can stake BAKE-BUSD BLP to earn BAKE, each case ROI will be different.\"\"https://www.cryptonewsz.com/forecast/bakerytoken-price-prediction/\"",
-      "HowToJoin": "\"\n1. Where Can You Buy BakeryToken (BAKE)?\"\"BakeryToken (BAKE) can be purchased or sold on the following exchanges:\"\"- Binance(https://coinmarketcap.com/exchanges/binance/)\"\"- Gate.io(https://coinmarketcap.com/exchanges/gate-io/)\"\"- PancakeSwap(https://coinmarketcap.com/exchanges/pancakeswap/)\"\"- Hotbit(https://coinmarketcap.com/exchanges/hotbit/)\"\"- Anyswap(https://coinmarketcap.com/exchanges/anyswap/)\"\"https://coinmarketcap.com/currencies/bakerytoken/\"\"2.BAKE tokens can be easily bought through the procedures below:\"\"- create an account with the crypto trading platform.\"\"- Then transfer a specific amount of fiat money to your crypto account through the funding options.\"\"- Upon confirmation of the transaction, BAKE tokens can then be purchased.\"\"https://ptpwallet.com/cryptocurrency-list/what-is-bakerytoken-bake/\"",
-      "FoundingTeam": "\"\n\nThe operation of BakeryToken deals with a large collection of liquidity and funds. As such, the founding team remains an anonymous group of developers who share the same belief in the extensive applications of decentralized autonomous organizations (DAOs).\"\"https://ptpwallet.com/cryptocurrency-list/what-is-bakerytoken-bake/\"",
-      "AdditionalInfo": "\"\nhttps://phemex.com/academy/what-is-bakeryswap\"\"https://www.cryptonewsz.com/forecast/bakerytoken-price-prediction/\"\"https://ptpwallet.com/cryptocurrency-list/what-is-bakerytoken-bake/\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/bakery_swap",
-      "websiteLink": "https://www.bakeryswap.org/#/home",
-      "updatedAt": "2022-12-26T04:35:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-26T04:35:00.000Z",
-      "title": "BakeryToken"
-    }
-  },
-  {
-    "id": "ad483680-638c-4630-b700-0ce63b60e468",
-    "attributes": {
-      "age": "Joined on June13, 2021",
-      "Token": "$CRISIS",
-      "type": "Investment DAO",
-      "Blockchain": "Ethereum",
-      "Community": "0 / Not available",
-      "About": "\"\"\"CrisisDAO is a technological investment collective dedicated to \"creating open, self-governing, financially successful, blockchain-driven, cross-border agreement at scale and speed\", under the assumption that best collaboration practices and mutual professionalization would create more sustainable and equitable DAO participation and control, and make it more financially profitable than traditional investment companies.\"\"https://deepdao.io/organization/baefd5d2-1941-4baa-a6bf-8f87247c99f2/organization_data/dig_deeper\"",
-      "HowToJoin": "\"\n1..Join their social media\n• Discord -- Not available\n• Twitter -- https://twitter.com/crisisdao\"",
-      "FoundingTeam": "\"\n\nCrisisDAO started when a group of technologists deliberately set out to recruit people from diverse backgrounds drawn by a common interest to explore the use of bleeding-edge technologies in the blockchain. \"\"https://hackmd.io/PIH8UL0oQOeB10xyLvhpmw?view/\"",
-      "AdditionalInfo": "\"\nhttps://hackmd.io/8kB9cHYXQIyOZj-VFcIR6g\"\"https://hackmd.io/PIH8UL0oQOeB10xyLvhpmw?edit\"\"https://snapshot.org/#/crisisdao.eth\"\"https://hackmd.io/@crisisdao/BJyQ2kQid\"\"https://etherscan.io/token/0x992f9bb313368ac11977b62490a83eeee54d9e1f\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/crisisdao?lang=en",
-      "websiteLink": "https://crisis.network/",
-      "updatedAt": "2022-12-26T04:36:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-26T04:36:00.000Z",
-      "title": "Crisis DAO"
-    }
-  },
-  {
-    "id": "fe767ba8-2dfd-4bcb-b1cf-ce2c83cfdc9d",
-    "attributes": {
-      "age": "16 March 2020",
-      "Token": "$GSAIL",
-      "type": "GOVERNANCE DAO, digital asset platform",
-      "Blockchain": "SOLANA",
-      "Community": "12k /  4173",
-      "About": "\"\"\"SolanaSail aims to create an all-encompassing DeFi ecosystem on the Solana stack with its specialized vault, governance, DeFi and NFT functionality.\"\"SolanaSail is a digital asset platform ecosystem with a native SPL utility token $SAIL and native governance token $gSAIL.\"\"gSAIL: The governance platform & Decentralized onchain SPL governance platform, powered by gSAIL tokens. Token holders will be able to generate proposals related to all SPL tokens and platforms operating on the Solana framework and have the right to participate in voting for their favorite projects. The more SPL token a user holds (gSAIL), the greater their voting power. By publishing the open-source code on our public git, we want to provide any SPL tokens the possibility to use and/or improve\nour onchain program.\"\"https://www.solanasail.com/docs/SolanaSail_WP_0_1_0.pdf\"",
-      "HowToJoin": "\"\n1..Join their social media\n• Discord -- https://discord.com/invite/37cMrQ8kV9\n• Medium -- https://solanasail.medium.com/\n• Twitter -- https://twitter.com/SolanaSail\"",
-      "FoundingTeam": "\"\n\nAnatoly Yakovenko,Co-founder @ Solana\"\"10+ years of building high performance Operating Systems.\"\"https://twitter.com/aeyakovenko\"\"https://www.linkedin.com/in/anatoly-yakovenko/\"",
-      "AdditionalInfo": "\"\nhttps://dao-beta.mango.markets/dao/gSAIL\"\"https://coinmarketcap.com/currencies/solanasail/\"",
-      "discordLink": "https://discord.com/invite/37cMrQ8kV9",
-      "twitterLink": "https://twitter.com/SolanaSail",
-      "websiteLink": "https://www.solanasail.com/",
-      "updatedAt": "2022-12-26T04:36:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-26T04:36:00.000Z",
-      "title": "GSAIL / SOLANASAIL  GOVERNANCE DAO"
-    }
-  },
-  {
-    "id": "16128ba0-c999-4779-ad9a-79d1ed68de17",
-    "attributes": {
-      "age": "first quarter of 2022",
-      "Token": "$LBY",
-      "type": "Platform DAO",
-      "Blockchain": "Ethereum",
-      "Community": "1.1k / 932",
-      "About": "\"\"\"Lobby is providing a platform for leading crypto issues and advocating for policymakers and the general public.Its on a mission to decentralize policymaking. It(http://policymaking.It) is a foundation that helps us steer clear of heavy-handed regulation related to DeFi, DEXs, and stablecoins, a coomunity - to utilize unique opportunities in the Lobby ecosystem to directly impact proposals and a path participate in Lobby Governance to help protect DeFi and be a part of the solution.\"\"Lobby Token ($LBY) is fighting to protect cryptocurrency from harmful government legislation. With every transaction, $LBY donates to a range of top-tier organizations that lobby the US government to protect crypto on state and federal levels.\"\"https://www.lobbytoken.io/\"\"https://lobbytoken.medium.com/\"",
-      "HowToJoin": "\"\n1.Join the community using:\"\"Participate in Lobby Governance to help protect DeFi and be a part of the solution.\"\"https://t.me/lbytoken\"\"\n2.Join their social media\n• Discord -- https://discord.gg/EZa6xfNZDZ\n• Telegram --\"\" https://t.me/lbytoken\n• Twitter -- https://twitter.com/lobby_token\"\"• Medium -- \"\"https://lobbytoken.medium.com/\"",
-      "FoundingTeam": "\"\n\nEli Finkelman\"\"Jayson Winer\"\"James Lenhart \"\"Abe Zeines.\"\"https://www.coinbase.com/price/lobby\"\"Wilson Hobbs, Founder at Lobby\"\"https://www.linkedin.com/in/wbhob/\"",
-      "AdditionalInfo": "\"\nhttps://www.coinbase.com/price/lobby\"\"https://www.lobbytoken.io/\"",
-      "discordLink": "https://discord.gg/EZa6xfNZDZ",
-      "twitterLink": "https://twitter.com/lobby_token",
-      "websiteLink": "https://www.lobbytoken.io/",
-      "updatedAt": "2022-12-26T04:38:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-26T04:38:00.000Z",
-      "title": "Lobby"
-    }
-  },
-  {
-    "id": "6a74e02c-dc05-474e-818f-8bfd3e5e8f74",
-    "attributes": {
-      "age": "2021",
-      "Token": "$LUCHA",
-      "type": "P2E",
-      "Blockchain": "Ethereum",
-      "Community": " 2.3k / 1.9k",
-      "About": "\"\"\"Luchadores.io is a 100% on-chain P2E auto battler. Customize your name, stats, skills, and wearables to win fights and earn $LUCHA.\"\"Luchadores are designed to exist forever on the Ethereum blockchain with 100% on-chain art + metadata. Chainlink VRF was used to randomly generate each luchador at the mint to ensure provable randomness and rarity. The play-to-earn mechanics will also be 100% on-chain to ensure provably fair gameplay.\"\"The Lucha DAO is voted on with Ethereum $LUCHADORES ERC-721s, while the ERC-20 token of the DAO lives on Polygon.\"",
-      "HowToJoin": "\"\n1. Join their social media to join the community\"",
-      "FoundingTeam": "\"\n\nNA\"",
-      "AdditionalInfo": "\"\nhttps://polygondex.com/track/token.aspx?id=0x6749441fdc8650b5b5a854ed255c82ef361f1596&s=LUCHA\"\"Medium(https://medium.com/@LuchadoresNFT)\"\"https://opensea.io/collection/luchadores-io\"\"https://etherscan.io/address/0x8b4616926705fb61e9c4eeac07cd946a5d4b0760\"",
-      "discordLink": "https://discord.com/invite/luchadores",
-      "twitterLink": "https://twitter.com/LuchadoresNFT",
-      "websiteLink": "https://luchadores.io/",
-      "updatedAt": "2022-12-27T10:56:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-26T04:38:00.000Z",
-      "title": "Luchadores.io"
-    }
-  },
-  {
-    "id": "a98fb729-1ff8-48fa-a582-d2c36d547a03",
-    "attributes": {
-      "age": "2020",
-      "Token": "$GDAO",
-      "type": "DAO Tool",
-      "Blockchain": "Ethereum",
-      "Community": "1k / 1.7k",
-      "About": "\" \"\"Governance DAO is a decentralized platform that offers governance as a service(GaaS). It provides effective solutions to have proper governance for any blockchain projects. They support decentralized project ownership. The advantages of this are that it reduces founder liability, enhances ease of contribution, and aligns token holders’ interests. This DAO provides high security to the users and maintains anonymity. Their protocol offers several services as part of the GaaS sandbox for any project to ensure their governance model works out of the box.\"",
-      "HowToJoin": "\"- You can buy GDAO tokens at the marketplace(/7908f001e61f4dfb97ec92c6f039cc3d) and participate in governance by voting on decisions on the forum(https://forum.gdao.info/login)\"\"- Join community via socials\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"Governor DAO (GDAO) Price, Charts, and News | Coinbase: gdao price, gdao, gdao coin(https://www.coinbase.com/price/governor-dao#FaqSection) \"\"Introduction - Governor DAO Docs(https://docs.governordao.org/)\"",
-      "discordLink": "https://discord.com/invite/5UKw3BC",
-      "twitterLink": "https://twitter.com/Governor_DAO",
-      "websiteLink": "https://governordao.org/",
-      "updatedAt": "2022-12-27T10:03:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-27T03:55:00.000Z",
-      "title": "Governor DAO"
-    }
-  },
-  {
-    "id": "6cfdf955-286a-4ac5-8047-ed60de09b293",
-    "attributes": {
-      "age": "2020",
-      "Token": "$MGD",
-      "type": "Grants DAO",
-      "Blockchain": "Ethereum",
-      "Community": "1.2k / 0",
-      "About": "\" \"\"MGD is the first decentralized platform supporting women-led projects. MGD is a community looking to provide valuable mentorship, resources, and grants for all those people who want to build great things. Their goal is to create a community where there is freedom and financial Independence for everyone. Their previous grants are Oxford Blockchain Society, Figura, Goodghosting, and CrytpCorner.Their sponsors include Polygon, harmony, MarkerDAO, MetaCartel, PoolTogetherm, Quantstamp, Unstoppable domains, and Panvala League.\"",
-      "HowToJoin": "\"1. To take part in Grants, you have to be a female Founder or Co-Founder, should be building a decentralized application, and working on a program that encourages women minorities part of their community.\nhttps://metagammadelta.com/grants\"\"2. Join the community via socials\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"Ethereum Layer 2 Solutions: An Interview with Meta Gamma Delta DAO Members | by Zoe Koulouris Augustinos | Upstate Interactive | Medium(https://medium.com/upstate-interactive/an-interview-with-dao-members-about-their-ethereum-layer-2-solution-a9d394a3bb81)\"",
-      "discordLink": "",
-      "twitterLink": "https://twitter.com/metagammadelta",
-      "websiteLink": "",
-      "updatedAt": "2022-12-27T10:26:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-27T03:56:00.000Z",
-      "title": "Meta Gama Delta"
-    }
-  },
-  {
-    "id": "f109a138-8510-4af7-b23b-b1fa73948fbf",
-    "attributes": {
-      "age": "2021",
-      "Token": "$cMETA,$vMETA",
-      "type": "DeFi, Investment DAO",
-      "Blockchain": "Solana",
-      "Community": "3.6k / 482",
-      "About": "\" \"\"MetaCollective is an investment DAO on Solana. MetaCollective uses 2 governance tokens, vMETA (Governance by the people) and cMETA is created by investors for other investors. Metacollective provides a platform for both investors and contributors. Its goal is to accelerate the growth of the Solana ecosystem. It supports NFT Trading, Yield Farming, Liquid Staking, and Token Selection. cMeta is used by investors and vMETA is used by Contributors. They aim to be the largest investment DAO in the Solana Ecosystem.\"",
-      "HowToJoin": "\"1. Join the community via Socials\"\"2. Discussion of new ideas and proposals is carried out on the forum(https://forum.meta-collective.digital/). There is also a Grape-verified channel for vMETA holders on the Discord server(https://discord.com/invite/NGBjgZSGG2).\"\"3. All voting is carried through the on-chain governance(https://governance.meta-collective.digital/)  using vMETA\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"Medium(/f109a13885104af7b23bb1fa73948fbf)\nhttps://docs.meta-collective.digital/\"",
-      "discordLink": "/4546dfda78264307a3777346c6e4e314",
-      "twitterLink": "",
-      "websiteLink": "https://docs.meta-collective.digital/",
-      "updatedAt": "2022-12-27T11:11:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-27T03:56:00.000Z",
-      "title": "Metacollective DAO"
-    }
-  },
-  {
-    "id": "7908f001-e61f-4dfb-97ec-92c6f039cc3d",
-    "attributes": {
-      "age": "2021",
-      "Token": "$RAID",
-      "type": "Service DAO",
-      "Blockchain": "Ethereum",
-      "Community": "1.5k / 178",
-      "About": "\" \"\"Raid Guild is a decentralized collection of builders, designers, and developers to create dApps for Web3 space. By sharing resources, branding, and collaborative tools, they aim to create a best-decentralized platform. Their profits will be used to fund other open-source tooling and public goods for their development. Their services include Full stack development, Consultations, design sprints, and Marketing. It is supported by Daohaus and moloch DAO.\"",
-      "HowToJoin": "\"You can buy $RAID tokens at:\nhttps://etherscan.io/token/0x154e35c2b0024b3e079c5c5e4fc31c979c189ccbhttps://www.coinbase.com/how-to-buy/raid-token\nFill out the Application form first and then join the discord and contribute to the community.\"\"https://www.raidguild.org/join\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"https://github.com/raid-guild \"\"https://handbook.raidguild.org/\"",
-      "discordLink": "https://discord.com/invite/rGFpfQf",
-      "twitterLink": "https://twitter.com/RaidGuild",
-      "websiteLink": "https://www.raidguild.org/",
-      "updatedAt": "2022-12-28T10:33:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-27T03:56:00.000Z",
-      "title": "Raid Guld DAO"
-    }
-  },
-  {
-    "id": "e5fef7a7-d7aa-4231-9046-d116f489f33d",
-    "attributes": {
-      "age": "May 2021",
-      "Token": "$WOOF",
-      "type": "Social/Community\nDAO",
-      "Blockchain": "Solana",
-      "Community": "84.1k / 15k",
-      "About": "\" \"\"WOOF DAO is set to control the $WOOF token ecosystem through a strong, fair launched-based community, and BUIDL a suite of services to DeFi, NFTs Solana users. WOOF was an experiment in spontaneous community building. The initial supply of 1 Trillion Tokens was airdropped to anyone who signed up. WOOF was the first dog coin to create a community DAO.\"",
-      "HowToJoin": "\"1. Join the community via social media\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"https://www.woofsolana.io/ \"\"https://solana.com/ecosystem/woofsolana  \"\"https://github.com/WoofSolana/ \"",
-      "discordLink": "https://discord.com/invite/woofsolana",
-      "twitterLink": "https://mobile.twitter.com/WoofSolana",
-      "websiteLink": "https://www.woofsolana.io/",
-      "updatedAt": "2022-12-29T16:06:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-28T10:04:00.000Z",
-      "title": "Woof DAO"
-    }
-  },
-  {
-    "id": "16b219c0-db82-4e61-85c9-431b17bf4444",
-    "attributes": {
-      "age": "December 2021",
-      "Token": "$JUSTICE",
-      "type": "Social/Community\nDAO",
-      "Blockchain": "Ethereum",
-      "Community": "7k /6.5K",
-      "About": "\" \"\"AssangeDAO is set to \"inspire a powerful solidarity network and fight for the freedom of Julian Assange\", by raising funds to help with his legal fees and campaigns, and to increase public awareness \"on the systemic failure of our justice systems.\" Notably, this organizational sophistication paves the ground for an interplay of legitimacy sources, namely: community, token-share, personal and organizational reputation, kinship, and the trust-less-trust of blockchains.\nThe primary mission of AssangeDAO is to Free Julian Assange. AssangeDAO has completed it's first objective in raising millions of dollars for Julian Assange's legal campaign and now continues forward with its mission\"",
-      "HowToJoin": "\"1. Acquire AssangeDAO $JUSTICE Governance Tokens to become part of our community and help draft & vote on proposals.\nParticipate in constructive discussions on our forum. ( Free Assange DAO - Free Assange DAO)\"\"2. Buy $JUSTICE Token here(https://coinmarketcap.com/currencies/assangedao/)\"\"3.  Join their chat via discord Discord\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"Footprint Analytics: AssangeDAO accusations highlight the danger of mixing activism and investing (yahoo.com)(https://finance.yahoo.com/news/footprint-analytics-assangedao-accusations-highlight-125338724.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAHodw3H6T-FLPAMkTB0JhsER7Xyc4E0RuZuX4ynLUu8HdhVmxKUb9sxRU28pvTPDYr96M_UYqP0Sg2J6NoEJqw_IFb6QD6NT_MI_5r7KAq0CtdnkPj3yt6kK_sIV2pNbg9gDWjyvyM2aJDtXQVMxpJsrvXPFJoe4AWWaCObjX9yk&guccounter=2) \"",
-      "discordLink": "https://discord.com/invite/9h6rsvGWNn",
-      "twitterLink": "https://twitter.com/AssangeDAO",
-      "websiteLink": "https://assangedao.org/",
-      "updatedAt": "2022-12-29T16:27:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-28T10:05:00.000Z",
-      "title": "Assange DAO"
-    }
-  },
-  {
-    "id": "04e64f58-e9ba-4d32-a3e2-a22aa3d25ce5",
-    "attributes": {
-      "age": "2022",
-      "Token": "$BABL",
-      "type": "DeFi",
-      "Blockchain": "Ethereum",
-      "Community": "1.1k / 7k",
-      "About": "\" \"\"Babylon.finance is a De-Fi investment and asset management protocol. It generates user-specified \"Gardens\" - tokenized liquidity pools of investor groups that propose, vote, and manage specific yield & risk strategies, built over a scope of tools and integrations. Currently, in the Beta phase and approaching public launch, the authority of Babylon lies mainly in the hands of the team & consultant multi-sig. $BABL holders' authority over the project is announced to assume multisig's responsibilities as the protocol gets battle-tested and stabilized.\"",
-      "HowToJoin": "\"Buy $BABL token and participate in governance : https://coinmarketcap.com/currencies/babylon-finance/ \"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"https://www.linkedin.com/company/babylonfinance/ \"\"🌴 Babylon Finance is shutting down | by Ramon Recuero | Babylon.finance | Medium(https://medium.com/babylon-finance/babylon-finance-is-shutting-down-b58abf1bc251) \"",
-      "discordLink": "https://discord.com/invite/ZqUrdYvt5e",
-      "twitterLink": "https://twitter.com/BabylonFinance",
-      "websiteLink": "http://www.babylon.finance/",
-      "updatedAt": "2022-12-29T16:42:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-28T10:04:00.000Z",
-      "title": "Babylon.finance"
-    }
-  },
-  {
-    "id": "43f90e2d-aee1-42d0-8ac8-ccedd8b99cc7",
-    "attributes": {
-      "age": "August 2021",
-      "Token": "",
-      "type": "Social/community DAO",
-      "Blockchain": "Ethereum",
-      "Community": "3.7 k / - ",
-      "About": "\" \"\"Shark DAO was established to purchase Nouns NFTs, and use accumulated assets to co-govern in Nouns DAO and take part in the development of its ecosystem and related artistic endeavors. It operates Shark Labs - \"a cohort of SharkDAO contributors that are actively working to ship Nounish projects,\" operating under 3 main outlets: media, art, and development.SharkDAO started as a group of Internet strangers interested in pooling together resources to acquire Nouns, a novel experiment in generative, code-driven art.\"",
-      "HowToJoin": "\"To join go to their discord Discord And proceed to the #onboard channel\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"https://medium.com/@sdaowin\"",
-      "discordLink": "https://discord.com/invite/8aThDGXHqH",
-      "twitterLink": "https://mobile.twitter.com/sharkdao",
-      "websiteLink": "https://sharks.wtf/",
-      "updatedAt": "2022-12-29T16:50:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-28T10:05:00.000Z",
-      "title": "Shark DAO"
-    }
-  },
-  {
-    "id": "860339e2-5bfc-47a0-9e31-d45f42483222",
-    "attributes": {
-      "age": "2019",
-      "Token": "$DG",
-      "type": "P2E",
-      "Blockchain": "Ethereum",
-      "Community": "40.7k / 3k",
-      "About": "\" \"\"Decentral Games ICE Poker is a free metaverse poker game where players earn tokens by completing daily challenges and competing against each other on a daily leaderboard. DG is a utility token spent to activate and upgrade ICE Wearables. xDG (staked DG) is the governance token that grants access to premium ICE Poker Guild tools, as well as votes to modify economic incentives and govern the Decentral Games treasury. Chips are non-transferable tokens that hold no value other than to play with at the DG play-to-earn poker table. Player Chips balances are reset daily at midnight UTC\"",
-      "HowToJoin": "\"1. Users can join through discord or twitter. The member can submit a proposal to join the DAO, usually offering tokens.\"\"2. Community members who hold $xDG tokens can help shape the future of Decentral Games by proposing and voting on key decisions. \"\"3. For a walkthrough on how to get $xDG tokens, follow our video guide(https://www.youtube.com/watch?v=RcpshjfZxc8) \"\"4. For an idea to be implemented, there are three phases in the process:\"\"            Phase 1: Forum Discussion\"\"            Phase 2: Proposal Submission\"\"            Phase 3: Proposal Voting\"",
-      "FoundingTeam": "",
-      "AdditionalInfo": "\"https://docs.decentral.games/\"",
-      "discordLink": "https://discord.com/invite/decentralgames",
-      "twitterLink": "https://twitter.com/DecentralGames?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-      "websiteLink": "https://decentral.games/",
-      "updatedAt": "2022-12-31T20:00:00.000Z",
-      "publishedAt": "",
-      "createdAt": "2022-12-31T19:47:00.000Z",
-      "title": "Decentral Games"
     }
   }
 ]

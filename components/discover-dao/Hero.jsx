@@ -14,17 +14,17 @@ const Hero = ({ setCurrentTag, bodyRef }) => {
     {
       id: 1,
       img: heroImg1,
-      alt: 'hero image 1',
+      alt: 'Social',
     },
     {
       id: 2,
       img: heroImg2,
-      alt: 'hero image 2',
+      alt: 'Infrastructure',
     },
     {
       id: 3,
       img: heroImg3,
-      alt: 'hero image 3',
+      alt: 'Investment',
     },
   ];
   const responsive = {
@@ -104,7 +104,7 @@ const Hero = ({ setCurrentTag, bodyRef }) => {
                 }}>
                   <Image
                     onClick={() => {
-                      setCurrentTag(hotTags[index].slice(2).trim());
+                      setCurrentTag(item.alt);
                       bodyRef?.current?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     src={item.img}
