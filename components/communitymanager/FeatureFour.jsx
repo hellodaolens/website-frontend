@@ -69,7 +69,7 @@ export const Container = styled.section`
   padding:100px 10%;
   h3{
   text-align:center;
-  font:normal 600 40px/52px Inter;
+  // font:normal 600 40px/52px Inter;
   }
   
   @media (min-width: 792px) {

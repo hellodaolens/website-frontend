@@ -131,7 +131,7 @@ export const Container = styled.section`
   padding:100px 10%;
   text-align:center;
   h3{
-    font:normal 600 40px/52px Inter;
+    // font:normal 600 40px/52px Inter;
   }
   
   .card{
