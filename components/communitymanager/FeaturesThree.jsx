@@ -20,28 +20,37 @@ const FeaturesThree = ({
       <a href={heroCTADestination} className='small Typeform-8 '>
         {heroCTAText}
       </a>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        {embedUrl ?
-          <iframe width="560" height="415" src={embedUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style={{ borderRadius: "12px" }} allowfullscreen> </iframe>
-          :
-          checkMediaType(content) === 'video' ? (
+      {embedUrl ?
+        <div style={{ width: "110%", aspectRatio: "1.8" }}>
+          <iframe
+            width="100%"
+            height="100%"
+            src={embedUrl}
+            title="YouTube video player"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            style={{ borderRadius: "12px" }}
+            allowFullScreen> </iframe>
 
-            <video
-              src={content?.data?.attributes?.url}
-              style={{ maxWidth: '600px', objectFit: "contain", borderRadius: "12px" }}
-              autoPlay
-              loop
-              muted
-              controls
-            />
-          ) : (
-            <img
-              src={content?.data?.attributes?.url}
-              style={{ maxWidth: '600px', objectFit: "contain", borderRadius: "12px" }}
-              blurDataURL={content?.data?.attributes?.url}
-            />
-          )}
-      </div>
+        </div>
+        :
+        checkMediaType(content) === 'video' ? (
+
+          <video
+            src={content?.data?.attributes?.url}
+            style={{ maxWidth: '600px', objectFit: "contain", borderRadius: "12px" }}
+            autoPlay
+            loop
+            muted
+            controls
+          />
+        ) : (
+          <img
+            src={content?.data?.attributes?.url}
+            style={{ maxWidth: '600px', objectFit: "contain", borderRadius: "12px" }}
+            blurDataURL={content?.data?.attributes?.url}
+          />
+        )}
 
       <div style={{ maxWidth: "400px" }}>
         <p>{heading}</p>
@@ -63,12 +72,12 @@ export const Container = styled.section`
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:120px 10%;
-  gap:80px;
+  padding:10%;
+  gap:40px;
   flex-direction: column-reverse;
   text-align:center;
   h3{
-    font:normal 600 40px/52px Inter;
+    // font:normal 600 40px/52px Inter;
   }
   .large {
     display:none;

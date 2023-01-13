@@ -27,7 +27,7 @@ const Hero = ({
         style={{ display: "flex", alignItems: "center", padding: "68px 0px", gap: "12px", height: "70%" }}>
         <div style={{}}>
           <h3>{heroHeading}</h3>
-          <p style={{ width: "500px", marginBottom: "30px" }}>{heroDescription}</p>
+          <p style={{ marginBottom: "30px" }}>{heroDescription}</p>
           <a href={heroCTADestination} className='Typeform-7 large' >
             {heroCTAText}
           </a>
@@ -62,12 +62,15 @@ export const Container = styled.section`
   height:100vh;
  
   h3{
-    font:normal 600 40px/52px Inter;
+    // font:normal 600 40px/52px Inter;
+  }
+  @media (min-width: 792px) {
+    height:100vh;
   }
   
   main{
     max-width: 1136px;
-    margin: auto;
+    margin: 0px 10%;
     text-align:center;
     flex-direction: column;
     .large{
