@@ -22,7 +22,15 @@ const FeaturesThree = ({
       </a>
       {embedUrl ?
         <div style={{ width: "110%", aspectRatio: "1.8" }}>
-          <iframe width="100%" height="100%" src={embedUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style={{ borderRadius: "12px" }} allowfullscreen> </iframe>
+          <iframe
+            width="100%"
+            height="100%"
+            src={embedUrl}
+            title="YouTube video player"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            style={{ borderRadius: "12px" }}
+            allowFullScreen> </iframe>
 
         </div>
         :
@@ -64,7 +72,7 @@ export const Container = styled.section`
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:120px 10%;
+  padding:10%;
   gap:40px;
   flex-direction: column-reverse;
   text-align:center;

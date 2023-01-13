@@ -66,7 +66,7 @@ const FeatureFour = ({
 
 export const Container = styled.section`
   background: url(${featuresBCG.src}) center/cover no-repeat;
-  padding:100px 10%;
+  padding: 10%;
   h3{
   text-align:center;
   // font:normal 600 40px/52px Inter;

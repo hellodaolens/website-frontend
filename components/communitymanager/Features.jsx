@@ -42,6 +42,7 @@ const Features = ({
             <>
 
               <div
+                key={idx}
                 style={{
                   padding: "28px",
                   borderTop: "0.5px solid",
@@ -79,7 +80,7 @@ const Features = ({
                     style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", height: "10px" }}>
                     {accordianItem.name} {open === idx ? <FaChevronDown /> : <FaChevronRight />}
                   </div>
-                  {open === idx && <div class="panel" style={{ marginTop: "20px" }}>
+                  {open === idx && <div className="panel" style={{ marginTop: "20px" }}>
                     <p>{accordianItem.description}</p>
                     <a
                       target="_blank"
@@ -92,7 +93,7 @@ const Features = ({
                   </div>}
                 </div>
               </div>
-              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12px 0px", borderRadius: "12px", width: "90%" }} />
+              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12px 0px", borderRadius: "12px", width: "100%" }} />
               }
             </>)}
 
@@ -119,7 +120,7 @@ const Features = ({
 
 export const Container = styled.section`
   background: url(${background1.src}) center/cover no-repeat;
-  padding:100px 10%;
+  padding:10%;
   display:flex;
   gap:48px;
   justify-content:center;

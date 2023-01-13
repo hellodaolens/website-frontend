@@ -70,7 +70,7 @@ export const Container = styled.section`
   
   main{
     max-width: 1136px;
-    margin: auto;
+    margin: 0px 10%;
     text-align:center;
     flex-direction: column;
     .large{
