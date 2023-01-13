@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import data from "../../../data.json";
 import banner from "../../../banner.json";
 import Image from "next/image";
-import { FaArrowRight, FaDiscord, FaTwitter } from "react-icons/fa";
+import { FaArrowRight, FaDiscord, FaLinkedin, FaTwitter } from "react-icons/fa";
 import howToJoinBCG from "../../../public/assets/discover-daos/how-to-join-bcg.png";
 import ReactLinkify from "react-linkify";
 import pattern from "../../../public/assets/discover-daos/pattern.png";
@@ -142,7 +142,26 @@ const SingleDaoPage = () => {
                 </a>
               </div>
             </div>
-
+            {dao?.attributes?.foundersDetails?.length > 0 && (
+              <div className="founders">
+                {dao?.attributes?.foundersDetails.map((singleFounder) => (
+                  <div key={singleFounder.name} className="single-founder">
+                    <span className="single-founder__name">
+                      {singleFounder.name}
+                    </span>
+                    <span className="single-founder__designation">
+                      {singleFounder.designation}
+                    </span>
+                    <p className="single-founder__description">
+                      {singleFounder.description}
+                    </p>
+                    <a href={singleFounder.link}>
+                      <FaLinkedin size={"28px"} />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="more-info">
               <h4>Helpful resources</h4>
               <a href={dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}>
@@ -378,7 +397,59 @@ export const Container = styled.section`
       padding: 9.15167px 25.6247px;
     }
   }
+  .founders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
 
+    margin-bottom: 36px;
+    .single-founder {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      border-radius: 16px;
+      background: #844aff3d;
+      border: 1px solid rgba(132, 74, 255, 0.24);
+      min-width: 370px;
+      max-width: 450px;
+      &__name {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 37.4687px;
+        line-height: 55px;
+        color: #6637f2;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+      &__designation {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18.5342px;
+        line-height: 19px;
+        color: #6637f2;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      &__description {
+        font-style: 400;
+        font-weight: 400;
+        font-size: 16;
+        line-height: 26px;
+        color: #211030;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .founders {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
   .more-info {
     padding: 0 1rem;
     color: black;
