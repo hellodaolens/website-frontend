@@ -1,32 +1,43 @@
-import styled from 'styled-components';
-import { useState } from 'react';
-import Image from 'next/image';
-import daosData from '../../data.json';
-import Link from 'next/link';
-import daoBCG from '../../public/assets/discover-daos/dao-bcg.png';
-import search from '../../public/assets/discover-daos/search.svg';
-import { DaoSearchBar } from '../common';
-import { useEffect } from 'react';
-import { hotTags, tags as tag, alltags } from '../utils/getPopularTags';
+import styled from "styled-components";
+import { useState } from "react";
+import Image from "next/image";
+import daosData from "../../data.json";
+import Link from "next/link";
+import daoBCG from "../../public/assets/discover-daos/dao-bcg.png";
+import search from "../../public/assets/discover-daos/search.svg";
+import { DaoSearchBar } from "../common";
+import { useEffect } from "react";
+import { hotTags, tags as tag, alltags } from "../utils/getPopularTags";
 const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
   const [daos, setDaos] = useState([]);
   useEffect(() => {
     let newDaos = [];
     if (currentTag === "All DAOs") {
-      newDaos = daosData;
-    } else
-      if (currentTag === "Hottest DAOs") {
-        newDaos = daosData.filter((item) => item.attributes.isPopular);
-      }
-      else {
-        newDaos = daosData.filter((item) => item.attributes.type.toLowerCase().includes(currentTag.toLowerCase()));
-      }
-    setDaos(allDao ? newDaos : newDaos.slice(0, 6));;
-
-  }, [currentTag])
+      newDaos = daosData.sort((a, b) =>
+        a.attributes.title.localeCompare(b.attributes.title)
+      );
+    } else if (currentTag === "Hottest DAOs") {
+      newDaos = daosData
+        .sort((a, b) => {
+          return a.attributes.title.localeCompare(b.attributes.title);
+        })
+        .filter((item) => item.attributes.isPopular);
+    } else {
+      newDaos = daosData
+        .sort((a, b) => a.attributes.title.localeCompare(b.attributes.title))
+        .filter((item) =>
+          item.attributes.type.toLowerCase().includes(currentTag.toLowerCase())
+        );
+    }
+    setDaos(allDao ? newDaos : newDaos.slice(0, 6));
+  }, [currentTag, allDao]);
 
   return (
-    <Container ref={bodyRef} className="section" style={{ marginTop: allDao ? "0px" : "" }}>
+    <Container
+      ref={bodyRef}
+      className="section"
+      style={{ marginTop: allDao ? "0px" : "" }}
+    >
       <div className="section-center">
         <header>
           <form className="search-box">
@@ -37,8 +48,9 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
               return (
                 <button
                   key={i}
-                  className={`${currentTag && tag.includes(currentTag) ? 'active' : ''
-                    } tag-btn`}
+                  className={`${
+                    currentTag && tag.includes(currentTag) ? "active" : ""
+                  } tag-btn`}
                   onClick={() => setCurrentTag(tag.split(" ")[1])}
                 >
                   {tag}
@@ -46,13 +58,15 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
               );
             })}
 
-            <div style={{
-              borderRadius: "100px",
-              border: "1px solid #E2E8F0",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}>
+            <div
+              style={{
+                borderRadius: "100px",
+                border: "1px solid #E2E8F0",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <select
                 value={currentTag}
                 style={{
@@ -65,18 +79,18 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                   padding: "8px 12px",
                   color: "#64748B",
                   font: "normal 500 16px/16px Inter",
-
-                }} onChange={(e) => {
-                  setCurrentTag(e.target.value)
+                }}
+                onChange={(e) => {
+                  setCurrentTag(e.target.value);
                 }}
               >
-
-                {alltags.map((tag, i) => <option key={i} value={tag.split(" ")[1]}>{tag}</option>)}
+                {alltags.map((tag, i) => (
+                  <option key={i} value={tag.split(" ")[1]}>
+                    {tag}
+                  </option>
+                ))}
               </select>
             </div>
-
-
-
           </div>
         </header>
 
@@ -89,23 +103,28 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
 
         <div className="daos-center">
           {daos.map((item) => {
-            let localTags = item?.attributes?.type.split(', ');
+            let localTags = item?.attributes?.type.split(", ");
             return (
               <Link
-                href={`/discover-dao/${item.attributes?.Token.replace('$', '')}`}
+                href={`/discover-dao/${item.attributes?.title}`}
                 key={item.id}
               >
                 <div
-                  className='card'
+                  className="card"
                   style={{
                     border: "1px solid #E2E8F0",
                     background: "white",
                     padding: "20px",
                     borderRadius: "12px",
-                  }} >
+                  }}
+                >
                   <div style={{ display: "flex", gap: "12px" }}>
                     <div
-                      style={{ borderRadius: "12px", width: "120px", height: "80px" }}
+                      style={{
+                        borderRadius: "12px",
+                        width: "120px",
+                        height: "80px",
+                      }}
                     >
                       <Image
                         className="logo"
@@ -116,21 +135,27 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                         style={{ borderRadius: "12px" }}
                         objectFit="contain"
                       />
-
                     </div>
 
                     <div>
-                      <h5 style={{ font: "normal 700 18px/24px Inter" }}>{item.attributes.title}</h5>
-                      <small style={{ font: "normal 400 12px/16px Inter", color: "#64748B" }}>
-                        {item.attributes.About.replace(/[^\w\s]/gi, '').substring(
-                          0,
-                          130
-                        )}
+                      <h5 style={{ font: "normal 700 18px/24px Inter" }}>
+                        {item.attributes.title}
+                      </h5>
+                      <small
+                        style={{
+                          font: "normal 400 12px/16px Inter",
+                          color: "#64748B",
+                        }}
+                      >
+                        {item.attributes.About.replace(
+                          /[^\w\s]/gi,
+                          ""
+                        ).substring(0, 130)}
                         ...
                       </small>
                     </div>
                   </div>
-                  {localTags.length > 0 &&
+                  {localTags.length > 0 && (
                     <div className="tags-list">
                       {localTags.map((tag, i) => {
                         if (i > 1) {
@@ -139,11 +164,17 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                         return (
                           <button
                             key={i}
-                            className={`${tag.toLowerCase().includes(currentTag.toLowerCase()) && currentTag !== "" ? 'active' : ''
-                              } tag-btn`}
+                            className={`${
+                              tag
+                                .toLowerCase()
+                                .includes(currentTag.toLowerCase()) &&
+                              currentTag !== ""
+                                ? "active"
+                                : ""
+                            } tag-btn`}
                             onClick={(e) => {
                               e.stopPropagation();
-                              setCurrentTag(tag)
+                              setCurrentTag(tag);
                             }}
                           >
                             {tag}
@@ -152,42 +183,47 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                       })}
 
                       {localTags.length > 2 && `+${localTags.length - 2} more`}
-
-                    </div>}
-
+                    </div>
+                  )}
                 </div>
-
               </Link>
             );
           })}
         </div>
-        {!allDao ?
+        {!allDao ? (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Link href="/all-daos">
-              <div style={{
-                display: "inline-block", padding: "20px",
-                border: "1px solid #E2E8F0",
-                borderRadius: "100px",
-                font: "normal 500 18px/24px Inter",
-                color: "#64748B",
-                margin: "20px",
-                cursor: "pointer",
-                background: "white"
-              }}>
+              <div
+                style={{
+                  display: "inline-block",
+                  padding: "20px",
+                  border: "1px solid #E2E8F0",
+                  borderRadius: "100px",
+                  font: "normal 500 18px/24px Inter",
+                  color: "#64748B",
+                  margin: "20px",
+                  cursor: "pointer",
+                  background: "white",
+                }}
+              >
                 Load more
-              </div></Link></div> :
-          <div style={{
-            display: "inline-block",
-          }}></div>}
-
-
+              </div>
+            </Link>
+          </div>
+        ) : (
+          <div
+            style={{
+              display: "inline-block",
+            }}
+          ></div>
+        )}
       </div>
-    </Container >
+    </Container>
   );
 };
 
 export const Container = styled.section`
-  z-index:10;
+  z-index: 10;
   position: relative;
   margin-top: 650px;
   @media screen and (max-width: 1024px) {
@@ -217,16 +253,14 @@ export const Container = styled.section`
     input {
       width: 100%;
       border-radius: 100px;
-      border: 1px solid #DED0FB;
-      padding: 0.75rem 0.75rem 0.75rem 2.5rem ;
+      border: 1px solid #ded0fb;
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem;
       background: white url(${search.src}) no-repeat 3% 50%;
       background-size: 20px 20px;
     }
-
-  
   }
-  .card{
-    background:pink;
+  .card {
+    background: pink;
     cursor: pointer;
     &:hover {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -247,14 +281,13 @@ export const Container = styled.section`
     button {
       background: white;
       border-radius: 100px;
-      border: 1px solid #E2E8F0;
+      border: 1px solid #e2e8f0;
       padding: 8px 12px;
-      color: #64748B;
-      
+      color: #64748b;
     }
 
     .active {
-      background: #9061F9;
+      background: #9061f9;
       color: white;
     }
   }
@@ -263,24 +296,24 @@ export const Container = styled.section`
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top:16px;
-    color: #64748B;
+    margin-top: 16px;
+    color: #64748b;
 
     font: normal 500 12px/16px Inter;
 
     button {
       background: white;
       border-radius: 100px;
-      border: 1px solid #E2E8F0;
+      border: 1px solid #e2e8f0;
       padding: 8px 12px;
-      color: #64748B;
+      color: #64748b;
       cursor: pointer;
 
       font: normal 500 12px/16px Inter;
     }
 
     .active {
-      background: #9061F9;
+      background: #9061f9;
       color: white;
     }
   }
