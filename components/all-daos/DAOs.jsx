@@ -1,18 +1,20 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import Image from 'next/image';
-import daosData from '../../data.json';
-import Link from 'next/link';
-import daoBCG from '../../public/assets/discover-daos/dao-bcg.png';
-import { DaoSearchBar } from '../common/';
-import { tags } from '../utils/getPopularTags';
+import { useState } from "react";
+import styled from "styled-components";
+import Image from "next/image";
+import daosData from "../../data.json";
+import Link from "next/link";
+import daoBCG from "../../public/assets/discover-daos/dao-bcg.png";
+import { DaoSearchBar } from "../common/";
+import { tags } from "../utils/getPopularTags";
 
 const DAOs = () => {
   const [daos, setDaos] = useState(daosData);
-  const [sectionTitle, setSectionTitle] = useState('All DAOs');
+  const [sectionTitle, setSectionTitle] = useState("All DAOs");
 
   const handleTagFilter = (tag) => {
-    const newDaos = daosData.filter((item) => item.attributes.type === tag);
+    const newDaos = daosData
+      .filter((item) => item.attributes.type === tag)
+      .sort((a, b) => a.attributes.title.localeCompare(b.attributes.title));
     setDaos(newDaos);
     setSectionTitle(tag);
   };
@@ -33,8 +35,9 @@ const DAOs = () => {
               return (
                 <button
                   key={i}
-                  className={`${sectionTitle === tag.category ? 'active' : ''
-                    } tag-btn`}
+                  className={`${
+                    sectionTitle === tag.category ? "active" : ""
+                  } tag-btn`}
                   onClick={() => handleTagFilter(tag.category)}
                 >
                   {tag.category}
@@ -48,7 +51,7 @@ const DAOs = () => {
           {daos.map((item) => {
             return (
               <Link
-                href={`/discover-dao/${item.attributes?.Token.replace('$', '')}`}
+                href={`/discover-dao/${item.attributes?.title}`}
                 key={item.id}
               >
                 <a className="dao">
@@ -60,12 +63,12 @@ const DAOs = () => {
                     height={104.57}
                   />
                   <div className="info">
-                    <h5>{item.attributes?.Token.replace('$', '')}</h5>
+                    <h5>{item.attributes?.Token.replace("$", "")}</h5>
                     <small>
-                      {item.attributes?.About.replace(/[^\w\s]/gi, '').substring(
-                        0,
-                        130
-                      )}
+                      {item.attributes?.About.replace(
+                        /[^\w\s]/gi,
+                        ""
+                      ).substring(0, 130)}
                       ...
                     </small>
                   </div>

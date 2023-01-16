@@ -11,7 +11,7 @@ import pattern from "../../../public/assets/discover-daos/pattern.png";
 const SingleDaoPage = () => {
   const router = useRouter();
   const { token } = router.query;
-  const dao = data?.find((dao) => dao.attributes.Token === `$${token}`);
+  const dao = data?.find((dao) => dao.attributes.title === `${token}`);
   return (
     <>
       <HeadSeo title={dao?.attributes?.Token} />
@@ -129,19 +129,9 @@ const SingleDaoPage = () => {
               </div>
             </div>
 
-            <div className="banner">
-              <div className="info">
-                <h2>{banner.heading}</h2>
-                <p>{banner.description}</p>
-                <small>{banner.subDescription}</small>
-              </div>
-
-              <div className="btn-container">
-                <a href={banner.buttonLink} className="banner-btn">
-                  {banner.buttonText} <FaArrowRight />
-                </a>
-              </div>
-            </div>
+            <a href={banner.buttonLink} className="banner-btn">
+              <div className="banner"></div>
+            </a>
             {dao?.attributes?.foundersDetails?.length > 0 && (
               <div className="founders">
                 {dao?.attributes?.foundersDetails.map((singleFounder) => (
@@ -377,7 +367,8 @@ export const Container = styled.section`
   }
 
   .banner {
-    background: url(${banner.imageLink}) center/cover no-repeat;
+    background: url("https://storage.googleapis.com/misc_bucket_daolens/DAO_Manager_Banner.gif")
+      center/cover no-repeat;
     padding: 2rem 3rem;
     border-radius: 0.5rem;
     display: flex;
@@ -386,7 +377,7 @@ export const Container = styled.section`
     gap: 1rem;
     flex-wrap: wrap;
     margin: 3rem 0;
-
+    height: 250px;
     img {
       border-radius: 0.5rem;
     }
