@@ -234,15 +234,21 @@ export const Container = styled.section`
       right: 5%;
       display: flex;
       gap: 1rem;
+      a {
+        font-size: 16px;
+      }
     }
 
     .social-link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: #fff;
       color: #6600ff;
-      font-size: 1.5rem;
+      font-size: 20px !important;
       border-radius: 2rem;
       padding: 2px 20px;
+
       /* .discord-count {
         font-size: 1.5rem;
       } */
