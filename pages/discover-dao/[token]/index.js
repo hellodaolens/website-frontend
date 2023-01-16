@@ -156,18 +156,24 @@ const SingleDaoPage = () => {
                       {singleFounder.description}
                     </p>
                     <a href={singleFounder.link}>
-                      <FaLinkedin size={"28px"} />
+                      {singleFounder.link.includes("twitter.com") ? (
+                        <FaTwitter size={"28px"} />
+                      ) : (
+                        <FaLinkedin size={"28px"} />
+                      )}
                     </a>
                   </div>
                 ))}
               </div>
             )}
-            <div className="more-info">
-              <h4>Helpful resources</h4>
-              <a href={dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}>
-                {dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}
-              </a>
-            </div>
+            {dao?.attributes?.AdditionalInfo && (
+              <div className="more-info">
+                <h4>Helpful resources</h4>
+                <a href={dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}>
+                  {dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}
+                </a>
+              </div>
+            )}
           </Container>
         </div>
       </main>
@@ -402,7 +408,7 @@ export const Container = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 
-    margin-bottom: 36px;
+    padding-bottom: 36px;
     .single-founder {
       display: flex;
       flex-direction: column;
