@@ -8202,5 +8202,558 @@
       ],
       "title": "Polkadot"
     }
+  },
+  {
+    "id": "04a6ada9-d639-4745-ab9f-b5d07be5c787",
+    "attributes": {
+      "age": "2017",
+      "Token": "$RPL",
+      "type": "Protocol DAO, DeFi",
+      "Blockchain": "Ethereum",
+      "Community": "17k /0",
+      "About": "\"Rocket Pool is the first truly decentralized Ethereum staking protocol. It is a decentralized, non-custodial, and Liquid Staking pool. They offer minimalized penalty risks. Any losses from bad nodes for stakers who deposit ETH are socialized across the whole network to minimize impacts on any single user. They have Smart Nodes with which users can run a node on their network. Open-source, audited smart contracts ensure funds are never in the custody of node operators. Their smart contracts have been audited by Consensys,  Trail of Bits, and Immune. \"",
+      "HowToJoin": "\"1. You can buy $RPL tokens from the following websites to join governance :\"\"https://www.binance.com/en-IN/how-to-buy/rocket-pool\"\"https://coinmarketcap.com/currencies/rocket-pool/\"\"https://www.coinbase.com/how-to-buy/rocket-pool\"\"Governance will take the form of the Rocket Pool DAO, where voting weight corresponds to the amount of RPL staked in the protocol. This staked RPL will come from two sources, passive stakers (non-node operators) and node operators\"\"1. Join their community via their Discord and Twitter\"\"2. Joining as a Node operator\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://medium.com/rocket-pool\\https://github.com/rocket-pool\"\"https://docs.rocketpool.net/overview/faq/\"\"https://docs.rocketpool.net/guides/node/faq.html\"\"https://github.com/rocket-pool\"",
+      "discordLink": "https://discord.com/invite/rocketpool",
+      "twitterLink": "https://twitter.com/Rocket_Pool",
+      "websiteLink": "https://rocketpool.net/#header",
+      "updatedAt": "2023-01-02T20:55:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T12:00:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "David Rugendyke",
+          "link": "https://www.linkedin.com/in/david-rugendyke-260a2a60/?originalSubdomain=au",
+          "designation": "Founder & CTO",
+          "description": "He has also worked as a Senior Digital Developer at George Patterson Y&R. He was also a Senior Programmer at Clemenger BBDO Brisbane."
+        }
+      ],
+      "title": "Rocket Pool Fans DAO"
+    }
+  },
+  {
+    "id": "e755b2fa-272b-418a-8152-01755b72f288",
+    "attributes": {
+      "age": "2021",
+      "Token": "$RxHT",
+      "type": " PROTOCOL DAO, DeFi",
+      "Blockchain": "Ethereum",
+      "Community": "4825 / 780",
+      "About": "\"Risk harbor is an algorithmic and transparent protocol that does not have any intermediaries. It is a Risk management platform for Web3. It protects against smart contract risk and maximizes capital efficiency. It takes into consideration Objective Events, Risk Engine, and Capital Efficiency. It has investors like Pantera, Framework, Bain Capital ventures, and many more. Their products are Ozone, Core, and Institutional.\"",
+      "HowToJoin": "\"1. You can contact the team through:\"\"https://airtable.com/shrZ21g5K6ly0V41g\"\"1. You can vote on proposals here(https://snapshot.org/#/riskharbor.eth) after connecting the Coinbase wallet.\"",
+      "FoundingTeam": "",
+      "AdditionalInfo": "\"https://docs.riskharbor.com/\"\"https://docs.riskharbor.com/resources/faq\"",
+      "discordLink": "https://discord.com/invite/7aAC4p6vsr",
+      "twitterLink": "https://twitter.com/riskharbor",
+      "websiteLink": "https://www.riskharbor.com/",
+      "updatedAt": "2023-01-17T09:32:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T12:10:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Raouf Ben-Har",
+          "link": "https://www.linkedin.com/in/raoufbenhar/",
+          "designation": "Co-founder",
+          "description": "He has also worked as an Associate Product Manager at Coinbase. He has been a Product Manager Intern at TikTok. He was a Quantitative Trader Intern at Citadel. He was also a Summer Analyst at Goldman Sachs."
+        },
+        {
+          "name": "Drew Patel",
+          "link": "https://www.linkedin.com/in/drew-patel/",
+          "designation": "Co-founder",
+          "description": "He has worked as a Software Engineer Intern at Coinbase. He is the Founder of Pollinate Delivery. He was a Portfolio Management Associate Intern at 8 Decimal Capital. He was a Chief Technology Officer at onfocoin."
+        }
+      ],
+      "title": "Risk Harbor DAO "
+    }
+  },
+  {
+    "id": "4c1718f2-d1c9-4508-8a08-d60f7b2fd774",
+    "attributes": {
+      "age": "2021",
+      "Token": "$TENDER",
+      "type": "Protocol DAO, DeFi",
+      "Blockchain": "Ethereum",
+      "Community": " 5,022 / 0",
+      "About": "\"Tenderize is a Liquid Staking Protocol that connects Web3 infrastructure with Defi . It uses TenderTokens for Staking. Tenderize provides an easy staking experience and automatically gives rewards on regular basis. There are no Lockups in Tenderize which means you can easily get staked assets without waiting for a longer time. \"",
+      "HowToJoin": "\"One can stake the TenderTokens at: https://app.tenderize.me/stakers/livepeer.\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://docs.tenderize.me/\"\"https://tenderize.medium.com/\"\"https://github.com/Tenderize/\"\"https://blog.tenderize.me/about/\"\"\n\"",
+      "discordLink": "https://discord.com/invite/WXR5VBttP5",
+      "twitterLink": "https://twitter.com/tenderize_me",
+      "websiteLink": "https://www.tenderize.me/",
+      "updatedAt": "2023-01-02T21:02:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T13:58:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Reuben Rodrigues",
+          "link": "https://www.linkedin.com/in/reuben-rodrigues-020b74b4/?originalSubdomain=in",
+          "designation": "Co-founder",
+          "description": "He was a Full Stack Engineer and Technical Program Manager at Smarter. Codes. He is also the co-founder of Sinode Datacenters and KernelVPS. He was Industrial IOT Developer Intern at GB Associates. "
+        },
+        {
+          "name": "Nico",
+          "link": "https://www.linkedin.com/in/nicovergauwen/?originalSubdomain=be",
+          "designation": "Co-founder",
+          "description": "He is the Founder of Liverpool. He worked as a Protocol Engineer at Livepeer. He was a Consultant at USG Professionals Belgium. He was a Blockchain Consultant at Design is Dead."
+        }
+      ],
+      "title": "Tenderize DAO"
+    }
+  },
+  {
+    "id": "e2f23981-0012-4aba-a7d3-b5006759c2cc",
+    "attributes": {
+      "age": "2018",
+      "Token": "$CNJ",
+      "type": "Protocol DAO, Synthetic Assets",
+      "Blockchain": "Ethereum",
+      "Community": "281/308",
+      "About": "\"Conjure is a DAO working on Ethereum Blockchain which allows automatic Synthetic asset creations without any permissions. It uses Open Oracle Framework for highly scalable, flexible, and secure feeds. It aids in creating Synthetic, Collateralized, and user-created assets. \"",
+      "HowToJoin": "\"You can buy $CNJ tokens from the following websites:\"\"https://www.binance.com/en-BH/how-to-buy/conjure\"\"https://coinmarketcap.com/currencies/conjure/\"\"https://etherscan.io/token/0x00a55375002f3cda400383f479e7cd57bad029a9\"",
+      "FoundingTeam": "",
+      "AdditionalInfo": "\"https://docs.conjure.finance/\"\"https://github.com/ConjureFi\"\"https://docs.oof.conjure.finance/\"",
+      "discordLink": "https://discord.com/invite/qeYPBYH5qB",
+      "twitterLink": "https://twitter.com/ConjureFi",
+      "websiteLink": "https://conjure.finance/main/home",
+      "updatedAt": "2023-01-02T21:01:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T14:21:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Sam Clark",
+          "link": "https://www.linkedin.com/in/conjure/?originalSubdomain=uk",
+          "designation": "CEO",
+          "description": "He was a Designer at Lightmaker and TH_NK.\n"
+        }
+      ],
+      "title": "Conjure DAO "
+    }
+  },
+  {
+    "id": "c98cb4c8-e2fb-4b14-9a65-10cd90b1cb27",
+    "attributes": {
+      "age": "February 14, 2019",
+      "Token": "-",
+      "type": "PRODUCT DAO, Grant",
+      "Blockchain": "Ethereum",
+      "Community": "1,230 / 0",
+      "About": "\"Moloch is a simple, open-source DAO framework that provides Security, Usability, and Extensibility. Moloch provides a way for members to exit DAO by exchanging their shares. Their goal is to fund the development of public infrastructure of other Eth2.0. Moloch has given many grants like Stereum Ethereum Node Setup, Sybil Resistance, Ethereum Cat Headers, TrueBlocks, and many more. \"",
+      "HowToJoin": "\"You can join MolochDAO through several means: HERE(https://molochdao.com/docs/dao-member-policies/how-to-join-molochdao/)\"\"1. Pledge 10-100 wETH\"\"2. Share the proposal in the forum:   https://forum.daohaus.club/c/moloch-rises/165\"\"3. Get DAO membership via a grant from Moloch. \"\"4. Get involved and do work for the DAO to earn your way in.\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://101blockchains.com/moloch-dao/\"\"https://molochdao.com/docs/vision-and-values/manifesto/\"",
+      "discordLink": "https://discord.com/invite/PxrnEUsbef",
+      "twitterLink": "https://twitter.com/molochdao",
+      "websiteLink": "https://molochdao.com/",
+      "updatedAt": "2023-01-02T21:00:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T15:25:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Ameen Soleimani",
+          "link": "https://www.linkedin.com/in/ameen-soleimani-97181942/",
+          "designation": "Founder",
+          "description": "He is the Co-Founder and CEO of SpankChain. He is the Co-Founder of Filter, Potomac Code Camp. "
+        }
+      ],
+      "title": "Moloch DAO "
+    }
+  },
+  {
+    "id": "861f4386-780d-489e-a866-9b65bd2b7000",
+    "attributes": {
+      "age": "2020",
+      "Token": "$BOR",
+      "type": "Product DAO, DAO Tools, Research",
+      "Blockchain": "Ethereum",
+      "Community": "3007 / 0",
+      "About": "\"Boring DAO is a DAO-driven cross-chain service provider for every crypto asset. They have released products like BoringDAO Bridge Aggregator, oPortal Bridge, and oToken Tunnel. They build exclusive tunnels for any asset. They help in transferring assets between different chains. They provide Low cost, Fast, Secure, Permissionless, and decentralized services. They are connected to 15 chains at present. It is a group of people who are interested in promoting the growth of Cosmos protocols and dApps by providing capital (seed/private raise), research, marketing, developers, and infrastructure resources. Their ecosystem is Polygon, footprint, defipulse, imtoken and many more.\"",
+      "HowToJoin": "\"\nYou can buy $BOR tokens from the following websites and participate in governance:\"\" https://coinmarketcap.com/currencies/boringdao/\"\"https://www.coinbase.com/how-to-buy/boringdao\"\"https://www.binance.com/en-IN/how-to-buy/boringdao\"\"After acquiring $BOR, you can vote and participate in the process from Snapshot(https://snapshot.org/#/boringvote.eth)\"\"Join their community via:\"\"Discord: https://discord.com/invite/zCQ2ddp\"\"Twitter : https://twitter.com/TheBoringDAO\"\"To join Forum: https://forum.boringdao.com/\"",
+      "FoundingTeam": "",
+      "AdditionalInfo": "\"https://theboringdao.medium.com/\"\"https://github.com/BoringDAO\"\"https://docs.boringdao.com/tutorials/boring-boring-faqs\"",
+      "discordLink": "https://discord.com/invite/zCQ2ddp",
+      "twitterLink": "https://twitter.com/TheBoringDAO",
+      "websiteLink": "https://www.boringdao.com/",
+      "updatedAt": "2023-01-02T20:59:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T15:25:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Rahul Patel",
+          "link": "https://www.linkedin.com/in/rahul-patel-a2281650/",
+          "designation": "Co-founder",
+          "description": "He is a Member of AVentures DAO. He has worked as an Analyst at Hartmann Capital. He was a Corporate Strategy Consultant at Blue Cross & Blue Shield of Rhode Island."
+        }
+      ],
+      "title": "Boring DAO"
+    }
+  },
+  {
+    "id": "2a7fd22e-380b-4486-a9bd-6ff9e89ffe8f",
+    "attributes": {
+      "age": "2019",
+      "Token": "$PHTR",
+      "type": "Protocol DAO, Analytics, DAO tools",
+      "Blockchain": "Ethereum",
+      "Community": "7k / 0",
+      "About": "\"Phuture is a decentralized crypto index platform. It aids in bringing simple crypto exposure to all investors from small to large. It was founded in order to simplify investments through automated index products. Their products include Phuture DeFi Index, Colony Avalanche Index, and USDC Savings Vault. Their partners are Uniswap, Yearn Finance, Beta Finance, Dune Analytics, Zerion, and 0xProtocol.\"",
+      "HowToJoin": "\"You can now stake your $PHTR and participate in our liquidity mining program.\"\"You can buy $PHTR tokens from the following websites:\"\" https://www.coinbase.com/price/phuture\"\" https://www.binance.com/en-IN/how-to-buy/phuture\n\"\"If you want to participate in the Phuture ecosystem - join their discord channel and make yourself known. Join their community via Discord and Twitter\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://defiprime.com/phuture\"\"https://docs.phuture.finance/faq/general\"\"https://www.phuture.finance/crypto-basics\"\"https://github.com/Phuture-finance\"\"https://docs.phuture.finance/introduction/master\"",
+      "discordLink": "https://discord.com/invite/frRD3Ck",
+      "twitterLink": "https://twitter.com/phuture_finance",
+      "websiteLink": "https://www.phuture.finance/",
+      "updatedAt": "2023-01-02T20:58:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-11-02T15:25:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Oliver Mehr",
+          "link": "https://www.linkedin.com/in/oliver-mehr-475074128/?originalSubdomain=uk",
+          "designation": "Co-founder & Head of Product",
+          "description": "He was worked as a Partner and Investment Analyst at SVK Crypto."
+        },
+        {
+          "name": "Charles Storry",
+          "link": "https://twitter.com/c_storry",
+          "designation": "Co-founder & Head of Growth",
+          "description": ""
+        },
+        {
+          "name": "Alex Melnichuk",
+          "link": "https://www.crunchbase.com/person/alex-melnichuk-c7fc",
+          "designation": "Co-founder & Teachnical lead",
+          "description": "He is also the Founder of Pragma."
+        }
+      ],
+      "title": "Phuture DAO "
+    }
+  },
+  {
+    "id": "fa92fe30-3ac2-4e0e-b555-768f40cbc295",
+    "attributes": {
+      "age": "2019",
+      "Token": "$ALGO",
+      "type": "DeFi",
+      "Blockchain": "Ethereum",
+      "Community": "40.3k/19",
+      "About": "\"Algorand is a scalable, secure, and decentralized digital currency and smart contract platform. It is a  blockchain-based network that supports a wide range of applications. These systems are secure, scalable, and efficient, all critical properties for effective applications in the real world. Algorand will support computations that require reliable performance guarantees to create new forms of trust. Algorand was invented to speed up transactions and improve efficiency, in response to the slow transaction times of Bitcoin and other blockchains. Algorand is designed so that there are lower transaction fees.\n\"",
+      "HowToJoin": "\"1. For career options: https://www.algorand.com/about/careers\"\"2. Community governance: Algo holders will need to go to the Governance web portal and declare how many Algo tokens they will commit to each period during the signup window. To participate, governors will have to sign a transaction to signify their commitment.\"\"https://governance.algorand.foundation/\"\"1. To join the community signup \"\"https://community.algorand.org/accounts/signup/?next=/\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://www.algorand.com/technology/white-papers\"\"https://medium.com/algorand-foundation\"\"https://www.algorand.com/technology/faq\"\"https://www.algorand.foundation/\"",
+      "discordLink": "https://discord.com/invite/QBYp7Y2",
+      "twitterLink": "https://twitter.com/AlgoFoundation",
+      "websiteLink": "https://www.algorand.com/",
+      "updatedAt": "2023-01-17T05:23:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-20T18:26:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Silvio Micali",
+          "link": "https://twitter.com/silviomicali?lang=en \n\n https://www.linkedin.com/in/silvio-micali-26bb37152",
+          "designation": "Founder",
+          "description": "Silvio Micali is a professor of computer science at the Massachusetts Institute of Technology and the founder of Algorand. He is a recipient of the Turing Award (in 2012) for his fundamental contributions to the theory and practice of secure two-party computation, electronic cash, cryptocurrencies, and blockchain protocols. This makes him one of the foremost creators of crypto in the world. "
+        }
+      ],
+      "title": "Algorand"
+    }
+  },
+  {
+    "id": "c35c0a0f-a818-482b-9a42-66afc6138cb0",
+    "attributes": {
+      "age": "2020",
+      "Token": "$GRO",
+      "type": "DeFi",
+      "Blockchain": "Ethereum",
+      "Community": "9.1k/ 1.6k",
+      "About": "\"Gro protocol’s mission is to make decentralized finance more accessible and empower everyone to easily create and share wealth- by combining the best of decentralized and traditional finance. Gro protocol is a stablecoin yield aggregator that tranches risk and yield.\"",
+      "HowToJoin": "\"1. Join Community via socials\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://docs.gro.xyz/gro-docs/labs/faqs\"\"https://docs.gro.xyz/gro-docs/governance/governance-tokenomics\"\"https://www.binance.com/en-IN/how-to-buy/gro-dao-token\"\"https://medium.com/gro-protocol/guide-to-gro-f4012442a19e\"",
+      "discordLink": "https://discord.com/invite/gro",
+      "twitterLink": "https://twitter.com/groprotocol",
+      "websiteLink": "http://www.gro.xyz/#/",
+      "updatedAt": "2023-01-17T06:12:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-20T18:28:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Hannes Graph",
+          "link": "https://www.linkedin.com/in/graah/",
+          "designation": "Founder",
+          "description": ""
+        }
+      ],
+      "title": "GRO DAO"
+    }
+  },
+  {
+    "id": "2f87746b-77de-497b-979c-5eec581330ec",
+    "attributes": {
+      "age": "2017",
+      "Token": "$ADA",
+      "type": "Blockchain",
+      "Blockchain": "Ethereum",
+      "Community": "- / 493k",
+      "About": "\"Cardano is a blockchain platform for changemakers, innovators, and visionaries, with the tools and technologies required to create possibilities for the many, as well as the few, and bring about positive global change. The platform was built for a sustainable future, to help people work better together, trust one another, and build global solutions to global problems. It's the first to be founded on peer-reviewed research and developed through evidence-based methods.\"",
+      "HowToJoin": "\"1. Get involved via social media:\"\"2. To join the ambassador program: \"\"The flagship program is designed to promote awareness and educate the wider community to drive the adoption of Cardano for better use cases. There are various roles for a Cardano ambassador like content creator, meetup organizer, moderator, and translator. There are three reward levels designed to reward the most active ambassador.\"\"https://cardano.org/ambassadors/\"\"If one wants to nominate an ambassador … fill the form:https://cardanofoundation.org/forms/ambassadornomination\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://bscscan.com/token/0x3ee2200efb3400fabb9aacf31297cbdd1d435d47#balances\"\"https://blockchair.com/cardano\"\"https://cardanoscan.io/\"\"https://explorer.cardano.org/en\"",
+      "discordLink": "",
+      "twitterLink": "https://twitter.com/cardano",
+      "websiteLink": "https://cardano.org/",
+      "updatedAt": "2023-01-17T08:37:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-20T18:29:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Charles Hoskinson",
+          "link": "https://www.linkedin.com/in/charleshoskinson",
+          "designation": "Founder",
+          "description": "Charles is a technology entrepreneur and was also one of the co-founders of the Ethereum network. He is the CEO of IOHK, the company that built Cardano’s blockchain. He was the founding chairman of the Bitcoin Foundation's education committee and established the not-for-profit Cryptocurrency Research Group in September of 2013."
+        }
+      ],
+      "title": "Cardano"
+    }
+  },
+  {
+    "id": "5e482973-a6f0-47c8-a7a5-cabf135bc51d",
+    "attributes": {
+      "age": "2017",
+      "Token": "$TRX",
+      "type": "",
+      "Blockchain": "Ethereum",
+      "Community": "85k/295k",
+      "About": "\"TRON DAO is a community-governed DAO dedicated to accelerating the decentralization of the internet via blockchain technology and dApps. It's a multi-purpose smart contract platform that enables the creation and deployment of decentralized applications (dApps).TRON is arguably most famous for its low-cost ability to make transactions.\"",
+      "HowToJoin": "\"1. For developers: GitHub:https://github.com/tronprotocol\"\"2. To contact them for queries:\"\"press@tron.network(mailto:press@tron.network)\"\"service@tron.network(mailto:service@tron.network)\"\"1. General Governance\"\"Every account in the TRON network can apply and have the opportunity to become a Super Representative (denoted as SR). Everyone can vote for SR candidates. The top 27 candidates with the most votes will become SRs with the right and obligation to generate blocks. The votes are counted every 6 hours and the SRs will change accordingly.\nTo prevent malicious attacks, there is a cost to becoming an SR candidate. When applying, 9999 TRX will be burned from the applicant’s account. Once successful, such account can join the SR election.\"\"1. Voting \"\"TRON Power (denoted as TP) is needed to vote and the amount of TP depends on the voter’s frozen assets (TRX).\nTP is calculated in the following way:\n1 TP = 1 TRX frozen to get the bandwidth\nEvery account in the TRON network has the right to vote for its own SRs.\nAfter the release (unfreeze, available after 3 days), users won't have any frozen assets and lose all TP accordingly. As a result, all votes become invalid for the ongoing and future voting round unless\nTRX is frozen again to vote. Note that the TRON network only records the most recent vote, which means that every new vote will negate all previous votes.\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://tron.network/faq?lng=en\"\"https://tronscan.org/#/data/bestdata\"\"https://messari.io/asset/tron\"\"https://tron.network/static/doc/white_paper_v_2_0.pdf\"\"https://tron.network/resources?lng=en\"\"https://trondao.medium.com/\"",
+      "discordLink": "https://discord.com/invite/YZcRdyykgn",
+      "twitterLink": "https://twitter.com/Tronfoundation",
+      "websiteLink": "https://tron.network/",
+      "updatedAt": "2023-01-17T08:42:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-20T18:29:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Justin Sun",
+          "link": "https://twitter.com/justinsuntron \n\n https://www.linkedin.com/in/justinsuntron/",
+          "designation": "Founder",
+          "description": "H.E. Justin Sun is the Ambassador and Permanent Representative of Grenada to the WTO, Founder of TRON, and Advisor to Huobi Global, one of the world’s largest crypto exchanges. A protege of Alibaba's Jack Ma, Sun has been named Forbes' 30 under 30 in the Consumer Technology category several times, among other global recognitions. Sun is an avid art collector, gamer, investor, philanthropist, and space enthusiast."
+        }
+      ],
+      "title": "TRON"
+    }
+  },
+  {
+    "id": "9662e973-8f7a-4049-a9b8-67dfe52c11aa",
+    "attributes": {
+      "age": "2017",
+      "Token": "$LINK",
+      "type": "Product DAO",
+      "Blockchain": "Ethereum",
+      "Community": "113k / -",
+      "About": "\"Chainlink is a decentralized oracle(https://messari.io/article/oracles) network. It aims to serve as middleware between smart contracts on smart contracting platforms and external data sources, allowing smart contracts to securely access off-chain data feeds. Chainlink allows blockchains to securely interact with external data feeds, events, and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement.\"",
+      "HowToJoin": "\"1. Buy $LINK to participate in governance: https://coinmarketcap.com/currencies/chainlink/\"\"2. Get involved with community grants: https://chain.link/community/grants \"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://chain.link/techtalks\"\"https://chain.link/case-studies\"\"https://chain.link/faqs\"\"https://chain.link/techtalks\"\"https://chain.link/whitepaper\"",
+      "discordLink": "https://discord.com/invite/aSK4zew",
+      "twitterLink": "https://twitter.com/chainlink",
+      "websiteLink": "https://chain.link/",
+      "updatedAt": "2023-01-17T08:47:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-20T18:29:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Sergey Nazarov",
+          "link": "https://www.linkedin.com/in/sergeydnazarov/",
+          "designation": "CoFounder ",
+          "description": "He is also the CoFounder & CEOCoFounder & CEO of Secure Asset Exchange, CoFounder of SmartContract."
+        }
+      ],
+      "title": "ChainLink"
+    }
+  },
+  {
+    "id": "27f807f6-46d2-4ba3-b05e-8c9548d1446c",
+    "attributes": {
+      "age": "2016",
+      "Token": "$ZRX",
+      "type": "DeFi, DAO Tool",
+      "Blockchain": "Ethereum",
+      "Community": "18.5k/196.1k",
+      "About": "\"0x is an open-source, decentralized exchange infrastructure that enables the exchange of tokenized assets on multiple blockchains. It is a permissionless protocol to facilitate the trading of Ethereum-based tokens. 0x is not itself a decentralized exchange, but instead a system of smart contracts that connects liquidity providers and market makers in order to provide exchange functionality in a range of applications. The team has also created a variety of products using 0x like 0x protocol,0x API, NFT swap SDK, etc.\"",
+      "HowToJoin": "\"1. To get in touch with the team for any kind of help\"\"https://www.0x.org/#contact\"\"1. Join the community via Social Media\"\"2. Many career options are open to joining the team. https://www.0x.org/about/jobs\\\"\"3.  Governance\"\"Every token holder, big or small, can play a role in governance -- from weighing in on ZeroEx Improvement Proposals (ZEIPs) to sharing ideas on how to use DAO treasury funds, to actively contributing to the protocol's advancement in a myriad of other ways. \"\"By participating in 0x governance, you can suggest ways to put communal funds to work, explore opportunities for the protocol to drive value creation and capture, and vote on key protocol upgrades and parameters.\"\"1. Building a project in the 0x ecosystem?\"\"Learn about the Qualification Criteria to apply for a grant from the 0xDAO: https://0xdao.gitbook.io/0x-dao/ecosystem-value-experiment/0xdao-grant-program-framework-v1-1\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"https://coinmarketcap.com/currencies/0x/\"\"https://forum.0x.org/\"\"https://www.0x.org/about/press\"",
+      "discordLink": "https://discord.com/invite/d3FTX3M",
+      "twitterLink": "https://twitter.com/0xproject",
+      "websiteLink": "https://www.0x.org/",
+      "updatedAt": "2023-01-17T08:51:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-20T18:30:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Will Warren",
+          "link": "https://twitter.com/willwarren?ref_src=twsrc^google|twcamp^serp|twgr^author",
+          "designation": "Co-founder",
+          "description": "He works as the CEO of 0x. He worked as the technical Advisor at Basic attention token and as a graduate Research Assistant at Los Alamos national Laboratory."
+        },
+        {
+          "name": "Amir Bandeali",
+          "link": "https://twitter.com/abandeali1?ref_src=twsrc^google|twcamp^serp|twgr^author",
+          "designation": "Co-founder",
+          "description": "He works as the CTO of 0x. HE previously worked as a trader at DRW and Chopper trading."
+        }
+      ],
+      "title": "0x"
+    }
+  },
+  {
+    "id": "fe767ba8-2dfd-4bcb-b1cf-ce2c83cfdc9d",
+    "attributes": {
+      "age": "16 March 2020",
+      "Token": "$GSAIL",
+      "type": "DeFi",
+      "Blockchain": "SOLANA",
+      "Community": "4173/ 12k ",
+      "About": "\"SolanaSail aims to create an all-encompassing DeFi ecosystem on the Solana stack with its specialized vault, governance, DeFi and NFT functionality.\"\"SolanaSail is a digital asset platform ecosystem with a native SPL utility token $SAIL and native governance token $gSAIL.\"\"gSAIL: The governance platform & Decentralized onchain SPL governance platform, powered by gSAIL tokens. Token holders will be able to generate proposals related to all SPL tokens and platforms operating on the Solana framework and have the right to participate in voting for their favorite projects. The more SPL token a user holds (gSAIL), the greater their voting power. By publishing the open-source code on our public git, we want to provide any SPL tokens the possibility to use and/or improve\nour onchain program.\"",
+      "HowToJoin": "\"\n1. Join the community via social media\"\"1. The governance platform & Decentralized on-chain SPL governance platform, powered by gSAIL tokens. Token holders will be able to generate proposals related to all SPL tokens and platforms operating on the Solana framework and have the right to participate in voting for their favorite projects. The more SPL token a user holds (gSAIL), the greater their voting power. By publishing the open-source code on our public git, we want to provide any SPL tokens the possibility to use and/or improve our on-chain program.\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"\nhttps://dao-beta.mango.markets/dao/gSAIL\"\"Telegram(https://t.me/SolanaSail_Official)\"\"Medium(https://solanasail.medium.com/)\"\"https://coinmarketcap.com/currencies/solanasail/\"",
+      "discordLink": "https://discord.com/invite/37cMrQ8kV9",
+      "twitterLink": "https://twitter.com/SolanaSail",
+      "websiteLink": "https://www.solanasail.com/",
+      "updatedAt": "2023-01-16T20:31:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-26T04:36:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Anatoly Yakovenko",
+          "link": "https://twitter.com/aeyakovenko",
+          "designation": "",
+          "description": "Co-founder @ Solana and 10+ years of experience in building high-performance Operating Systems."
+        }
+      ],
+      "title": "GSAIL / SOLANASAIL  GOVERNANCE DAO"
+    }
+  },
+  {
+    "id": "16128ba0-c999-4779-ad9a-79d1ed68de17",
+    "attributes": {
+      "age": "2022",
+      "Token": "$LBY",
+      "type": "DAO Tool",
+      "Blockchain": "Ethereum",
+      "Community": " 932 / 1.1k ",
+      "About": "\"Lobby is providing a platform for leading crypto issues and advocating for policymakers and the general public.Its on a mission to decentralize policymaking. It(http://policymaking.It) is a foundation that helps us steer clear of heavy-handed regulation related to DeFi, DEXs, and stablecoins, a coomunity - to utilize unique opportunities in the Lobby ecosystem to directly impact proposals and a path participate in Lobby Governance to help protect DeFi and be a part of the solution.\"\"Lobby Token ($LBY) is fighting to protect cryptocurrency from harmful government legislation. With every transaction, $LBY donates to a range of top-tier organizations that lobby the US government to protect crypto on state and federal levels.\"",
+      "HowToJoin": "\"\n1. Join the community using:\"\"Participate in Lobby Governance to help protect DeFi and be a part of the solution.\"\"https://t.me/lbytoken \"\"and Join their other social media to join community\n2. Buy token and vote on the proposals here : https://vote.lobbytoken.io/#/ \"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"\nhttps://www.coinbase.com/price/lobby\"\"Github(https://github.com/Lobby-Token)\"\"Telegram(https://t.me/lbytoken)\"\"Medium(https://lobbytoken.medium.com/)\"\"https://www.lobbytoken.io/\"",
+      "discordLink": "https://discord.gg/EZa6xfNZDZ",
+      "twitterLink": "https://twitter.com/lobby_token",
+      "websiteLink": "https://www.lobbytoken.io/",
+      "updatedAt": "2023-01-16T20:30:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2022-12-26T04:38:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Wilson  Hobbs",
+          "link": "https://www.linkedin.com/in/wbhob/",
+          "designation": "Founder ",
+          "description": ""
+        }
+      ],
+      "title": "Lobby"
+    }
+  },
+  {
+    "id": "c7afd796-a03d-4bba-bb8c-a7de5df0d490",
+    "attributes": {
+      "age": "2011",
+      "Token": "$SAND",
+      "type": "Community DAO",
+      "Blockchain": "Ethereum",
+      "Community": "15.8k / -",
+      "About": "\"The Sandbox is a community-driven platform where creators can monetize voxel ASSETS and gaming experiences on the blockchain. \"\"The Sandbox team is building a unique virtual world where players can build, own, and monetize their gaming experiences using SAND, the main utility token of the platform.\"",
+      "HowToJoin": "\"\n1. Join their community using social media\"\"1. How To Enter The Metaverse With Sandbox:\"\"- Click the “Sign in” tab in the upper right corner of the Sandbox Metaverse Website’s homepage.\"\"- Sign up using a wallet or social media (SM) account.\"\"- Sandbox Metaverse will create a unique Ethereum wallet address for users logging in using social accounts. Protect the wallet with a 4-6 digit PIN.\"\"- Type your e-mail & nickname and hit the “Continue” tab. Click the “Create Avatar” tab on the Sandbox homepage.\"\"- Complete your profile by clicking the “Settings” tab. Explore the Sandbox Alpha Lobby and the SandBox Metaverse.\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"\nhttps://installers.sandbox.game/The_Sandbox_Whitepaper_2020.pdf?_gl=1*1tzlr0a*_ga*MTg0NjYzNTcwLjE2NzI5MDEwNjg.*_ga_R0TLSXCC02*MTY3MjkwMTA2OC4xLjEuMTY3MjkwMTIyMy4wLjAuMA..&_ga=2.117208838.1498779198.1672901068-184663570.1672901068\"\"https://coinmarketcap.com/currencies/the-sandbox/\"\"twitter-https://twitter.com/thesandboxgame\"\"discord-https://discord.com/invite/vAe4zvY\"\"telegram- https://t.me/sandboxgame\"\"YouTube: https://www.youtube.com/TheSandboxGame(https://www.youtube.com/channel/UCzv1t7voB-bxMmXLysT4h0w?sub_confirmation=1)\"\"email: https://community.sandbox.game/\"\"https://medium.com/sandbox-game/what-is-the-sandbox-850de68d893e\"",
+      "discordLink": "https://discord.com/invite/vAe4zvY",
+      "twitterLink": "https://twitter.com/thesandboxgame",
+      "websiteLink": "https://www.sandbox.game/en/",
+      "updatedAt": "2023-01-16T20:37:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2023-01-06T20:06:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Arthur Madrid ",
+          "link": "",
+          "designation": "CEO and Director ",
+          "description": "Arthur Madrid is the Co-founder and CEO of Pixowl (acquired by Animoca Brands in 2018) as well as The Sandbox (40M players). Board Member of Animoca Brands and a longtime social gaming entrepreneur. He sold two software companies (Wixi Inc. and 1-Click Media) and is an advisor for startups in gaming, social media and software. Arthur began his career building a P2P delivery platform for Media companies, one of the first Distributed Computing Software (DCIA) platforms. Now, he is focusing on Blockchain Gaming as CEO & Co-Founder of The Sandbox."
+        },
+        {
+          "name": "Sebastien Borget",
+          "link": "",
+          "designation": "COO and Director",
+          "description": "Sébastien Borget is the Co-founder and COO of Pixowl (acquired by Animoca Brands in 2018)as well as The Sandbox (40M players). Passionate for blockchain technology, gaming and education, he is a very active speaker and evangelist on the opportunity Non-Fungible Tokens brings to gaming. He is now building the metaverse with The Sandbox, one of the 2019’s most anticipated and top ranked blockchain games (#13 in the Top 50), that is empowering players through NFTs, enabling them to own, buy, sell and trade their 3D creations on their Marketplace and use them in their Game Maker. Sebastien also became President of the Blockchain Game Alliance in 2020."
+        },
+        {
+          "name": "Marcelo Santurio",
+          "link": "",
+          "designation": " CFO ",
+          "description": "Marcelo Santurio is the Co-founder of the 1st online payment company in Latam and has +20 years\nexperience in Finance, Tech, and Gaming. MBA from the London Business School with focus on\nFinance and Execute Program at MIT in Entrepreneurship."
+        },
+        {
+          "name": "Lucas Shrewsbury",
+          "link": "",
+          "designation": " CTO",
+          "description": "Lucas Shrewbusyr has spent more than a decade leading mobile gaming studios. While at\nGameloft Argentina, he managed the studio and a team of 200 people."
+        },
+        {
+          "name": "Pablo Iglesias",
+          "link": "",
+          "designation": " Inventor of The Sandbox Game",
+          "description": "Pablo Iglesias has over ten years of experience in researching and developing emergent\nprocedural systems while leading teams of professionals through several successful games."
+        }
+      ],
+      "title": "The Sandbox"
+    }
+  },
+  {
+    "id": "119d1a1d-3aa2-45ad-b2c6-0bffb08ea63b",
+    "attributes": {
+      "age": "2015",
+      "Token": "$MANA",
+      "type": "Metaverse",
+      "Blockchain": "Ethereum",
+      "Community": " 7.9k /  298k",
+      "About": "\"Decentraland is a gamified metaverse platform for gaming, socializing, trading and building over its NFT lands.\"\"Decentraland is a distributed platform for a shared virtual world that enables developers to build and monetize applications on top of it. The scarcity of land, on top of which applications can be built, creates hubs that capture user attention, which drives revenue to content creators. MANA tokens will be used to purchase land, goods, and services in-world. MANA tokens will also be used to incentivize content creation and user adoption, therefore bootstrapping the first decentralized virtual world.\"",
+      "HowToJoin": "\"\n1.If you’re looking to visit Decentraland for the first time, the first thing you’ll need to do is navigate to the official website and click \"Start Exploring\" in the top right-hand corner. Connect a crypto wallet that you already own, or just enter as a guest. You will need to do this on a desktop, as Decentraland is not yet supported on mobile devices.\n2. Join their social media to join their community\"",
+      "FoundingTeam": "\"\"",
+      "AdditionalInfo": "\"\nhttps://coinmarketcap.com/currencies/decentraland/\"\"https://docs.decentraland.org/\"\"https://decentraland.org/whitepaper.pdf\"\"Github(https://github.com/decentraland)\"",
+      "discordLink": "https://dcl.gg/discord",
+      "twitterLink": "https://twitter.com/decentraland",
+      "websiteLink": "https://decentraland.org/",
+      "updatedAt": "2023-01-16T20:41:00.000Z",
+      "publishedAt": "",
+      "createdAt": "2023-01-06T20:07:00.000Z",
+      "foundersDetails": [
+        {
+          "name": "Ari  Meilich",
+          "link": "https://twitter.com/arimeilich",
+          "designation": "",
+          "description": "Ari Meilich  is the Founder at Big Time Studios . Additionally, Ari Meilich has had 2\n past jobs including Project Lead at Decentraland. \nAriel Meilich previously held the role of project lead at Decentraland between 2017 and 2020, and is a serial entrepreneur that has founded several other startups, including an online translation agency and a CRM platform. He also worked as an analyst at Charles River Ventures, a prominent Silicon Valley venture fund"
+        },
+        {
+          "name": "Esteban Ordano",
+          "link": "https://twitter.com/eordano",
+          "designation": "",
+          "description": "steban Ordano is the Advisor at Decentraland.He was the Founder & CTO at Decentraland.Esteban Ordano  has made 2 investments. Their latest investment was Seed Round - SenseiNode on Apr 6, 2022, when SenseiNode raised $3.6M.\nEsteban is also credited with co-founding Zeppelin Solutions, an established blockchain technology infrastructure company.He has varied history in the cryptocurrency space working as a software engineer at BitPay, Inc., an advisor to Matic Network\n and briefly operated his own smart contract development firm known as Smart Contract Solutions."
+        }
+      ],
+      "title": "Decentraland"
+    }
   }
 ]
