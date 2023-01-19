@@ -24,7 +24,7 @@ const Hero = ({
       />
       <main
         onClick={() => setShowMenu(false)}
-        style={{ display: "flex", alignItems: "center", padding: "68px 0px", gap: "12px", height: "70%" }}>
+        style={{ display: "flex", alignItems: "center", padding: "0px 0px", gap: "12px", height: "70%" }}>
         <div style={{}}>
           <h3>{heroHeading}</h3>
           <p style={{ marginBottom: "30px" }}>{heroDescription}</p>
@@ -59,7 +59,7 @@ const Hero = ({
 
 export const Container = styled.section`
   background: url(${heroBCG.src}) center/cover no-repeat;
-  height:100vh;
+  height:auto;
  
   h3{
     // font:normal 600 40px/52px Inter;

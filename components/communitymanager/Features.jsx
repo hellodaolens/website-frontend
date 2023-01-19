@@ -99,7 +99,7 @@ const Features = ({
 
         </div>
 
-        <a href={heroCTADestination} className='Typeform-8' style={{ marginBottom: "68px" }}>
+        <a href={heroCTADestination} className='Typeform-8' >
           {heroCTAText}
         </a>
       </div>
