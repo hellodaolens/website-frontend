@@ -1,30 +1,30 @@
-import styled from 'styled-components';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import logo from '../../public/assets/discover-daos/logo.webp';
-import search from '../../public/assets/discover-daos/search.svg';
-import pattern from '../../public/assets/discover-daos/pattern.png';
+import styled from "styled-components";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import logo from "../../public/assets/discover-daos/logo.webp";
+import search from "../../public/assets/discover-daos/search.svg";
+import pattern from "../../public/assets/discover-daos/pattern.png";
 
-
-import { DaoSearchBar } from '.';
+import { DaoSearchBar } from ".";
 
 const DaoNavbar = () => {
   return (
     <NavContainer>
       <div className="section-center nav-center">
         <div className="logo">
-          <Link href="/">
+          <Link href="/discover-dao">
             <a>
-              <Image src={logo} alt={'Dao Lens'} width={145} height={28} />
+              <Image src={logo} alt={"Dao Lens"} width={145} height={28} />
             </a>
           </Link>
         </div>
 
-
         <div className="links">
           <Link href="/all-daos">
-            <a className="all-link" style={{ color: "#6637F2" }}>All DAO's</a>
+            <a className="all-link" style={{ color: "#6637F2" }}>
+              All DAO's
+            </a>
           </Link>
           <a href="https://daolens.typeform.com/to/C6t2Y6vr" className="btn">
             Submit Your DAO
@@ -37,10 +37,10 @@ const DaoNavbar = () => {
 
 export const NavContainer = styled.nav`
   position: fixed;
-  width:100%;
-  background:url('${pattern.src}')  center;
-  background-size:100%;
-  top:0;
+  width: 100%;
+  background: url("${pattern.src}") center;
+  background-size: 100%;
+  top: 0;
   z-index: 20;
   backdrop-filter: blur(77.544px);
   .nav-center {
@@ -84,9 +84,9 @@ export const NavContainer = styled.nav`
     input {
       width: 100%;
       border-radius: 100px;
-      border: 1px solid #DED0FB;
-      padding: 0.75rem 0.75rem 0.75rem 2.5rem ;
-      color: #6637F2;
+      border: 1px solid #ded0fb;
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+      color: #6637f2;
       background: transparent url(${search.src}) no-repeat 3% 50%;
       background-size: 20px 20px;
     }
