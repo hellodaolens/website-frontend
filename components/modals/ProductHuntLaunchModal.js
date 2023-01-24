@@ -27,8 +27,8 @@ function ProductHuntLaunchModal({ setProductHuntLaunchModal }) {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
           borderRadius: "8px",
+          justifyContent: "center",
         }}
       >
         <img
