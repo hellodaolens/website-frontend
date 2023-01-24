@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import Image from 'next/image';
-import footerBCG from '../../public/assets/footer-bcg.png';
-import Link from 'next/link';
-import { toast } from 'react-toastify';
+import { useState, useEffect } from "react";
+import styled from "styled-components";
+import Image from "next/image";
+import footerBCG from "../../public/assets/footer-bcg.png";
+import Link from "next/link";
+import { toast } from "react-toastify";
 
 const Footer = () => {
   const [footerData, setFooterData] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const setDimension = () => {
     const ismobile = window.innerWidth < 595;
@@ -16,10 +16,10 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', setDimension, false);
+    window.addEventListener("resize", setDimension, false);
 
     return () => {
-      window.removeEventListener('resize', setDimension);
+      window.removeEventListener("resize", setDimension);
     };
   }, [isMobile]);
 
@@ -37,31 +37,31 @@ const Footer = () => {
       const response = await fetch(
         `https://api.mailmodo.com/api/v1/addToList`,
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            mmApiKey: '0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC',
-            'Content-Type': 'application/json',
+            mmApiKey: "0KTN04A-GKMMYZ4-N5H45E1-MMJ01TC",
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             email,
-            listName: 'email subscribers',
+            listName: "email subscribers",
           }),
         }
       );
       toast.success("Thank you for submitting, you'll receive it soon!", {
-        position: 'top-center',
+        position: "top-center",
         autoClose: 5000,
         closeOnClick: true,
       });
     } catch (err) {
       toast.error(err, {
-        position: 'top-center',
+        position: "top-center",
         autoClose: 5000,
         closeOnClick: true,
       });
       console.error(`Error: ${err}`);
     }
-    setEmail('');
+    setEmail("");
   };
 
   return (
@@ -69,7 +69,7 @@ const Footer = () => {
       <div className="section-center">
         <article className="footer-icons">
           <div className="logo">
-            <Link href="/">
+            <Link href="/discover-dao">
               <a>
                 <Image
                   src={footerData?.logo?.data?.attributes?.url}

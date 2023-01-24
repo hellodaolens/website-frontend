@@ -8,6 +8,7 @@ import {
 import FeatureFour from "../components/communitymanager/FeatureFour";
 import { TopBar } from "../components/home";
 
+
 const CommunityTool = ({ data: { data }, topBarInfo, navItems }) => {
   const {
     heroHeading,

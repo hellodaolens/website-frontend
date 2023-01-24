@@ -123,13 +123,25 @@ const SingleDaoPage = () => {
                       wordBreak: "break-word",
                     }}
                   >
-                    {dao?.attributes?.HowToJoin.replace(/\\|\"/g, "\n").trim()}
+                    {dao?.attributes?.HowToJoin.split(/\\|\"/g).map(
+                      (singleLine, idx) => (
+                        <>
+                          <span key={idx}>{singleLine}</span>
+                          <br />
+                        </>
+                      )
+                    )}
                   </p>
                 </ReactLinkify>
               </div>
             </div>
 
-            <a href={banner.buttonLink} className="banner-btn">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={banner.buttonLink}
+              className="banner-btn"
+            >
               <div className="banner"></div>
             </a>
             {dao?.attributes?.foundersDetails?.length > 0 && (
@@ -145,7 +157,11 @@ const SingleDaoPage = () => {
                     <p className="single-founder__description">
                       {singleFounder.description}
                     </p>
-                    <a href={singleFounder.link}>
+                    <a
+                      href={singleFounder.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {singleFounder.link.includes("twitter.com") ? (
                         <FaTwitter size={"28px"} />
                       ) : (
@@ -180,10 +196,11 @@ export const Container = styled.section`
     padding: 16px;
     gap: 10px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
     border-radius: 24px;
     bottom: -50px;
+
     .logo {
       width: 80px;
       height: 80px;

@@ -1,26 +1,39 @@
-import '../styles/globals.css';
-import 'react-toastify/dist/ReactToastify.css';
-import 'react-multi-carousel/lib/styles.css';
-import { ToastContainer } from 'react-toastify';
-import { BlogPageFooter, Footer } from '../components/common';
-import Script from 'next/script';
-import TagManager from 'react-gtm-module';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import LightFooter from '../components/common/LightFooter';
+import "../styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import "react-multi-carousel/lib/styles.css";
+import { ToastContainer } from "react-toastify";
+import { BlogPageFooter, Footer } from "../components/common";
+import Script from "next/script";
+import TagManager from "react-gtm-module";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import LightFooter from "../components/common/LightFooter";
+import ProductHuntLaunchModal from "../components/modals/ProductHuntLaunchModal";
 
 const tagManagerArgs = {
-  gtmId: 'GTM-PH3ZXT3',
+  gtmId: "GTM-PH3ZXT3",
 };
 
 // TagManager.initialize(tagManagerArgs);
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [productHuntLaunchModal, setProductHuntLaunchModal] = useState(false);
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
+    let showModal = window.localStorage.getItem("showProductHuntLaunchModal");
+    if (!showModal) {
+      window.localStorage.setItem("showProductHuntLaunchModal", "true");
+      setProductHuntLaunchModal(true);
+    }
   }, []);
+  useEffect(() => {
+    if (!productHuntLaunchModal) {
+      window.localStorage.setItem("showProductHuntLaunchModal", "false");
+    }
+  }, [productHuntLaunchModal]);
+
   let pathname = router.pathname;
 
   return (
@@ -28,7 +41,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link
           rel="canonical"
-          href={`https://www.daolens.com${router?.asPath?.split('?')?.[0]}`}
+          href={`https://www.daolens.com${router?.asPath?.split("?")?.[0]}`}
           key="canonical"
         />
       </Head>
@@ -54,13 +67,18 @@ function MyApp({ Component, pageProps }) {
         closeOnClick
         rtl={false}
         theme="dark"
-        width={'400px'}
+        width={"400px"}
       />
+      {productHuntLaunchModal && (
+        <ProductHuntLaunchModal
+          setProductHuntLaunchModal={setProductHuntLaunchModal}
+        />
+      )}
       <Component {...pageProps} />
-      {pathname.includes('/blog') ? (
+      {pathname.includes("/blog") ? (
         <BlogPageFooter />
-      ) : pathname.includes('/discover-dao') ||
-        pathname.includes('/all-daos') ? (
+      ) : pathname.includes("/discover-dao") ||
+        pathname.includes("/all-daos") ? (
         <LightFooter />
       ) : (
         <Footer />
