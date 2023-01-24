@@ -64,8 +64,21 @@ function ProductHuntLaunchModal({ setProductHuntLaunchModal }) {
           }}
         >
           Check us out and leave a review
-        </h4>
+        </h4>{" "}
         <a
+          href="https://www.producthunt.com/posts/dao-manager?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dao&#0045;manager"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=375328&theme=dark"
+            alt="DAO&#0032;Manager - Your&#0032;ultimate&#0032;solution&#0032;for&#0032;growing&#0032;your&#0032;community | Product Hunt"
+            style={{ width: "262px", height: "54px", marginTop: "20px" }}
+            width="250"
+            height="54"
+          />
+        </a>
+        {/* <a
           href="https://www.producthunt.com/posts/dao-manager"
           rel="noreferrer"
           target="_blank"
@@ -87,7 +100,7 @@ function ProductHuntLaunchModal({ setProductHuntLaunchModal }) {
           >
             Continue
           </span>
-        </a>
+        </a> */}
       </div>
     </div>
   );
