@@ -10,7 +10,6 @@ import {
   Investors,
   TopBar,
 } from "../components/home";
-import ProductHuntLaunchModal from "../components/modals/ProductHuntLaunchModal";
 
 export default function Home({
   data,
