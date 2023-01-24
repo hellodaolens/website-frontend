@@ -4,10 +4,13 @@ import bannerBcg from '../../public/assets/content/banner-bcg.png';
 import bannerBcg2 from '../../public/assets/content/banner2-bcg.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import readingTime from 'reading-time';
 
 const HighlightedArticle = ({ banner, openModal }) => {
   const router = useRouter();
   const path = router.pathname;
+  
+  const readingStats = readingTime(banner?.attributes?.content);
 
   return (
     <Container
