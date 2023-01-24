@@ -104,13 +104,13 @@ export async function getStaticProps() {
 
   // hero
   const heroRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=1&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=False&populate=*`
+     `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=1&filters[isHighLight][$eq]=True&populate=*`
   );
   const heroData = await heroRes.json();
 
   // second highlight article
   const secondHeroRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=1&filters[isHighLight][$eq]=True&filters[showCTAinHighlight][$eq]=True&populate=*`
+      `${process.env.NEXT_PUBLIC_API_URL}/api/articles?sort=updatedAt:desc&pagination[limit]=1&filters[isSubHighlight][$eq]=True&populate=*`
   );
   const secondHeroData = await secondHeroRes.json();
 
