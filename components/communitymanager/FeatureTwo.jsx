@@ -92,7 +92,7 @@ const FeatureTwo = ({
                 flexDirection: "column",
                 gap: "12px",
               }}>
-              {accordian === index ? <p>{item.description}</p> :
+              {accordian === index ? <p style={{ height: "200px", marginBottom: 0 }}>{item.description}</p> :
                 <img
                   style={{ borderRadius: "16px", height: "200px", objectFit: "cover" }}
                   src={item.image.data.attributes.url}
@@ -128,10 +128,10 @@ const FeatureTwo = ({
 
 export const Container = styled.section`
   background: url(${featuresBCG.src}) center/cover no-repeat;
-  padding:100px 10%;
+  padding:10%;
   text-align:center;
   h3{
-    font:normal 600 40px/52px Inter;
+    // font:normal 600 40px/52px Inter;
   }
   
   .card{

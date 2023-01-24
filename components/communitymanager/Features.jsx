@@ -35,13 +35,14 @@ const Features = ({
   return (
     <Container className='section'>
       <div>
-        <h3 style={{ width: "650px" }}>{title}</h3>
+        <h3 style={{}}>{title}</h3>
         <p>{description}</p>
         <div style={{ marginBottom: "28px" }}>
           {accordian.map((accordianItem, idx) =>
             <>
 
               <div
+                key={idx}
                 style={{
                   padding: "28px",
                   borderTop: "0.5px solid",
@@ -79,7 +80,7 @@ const Features = ({
                     style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", height: "10px" }}>
                     {accordianItem.name} {open === idx ? <FaChevronDown /> : <FaChevronRight />}
                   </div>
-                  {open === idx && <div class="panel" style={{ marginTop: "20px" }}>
+                  {open === idx && <div className="panel" style={{ marginTop: "20px" }}>
                     <p>{accordianItem.description}</p>
                     <a
                       target="_blank"
@@ -92,13 +93,13 @@ const Features = ({
                   </div>}
                 </div>
               </div>
-              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12px 0px", borderRadius: "12px" }} />
+              {open === idx && <img className="body-image" src={accordianItem.image.data.attributes.url} style={{ margin: "20px 0px 12px 0px", borderRadius: "12px", width: "100%" }} />
               }
             </>)}
 
         </div>
 
-        <a href={heroCTADestination} className='Typeform-8' style={{ marginBottom: "68px" }}>
+        <a href={heroCTADestination} className='Typeform-8' >
           {heroCTAText}
         </a>
       </div>
@@ -109,7 +110,7 @@ const Features = ({
         style={{
           objectFit: "cover",
           borderRadius: "12px",
-          width: "500px",
+          width: "50%",
         }} />
 
 
@@ -119,8 +120,7 @@ const Features = ({
 
 export const Container = styled.section`
   background: url(${background1.src}) center/cover no-repeat;
-  padding:0px 10%;
-  padding-top:100px;
+  padding:10%;
   display:flex;
   gap:48px;
   justify-content:center;
@@ -128,7 +128,7 @@ export const Container = styled.section`
   text-align:center;
 
   h3{
-    font:normal 600 40px/52px Inter;
+    // font:normal 600 40px/52px Inter;
   }
   
 

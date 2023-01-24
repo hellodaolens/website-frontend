@@ -1,121 +1,74 @@
 import { HeadSeo } from "../components/common";
 import {
   Hero,
-  Banner,
-  Tabs,
-  Customers,
-  Resources,
-  Reviews,
-  CTA,
-  Investors,
-  TopBar,
-} from "../components/home";
+  Features,
+  FeaturesThree,
+  FeatureTwo,
+} from "../components/communitymanager";
+import FeatureFour from "../components/communitymanager/FeatureFour";
+import { TopBar } from "../components/home";
 
-export default function Home({
-  data,
-  navItems,
-  reviews,
-  customers,
-  investors,
-}) {
+
+const CommunityTool = ({ data: { data }, topBarInfo, navItems }) => {
   const {
-    DAOResourcesHeading,
-    DAOResources,
-    adminText,
-    adminHeading,
-    adminCTAText,
-    adminCTADestination,
-    adminImg1,
-    adminImg2,
-    adminPoints,
-    contributorText,
-    contributorHeading,
-    contributorCTAText,
-    contributorCTADestination,
-    contributorImg1,
-    contributorImg2,
-    contributorPoints,
-    customersHeading,
-    customersSubHeading,
-    heroCTADestination,
-    heroCTAText,
-    heroDesription,
     heroHeading,
-    heroImage,
-    lastSectionDescription,
-    lastSectionHeading,
-    lastSectionSubHeading,
-    lastSectionImg,
-    lastSectionCTAText,
-    lastSectionCTADestination,
-    section1MainHeading,
-    section1SubHeading,
-    topBar,
-    topBarInfo,
-    testimonalHeading,
-  } = data.data.attributes;
-
+    heroDescription,
+    heroCTAText,
+    heroCTADestination,
+    heroImg,
+    TopBar: topBar,
+    section1,
+    section2,
+    section3,
+    section4,
+  } = data.attributes;
   return (
     <>
-      <HeadSeo title="Personalised DAO Onboarding" />
+      <HeadSeo title={heroHeading} description={heroDescription} />
       {topBar && <TopBar topBarInfo={topBarInfo} />}
       <Hero
+        navItems={navItems}
         heroHeading={heroHeading}
-        heroDesription={heroDesription}
+        heroDescription={heroDescription}
         heroCTAText={heroCTAText}
         heroCTADestination={heroCTADestination}
-        heroImage={heroImage}
-        navItems={navItems}
+        heroImg={heroImg.data}
       />
-      <Banner
-        section1MainHeading={section1MainHeading}
-        section1SubHeading={section1SubHeading}
+      <Features
+        title={section1.name}
+        description={section1.description}
+        accordian={section1.accordian}
+        heroCTAText={heroCTAText}
+        heroCTADestination={heroCTADestination}
       />
-      <Tabs
-        adminText={adminText}
-        adminHeading={adminHeading}
-        adminImg1={adminImg1}
-        adminImg2={adminImg2}
-        adminPoints={adminPoints}
-        adminCTAText={adminCTAText}
-        adminCTADestination={adminCTADestination}
-        contributorText={contributorText}
-        contributorHeading={contributorHeading}
-        contributorCTAText={contributorCTAText}
-        contributorCTADestination={contributorCTADestination}
-        contributorImg1={contributorImg1}
-        contributorImg2={contributorImg2}
-        contributorPoints={contributorPoints}
+      <FeatureTwo heading={section3.heading} data={section3.data} />
+      <FeaturesThree
+        embedUrl={section2.embedUrl}
+        title={section2.name}
+        description={section2.description}
+        content={section2.content}
+        heading={section2.heading}
+        heroCTAText={heroCTAText}
+        heroCTADestination={heroCTADestination}
       />
-      <Customers
-        customersHeading={customersHeading}
-        customersSubHeading={customersSubHeading}
-        customers={customers}
-      />
-      <Resources
-        DAOResourcesHeading={DAOResourcesHeading}
-        DAOResources={DAOResources}
-      />
-      <Reviews reviews={reviews} heading={testimonalHeading} />
-      <CTA
-        lastSectionSubHeading={lastSectionSubHeading}
-        lastSectionHeading={lastSectionHeading}
-        lastSectionDescription={lastSectionDescription}
-        lastSectionImg={lastSectionImg}
-        lastSectionCTAText={lastSectionCTAText}
-        lastSectionCTADestination={lastSectionCTADestination}
-      />
-      <Investors investors={investors} />
+      <FeatureFour heading={section4.heading} data={section4.data} />
     </>
   );
-}
+};
+
+export default CommunityTool;
 
 export async function getStaticProps() {
-  // page data
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate[0]=adminImg1&populate[1]=adminImg2&populate[2]=adminPoints&populate[3]=adminPoints.img&populate[4]=lastSectionImg&populate[5]=DAOResources&populate[6]=DAOResources.logo&populate[7]=contributorImg1&populate[8]=contributorImg2&populate[9]=contributorPoints&populate[10]=contributorPoints.img&populate[11]=heroImage.img`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/communitymanager-page?populate[1]=heroImg&populate[2]=section1.accordian.image&populate[3]=section2.content&populate[4]=section3.data.image&populate[5]=section4.data.image`
   );
   const data = await res.json();
+
+  // home-page data (topbar info)
+  const homeRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
+  );
+  const homeData = await homeRes.json();
 
   // nav data
   const navRes = await fetch(
@@ -125,29 +78,23 @@ export async function getStaticProps() {
 
   // reviews data
   const reviewsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/testimonials?populate=*`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/contributiontool-testimonials?populate=*`
   );
   const reviewsData = await reviewsRes.json();
 
-  // customers data
-  const customersRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/customers?populate=*`
+  // users data
+  const usersRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/contributiontool-customers?populate=*`
   );
-  const customersData = await customersRes.json();
-
-  // investors data
-  const investorsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/investors?pagination[start]=0&pagination[limit]=100&sort=isHightlight:desc&populate=*`
-  );
-  const investorsData = await investorsRes.json();
+  const usersData = await usersRes.json();
 
   return {
     props: {
       data,
+      topBarInfo: homeData?.data?.attributes?.topBarInfo,
       navItems: navData?.data?.attributes,
       reviews: reviewsData?.data,
-      customers: customersData?.data,
-      investors: investorsData?.data,
+      users: usersData?.data,
     },
     revalidate: 1,
   };

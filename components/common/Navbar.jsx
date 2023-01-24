@@ -87,6 +87,14 @@ export const NavContainer = styled.nav`
   background: transparent;
   position: relative;
   z-index: 10;
+  @media (max-width: 375px) {
+    gap: 5px;
+    padding: 5px;
+    font-size: 0.75rem;
+    .Typeform-1 {
+      font-size:12px;
+    }
+  }
 
   .Typeform-1 {
     display: inline-block;
@@ -134,6 +142,9 @@ export const NavContainer = styled.nav`
         gap: 5px;
         padding: 5px;
         font-size: 0.75rem;
+        .Typeform-1 {
+          font-size:12px;
+        }
       }
     }
 
