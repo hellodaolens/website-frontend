@@ -1,4 +1,4 @@
-import { HeadSeo } from '../components/common';
+import { HeadSeo } from "../components/common";
 import {
   Hero,
   Banner,
@@ -9,7 +9,8 @@ import {
   CTA,
   Investors,
   TopBar,
-} from '../components/home';
+} from "../components/home";
+import ProductHuntLaunchModal from "../components/modals/ProductHuntLaunchModal";
 
 export default function Home({
   data,
