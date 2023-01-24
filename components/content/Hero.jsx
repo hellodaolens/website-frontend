@@ -77,7 +77,7 @@ const Hero = ({
   const readingStats = readingTime(bannerArticle?.attributes?.content);
 
   const url = bannerArticle?.attributes?.podcastLink;
-  const id = url.split('/')[4];
+  const id = url && url.split('/')[4];
 
   return (
     <Container>
