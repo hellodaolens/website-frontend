@@ -6978,10 +6978,10 @@
       "type": "DeFi",
       "Blockchain": "Ethereum",
       "Community": "14K /  -",
-      "About": "\"\"\"TrustSwap is a distributed platform, cryptocurrency, and protocol that promises a new evolution to decentralized finance (DeFi). It aims to achieve this through next-generation multi-chain token swaps and other functionalities that aim to solve existing problems with split payments, subscriptions and cross-chain token swaps. TrustSwap offers smart contract services and innovative solutions for decentralized finance (DeFi) and helps the crypto community transact with integrity and accountability. TrustSwap solves problems in the DeFi space connected to payments, escrow, minting, token and liquidity locks, and fundraising.\"",
-      "HowToJoin": "\"1. Join TrustSwap Launchpad:\"\"TrustSwap Launchpad is a full-service launch platform where stakers (non-US*) can gain early access and participate in the most promising blockchain projects.\"\"- Step 1: Make sure you own a wallet that is interacting with the Ethereum Blockchain (e.g. Metamask). In addition, your wallet should hold ETH and SWAP tokens.\"\"- Step 2: Navigate to Launchpad Dashboard and connect your wallet. We recommend Metamask.\"\"- Step 3: Select Stake.\"\"- Step 4: Complete the steps outlined in the Staking Portal. The staking requirements are now complete.\"\"- Step 5: Fill in the application form within the 24-hour launch window and wait for a confirmation email which you should receive within 72 hours that includes payment details.\"\"1. Navigate to the TrustSwap website and click [Buy SWAP] on the upper right of the page.\"",
+      "About": "\"TrustSwap is a multichain digital asset ecosystem focused on making crypto safer and more accessible for the average person. Their diverse suite of tools and services synergize to support blockchain innovation by aligning interests and incentives between builders, investors, and communities.\"\"The TrustSwap Ecosystem is comprised of:\"\"Team Finance - A smart contract toolkit designed for builders that include:\"\"- Mint Token Generator - Easily customize and mint your own fully-audited token contracts with no coding experience needed.\"\"- Team Token & Liquidity Locks - Time-lock your Team and Liquidity Pool (LP) tokens to show your commitment to the community.\"\"- Vesting and Staking Contracts - Distribute tokens to your community and early investors with time-release token vesting and staking contract solutions.\"\"The Crypto App - One of the world’s most popular crypto mobile apps with over 4 million downloads. It includes portfolio tracking, news, alerts, and widgets with many more features coming soon.\"\"TrustSwap Launchpad - This exclusive launchpad and incubation program is reserved for exceptional projects that are hand-selected by TrustSwap's team of experts and advisors.\"\"Swappable - A premium B2B NFT service working with artists, institutions, and businesses to help them expand into the Web3 world.\"\"SmartSwaps - TrustSwap's flagship service is a decentralized P2P/OTC escrow solution that allows any two people in the world to exchange digital assets securely.\"",
+      "HowToJoin": "\"Staking SWAP tokens in the Long Term Staking Pool unlocks access to the TrustSwap community. Staking more SWAP longer leads to progressively higher rewards and benefits within the TrustSwap Ecosystem including:\"\"- Access to Launchpad allocations\"\"- Discounts on TrustSwap services\"\"- Competitive staking rewards ( up to 27% APY, non-inflationary )\"\"- Exclusive community chat groups\"\"SWAP tokens can be purchased from various exchanges and staked on multiple blockchains including Ethereum, Polygon, BSC, and Avalanche. \"\"Explore your options at: https://trustswap.com/buy-swap/\"\"For more information about Staking SWAP tokens and the Long Term Staking Pool, please see the blog post here \"",
       "FoundingTeam": "\"Jeff Kirdeikis, CEO\"\"Jeff Kirdeikis is a Downloads Advocate for Bitcoin as well as previously CEO @ Uptrennd, which became the most visited blockchain social media site globally.\"\"Linkedin-https://ca.linkedin.com/in/jeffkirdeikis\"\"Adam Barlam, CTO\"\"Adam Barlam who has previously developed a decentralized social media platform called Rebuzz, and was the developer of Bravocoin – a platform where users write reviews and receive crypto in return.\"\"https://www.linkedin.com/in/adambarlam\"\"Ivan Reif, CTO\"\"https://www.linkedin.com/in/ivan-reif/\"\"Joey Ryan, CFO\"\"Joseph Ryan studied at Florida State University majoring Masters of Accounting. Additionally, Joseph Ryan has had 1 past job as the CFO at Gilded.\"\"Linkedin-https://www.linkedin.com/in/joseph-ryan-cpa/\"\"Onuora Amobi, CMO\"\"Linkedin-https://www.linkedin.com/in/amobi\"",
-      "AdditionalInfo": "\"https://www.crunchbase.com/organization/trustswap\"\"https://www.reddit.com/r/Trustswap/\"\"https://www.coinbase.com/price/trustswap\"",
+      "AdditionalInfo": "\"https://www.crunchbase.com/organization/trustswap\"\"https://www.reddit.com/r/Trustswap/\"\"https://www.coinbase.com/price/trustswap\"\"Telegram Group(https://t.me/TrustSwap)\"",
       "discordLink": "https://discord.com/invite/VN2e4Qz",
       "twitterLink": "https://twitter.com/trustswap",
       "websiteLink": "https://trustswap.com/",
@@ -6997,13 +6997,7 @@
           "name": "Jeff Kirdeikis",
           "link": "https://ca.linkedin.com/in/jeffkirdeikis",
           "designation": "CEO",
-          "description": "Jeff Kirdeikis is a Downloads Advocate for Bitcoin as well as previously CEO @ Uptrennd, which became the most visited blockchain social media site globally."
-        },
-        {
-          "name": "Adam Barlam",
-          "link": "https://www.linkedin.com/in/adambarlam",
-          "designation": " CTO",
-          "description": "Adam Barlam who has previously developed a decentralized social media platform called Rebuzz, and was the developer of Bravocoin – a platform where users write reviews and receive crypto in return."
+          "description": "Jeff Kirdeikis is a Downloads Advocate for Bitcoin as well as previously CEO @Uptrennd, which became the most visited blockchain social media site globally."
         },
         {
           "name": "Ivan Reif",
@@ -7012,10 +7006,16 @@
           "description": ""
         },
         {
+          "name": "Adam Barlam",
+          "link": "https://www.linkedin.com/in/adambarlam",
+          "designation": " ",
+          "description": "Adam Barlam has previously developed a decentralized social media platform called Rebuzz, and was the developer of Bravocoin – a platform where users write reviews and receive crypto in return."
+        },
+        {
           "name": "Joey Ryan",
           "link": "https://www.linkedin.com/in/joseph-ryan-cpa/",
           "designation": "CFO",
-          "description": "Joseph Ryan studied at Florida State University majoring Masters of Accounting. Additionally, Joseph Ryan has had 1 past job as the CFO at Gilded."
+          "description": "Joseph Ryan studied at Florida State University majoring in Master of Accounting. Additionally, Joseph Ryan has had 1 past job as the CFO at Gilded."
         },
         {
           "name": "Onuora Amobi",
