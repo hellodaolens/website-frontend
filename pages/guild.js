@@ -22,7 +22,6 @@ function Guild({ data, topBarInfo, navItems }) {
     section3,
     section4,
   } = data.attributes;
-  console.log("heroImg", heroImg);
   return (
     <>
       <HeadSeo title={heroHeading} description={heroDescription} />
@@ -64,9 +63,6 @@ export async function getStaticProps() {
     `${process.env.NEXT_PUBLIC_API_URL}/api/manager-templates?populate[1]=heroImg&populate[2]=section1.accordian.image&populate[3]=section2.content&populate[4]=section3.data.image&populate[5]=section4.data.image`
   );
   var data = await res.json();
-
-  console.log("manager template data\n\n\n", data, "\n\n\n");
-
   // home-page data (topbar info)
   const homeRes = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/home-page`
