@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { HeadSeo, Navbar } from '../../../components/common';
-import styled from 'styled-components';
-import moment from 'moment/moment';
-import ReactMarkdown from 'react-markdown';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { HeadSeo, Navbar } from "../../../components/common";
+import styled from "styled-components";
+import moment from "moment/moment";
+import ReactMarkdown from "react-markdown";
+import { useRouter } from "next/router";
 import {
   PageBanner,
   PageBannerSmall,
   TopPosts,
-} from '../../../components/content';
-import Link from 'next/link';
-import HighlightedArticle from '../../../components/content/Highlighted';
-import FeaturedArticles from '../../../components/content/FeaturedArticles';
+} from "../../../components/content";
+import Link from "next/link";
+import HighlightedArticle from "../../../components/content/Highlighted";
+import FeaturedArticles from "../../../components/content/FeaturedArticles";
 
 const SingleBlogPage = ({
   article,
@@ -28,7 +28,7 @@ const SingleBlogPage = ({
   if (isFallback) {
     return (
       <>
-        <HeadSeo title={'Blog'} />
+        <HeadSeo title={"Blog"} />
         <Container>
           <Navbar
             navItems={navItems}
@@ -89,7 +89,7 @@ const SingleBlogPage = ({
                           {author}
                         </a>
                       </span>
-                      , {moment(date).format('ll')}
+                      , {moment(date).format("ll")}
                     </p>
                   </div>
                 </div>
