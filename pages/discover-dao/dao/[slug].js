@@ -1,21 +1,16 @@
-import { HeadSeo, DaoNavbar } from "../../../components/common";
-import styled from "styled-components";
-import { useRouter } from "next/router";
-import data from "../../../data.json";
-import banner from "../../../banner.json";
-import Image from "next/image";
-import { FaArrowRight, FaDiscord, FaLinkedin, FaTwitter } from "react-icons/fa";
-import howToJoinBCG from "../../../public/assets/discover-daos/how-to-join-bcg.png";
+import React from "react";
+import { FaDiscord, FaLinkedin, FaTwitter } from "react-icons/fa";
 import ReactLinkify from "react-linkify";
+import ReactMarkdown from "react-markdown";
+import styled from "styled-components";
+import { DaoNavbar, HeadSeo } from "../../../components/common";
 import pattern from "../../../public/assets/discover-daos/pattern.png";
-const SingleDaoPage = () => {
-  const router = useRouter();
-  const { token } = router.query;
-  const dao = data?.find((dao) => dao.attributes.title === `${token}`);
-  
+import banner from "../../../banner.json";
+function DaoName({ dao, slug }) {
+  console.log("daodetails", dao);
   return (
     <>
-      <HeadSeo title={dao?.attributes?.Token} />
+      <HeadSeo title={dao?.Token} />
       <main>
         <div
           style={{
@@ -29,12 +24,12 @@ const SingleDaoPage = () => {
             <div
               className="hero-banner"
               style={{
-                background: `url(${dao?.attributes?.twittercover}) center/cover no-repeat`,
+                background: `url(${dao?.twittercover}) center/cover no-repeat`,
               }}
             >
               <div className="links">
                 <a
-                  href={dao?.attributes?.websiteLink}
+                  href={dao?.websiteLink}
                   className="website-link"
                   target="_blank"
                   rel="noreferrer"
@@ -42,7 +37,7 @@ const SingleDaoPage = () => {
                   Visit Website
                 </a>
                 <a
-                  href={dao?.attributes?.discordLink}
+                  href={dao?.discordLink}
                   className="social-link"
                   target="_blank"
                   rel="noreferrer"
@@ -55,12 +50,10 @@ const SingleDaoPage = () => {
                   }}
                 >
                   <FaDiscord size="28px" color="white" />{" "}
-                  <span className="discord-count">
-                    {dao?.attributes?.Community.split("/")[0]}
-                  </span>
+                  <span className="discord-count">{dao?.Community}</span>
                 </a>
                 <a
-                  href={dao?.attributes?.twitterLink}
+                  href={dao?.twitterLink}
                   className="social-link"
                   target="_blank"
                   rel="noreferrer"
@@ -72,26 +65,26 @@ const SingleDaoPage = () => {
               <div className="dao-logo-wrapper">
                 <img
                   className="logo"
-                  src={dao?.attributes?.twitterdp}
-                  alt={dao?.attributes?.Token}
+                  src={dao?.twitterdp}
+                  alt={dao?.Token}
                   objectFit="contain"
                 />
-                <h2>{dao?.attributes?.title}</h2>
+                <h2>{dao?.title}</h2>
               </div>
             </div>
 
             <div className="dao-info">
               <div className="dao-info-left">
-                <p>{dao?.attributes?.About.replace(/\\|\"/g, "")}</p>
+                <ReactMarkdown>{dao?.About}</ReactMarkdown>
                 <div className="footer">
-                  <span>Founded in {dao?.attributes?.age}</span>
-                  <span>On {dao?.attributes?.Blockchain} Blockchain</span>
+                  <span>Founded in {dao?.age}</span>
+                  <span>On {dao?.Blockchain} Blockchain</span>
                 </div>
               </div>
 
               <div className="dao-info-right">
                 <div className="tags">
-                  {dao?.attributes?.type.split(", ").map((tag, index) => (
+                  {dao?.type.split(", ").map((tag, index) => (
                     <span className="tag-btn" key={index}>
                       #{tag}
                     </span>
@@ -100,40 +93,19 @@ const SingleDaoPage = () => {
 
                 <div className="community">
                   <span className="tag-btn">
-                    {dao?.attributes?.Community.split("/")[1]} Token Holders
+                    {dao?.Community.split("/")[1]} Token Holders
                   </span>
                 </div>
 
                 <div className="token">
-                  <span className="tag-btn">
-                    Token {dao?.attributes?.Token}
-                  </span>
+                  <span className="tag-btn">Token {dao?.Token}</span>
                 </div>
               </div>
             </div>
 
             <div className="how-to-join">
               <div className="content">
-                <h4>How to join:</h4>
-                <ReactLinkify>
-                  <p
-                    style={{
-                      overflowWrap: "break-word",
-                      hyphens: "auto",
-                      wordWrap: "break-word",
-                      wordBreak: "break-word",
-                    }}
-                  >
-                    {dao?.attributes?.HowToJoin.split(/\\|\"/g).map(
-                      (singleLine, idx) => (
-                        <>
-                          <span key={idx}>{singleLine}</span>
-                          <br />
-                        </>
-                      )
-                    )}
-                  </p>
-                </ReactLinkify>
+                <ReactMarkdown>{dao?.HowToJoin}</ReactMarkdown>
               </div>
             </div>
 
@@ -145,49 +117,29 @@ const SingleDaoPage = () => {
             >
               <div className="banner"></div>
             </a>
-            {dao?.attributes?.foundersDetails?.length > 0 && (
+            {dao?.foundersDetails?.length > 0 && (
               <div className="founders">
-                {dao?.attributes?.foundersDetails.map((singleFounder) => (
-                  <div key={singleFounder.name} className="single-founder">
-                    <span className="single-founder__name">
-                      {singleFounder.name}
-                    </span>
-                    <span className="single-founder__designation">
-                      {singleFounder.designation}
-                    </span>
-                    <p className="single-founder__description">
-                      {singleFounder.description}
-                    </p>
-                    <a
-                      href={singleFounder.link}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {singleFounder.link.includes("twitter.com") ? (
-                        <FaTwitter size={"28px"} />
-                      ) : (
-                        <FaLinkedin size={"28px"} />
-                      )}
-                    </a>
-                  </div>
+                {dao?.foundersDetails.map((singleFounder) => (
+                  <ReactMarkdown
+                    key={singleFounder.id}
+                    className="single-founder"
+                  >
+                    {singleFounder.singleFounder}
+                  </ReactMarkdown>
                 ))}
               </div>
             )}
-            {dao?.attributes?.AdditionalInfo && (
-              <div className="more-info">
-                <h4>Helpful resources</h4>
-                <a href={dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}>
-                  {dao?.attributes?.AdditionalInfo.replace(/\\|\"/g, "")}
-                </a>
-              </div>
+            {dao?.AdditionalInfo && (
+              <ReactMarkdown className="more-info">
+                {dao?.AdditionalInfo}
+              </ReactMarkdown>
             )}
           </Container>
         </div>
       </main>
     </>
   );
-};
-
+}
 export const Container = styled.section`
   padding: 6rem 0 0 0;
 
@@ -422,13 +374,12 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-
     padding-bottom: 36px;
     .single-founder {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 10px;
+      padding: 16px 20px;
       justify-content: flex-start;
       flex-wrap: wrap;
       border-radius: 16px;
@@ -436,7 +387,11 @@ export const Container = styled.section`
       border: 1px solid rgba(132, 74, 255, 0.24);
       min-width: 370px;
       max-width: 450px;
-      &__name {
+      p a img {
+        width: 24px !important;
+      }
+
+      h5 {
         font-style: normal;
         font-weight: 600;
         font-size: 37.4687px;
@@ -445,7 +400,7 @@ export const Container = styled.section`
         display: inline-block;
         margin-bottom: 8px;
       }
-      &__designation {
+      p {
         font-style: normal;
         font-weight: 600;
         font-size: 18.5342px;
@@ -454,7 +409,7 @@ export const Container = styled.section`
         display: inline-block;
         margin-bottom: 20px;
       }
-      &__description {
+      p {
         font-style: 400;
         font-weight: 400;
         font-size: 16;
@@ -474,6 +429,9 @@ export const Container = styled.section`
   .more-info {
     padding: 0 1rem;
     color: black;
+    p {
+      margin-bottom: 0 !important;
+    }
     a {
       text-decoration: underline;
       color: black;
@@ -481,5 +439,44 @@ export const Container = styled.section`
     }
   }
 `;
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params;
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/daos/${slug}?populate=*`
+  );
+  const data = await res.json();
+  const daoDetails = data.data.attributes;
+  const DAO_DATA = {
+    age: daoDetails?.age,
+    Token: daoDetails?.Token,
+    type: daoDetails?.type,
+    Blockchain: daoDetails?.Blockchain,
+    Community: daoDetails?.Community,
+    About: daoDetails?.About,
+    HowToJoin: daoDetails?.HowToJoin,
+    AdditionalInfo: daoDetails?.AdditionalInfo,
+    discordLink: daoDetails?.discordLink,
+    twitterLink: daoDetails?.twitterLink,
+    websiteLink: daoDetails?.websiteLink,
+    title: daoDetails?.title,
+    twitterdp: daoDetails?.ProfileImageLink,
+    twittercover: daoDetails?.BannerImageLink,
+    isPopular: daoDetails?.isPopular,
+    foundersDetails: daoDetails?.founders,
+  };
+  return { props: { dao: DAO_DATA, slug } };
+};
+export const getStaticPaths = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/daos`);
+  const data = await res.json();
+  const daos = data?.data;
+  const slugs = daos?.map((dao) => dao?.id);
+  const paths = slugs?.map((slug) => ({ params: { slug: `${slug}` } }));
 
-export default SingleDaoPage;
+  return {
+    paths,
+    fallback: true,
+  };
+};
+
+export default DaoName;
