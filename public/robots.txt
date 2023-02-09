@@ -1,1 +1,4 @@
+User-agent: *
+Disallow: /index
+
 Sitemap: https://www.daolens.com/sitemap.xml
