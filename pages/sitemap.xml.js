@@ -1,40 +1,79 @@
+import { globby } from "globby";
+import daoData from "../data.json";
 //pages/sitemap.xml.js
 const EXTERNAL_DATA_URL =
-  'https://daolens-strapi-dxrba.ondigitalocean.app/api/articles?pagination[start]=0&pagination[limit]=100';
+  "https://daolens-strapi-dxrba.ondigitalocean.app/api/articles?pagination[start]=0&pagination[limit]=100";
 
-function generateSiteMap(posts) {
+function addPage(page) {
+  const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");
+  const route =
+    path === "/index"
+      ? "/"
+      : path.includes("/index")
+      ? path.replace("/index", "")
+      : path;
+
+  return `  <url>
+      <loc>${`https://www.daolens.com${route}`}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>`;
+}
+
+const getStaticPageSitemap = async () => {
+  const pages = await globby([
+    "pages/**/*.js",
+    "!pages/_*.js",
+    "!pages/api",
+    "!pages/blog/[slug]/*",
+    "!pages/discover-dao/[token]/*",
+    "!pages/discover-dao/dao/*",
+    "!pages/sitemap.xml.js",
+  ]);
+
+  return pages.map((page) => addPage(page)).join("");
+};
+
+const getBlogSitemap = async () => {
+  const request = await fetch(EXTERNAL_DATA_URL);
+  const posts = await request.json();
+  return posts?.data
+    .map(
+      (post) =>
+        `
+      <url>
+        <loc>${`https://www.daolens.com/blog/${post?.attributes?.slug}`}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+      </url>
+      `
+    )
+    .join("");
+};
+
+const getDiscoverDaoSitemap = () => {
+  const sitemap = daoData
+    .map(
+      (dao) =>
+        `<url>
+          <loc>https://www.daolens.com/discover-dao/${dao.attributes.title}</loc>
+          <lastmod>${new Date().toISOString()}</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>1.0</priority>
+        </url>`
+    )
+    .join("");
+  return sitemap;
+};
+
+async function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <url>
-       <loc>https://www.daolens.com</loc>
-     </url>
-     <url>
-       <loc>https://www.daolens.com/careers</loc>
-     </url>
-     <url>
-       <loc>https://www.daolens.com/community</loc>
-     </url>
-     <url>
-       <loc>https://www.daolens.com/dao-manager</loc>
-     </url>
-     <url>
-     <loc>https://www.daolens.com/community-manager</loc>
-     </url>
-     <url>
-       <loc>https://www.daolens.com/onboarding-tool</loc>
-     </url>
-     <url>
-       <loc>https://www.daolens.com/blog</loc>
-     </url>
-          ${posts?.data
-      .map((post) => {
-        return `
-       <url>
-           <loc>${`https://www.daolens.com/blog/${post?.attributes?.slug}`}</loc>
-       </url>
-     `;
-      })
-      .join('')}
+    ${await getStaticPageSitemap()} 
+    ${await getBlogSitemap()}
+    ${getDiscoverDaoSitemap()}
    </urlset>
  `;
 }
@@ -44,14 +83,9 @@ function SiteMap() {
 }
 
 export const getServerSideProps = async ({ res }) => {
-  // We make an API call to gather the URLs for our site
-  const request = await fetch(EXTERNAL_DATA_URL);
-  const posts = await request.json();
+  const sitemap = await generateSiteMap();
 
-  // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap(posts);
-
-  res.setHeader('Content-Type', 'text/xml');
+  res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser
   res.write(sitemap);
   res.end();
