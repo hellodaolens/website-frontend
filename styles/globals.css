@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 html {
   font-size: 100%;
@@ -45,9 +45,9 @@ html {
   --textColor: var(--clr-grey);
 
   /* fonts */
-  --headingFont: 'Inter', sans-serif;
-  --bodyFont: 'Inter', sans-serif;
-  --gameFont: 'Press Start 2P', cursive;
+  --headingFont: "Inter", sans-serif;
+  --bodyFont: "Inter", sans-serif;
+  --gameFont: "Press Start 2P", cursive;
   --smallText: 0.8em;
 
   /* dimensions */
@@ -109,37 +109,47 @@ h4 {
   letter-spacing: var(--letterSpacing);
 }
 
-h1 {
+h1,
+.h1 {
   font-size: 2.8rem;
 }
-h2 {
+h2,
+.h2 {
   font-size: 2rem;
 }
-h3 {
+h3,
+.h3 {
   font-size: 1.2rem;
 }
-h4 {
+h4,
+.h4 {
   font-size: 1rem;
 }
-p {
+p,
+.p {
   margin-bottom: 1.25rem;
   max-width: 40em;
   color: var(--clr-light-blue);
 }
 @media screen and (min-width: 792px) {
-  h1 {
+  h1,
+  .h1 {
     font-size: 4.5rem;
   }
-  h2 {
+  h2,
+  .h2 {
     font-size: 3rem;
   }
-  h3 {
+  h3,
+  .h3 {
     font-size: 2rem;
   }
-  h4 {
+  h4,
+  .h4 {
     font-size: 1.5rem;
   }
-  h5 {
+  h5,
+  .h5 {
     font-size: 1rem;
   }
   body,

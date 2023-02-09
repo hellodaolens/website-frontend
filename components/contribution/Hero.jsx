@@ -27,7 +27,7 @@ const Hero = ({
       <main onClick={() => setShowMenu(false)}>
         <div className='main section-center'>
           <div className='hero-content'>
-            <h2>{heroHeading}</h2>
+            <h1 className='h2'>{heroHeading}</h1>
             <p>{heroDescription}</p>
             <a href={heroCTADestination} className='Typeform-7'>
               {heroCTAText}

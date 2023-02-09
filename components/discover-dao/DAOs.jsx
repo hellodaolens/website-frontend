@@ -95,7 +95,7 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
         </header>
 
         <div className="title">
-          <h3>{currentTag}</h3>
+          <h1 className="h3">{currentTag}</h1>
           <Link href="/all-daos">
             <a>See all</a>
           </Link>
@@ -324,7 +324,7 @@ export const Container = styled.section`
     justify-content: space-between;
     align-items: center;
 
-    h3 {
+    h3, .h3 {
       margin-bottom: 0;
     }
 
