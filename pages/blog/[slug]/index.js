@@ -95,7 +95,7 @@ const SingleBlogPage = ({
                 </div>
 
                 <div className="title">
-                  <h3>{name}</h3>
+                  <h1 className="h3">{name}</h1>
                 </div>
 
                 <div className="content">

@@ -53,7 +53,7 @@ const Hero = ({ setCurrentTag, bodyRef }) => {
       <main>
         <div className="title" style={{ position: "absolute", top: 110, zIndex: "2", textAlign: "center", width: "100%" }}>
 
-          <h2>Discover, Join and Contribute</h2>
+          <h1 className='h2'>Discover, Join and Contribute</h1>
         </div>
         <Carousel
           showDots={true}

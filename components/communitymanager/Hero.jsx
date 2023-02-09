@@ -33,7 +33,7 @@ const Hero = ({
         }}
       >
         <div style={{}}>
-          <h3>{heroHeading}</h3>
+          <h1 className="h3">{heroHeading}</h1>
           <p style={{ marginBottom: "30px" }}>{heroDescription}</p>
           <a href={heroCTADestination} className="Typeform-7 large">
             {heroCTAText}

@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import readingTime from 'reading-time';
-import heroBcg from '../../public/assets/content/hero-bcg.png';
-import bannerBcg from '../../public/assets/content/banner-bcg.png';
-import youtube from '../../public/assets/content/youtube.png';
-import spotify from '../../public/assets/content/spotify.png';
-import articles from '../../public/assets/content/articles.png';
-import activeOption from '../../public/assets/content/active-option.png';
-import Image from 'next/image';
-import Link from 'next/link';
-import Articles from './Articles';
-import Spotify from './Spotify';
-import { Navbar } from '../common';
-import Videos from './Videos';
-import Modal from './Modal';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import ReactPlayer from 'react-player/lazy';
-import PageBanner from './PageBanner';
-import HighlightedArticle from './Highlighted';
-import FeaturedArticles from './FeaturedArticles';
+import { useState } from "react";
+import styled from "styled-components";
+import readingTime from "reading-time";
+import heroBcg from "../../public/assets/content/hero-bcg.png";
+import bannerBcg from "../../public/assets/content/banner-bcg.png";
+import youtube from "../../public/assets/content/youtube.png";
+import spotify from "../../public/assets/content/spotify.png";
+import articles from "../../public/assets/content/articles.png";
+import activeOption from "../../public/assets/content/active-option.png";
+import Image from "next/image";
+import Link from "next/link";
+import Articles from "./Articles";
+import Spotify from "./Spotify";
+import { Navbar } from "../common";
+import Videos from "./Videos";
+import Modal from "./Modal";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import ReactPlayer from "react-player/lazy";
+import PageBanner from "./PageBanner";
+import HighlightedArticle from "./Highlighted";
+import FeaturedArticles from "./FeaturedArticles";
 
 const Hero = ({
   navItems,
@@ -40,7 +40,7 @@ const Hero = ({
   const { query } = useRouter();
 
   const [showMenu, setShowMenu] = useState(false);
-  const [option, setOption] = useState('articles');
+  const [option, setOption] = useState("articles");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -48,24 +48,24 @@ const Hero = ({
   };
 
   useEffect(() => {
-    query?.modal === 'open' && setIsModalOpen(true);
+    query?.modal === "open" && setIsModalOpen(true);
   }, [query]);
 
   const updateOptionBtns = (e) => {
-    if (e.target.parentNode.classList.contains('option')) {
-      document.querySelectorAll('.option').forEach((btn) => {
-        btn.classList.add('unactive');
+    if (e.target.parentNode.classList.contains("option")) {
+      document.querySelectorAll(".option").forEach((btn) => {
+        btn.classList.add("unactive");
       });
-      e.target.parentNode.classList.remove('unactive');
-      e.target.parentNode.classList.add('active-opt');
+      e.target.parentNode.classList.remove("unactive");
+      e.target.parentNode.classList.add("active-opt");
     }
 
-    if (e.target.parentNode.parentNode.classList.contains('option')) {
-      document.querySelectorAll('.option').forEach((btn) => {
-        btn.classList.add('unactive');
+    if (e.target.parentNode.parentNode.classList.contains("option")) {
+      document.querySelectorAll(".option").forEach((btn) => {
+        btn.classList.add("unactive");
       });
-      e.target.parentNode.parentNode.classList.remove('unactive');
-      e.target.parentNode.parentNode.classList.add('active-opt');
+      e.target.parentNode.parentNode.classList.remove("unactive");
+      e.target.parentNode.parentNode.classList.add("active-opt");
     }
   };
 
@@ -77,7 +77,7 @@ const Hero = ({
   const readingStats = readingTime(bannerArticle?.attributes?.content);
 
   const url = bannerArticle?.attributes?.podcastLink;
-  const id = url && url.split('/')[4];
+  const id = url && url.split("/")[4];
 
   return (
     <Container>
@@ -89,7 +89,6 @@ const Hero = ({
       <main onClick={() => setShowMenu(false)} className="section">
         <div className="section-center">
           <PageBanner banner={pageBanner} />
-
           <div className="banner-container">
             {/* banner */}
             <div className="banner">
@@ -122,7 +121,7 @@ const Hero = ({
                 )}
                 {bannerArticle?.attributes?.showPodcast && (
                   <iframe
-                    style={{ borderRadius: '15px' }}
+                    style={{ borderRadius: "15px" }}
                     src={`https://open.spotify.com/embed/episode/${id}?utm_source=generator&theme=0`}
                     width="100%"
                     height="352"
@@ -133,11 +132,11 @@ const Hero = ({
                 )}
               </div>
               <article className="info">
-                <h3>{bannerArticle?.attributes?.name}</h3>
+                <h1 className="h3">{bannerArticle?.attributes?.name}</h1>
                 <div>
                   <p>{bannerArticle?.attributes?.shortDescription}</p>
                   <p>
-                    - {bannerArticle?.attributes?.author},{' '}
+                    - {bannerArticle?.attributes?.author},{" "}
                     {bannerArticle?.attributes?.authorDesignation}
                   </p>
                 </div>
@@ -183,7 +182,7 @@ const Hero = ({
           <div className="options">
             <button
               className="option active-opt"
-              onClick={(e) => selectOption(e, 'articles')}
+              onClick={(e) => selectOption(e, "articles")}
             >
               <Image
                 src={articles}
@@ -196,7 +195,7 @@ const Hero = ({
             </button>
             <button
               className="option"
-              onClick={(e) => selectOption(e, 'youtube')}
+              onClick={(e) => selectOption(e, "youtube")}
             >
               <Image
                 src={youtube}
@@ -209,7 +208,7 @@ const Hero = ({
             </button>
             <button
               className="option"
-              onClick={(e) => selectOption(e, 'spotify')}
+              onClick={(e) => selectOption(e, "spotify")}
             >
               <Image
                 src={spotify}
@@ -223,9 +222,9 @@ const Hero = ({
             </button>
           </div>
 
-          {option === 'articles' && <Articles allArticles={allArticles} />}
-          {option === 'youtube' && <Videos videos={videos} />}
-          {option === 'spotify' && <Spotify podcasts={podcasts} />}
+          {option === "articles" && <Articles allArticles={allArticles} />}
+          {option === "youtube" && <Videos videos={videos} />}
+          {option === "spotify" && <Spotify podcasts={podcasts} />}
         </div>
       </main>
     </Container>
@@ -296,7 +295,7 @@ export const Container = styled.section`
     &::after {
       padding-top: 56.25%;
       display: block;
-      content: '';
+      content: "";
     }
     iframe {
       position: absolute;

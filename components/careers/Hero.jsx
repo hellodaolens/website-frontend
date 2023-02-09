@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import heroBCG from '../../public/assets/careers/hero-bcg.png';
-import { Navbar } from '../common';
+import { useState } from "react";
+import Image from "next/image";
+import styled from "styled-components";
+import heroBCG from "../../public/assets/careers/hero-bcg.png";
+import { Navbar } from "../common";
 
 const Hero = ({
   navItems,
@@ -22,12 +22,12 @@ const Hero = ({
         setShowMenu={setShowMenu}
       />
       <main onClick={() => setShowMenu(false)}>
-        <div className='section-center'>
-          <article className='info'>
+        <div className="section-center">
+          <article className="info">
             <div>
-              <h2>{heroHeading}</h2>
+              <h1 className="h2">{heroHeading}</h1>
               <p>{heroDescription}</p>
-              <a href={heroCTADestination} className='Jobs-1'>
+              <a href={heroCTADestination} className="Jobs-1">
                 {heroCTAText}
               </a>
             </div>
@@ -35,11 +35,11 @@ const Hero = ({
 
           <Image
             src={heroImg?.data?.attributes?.url}
-            alt='hero'
+            alt="hero"
             width={903.91}
             height={454}
-            objectFit='contain'
-            placeholder='blur'
+            objectFit="contain"
+            placeholder="blur"
             blurDataURL={heroImg?.data?.attributes?.url}
           />
         </div>

@@ -76,7 +76,7 @@ const SingleDaoPage = () => {
                   alt={dao?.attributes?.Token}
                   objectFit="contain"
                 />
-                <h2>{dao?.attributes?.title}</h2>
+                <h1 className="h2">{dao?.attributes?.title}</h1>
               </div>
             </div>
 

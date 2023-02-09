@@ -69,7 +69,7 @@ function DaoName({ dao, slug }) {
                   alt={dao?.Token}
                   objectFit="contain"
                 />
-                <h2>{dao?.title}</h2>
+                <h1 className="h2">{dao?.title}</h1>
               </div>
             </div>
 
