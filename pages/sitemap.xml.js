@@ -1,18 +1,9 @@
-import { globby } from "globby";
 import daoData from "../data.json";
 //pages/sitemap.xml.js
 const EXTERNAL_DATA_URL =
   "https://daolens-strapi-dxrba.ondigitalocean.app/api/articles?pagination[start]=0&pagination[limit]=100";
 
-function addPage(page) {
-  const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");
-  const route =
-    path === "/index"
-      ? "/"
-      : path.includes("/index")
-      ? path.replace("/index", "")
-      : path;
-
+function addPage(route) {
   return `  <url>
       <loc>${`https://www.daolens.com${route}`}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
@@ -22,17 +13,21 @@ function addPage(page) {
 }
 
 const getStaticPageSitemap = async () => {
-  const pages = await globby([
-    "pages/**/*.js",
-    "!pages/_*.js",
-    "!pages/api",
-    "!pages/blog/[slug]/*",
-    "!pages/discover-dao/[token]/*",
-    "!pages/discover-dao/dao/*",
-    "!pages/sitemap.xml.js",
-  ]);
+  const routes = [
+    "/blog",
+    "/discover-dao",
+    "/all-daos",
+    "/archieved",
+    "/careers",
+    "/community",
+    "/dao-manager",
+    "/guild",
+    "/",
+    "/nft",
+    "/onboarding-tool",
+  ];
 
-  return pages.map((page) => addPage(page)).join("");
+  return routes.map((route) => addPage(route)).join("");
 };
 
 const getBlogSitemap = async () => {
@@ -58,7 +53,9 @@ const getDiscoverDaoSitemap = () => {
     .map(
       (dao) =>
         `<url>
-          <loc>https://www.daolens.com/discover-dao/${dao.attributes.title}</loc>
+          <loc>https://www.daolens.com/discover-dao/${
+            dao.attributes.title
+          }</loc>
           <lastmod>${new Date().toISOString()}</lastmod>
           <changefreq>monthly</changefreq>
           <priority>1.0</priority>
