@@ -207,6 +207,25 @@ export const Container = styled.section`
       max-width: unset;
       color: #fff;
     }
+
+    h1 {
+      font-size: 2rem !important;
+    }
+
+    h2 {
+      font-size: 1.5rem !important;
+    }
+
+    h3 {
+      font-size: 1.25rem !important;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-size: 1rem !important;
+      margin: 0;
+    }
   }
 `;
 

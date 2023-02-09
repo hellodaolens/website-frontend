@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import styled from 'styled-components';
-import articleBCG from '../../public/assets/content/article-bcg.png';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import slugify from 'slugify';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import styled from "styled-components";
+import articleBCG from "../../public/assets/content/article-bcg.png";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import slugify from "slugify";
 
 const Articles = ({ allArticles }) => {
   const router = useRouter();
@@ -17,7 +17,7 @@ const Articles = ({ allArticles }) => {
   const [numOfArticles, setNumOfArticles] = useState(numOfArticlesToShow);
   const articlesToShow = articles?.slice(0, numOfArticles);
   const filters = [
-    'all',
+    "all",
     ...new Set(allArticles?.map((article) => article.attributes.type.trim())),
   ];
 
@@ -27,15 +27,15 @@ const Articles = ({ allArticles }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', setDimension, false);
+    window.addEventListener("resize", setDimension, false);
 
     return () => {
-      window.removeEventListener('resize', setDimension);
+      window.removeEventListener("resize", setDimension);
     };
   }, [isMobile]);
 
   const handleFilterArticles = (type) => {
-    if (type === 'all') {
+    if (type === "all") {
       setArticles(allArticles);
     } else {
       const tempArticles = allArticles?.filter(
@@ -109,7 +109,7 @@ const Articles = ({ allArticles }) => {
         })}
       </div>
       {articles?.length === 0 && (
-        <h4 style={{ textAlign: 'center' }}>No articles to display...</h4>
+        <h4 style={{ textAlign: "center" }}>No articles to display...</h4>
       )}
 
       {articlesToShow?.length < articles?.length && (

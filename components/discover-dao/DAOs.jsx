@@ -95,7 +95,7 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
         </header>
 
         <div className="title">
-          <h1 className="h3">{currentTag}</h1>
+          <h2 className="h3">{currentTag}</h2>
           <Link href="/all-daos">
             <a>See all</a>
           </Link>
