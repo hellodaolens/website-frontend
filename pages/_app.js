@@ -19,20 +19,20 @@ const tagManagerArgs = {
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [productHuntLaunchModal, setProductHuntLaunchModal] = useState(false);
+  // const [productHuntLaunchModal, setProductHuntLaunchModal] = useState(false);
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
-    let showModal = window.localStorage.getItem("showProductHuntLaunchModal");
-    if (!showModal) {
-      window.localStorage.setItem("showProductHuntLaunchModal", "true");
-      setProductHuntLaunchModal(true);
-    }
+    // let showModal = window.localStorage.getItem("showProductHuntLaunchModal");
+    // if (!showModal) {
+    //   window.localStorage.setItem("showProductHuntLaunchModal", "true");
+    //   setProductHuntLaunchModal(true);
+    // }
   }, []);
-  useEffect(() => {
-    if (!productHuntLaunchModal) {
-      window.localStorage.setItem("showProductHuntLaunchModal", "false");
-    }
-  }, [productHuntLaunchModal]);
+  // useEffect(() => {
+  //   if (!productHuntLaunchModal) {
+  //     window.localStorage.setItem("showProductHuntLaunchModal", "false");
+  //   }
+  // }, [productHuntLaunchModal]);
 
   let pathname = router.pathname;
 
@@ -69,11 +69,11 @@ function MyApp({ Component, pageProps }) {
         theme="dark"
         width={"400px"}
       />
-      {productHuntLaunchModal && (
+      {/* {productHuntLaunchModal && (
         <ProductHuntLaunchModal
           setProductHuntLaunchModal={setProductHuntLaunchModal}
         />
-      )}
+      )} */}
       <Component {...pageProps} />
       {pathname.includes("/blog") ? (
         <BlogPageFooter />
