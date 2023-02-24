@@ -24,7 +24,7 @@ function DaoName({ dao, slug }) {
             <div
               className="hero-banner"
               style={{
-                background: `url(${dao?.twittercover}) center/cover no-repeat`,
+                background: `url(${dao?.twittercover?.data?.attributes?.url}) center/cover no-repeat`,
               }}
             >
               <div className="links">
@@ -65,7 +65,7 @@ function DaoName({ dao, slug }) {
               <div className="dao-logo-wrapper">
                 <img
                   className="logo"
-                  src={dao?.twitterdp}
+                  src={dao?.twitterdp?.data?.attributes?.url}
                   alt={dao?.Token}
                   objectFit="contain"
                 />
@@ -459,8 +459,8 @@ export const getStaticProps = async ({ params }) => {
     twitterLink: daoDetails?.twitterLink,
     websiteLink: daoDetails?.websiteLink,
     title: daoDetails?.title,
-    twitterdp: daoDetails?.ProfileImageLink,
-    twittercover: daoDetails?.BannerImageLink,
+    twitterdp: daoDetails?.profileImage,
+    twittercover: daoDetails?.bannerImage,
     isPopular: daoDetails?.isPopular,
     foundersDetails: daoDetails?.founders,
   };

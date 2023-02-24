@@ -8,22 +8,23 @@ import search from "../../public/assets/discover-daos/search.svg";
 import { DaoSearchBar } from "../common";
 import { useEffect } from "react";
 import { hotTags, tags as tag, alltags } from "../utils/getPopularTags";
-const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
+const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao, daoData }) => {
   const [daos, setDaos] = useState([]);
+  console.log("daoData.length", daoData.length);
   useEffect(() => {
     let newDaos = [];
     if (currentTag === "All DAOs") {
-      newDaos = daosData.sort((a, b) =>
+      newDaos = daoData.sort((a, b) =>
         a.attributes.title.localeCompare(b.attributes.title)
       );
     } else if (currentTag === "Hottest DAOs") {
-      newDaos = daosData
+      newDaos = daoData
         .sort((a, b) => {
           return a.attributes.title.localeCompare(b.attributes.title);
         })
         .filter((item) => item.attributes.isPopular);
     } else {
-      newDaos = daosData
+      newDaos = daoData
         .sort((a, b) => a.attributes.title.localeCompare(b.attributes.title))
         .filter((item) =>
           item.attributes.type.toLowerCase().includes(currentTag.toLowerCase())
@@ -102,13 +103,10 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
         </div>
 
         <div className="daos-center">
-          {daos.map((item) => {
+          {daoData.map((item) => {
             let localTags = item?.attributes?.type.split(", ");
             return (
-              <Link
-                href={`/discover-dao/${item.attributes?.title}`}
-                key={item.id}
-              >
+              <Link href={`/discover-dao/dao/${item.id}`} key={item.id}>
                 <div
                   className="card"
                   style={{
@@ -128,7 +126,9 @@ const DAOs = ({ currentTag, setCurrentTag, bodyRef, allDao }) => {
                     >
                       <Image
                         className="logo"
-                        src={item?.attributes?.twitterdp}
+                        src={
+                          item?.attributes?.profileImage?.data?.attributes?.url
+                        }
                         alt={item?.attributes?.Token}
                         width={100}
                         height={100}
@@ -324,7 +324,8 @@ export const Container = styled.section`
     justify-content: space-between;
     align-items: center;
 
-    h3, .h3 {
+    h3,
+    .h3 {
       margin-bottom: 0;
     }
 
